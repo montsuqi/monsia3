@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GladePropertyClass</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="Glade UI Builder Reference Manual">
+<link rel="up" href="core.html" title="Part II. Glade Core">
+<link rel="prev" href="gladeui-GladeWidgetAdaptor.html" title="GladeWidgetAdaptor">
+<link rel="next" href="GladeCommand.html" title="GladeCommand">
+<meta name="generator" content="GTK-Doc V1.10 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="catalog.html" title="Part I. Adding your custom widgets">
+<link rel="part" href="core.html" title="Part II. Glade Core">
+<link rel="part" href="dockables.html" title="Part III. Dockable Glade UI Widgets">
+<link rel="part" href="misc.html" title="Part IV. Miscellaneous utilities">
+<link rel="index" href="ix01.html" title="Index">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gladeui-GladeWidgetAdaptor.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="core.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Glade UI Builder Reference Manual</th>
+<td><a accesskey="n" href="GladeCommand.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#gladeui-GladePropertyClass.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#gladeui-GladePropertyClass.description" class="shortcut">Description</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="gladeui-GladePropertyClass"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gladeui-GladePropertyClass.top_of_page"></a>GladePropertyClass</span></h2>
+<p>GladePropertyClass — Property Class-wide metadata.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="gladeui-GladePropertyClass.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#define             <a class="link" href="gladeui-GladePropertyClass.html#GPC-OBJECT-DELIMITER:CAPS" title="GPC_OBJECT_DELIMITER">GPC_OBJECT_DELIMITER</a>
+#define             <a class="link" href="gladeui-GladePropertyClass.html#GPC-PROPERTY-NAMELEN:CAPS" title="GPC_PROPERTY_NAMELEN">GPC_PROPERTY_NAMELEN</a>
+enum                <a class="link" href="gladeui-GladePropertyClass.html#GPCType" title="enum GPCType">GPCType</a>;
+GladePropertyClass* <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-new" title="glade_property_class_new ()">glade_property_class_new</a>            (gpointer handle);
+GladePropertyClass* <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-new-from-spec" title="glade_property_class_new_from_spec ()">glade_property_class_new_from_spec</a>  (gpointer handle,
+                                                         GParamSpec *spec);
+GList*              <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-list-atk-relations" title="glade_property_class_list_atk_relations ()">glade_property_class_list_atk_relations</a>
+                                                        (gpointer handle,
+                                                         GType owner_type);
+GladePropertyClass* <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-accel-property" title="glade_property_class_accel_property ()">glade_property_class_accel_property</a> (gpointer handle,
+                                                         GType owner_type);
+GladePropertyClass* <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-clone" title="glade_property_class_clone ()">glade_property_class_clone</a>          (GladePropertyClass *property_class);
+void                <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-free" title="glade_property_class_free ()">glade_property_class_free</a>           (GladePropertyClass *property_class);
+gboolean            <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-is-visible" title="glade_property_class_is_visible ()">glade_property_class_is_visible</a>     (GladePropertyClass *property_class);
+gboolean            <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-is-object" title="glade_property_class_is_object ()">glade_property_class_is_object</a>      (GladePropertyClass *property_class);
+GValue*             <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-make-gvalue-from-string" title="glade_property_class_make_gvalue_from_string ()">glade_property_class_make_gvalue_from_string</a>
+                                                        (GladePropertyClass *property_class,
+                                                         const gchar *string,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project);
+gchar*              <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-make-string-from-gvalue" title="glade_property_class_make_string_from_gvalue ()">glade_property_class_make_string_from_gvalue</a>
+                                                        (GladePropertyClass *property_class,
+                                                         const GValue *value);
+GValue*             <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-make-gvalue-from-vl" title="glade_property_class_make_gvalue_from_vl ()">glade_property_class_make_gvalue_from_vl</a>
+                                                        (GladePropertyClass *property_class,
+                                                         va_list vl);
+void                <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-set-vl-from-gvalue" title="glade_property_class_set_vl_from_gvalue ()">glade_property_class_set_vl_from_gvalue</a>
+                                                        (GladePropertyClass *klass,
+                                                         GValue *value,
+                                                         va_list vl);
+GValue*             <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-make-gvalue" title="glade_property_class_make_gvalue ()">glade_property_class_make_gvalue</a>    (GladePropertyClass *klass,
+                                                         ...);
+void                <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-get-from-gvalue" title="glade_property_class_get_from_gvalue ()">glade_property_class_get_from_gvalue</a>
+                                                        (GladePropertyClass *klass,
+                                                         GValue *value,
+                                                         ...);
+gboolean            <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-update-from-node" title="glade_property_class_update_from_node ()">glade_property_class_update_from_node</a>
+                                                        (GladeXmlNode *node,
+                                                         GModule *module,
+                                                         GType object_type,
+                                                         GladePropertyClass **property_class,
+                                                         const gchar *domain);
+const gchar*        <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-get-displayable-value" title="glade_property_class_get_displayable_value ()">glade_property_class_get_displayable_value</a>
+                                                        (GladePropertyClass *klass,
+                                                         gint value);
+GtkAdjustment*      <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-make-adjustment" title="glade_property_class_make_adjustment ()">glade_property_class_make_adjustment</a>
+                                                        (GladePropertyClass *property_class);
+gboolean            <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-match" title="glade_property_class_match ()">glade_property_class_match</a>          (GladePropertyClass *klass,
+                                                         GladePropertyClass *comp);
+gboolean            <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-void-value" title="glade_property_class_void_value ()">glade_property_class_void_value</a>     (GladePropertyClass *klass,
+                                                         GValue *value);
+const gchar*        <a class="link" href="gladeui-GladePropertyClass.html#glade-property-class-atk-realname" title="glade_property_class_atk_realname ()">glade_property_class_atk_realname</a>   (const gchar *atk_name);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-GladePropertyClass.description"></a><h2>Description</h2>
+<p>
+<span class="type">GladePropertyClass</span> is a structure based on a <span class="type">GParamSpec</span> and parameters
+from the Glade catalog files and describes how properties are to be handled
+in Glade; it also provides an interface to convert <span class="type">GValue</span> to strings and
+va_lists etc (back and forth).</p>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-GladePropertyClass.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="GPC-OBJECT-DELIMITER:CAPS"></a><h3>GPC_OBJECT_DELIMITER</h3>
+<pre class="programlisting">#define GPC_OBJECT_DELIMITER ", "
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GPC-PROPERTY-NAMELEN:CAPS"></a><h3>GPC_PROPERTY_NAMELEN</h3>
+<pre class="programlisting">#define GPC_PROPERTY_NAMELEN 512  /* Enough space for a property name I think */
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GPCType"></a><h3>enum GPCType</h3>
+<pre class="programlisting">typedef enum {
+	GPC_NORMAL,
+	GPC_ATK_PROPERTY,
+	GPC_ATK_RELATION,
+	GPC_ATK_ACTION,
+	GPC_ACCEL_PROPERTY
+} GPCType;
+</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GPC-NORMAL:CAPS"></a><span class="term"><code class="literal">GPC_NORMAL</code></span></p></td>
+<td> is not an atk property
+</td>
+</tr>
+<tr>
+<td><p><a name="GPC-ATK-PROPERTY:CAPS"></a><span class="term"><code class="literal">GPC_ATK_PROPERTY</code></span></p></td>
+<td> is a property of an <span class="type">AtkImplementor</span> object
+</td>
+</tr>
+<tr>
+<td><p><a name="GPC-ATK-RELATION:CAPS"></a><span class="term"><code class="literal">GPC_ATK_RELATION</code></span></p></td>
+<td> is an atk relation set property
+</td>
+</tr>
+<tr>
+<td><p><a name="GPC-ATK-ACTION:CAPS"></a><span class="term"><code class="literal">GPC_ATK_ACTION</code></span></p></td>
+<td> is an atk action property
+</td>
+</tr>
+<tr>
+<td><p><a name="GPC-ACCEL-PROPERTY:CAPS"></a><span class="term"><code class="literal">GPC_ACCEL_PROPERTY</code></span></p></td>
+<td> is an accelerator key property
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-new"></a><h3>glade_property_class_new ()</h3>
+<pre class="programlisting">GladePropertyClass* glade_property_class_new            (gpointer handle);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> A generic pointer (i.e. a <span class="type">GladeWidgetClass</span>)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-new-from-spec"></a><h3>glade_property_class_new_from_spec ()</h3>
+<pre class="programlisting">GladePropertyClass* glade_property_class_new_from_spec  (gpointer handle,
+                                                         GParamSpec *spec);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> A generic pointer (i.e. a <span class="type">GladeWidgetClass</span>)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>spec</code></em> :</span></p></td>
+<td> A <span class="type">GParamSpec</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a newly created <span class="type">GladePropertyClass</span> based on <em class="parameter"><code>spec</code></em>
+         or <code class="literal">NULL</code> if its unsupported.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-list-atk-relations"></a><h3>glade_property_class_list_atk_relations ()</h3>
+<pre class="programlisting">GList*              glade_property_class_list_atk_relations
+                                                        (gpointer handle,
+                                                         GType owner_type);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> A generic pointer (i.e. a <span class="type">GladeWidgetClass</span>)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>owner_type</code></em> :</span></p></td>
+<td> The <span class="type">GType</span> of the owning widget class.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <span class="type">GList</span> of newly created atk relation <span class="type">GladePropertyClass</span>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-accel-property"></a><h3>glade_property_class_accel_property ()</h3>
+<pre class="programlisting">GladePropertyClass* glade_property_class_accel_property (gpointer handle,
+                                                         GType owner_type);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> A generic pointer (i.e. a <span class="type">GladeWidgetClass</span>)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>owner_type</code></em> :</span></p></td>
+<td> The <span class="type">GType</span> of the owning widget class.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a newly created <span class="type">GladePropertyClass</span> for accelerators
+         of the prescribed <em class="parameter"><code>owner_type</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-clone"></a><h3>glade_property_class_clone ()</h3>
+<pre class="programlisting">GladePropertyClass* glade_property_class_clone          (GladePropertyClass *property_class);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> a <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new <span class="type">GladePropertyClass</span> cloned from <em class="parameter"><code>property_class</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-free"></a><h3>glade_property_class_free ()</h3>
+<pre class="programlisting">void                glade_property_class_free           (GladePropertyClass *property_class);</pre>
+<p>
+Frees <em class="parameter"><code>klass</code></em> and its associated memory.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> a <span class="type">GladePropertyClass</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-is-visible"></a><h3>glade_property_class_is_visible ()</h3>
+<pre class="programlisting">gboolean            glade_property_class_is_visible     (GladePropertyClass *property_class);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether or not to show this property in the editor
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-is-object"></a><h3>glade_property_class_is_object ()</h3>
+<pre class="programlisting">gboolean            glade_property_class_is_object      (GladePropertyClass *property_class);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether or not this is an object property 
+that refers to another object in this project.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-make-gvalue-from-string"></a><h3>glade_property_class_make_gvalue_from_string ()</h3>
+<pre class="programlisting">GValue*             glade_property_class_make_gvalue_from_string
+                                                        (GladePropertyClass *property_class,
+                                                         const gchar *string,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>string</code></em> :</span></p></td>
+<td> a string representation of this property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>project</code></em> :</span></p></td>
+<td> the glade project that the associated property
+          belongs to.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <span class="type">GValue</span> created based on the <em class="parameter"><code>property_class</code></em>
+         and <em class="parameter"><code>string</code></em> criteria.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-make-string-from-gvalue"></a><h3>glade_property_class_make_string_from_gvalue ()</h3>
+<pre class="programlisting">gchar*              glade_property_class_make_string_from_gvalue
+                                                        (GladePropertyClass *property_class,
+                                                         const GValue *value);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> A <span class="type">GValue</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string representation of <em class="parameter"><code>value</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-make-gvalue-from-vl"></a><h3>glade_property_class_make_gvalue_from_vl ()</h3>
+<pre class="programlisting">GValue*             glade_property_class_make_gvalue_from_vl
+                                                        (GladePropertyClass *property_class,
+                                                         va_list vl);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vl</code></em> :</span></p></td>
+<td> a <span class="type">va_list</span> holding one argument of the correct type
+     specified by <em class="parameter"><code>property_class</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <span class="type">GValue</span> created based on the <em class="parameter"><code>property_class</code></em>
+         and a <em class="parameter"><code>vl</code></em> arg of the correct type.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-set-vl-from-gvalue"></a><h3>glade_property_class_set_vl_from_gvalue ()</h3>
+<pre class="programlisting">void                glade_property_class_set_vl_from_gvalue
+                                                        (GladePropertyClass *klass,
+                                                         GValue *value,
+                                                         va_list vl);</pre>
+<p>
+Sets <em class="parameter"><code>vl</code></em> from <em class="parameter"><code>value</code></em> based on <em class="parameter"><code>klass</code></em> criteria.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> A <span class="type">GValue</span> to set
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vl</code></em> :</span></p></td>
+<td> a <span class="type">va_list</span> holding one argument of the correct type
+     specified by <em class="parameter"><code>klass</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-make-gvalue"></a><h3>glade_property_class_make_gvalue ()</h3>
+<pre class="programlisting">GValue*             glade_property_class_make_gvalue    (GladePropertyClass *klass,
+                                                         ...);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> an argument of the correct type specified by <em class="parameter"><code>property_class</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <span class="type">GValue</span> created based on the <em class="parameter"><code>property_class</code></em>
+         and the provided argument.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-get-from-gvalue"></a><h3>glade_property_class_get_from_gvalue ()</h3>
+<pre class="programlisting">void                glade_property_class_get_from_gvalue
+                                                        (GladePropertyClass *klass,
+                                                         GValue *value,
+                                                         ...);</pre>
+<p>
+Assignes the provided return location to <em class="parameter"><code>value</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> A <span class="type">GValue</span> to set
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> a return location of the correct type
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-update-from-node"></a><h3>glade_property_class_update_from_node ()</h3>
+<pre class="programlisting">gboolean            glade_property_class_update_from_node
+                                                        (GladeXmlNode *node,
+                                                         GModule *module,
+                                                         GType object_type,
+                                                         GladePropertyClass **property_class,
+                                                         const gchar *domain);</pre>
+<p>
+Updates the <em class="parameter"><code>property_class</code></em> with the contents of the node in the xml
+file. Only the values found in the xml file are overridden.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td> the property node
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>module</code></em> :</span></p></td>
+<td> a <span class="type">GModule</span> to lookup symbols from the plugin
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object_type</code></em> :</span></p></td>
+<td> the <span class="type">GType</span> of the owning object
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> a pointer to the property class
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>domain</code></em> :</span></p></td>
+<td> the domain to translate catalog strings from
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <code class="literal">TRUE</code> on success. <em class="parameter"><code>property_class</code></em> is set to NULL if the property
+         has Disabled="TRUE".
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-get-displayable-value"></a><h3>glade_property_class_get_displayable_value ()</h3>
+<pre class="programlisting">const gchar*        glade_property_class_get_displayable_value
+                                                        (GladePropertyClass *klass,
+                                                         gint value);</pre>
+<p>
+Search a displayable values for <em class="parameter"><code>value</code></em> in this property class.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td> the property class to search in
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> the value to search
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a (gchar *) if a diplayable value was found, otherwise NULL.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-make-adjustment"></a><h3>glade_property_class_make_adjustment ()</h3>
+<pre class="programlisting">GtkAdjustment*      glade_property_class_make_adjustment
+                                                        (GladePropertyClass *property_class);</pre>
+<p>
+Creates and appropriate GtkAdjustment for use in the editor</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_class</code></em> :</span></p></td>
+<td> a pointer to the property class
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> An appropriate <span class="type">GtkAdjustment</span> for use in the Property editor
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-match"></a><h3>glade_property_class_match ()</h3>
+<pre class="programlisting">gboolean            glade_property_class_match          (GladePropertyClass *klass,
+                                                         GladePropertyClass *comp);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td> a <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>comp</code></em> :</span></p></td>
+<td> a <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>klass</code></em> and <em class="parameter"><code>comp</code></em> are a match or not
+         (properties in seperate decendant heirarchies that
+          have the same name are not matches).
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-void-value"></a><h3>glade_property_class_void_value ()</h3>
+<pre class="programlisting">gboolean            glade_property_class_void_value     (GladePropertyClass *klass,
+                                                         GValue *value);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td> a <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Whether <em class="parameter"><code>value</code></em> for this <em class="parameter"><code>klass</code></em> is voided; a voided value
+         can be a <code class="literal">NULL</code> value for boxed or object type param specs.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-class-atk-realname"></a><h3>glade_property_class_atk_realname ()</h3>
+<pre class="programlisting">const gchar*        glade_property_class_atk_realname   (const gchar *atk_name);</pre>
+<p>
+Translates a GladePropertyClass-&gt;id to the name that should be
+saved into the glade file.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>atk_name</code></em> :</span></p></td>
+<td> The id of the atk property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to a constant string.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.10</div>
+</body>
+</html>

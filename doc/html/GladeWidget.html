@@ -1,0 +1,2703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GladeWidget</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="Glade UI Builder Reference Manual">
+<link rel="up" href="core.html" title="Part II. Glade Core">
+<link rel="prev" href="GladeProject.html" title="GladeProject">
+<link rel="next" href="GladeFixed.html" title="GladeFixed">
+<meta name="generator" content="GTK-Doc V1.10 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="catalog.html" title="Part I. Adding your custom widgets">
+<link rel="part" href="core.html" title="Part II. Glade Core">
+<link rel="part" href="dockables.html" title="Part III. Dockable Glade UI Widgets">
+<link rel="part" href="misc.html" title="Part IV. Miscellaneous utilities">
+<link rel="index" href="ix01.html" title="Index">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GladeProject.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="core.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Glade UI Builder Reference Manual</th>
+<td><a accesskey="n" href="GladeFixed.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#GladeWidget.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GladeWidget.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GladeWidget.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GladeWidget.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#GladeWidget.signals" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GladeWidget"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GladeWidget.top_of_page"></a>GladeWidget</span></h2>
+<p>GladeWidget — An object wrapper for the Glade runtime environment.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GladeWidget.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+struct              <a class="link" href="GladeWidget.html#GladeWidget-struct" title="struct GladeWidget">GladeWidget</a>;
+<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        <a class="link" href="GladeWidget.html#glade-widget-get-from-gobject" title="glade_widget_get_from_gobject ()">glade_widget_get_from_gobject</a>       (gpointer object);
+void                <a class="link" href="GladeWidget.html#glade-widget-add-child" title="glade_widget_add_child ()">glade_widget_add_child</a>              (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child,
+                                                         gboolean at_mouse);
+void                <a class="link" href="GladeWidget.html#glade-widget-remove-child" title="glade_widget_remove_child ()">glade_widget_remove_child</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child);
+<a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeWidgetInfo"
+>GladeWidgetInfo</a>*    <a class="link" href="GladeWidget.html#glade-widget-write" title="glade_widget_write ()">glade_widget_write</a>                  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeInterface"
+>GladeInterface</a> *interface);
+<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        <a class="link" href="GladeWidget.html#glade-widget-read" title="glade_widget_read ()">glade_widget_read</a>                   (<a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project,
+                                                         <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeWidgetInfo"
+>GladeWidgetInfo</a> *info);
+void                <a class="link" href="GladeWidget.html#glade-widget-replace" title="glade_widget_replace ()">glade_widget_replace</a>                (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         GObject *old_object,
+                                                         GObject *new_object);
+void                <a class="link" href="GladeWidget.html#glade-widget-rebuild" title="glade_widget_rebuild ()">glade_widget_rebuild</a>                (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gwidget);
+<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        <a class="link" href="GladeWidget.html#glade-widget-dup" title="glade_widget_dup ()">glade_widget_dup</a>                    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *template_widget,
+                                                         gboolean exact);
+void                <a class="link" href="GladeWidget.html#glade-widget-copy-signals" title="glade_widget_copy_signals ()">glade_widget_copy_signals</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *template_widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-copy-properties" title="glade_widget_copy_properties ()">glade_widget_copy_properties</a>        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *template_widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-set-packing-properties" title="glade_widget_set_packing_properties ()">glade_widget_set_packing_properties</a> (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *container);
+<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      <a class="link" href="GladeWidget.html#glade-widget-get-property" title="glade_widget_get_property ()">glade_widget_get_property</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      <a class="link" href="GladeWidget.html#glade-widget-get-pack-property" title="glade_widget_get_pack_property ()">glade_widget_get_pack_property</a>      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+GList*              <a class="link" href="GladeWidget.html#glade-widget-dup-properties" title="glade_widget_dup_properties ()">glade_widget_dup_properties</a>         (GList *template_props,
+                                                         gboolean as_load);
+void                <a class="link" href="GladeWidget.html#glade-widget-remove-property" title="glade_widget_remove_property ()">glade_widget_remove_property</a>        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+void                <a class="link" href="GladeWidget.html#glade-widget-show" title="glade_widget_show ()">glade_widget_show</a>                   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-hide" title="glade_widget_hide ()">glade_widget_hide</a>                   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-add-signal-handler" title="glade_widget_add_signal_handler ()">glade_widget_add_signal_handler</a>     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GladeSignal *signal_handler);
+void                <a class="link" href="GladeWidget.html#glade-widget-remove-signal-handler" title="glade_widget_remove_signal_handler ()">glade_widget_remove_signal_handler</a>  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GladeSignal *signal_handler);
+void                <a class="link" href="GladeWidget.html#glade-widget-change-signal-handler" title="glade_widget_change_signal_handler ()">glade_widget_change_signal_handler</a>  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GladeSignal *old_signal_handler,
+                                                         GladeSignal *new_signal_handler);
+GPtrArray*          <a class="link" href="GladeWidget.html#glade-widget-list-signal-handlers" title="glade_widget_list_signal_handlers ()">glade_widget_list_signal_handlers</a>   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *signal_name);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-has-decendant" title="glade_widget_has_decendant ()">glade_widget_has_decendant</a>          (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GType type);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-event" title="glade_widget_event ()">glade_widget_event</a>                  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gwidget,
+                                                         GdkEvent *event);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-placeholder-relation" title="glade_widget_placeholder_relation ()">glade_widget_placeholder_relation</a>   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+GladeWidgetAction*  <a class="link" href="GladeWidget.html#glade-widget-get-action" title="glade_widget_get_action ()">glade_widget_get_action</a>             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);
+GladeWidgetAction*  <a class="link" href="GladeWidget.html#glade-widget-get-pack-action" title="glade_widget_get_pack_action ()">glade_widget_get_pack_action</a>        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-set-action-sensitive" title="glade_widget_set_action_sensitive ()">glade_widget_set_action_sensitive</a>   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path,
+                                                         gboolean sensitive);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-set-pack-action-sensitive" title="glade_widget_set_pack_action_sensitive ()">glade_widget_set_pack_action_sensitive</a>
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path,
+                                                         gboolean sensitive);
+void                <a class="link" href="GladeWidget.html#glade-widget-remove-action" title="glade_widget_remove_action ()">glade_widget_remove_action</a>          (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);
+void                <a class="link" href="GladeWidget.html#glade-widget-remove-pack-action" title="glade_widget_remove_pack_action ()">glade_widget_remove_pack_action</a>     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);
+GtkWidget*          <a class="link" href="GladeWidget.html#glade-widget-create-action-menu" title="glade_widget_create_action_menu ()">glade_widget_create_action_menu</a>     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);
+void                <a class="link" href="GladeWidget.html#glade-widget-project-notify" title="glade_widget_project_notify ()">glade_widget_project_notify</a>         (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project);
+void                <a class="link" href="GladeWidget.html#glade-widget-add-prop-ref" title="glade_widget_add_prop_ref ()">glade_widget_add_prop_ref</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="GladeWidget.html#glade-widget-remove-prop-ref" title="glade_widget_remove_prop_ref ()">glade_widget_remove_prop_ref</a>        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="GladeWidget.html#glade-widget-object-set-property" title="glade_widget_object_set_property ()">glade_widget_object_set_property</a>    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *property_name,
+                                                         const GValue *value);
+void                <a class="link" href="GladeWidget.html#glade-widget-object-get-property" title="glade_widget_object_get_property ()">glade_widget_object_get_property</a>    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *property_name,
+                                                         GValue *value);
+void                <a class="link" href="GladeWidget.html#glade-widget-child-set-property" title="glade_widget_child_set_property ()">glade_widget_child_set_property</a>     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child,
+                                                         const gchar *property_name,
+                                                         const GValue *value);
+void                <a class="link" href="GladeWidget.html#glade-widget-child-get-property" title="glade_widget_child_get_property ()">glade_widget_child_get_property</a>     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child,
+                                                         const gchar *property_name,
+                                                         GValue *value);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-get" title="glade_widget_property_get ()">glade_widget_property_get</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-set" title="glade_widget_property_set ()">glade_widget_property_set</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-pack-property-get" title="glade_widget_pack_property_get ()">glade_widget_pack_property_get</a>      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-pack-property-set" title="glade_widget_pack_property_set ()">glade_widget_pack_property_set</a>      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-reset" title="glade_widget_property_reset ()">glade_widget_property_reset</a>         (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-pack-property-reset" title="glade_widget_pack_property_reset ()">glade_widget_pack_property_reset</a>    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-default" title="glade_widget_property_default ()">glade_widget_property_default</a>       (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-original-default" title="glade_widget_property_original_default ()">glade_widget_property_original_default</a>
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-pack-property-default" title="glade_widget_pack_property_default ()">glade_widget_pack_property_default</a>  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-set-sensitive" title="glade_widget_property_set_sensitive ()">glade_widget_property_set_sensitive</a> (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean sensitive,
+                                                         const gchar *reason);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-pack-property-set-sensitive" title="glade_widget_pack_property_set_sensitive ()">glade_widget_pack_property_set_sensitive</a>
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean sensitive,
+                                                         const gchar *reason);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-set-enabled" title="glade_widget_property_set_enabled ()">glade_widget_property_set_enabled</a>   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean enabled);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-pack-property-set-enabled" title="glade_widget_pack_property_set_enabled ()">glade_widget_pack_property_set_enabled</a>
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean enabled);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-property-set-save-always" title="glade_widget_property_set_save_always ()">glade_widget_property_set_save_always</a>
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean setting);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-pack-property-set-save-always" title="glade_widget_pack_property_set_save_always ()">glade_widget_pack_property_set_save_always</a>
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean setting);
+gchar*              <a class="link" href="GladeWidget.html#glade-widget-property-string" title="glade_widget_property_string ()">glade_widget_property_string</a>        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         const GValue *value);
+gchar*              <a class="link" href="GladeWidget.html#glade-widget-pack-property-string" title="glade_widget_pack_property_string ()">glade_widget_pack_property_string</a>   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         const GValue *value);
+void                <a class="link" href="GladeWidget.html#glade-widget-set-name" title="glade_widget_set_name ()">glade_widget_set_name</a>               (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *name);
+const gchar*        <a class="link" href="GladeWidget.html#glade-widget-get-name" title="glade_widget_get_name ()">glade_widget_get_name</a>               (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-set-internal" title="glade_widget_set_internal ()">glade_widget_set_internal</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *internal);
+const gchar*        <a class="link" href="GladeWidget.html#glade-widget-get-internal" title="glade_widget_get_internal ()">glade_widget_get_internal</a>           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-set-object" title="glade_widget_set_object ()">glade_widget_set_object</a>             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gwidget,
+                                                         GObject *new_object);
+GObject*            <a class="link" href="GladeWidget.html#glade-widget-get-object" title="glade_widget_get_object ()">glade_widget_get_object</a>             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-set-project" title="glade_widget_set_project ()">glade_widget_set_project</a>            (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project);
+<a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a>*       <a class="link" href="GladeWidget.html#glade-widget-get-project" title="glade_widget_get_project ()">glade_widget_get_project</a>            (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+<a class="link" href="gladeui-GladeWidgetAdaptor.html#GladeWidgetAdaptor" title="GladeWidgetAdaptor">GladeWidgetAdaptor</a>* <a class="link" href="GladeWidget.html#glade-widget-get-adaptor" title="glade_widget_get_adaptor ()">glade_widget_get_adaptor</a>            (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        <a class="link" href="GladeWidget.html#glade-widget-get-parent" title="glade_widget_get_parent ()">glade_widget_get_parent</a>             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+void                <a class="link" href="GladeWidget.html#glade-widget-set-parent" title="glade_widget_set_parent ()">glade_widget_set_parent</a>             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent);
+gboolean            <a class="link" href="GladeWidget.html#glade-widget-superuser" title="glade_widget_superuser ()">glade_widget_superuser</a>              (void);
+void                <a class="link" href="GladeWidget.html#glade-widget-push-superuser" title="glade_widget_push_superuser ()">glade_widget_push_superuser</a>         (void);
+void                <a class="link" href="GladeWidget.html#glade-widget-pop-superuser" title="glade_widget_pop_superuser ()">glade_widget_pop_superuser</a>          (void);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="GladeWidget.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GladeWidget
+         +----<a class="link" href="GladeFixed.html" title="GladeFixed">GladeFixed</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="GladeWidget.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GladeWidget.html#GladeWidget--adaptor" title='The "adaptor" property'>adaptor</a>"                  GladeGObjectAdaptor*  : Read / Write / Construct Only
+  "<a class="link" href="GladeWidget.html#GladeWidget--anarchist" title='The "anarchist" property'>anarchist</a>"                gboolean              : Read / Write / Construct Only
+  "<a class="link" href="GladeWidget.html#GladeWidget--info" title='The "info" property'>info</a>"                     gpointer              : Write / Construct Only
+  "<a class="link" href="GladeWidget.html#GladeWidget--internal" title='The "internal" property'>internal</a>"                 gchar*                : Read / Write / Construct
+  "<a class="link" href="GladeWidget.html#GladeWidget--internal-name" title='The "internal-name" property'>internal-name</a>"            gchar*                : Write / Construct Only
+  "<a class="link" href="GladeWidget.html#GladeWidget--name" title='The "name" property'>name</a>"                     gchar*                : Read / Write / Construct
+  "<a class="link" href="GladeWidget.html#GladeWidget--object" title='The "object" property'>object</a>"                   GObject*              : Read / Write / Construct
+  "<a class="link" href="GladeWidget.html#GladeWidget--parent" title='The "parent" property'>parent</a>"                   <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*          : Read / Write / Construct
+  "<a class="link" href="GladeWidget.html#GladeWidget--project" title='The "project" property'>project</a>"                  <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a>*         : Read / Write / Construct
+  "<a class="link" href="GladeWidget.html#GladeWidget--properties" title='The "properties" property'>properties</a>"               gpointer              : Read / Write / Construct Only
+  "<a class="link" href="GladeWidget.html#GladeWidget--reason" title='The "reason" property'>reason</a>"                   gint                  : Write / Construct Only
+  "<a class="link" href="GladeWidget.html#GladeWidget--template" title='The "template" property'>template</a>"                 <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*          : Write / Construct Only
+  "<a class="link" href="GladeWidget.html#GladeWidget--toplevel-height" title='The "toplevel-height" property'>toplevel-height</a>"          gint                  : Read / Write
+  "<a class="link" href="GladeWidget.html#GladeWidget--toplevel-width" title='The "toplevel-width" property'>toplevel-width</a>"           gint                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="GladeWidget.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GladeWidget.html#GladeWidget-add-signal-handler" title='The "add-signal-handler" signal'>add-signal-handler</a>"                             : Run Last
+  "<a class="link" href="GladeWidget.html#GladeWidget-button-press-event" title='The "button-press-event" signal'>button-press-event</a>"                             : Run Last
+  "<a class="link" href="GladeWidget.html#GladeWidget-button-release-event" title='The "button-release-event" signal'>button-release-event</a>"                           : Run Last
+  "<a class="link" href="GladeWidget.html#GladeWidget-change-signal-handler" title='The "change-signal-handler" signal'>change-signal-handler</a>"                          : Run Last
+  "<a class="link" href="GladeWidget.html#GladeWidget-motion-notify-event" title='The "motion-notify-event" signal'>motion-notify-event</a>"                            : Run Last
+  "<a class="link" href="GladeWidget.html#GladeWidget-remove-signal-handler" title='The "remove-signal-handler" signal'>remove-signal-handler</a>"                          : Run Last
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="GladeWidget.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> is the proxy between the instantiated runtime object and
+the Glade core metadata. This api will be mostly usefull for its
+convenience api for getting and setting properties (mostly from the plugin).</p>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="GladeWidget.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="GladeWidget-struct"></a><h3>struct GladeWidget</h3>
+<pre class="programlisting">struct GladeWidget;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-from-gobject"></a><h3>glade_widget_get_from_gobject ()</h3>
+<pre class="programlisting"><a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        glade_widget_get_from_gobject       (gpointer object);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-add-child"></a><h3>glade_widget_add_child ()</h3>
+<pre class="programlisting">void                glade_widget_add_child              (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child,
+                                                         gboolean at_mouse);</pre>
+<p>
+Adds <em class="parameter"><code>child</code></em> to <em class="parameter"><code>parent</code></em> in a generic way for this <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> parent.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parent</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> to add
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>at_mouse</code></em> :</span></p></td>
+<td> whether the added widget should be added
+           at the current mouse position
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-remove-child"></a><h3>glade_widget_remove_child ()</h3>
+<pre class="programlisting">void                glade_widget_remove_child           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child);</pre>
+<p>
+Removes <em class="parameter"><code>child</code></em> from <em class="parameter"><code>parent</code></em> in a generic way for this <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> parent.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parent</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> to add
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-write"></a><h3>glade_widget_write ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeWidgetInfo"
+>GladeWidgetInfo</a>*    glade_widget_write                  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeInterface"
+>GladeInterface</a> *interface);</pre>
+<p>
+TODO: write me</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>interface</code></em> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeInterface"
+><span class="type">GladeInterface</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-read"></a><h3>glade_widget_read ()</h3>
+<pre class="programlisting"><a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        glade_widget_read                   (<a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project,
+                                                         <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeWidgetInfo"
+>GladeWidgetInfo</a> *info);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>project</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeProject.html" title="GladeProject"><span class="type">GladeProject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>info</code></em> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeWidgetInfo"
+><span class="type">GladeWidgetInfo</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> for <em class="parameter"><code>project</code></em>, based on <em class="parameter"><code>info</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-replace"></a><h3>glade_widget_replace ()</h3>
+<pre class="programlisting">void                glade_widget_replace                (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         GObject *old_object,
+                                                         GObject *new_object);</pre>
+<p>
+Replaces a GObject with another GObject inside a GObject which
+behaves as a container.
+</p>
+<p>
+Note that both GObjects must be owned by a GladeWidget.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parent</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>old_object</code></em> :</span></p></td>
+<td> a <span class="type">GObject</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_object</code></em> :</span></p></td>
+<td> a <span class="type">GObject</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-rebuild"></a><h3>glade_widget_rebuild ()</h3>
+<pre class="programlisting">void                glade_widget_rebuild                (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gwidget);</pre>
+<p>
+Replaces the current widget instance with
+a new one while preserving all properties children and
+takes care of reparenting.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>gwidget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-dup"></a><h3>glade_widget_dup ()</h3>
+<pre class="programlisting"><a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        glade_widget_dup                    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *template_widget,
+                                                         gboolean exact);</pre>
+<p>
+Creates a deep copy of <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>. if <em class="parameter"><code>exact</code></em> is specified,
+the widget name is preserved and signals are carried over
+(this is used to maintain names &amp; signals in Cut/Paste context
+as opposed to Copy/Paste contexts).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>template_widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>exact</code></em> :</span></p></td>
+<td> whether or not to creat an exact duplicate
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The newly created <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-copy-signals"></a><h3>glade_widget_copy_signals ()</h3>
+<pre class="programlisting">void                glade_widget_copy_signals           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *template_widget);</pre>
+<p>
+Sets signals in <em class="parameter"><code>widget</code></em> based on the values of
+matching signals in <em class="parameter"><code>template_widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>   a 'dest' <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>template_widget</code></em> :</span></p></td>
+<td> a 'src' <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-copy-properties"></a><h3>glade_widget_copy_properties ()</h3>
+<pre class="programlisting">void                glade_widget_copy_properties        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *template_widget);</pre>
+<p>
+Sets properties in <em class="parameter"><code>widget</code></em> based on the values of
+matching properties in <em class="parameter"><code>template_widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>   a 'dest' <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>template_widget</code></em> :</span></p></td>
+<td> a 'src' <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-packing-properties"></a><h3>glade_widget_set_packing_properties ()</h3>
+<pre class="programlisting">void                glade_widget_set_packing_properties (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *container);</pre>
+<p>
+Generates the packing_properties list of the widget, given
+the class of the container we are adding the widget to.
+If the widget already has packing_properties, but the container
+has changed, the current list is freed and replaced.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>     A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td>  The parent <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-property"></a><h3>glade_widget_get_property ()</h3>
+<pre class="programlisting"><a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      glade_widget_get_property           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> in <em class="parameter"><code>widget</code></em> named <em class="parameter"><code>id_property</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-pack-property"></a><h3>glade_widget_get_pack_property ()</h3>
+<pre class="programlisting"><a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      glade_widget_get_pack_property      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> in <em class="parameter"><code>widget</code></em> named <em class="parameter"><code>id_property</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-dup-properties"></a><h3>glade_widget_dup_properties ()</h3>
+<pre class="programlisting">GList*              glade_widget_dup_properties         (GList *template_props,
+                                                         gboolean as_load);</pre>
+<p>
+Copies a list of properties, if <em class="parameter"><code>as_load</code></em> is specified, then
+properties that are not saved to the glade file are ignored.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>template_props</code></em> :</span></p></td>
+<td> the <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> list to copy
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>as_load</code></em> :</span></p></td>
+<td> whether to behave as if loading the project
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated <span class="type">GList</span> of new <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> objects.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-remove-property"></a><h3>glade_widget_remove_property ()</h3>
+<pre class="programlisting">void                glade_widget_remove_property        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+Removes the <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> indicated by <em class="parameter"><code>id_property</code></em>
+from <em class="parameter"><code>widget</code></em> (this is intended for use in the plugin, to
+remove properties from composite children that dont make
+sence to allow the user to specify, notably - properties
+that are proxied through the composite widget's properties or
+style properties).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> the name of the property
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-show"></a><h3>glade_widget_show ()</h3>
+<pre class="programlisting">void                glade_widget_show                   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+Display <em class="parameter"><code>widget</code></em> in it's project's GladeDesignView</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-hide"></a><h3>glade_widget_hide ()</h3>
+<pre class="programlisting">void                glade_widget_hide                   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+Hide <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-add-signal-handler"></a><h3>glade_widget_add_signal_handler ()</h3>
+<pre class="programlisting">void                glade_widget_add_signal_handler     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GladeSignal *signal_handler);</pre>
+<p>
+Adds a signal handler for <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>signal_handler</code></em> :</span></p></td>
+<td> The <span class="type">GladeSignal</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-remove-signal-handler"></a><h3>glade_widget_remove_signal_handler ()</h3>
+<pre class="programlisting">void                glade_widget_remove_signal_handler  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GladeSignal *signal_handler);</pre>
+<p>
+Removes a signal handler from <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>signal_handler</code></em> :</span></p></td>
+<td> The <span class="type">GladeSignal</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-change-signal-handler"></a><h3>glade_widget_change_signal_handler ()</h3>
+<pre class="programlisting">void                glade_widget_change_signal_handler  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GladeSignal *old_signal_handler,
+                                                         GladeSignal *new_signal_handler);</pre>
+<p>
+Changes a <span class="type">GladeSignal</span> on <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>old_signal_handler</code></em> :</span></p></td>
+<td> the old <span class="type">GladeSignal</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_signal_handler</code></em> :</span></p></td>
+<td> the new <span class="type">GladeSignal</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-list-signal-handlers"></a><h3>glade_widget_list_signal_handlers ()</h3>
+<pre class="programlisting">GPtrArray*          glade_widget_list_signal_handlers   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *signal_name);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>signal_name</code></em> :</span></p></td>
+<td> the name of the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <span class="type">GPtrArray</span> of <span class="type">GladeSignal</span> for <em class="parameter"><code>signal_name</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-has-decendant"></a><h3>glade_widget_has_decendant ()</h3>
+<pre class="programlisting">gboolean            glade_widget_has_decendant          (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GType type);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td> a  <span class="type">GType</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether this GladeWidget has any decendants of type <em class="parameter"><code>type</code></em>
+         or any decendants that implement the <em class="parameter"><code>type</code></em> interface
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-event"></a><h3>glade_widget_event ()</h3>
+<pre class="programlisting">gboolean            glade_widget_event                  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gwidget,
+                                                         GdkEvent *event);</pre>
+<p>
+Feed an event to be handled on the project GladeWidget
+hierarchy.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gwidget</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td> A <span class="type">GdkEvent</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>whether the event was handled or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-placeholder-relation"></a><h3>glade_widget_placeholder_relation ()</h3>
+<pre class="programlisting">gboolean            glade_widget_placeholder_relation   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+Returns whether placeholders should be used
+in operations concerning this parent &amp; child.
+</p>
+<p>
+Currently that criteria is whether <em class="parameter"><code>parent</code></em> is a
+GtkContainer, <em class="parameter"><code>widget</code></em> is a GtkWidget and the parent
+adaptor has been marked to use placeholders.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parent</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> The child <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether to use placeholders for this relationship.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-action"></a><h3>glade_widget_get_action ()</h3>
+<pre class="programlisting">GladeWidgetAction*  glade_widget_get_action             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);</pre>
+<p>
+Returns a <span class="type">GladeWidgetAction</span> object indentified by <em class="parameter"><code>action_path</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>action_path</code></em> :</span></p></td>
+<td> a full action path including groups
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the action or NULL if not found.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-pack-action"></a><h3>glade_widget_get_pack_action ()</h3>
+<pre class="programlisting">GladeWidgetAction*  glade_widget_get_pack_action        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);</pre>
+<p>
+Returns a <span class="type">GladeWidgetAction</span> object indentified by <em class="parameter"><code>action_path</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>action_path</code></em> :</span></p></td>
+<td> a full action path including groups
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the action or NULL if not found.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-action-sensitive"></a><h3>glade_widget_set_action_sensitive ()</h3>
+<pre class="programlisting">gboolean            glade_widget_set_action_sensitive   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path,
+                                                         gboolean sensitive);</pre>
+<p>
+Sets the sensitivity of <em class="parameter"><code>action_path</code></em> in <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>action_path</code></em> :</span></p></td>
+<td> a full action path including groups
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sensitive</code></em> :</span></p></td>
+<td> setting sensitive or insensitive
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>action_path</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-pack-action-sensitive"></a><h3>glade_widget_set_pack_action_sensitive ()</h3>
+<pre class="programlisting">gboolean            glade_widget_set_pack_action_sensitive
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path,
+                                                         gboolean sensitive);</pre>
+<p>
+Sets the sensitivity of <em class="parameter"><code>action_path</code></em> in <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>action_path</code></em> :</span></p></td>
+<td> a full action path including groups
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sensitive</code></em> :</span></p></td>
+<td> setting sensitive or insensitive
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>action_path</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-remove-action"></a><h3>glade_widget_remove_action ()</h3>
+<pre class="programlisting">void                glade_widget_remove_action          (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);</pre>
+<p>
+Remove an action.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>action_path</code></em> :</span></p></td>
+<td> a full action path including groups
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-remove-pack-action"></a><h3>glade_widget_remove_pack_action ()</h3>
+<pre class="programlisting">void                glade_widget_remove_pack_action     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);</pre>
+<p>
+Remove a packing action.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>action_path</code></em> :</span></p></td>
+<td> a full action path including groups
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-create-action-menu"></a><h3>glade_widget_create_action_menu ()</h3>
+<pre class="programlisting">GtkWidget*          glade_widget_create_action_menu     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *action_path);</pre>
+<p>
+Create a new GtkMenu with every action in it.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>action_path</code></em> :</span></p></td>
+<td> an action path or NULL to include every <em class="parameter"><code>widget</code></em> action.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-project-notify"></a><h3>glade_widget_project_notify ()</h3>
+<pre class="programlisting">void                glade_widget_project_notify         (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project);</pre>
+<p>
+Notifies <em class="parameter"><code>widget</code></em> that it is now in <em class="parameter"><code>project</code></em>.
+</p>
+<p>
+Note that this doesnt really set the project; the project is saved
+for internal reasons even when the widget is on the clipboard.
+(also used for property references).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>project</code></em> :</span></p></td>
+<td> The <a class="link" href="GladeProject.html" title="GladeProject"><span class="type">GladeProject</span></a> (or <code class="literal">NULL</code>)
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-add-prop-ref"></a><h3>glade_widget_add_prop_ref ()</h3>
+<pre class="programlisting">void                glade_widget_add_prop_ref           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+Adds <em class="parameter"><code>property</code></em> to <em class="parameter"><code>widget</code></em> 's list of referenced properties.
+</p>
+<p>
+Note: this is used to track object reference properties that
+      go in and out of the project.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> the <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-remove-prop-ref"></a><h3>glade_widget_remove_prop_ref ()</h3>
+<pre class="programlisting">void                glade_widget_remove_prop_ref        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+Removes <em class="parameter"><code>property</code></em> from <em class="parameter"><code>widget</code></em> 's list of referenced properties.
+</p>
+<p>
+Note: this is used to track object reference properties that
+      go in and out of the project.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> the <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-object-set-property"></a><h3>glade_widget_object_set_property ()</h3>
+<pre class="programlisting">void                glade_widget_object_set_property    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *property_name,
+                                                         const GValue *value);</pre>
+<p>
+This function applies <em class="parameter"><code>value</code></em> to the property <em class="parameter"><code>property_name</code></em> on
+the runtime object of <em class="parameter"><code>widget</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>        A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_name</code></em> :</span></p></td>
+<td> The property identifier
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>         The <span class="type">GValue</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-object-get-property"></a><h3>glade_widget_object_get_property ()</h3>
+<pre class="programlisting">void                glade_widget_object_get_property    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *property_name,
+                                                         GValue *value);</pre>
+<p>
+This function retrieves the value of the property <em class="parameter"><code>property_name</code></em> on
+the runtime object of <em class="parameter"><code>widget</code></em> and sets it in <em class="parameter"><code>value</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>        A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_name</code></em> :</span></p></td>
+<td> The property identifier
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>         The <span class="type">GValue</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-child-set-property"></a><h3>glade_widget_child_set_property ()</h3>
+<pre class="programlisting">void                glade_widget_child_set_property     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child,
+                                                         const gchar *property_name,
+                                                         const GValue *value);</pre>
+<p>
+Sets <em class="parameter"><code>child</code></em>'s packing property identified by <em class="parameter"><code>property_name</code></em> to <em class="parameter"><code>value</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>        A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td>         The <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> child
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_name</code></em> :</span></p></td>
+<td> The id of the property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>         The <em class="parameter"><code>GValue</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-child-get-property"></a><h3>glade_widget_child_get_property ()</h3>
+<pre class="programlisting">void                glade_widget_child_get_property     (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *child,
+                                                         const gchar *property_name,
+                                                         GValue *value);</pre>
+<p>
+Gets <em class="parameter"><code>child</code></em>'s packing property identified by <em class="parameter"><code>property_name</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td>        A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td>         The <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> child
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property_name</code></em> :</span></p></td>
+<td> The id of the property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>         The <em class="parameter"><code>GValue</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-get"></a><h3>glade_widget_property_get ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_get           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);</pre>
+<p>
+Gets the value of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> The return location for the value of the said <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-set"></a><h3>glade_widget_property_set ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_set           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);</pre>
+<p>
+Sets the value of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> A value of the correct type for the said <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-get"></a><h3>glade_widget_pack_property_get ()</h3>
+<pre class="programlisting">gboolean            glade_widget_pack_property_get      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);</pre>
+<p>
+Gets the value of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em> packing properties</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> The return location for the value of the said <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-set"></a><h3>glade_widget_pack_property_set ()</h3>
+<pre class="programlisting">gboolean            glade_widget_pack_property_set      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         ...);</pre>
+<p>
+Sets the value of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em> packing properties</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> The return location for the value of the said <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-reset"></a><h3>glade_widget_property_reset ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_reset         (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+Resets <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em> to it's default value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-reset"></a><h3>glade_widget_pack_property_reset ()</h3>
+<pre class="programlisting">gboolean            glade_widget_pack_property_reset    (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+Resets <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em>'s packing properties to it's default value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-default"></a><h3>glade_widget_property_default ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_default       (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether whether <em class="parameter"><code>id_property</code></em> was found and is 
+currently set to it's default value.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-original-default"></a><h3>glade_widget_property_original_default ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_original_default
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether whether <em class="parameter"><code>id_property</code></em> was found and is 
+currently set to it's original default value.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-default"></a><h3>glade_widget_pack_property_default ()</h3>
+<pre class="programlisting">gboolean            glade_widget_pack_property_default  (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether whether <em class="parameter"><code>id_property</code></em> was found and is 
+currently set to it's default value.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-set-sensitive"></a><h3>glade_widget_property_set_sensitive ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_set_sensitive (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean sensitive,
+                                                         const gchar *reason);</pre>
+<p>
+Sets the sensitivity of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sensitive</code></em> :</span></p></td>
+<td> setting sensitive or insensitive
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>reason</code></em> :</span></p></td>
+<td> a description of why the user cant edit this property
+         which will be used as a tooltip
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-set-sensitive"></a><h3>glade_widget_pack_property_set_sensitive ()</h3>
+<pre class="programlisting">gboolean            glade_widget_pack_property_set_sensitive
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean sensitive,
+                                                         const gchar *reason);</pre>
+<p>
+Sets the sensitivity of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em>'s packing properties.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sensitive</code></em> :</span></p></td>
+<td> setting sensitive or insensitive
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>reason</code></em> :</span></p></td>
+<td> a description of why the user cant edit this property
+         which will be used as a tooltip
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-set-enabled"></a><h3>glade_widget_property_set_enabled ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_set_enabled   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean enabled);</pre>
+<p>
+Sets the enabled state of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em>; this is
+used for optional properties.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>enabled</code></em> :</span></p></td>
+<td> setting enabled or disabled
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-set-enabled"></a><h3>glade_widget_pack_property_set_enabled ()</h3>
+<pre class="programlisting">gboolean            glade_widget_pack_property_set_enabled
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean enabled);</pre>
+<p>
+Sets the enabled state of <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em>'s packing 
+properties; this is used for optional properties.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>enabled</code></em> :</span></p></td>
+<td> setting enabled or disabled
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-set-save-always"></a><h3>glade_widget_property_set_save_always ()</h3>
+<pre class="programlisting">gboolean            glade_widget_property_set_save_always
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean setting);</pre>
+<p>
+Sets whether <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em> should be special cased
+to always be saved regardless of its default value.
+(used for some special cases like properties
+that are assigned initial values in composite widgets
+or derived widget code).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>setting</code></em> :</span></p></td>
+<td> the setting 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-set-save-always"></a><h3>glade_widget_pack_property_set_save_always ()</h3>
+<pre class="programlisting">gboolean            glade_widget_pack_property_set_save_always
+                                                        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         gboolean setting);</pre>
+<p>
+Sets whether <em class="parameter"><code>id_property</code></em> in <em class="parameter"><code>widget</code></em> should be special cased
+to always be saved regardless of its default value.
+(used for some special cases like properties
+that are assigned initial values in composite widgets
+or derived widget code).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>setting</code></em> :</span></p></td>
+<td> the setting 
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> whether <em class="parameter"><code>id_property</code></em> was found or not.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-property-string"></a><h3>glade_widget_property_string ()</h3>
+<pre class="programlisting">gchar*              glade_widget_property_string        (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         const GValue *value);</pre>
+<p>
+Creates a printable string representing <em class="parameter"><code>id_property</code></em> in
+<em class="parameter"><code>widget</code></em>, if <em class="parameter"><code>value</code></em> is specified it will be used in place
+of <em class="parameter"><code>id_property</code></em>'s real value (this is a convinience
+function to print/debug properties usually from plugin
+backends).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> the <span class="type">GValue</span> to print or <code class="literal">NULL</code>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string representing <em class="parameter"><code>id_property</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pack-property-string"></a><h3>glade_widget_pack_property_string ()</h3>
+<pre class="programlisting">gchar*              glade_widget_pack_property_string   (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *id_property,
+                                                         const GValue *value);</pre>
+<p>
+Same as <a class="link" href="GladeWidget.html#glade-widget-property-string" title="glade_widget_property_string ()"><code class="function">glade_widget_property_string()</code></a> but for packing
+properties.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id_property</code></em> :</span></p></td>
+<td> a string naming a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> the <span class="type">GValue</span> to print or <code class="literal">NULL</code>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly allocated string representing <em class="parameter"><code>id_property</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-name"></a><h3>glade_widget_set_name ()</h3>
+<pre class="programlisting">void                glade_widget_set_name               (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *name);</pre>
+<p>
+Sets <em class="parameter"><code>widget</code></em>'s name to <em class="parameter"><code>name</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td> a string
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-name"></a><h3>glade_widget_get_name ()</h3>
+<pre class="programlisting">const gchar*        glade_widget_get_name               (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to <em class="parameter"><code>widget</code></em>'s name
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-internal"></a><h3>glade_widget_set_internal ()</h3>
+<pre class="programlisting">void                glade_widget_set_internal           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         const gchar *internal);</pre>
+<p>
+Sets the internal name of <em class="parameter"><code>widget</code></em> to <em class="parameter"><code>internal</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>internal</code></em> :</span></p></td>
+<td> The internal name
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-internal"></a><h3>glade_widget_get_internal ()</h3>
+<pre class="programlisting">const gchar*        glade_widget_get_internal           (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the internal name of <em class="parameter"><code>widget</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-object"></a><h3>glade_widget_set_object ()</h3>
+<pre class="programlisting">void                glade_widget_set_object             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gwidget,
+                                                         GObject *new_object);</pre>
+<p>
+Set the runtime object for this GladeWidget wrapper
+(this is used deep in the core and is probably unsafe
+to use elsewhere).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gwidget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_object</code></em> :</span></p></td>
+<td> the new <span class="type">GObject</span> for <em class="parameter"><code>gwidget</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-object"></a><h3>glade_widget_get_object ()</h3>
+<pre class="programlisting">GObject*            glade_widget_get_object             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <span class="type">GObject</span> associated with <em class="parameter"><code>widget</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-project"></a><h3>glade_widget_set_project ()</h3>
+<pre class="programlisting">void                glade_widget_set_project            (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project);</pre>
+<p>
+Makes <em class="parameter"><code>widget</code></em> belong to <em class="parameter"><code>project</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>project</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeProject.html" title="GladeProject"><span class="type">GladeProject</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-project"></a><h3>glade_widget_get_project ()</h3>
+<pre class="programlisting"><a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a>*       glade_widget_get_project            (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="GladeProject.html" title="GladeProject"><span class="type">GladeProject</span></a> that <em class="parameter"><code>widget</code></em> belongs to
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-adaptor"></a><h3>glade_widget_get_adaptor ()</h3>
+<pre class="programlisting"><a class="link" href="gladeui-GladeWidgetAdaptor.html#GladeWidgetAdaptor" title="GladeWidgetAdaptor">GladeWidgetAdaptor</a>* glade_widget_get_adaptor            (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> a <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="gladeui-GladeWidgetAdaptor.html#GladeWidgetAdaptor" title="GladeWidgetAdaptor"><span class="type">GladeWidgetAdaptor</span></a> of <em class="parameter"><code>widget</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-get-parent"></a><h3>glade_widget_get_parent ()</h3>
+<pre class="programlisting"><a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*        glade_widget_get_parent             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The parenting <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-set-parent"></a><h3>glade_widget_set_parent ()</h3>
+<pre class="programlisting">void                glade_widget_set_parent             (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *parent);</pre>
+<p>
+sets the parenting <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parent</code></em> :</span></p></td>
+<td> the parenting <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> (or <code class="literal">NULL</code>)
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-superuser"></a><h3>glade_widget_superuser ()</h3>
+<pre class="programlisting">gboolean            glade_widget_superuser              (void);</pre>
+<p>
+Checks if we are in superuser mode.
+</p>
+<p>
+Superuser mode is when we are
+  - Loading a project
+  - Dupping a widget recursively
+  - Rebuilding an instance for a construct-only property
+</p>
+<p>
+In these cases, we must act like a load, this should be checked
+from the plugin when implementing containers, when undo/redo comes
+around, the plugin is responsable for maintaining the same container
+size when widgets are added/removed.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-push-superuser"></a><h3>glade_widget_push_superuser ()</h3>
+<pre class="programlisting">void                glade_widget_push_superuser         (void);</pre>
+<p>
+Sets superuser mode</p>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-widget-pop-superuser"></a><h3>glade_widget_pop_superuser ()</h3>
+<pre class="programlisting">void                glade_widget_pop_superuser          (void);</pre>
+<p>
+Unsets superuser mode</p>
+<p>
+
+</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="GladeWidget.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--adaptor"></a><h3>The <code class="literal">"adaptor"</code> property</h3>
+<pre class="programlisting">  "adaptor"                  GladeGObjectAdaptor*  : Read / Write / Construct Only</pre>
+<p>The class adaptor for the associated widget.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--anarchist"></a><h3>The <code class="literal">"anarchist"</code> property</h3>
+<pre class="programlisting">  "anarchist"                gboolean              : Read / Write / Construct Only</pre>
+<p>Whether this composite child is an ancestral child or an anarchist child.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--info"></a><h3>The <code class="literal">"info"</code> property</h3>
+<pre class="programlisting">  "info"                     gpointer              : Write / Construct Only</pre>
+<p>A GladeWidgetInfo struct to base a new widget on.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--internal"></a><h3>The <code class="literal">"internal"</code> property</h3>
+<pre class="programlisting">  "internal"                 gchar*                : Read / Write / Construct</pre>
+<p>The internal name of the widget.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--internal-name"></a><h3>The <code class="literal">"internal-name"</code> property</h3>
+<pre class="programlisting">  "internal-name"            gchar*                : Write / Construct Only</pre>
+<p>A generic name prefix for internal widgets.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     gchar*                : Read / Write / Construct</pre>
+<p>The name of the widget.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--object"></a><h3>The <code class="literal">"object"</code> property</h3>
+<pre class="programlisting">  "object"                   GObject*              : Read / Write / Construct</pre>
+<p>The object associated.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--parent"></a><h3>The <code class="literal">"parent"</code> property</h3>
+<pre class="programlisting">  "parent"                   <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*          : Read / Write / Construct</pre>
+<p>A pointer to the parenting GladeWidget.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--project"></a><h3>The <code class="literal">"project"</code> property</h3>
+<pre class="programlisting">  "project"                  <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a>*         : Read / Write / Construct</pre>
+<p>The glade project that this widget belongs to.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--properties"></a><h3>The <code class="literal">"properties"</code> property</h3>
+<pre class="programlisting">  "properties"               gpointer              : Read / Write / Construct Only</pre>
+<p>A list of GladeProperties.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--reason"></a><h3>The <code class="literal">"reason"</code> property</h3>
+<pre class="programlisting">  "reason"                   gint                  : Write / Construct Only</pre>
+<p>A GladeCreateReason for this creation.</p>
+<p>Allowed values: [0,3]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--template"></a><h3>The <code class="literal">"template"</code> property</h3>
+<pre class="programlisting">  "template"                 <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>*          : Write / Construct Only</pre>
+<p>A GladeWidget template to base a new widget on.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--toplevel-height"></a><h3>The <code class="literal">"toplevel-height"</code> property</h3>
+<pre class="programlisting">  "toplevel-height"          gint                  : Read / Write</pre>
+<p>The height of the widget when toplevel in the GladeDesignLayout.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget--toplevel-width"></a><h3>The <code class="literal">"toplevel-width"</code> property</h3>
+<pre class="programlisting">  "toplevel-width"           gint                  : Read / Write</pre>
+<p>The width of the widget when toplevel in the GladeDesignLayout.</p>
+<p>Allowed values: &gt;= G_MAXULONG</p>
+<p>Default value: -1</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="GladeWidget.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="GladeWidget-add-signal-handler"></a><h3>The <code class="literal">"add-signal-handler"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gladewidget,
+                                                        gpointer     arg1,
+                                                        gpointer     user_data)        : Run Last</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladewidget</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td> the <span class="type">GladeSignal</span> that was added to <em class="parameter"><code>gladewidget</code></em>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget-button-press-event"></a><h3>The <code class="literal">"button-press-event"</code> signal</h3>
+<pre class="programlisting">gboolean            user_function                      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>    *gladewidget,
+                                                        GdkEventButton *arg1,
+                                                        gpointer        user_data)        : Run Last</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladewidget</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td> the <span class="type">GdkEvent</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget-button-release-event"></a><h3>The <code class="literal">"button-release-event"</code> signal</h3>
+<pre class="programlisting">gboolean            user_function                      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>    *gladewidget,
+                                                        GdkEventButton *event,
+                                                        gpointer        user_data)        : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladewidget</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget-change-signal-handler"></a><h3>The <code class="literal">"change-signal-handler"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gladewidget,
+                                                        gpointer     arg1,
+                                                        gpointer     arg2,
+                                                        gpointer     user_data)        : Run Last</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladewidget</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td> the old <span class="type">GladeSignal</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td> the new <span class="type">GladeSignal</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget-motion-notify-event"></a><h3>The <code class="literal">"motion-notify-event"</code> signal</h3>
+<pre class="programlisting">gboolean            user_function                      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a>    *gladewidget,
+                                                        GdkEventMotion *arg1,
+                                                        gpointer        user_data)        : Run Last</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladewidget</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td> the <span class="type">GdkEvent</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeWidget-remove-signal-handler"></a><h3>The <code class="literal">"remove-signal-handler"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *gladewidget,
+                                                        gpointer     arg1,
+                                                        gpointer     user_data)        : Run Last</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladewidget</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td> the <span class="type">GladeSignal</span> that was removed from <em class="parameter"><code>gladewidget</code></em>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.10</div>
+</body>
+</html>

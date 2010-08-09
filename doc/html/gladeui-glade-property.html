@@ -1,0 +1,1343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GladeProperty</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="Glade UI Builder Reference Manual">
+<link rel="up" href="core.html" title="Part II. Glade Core">
+<link rel="prev" href="GladeFixed.html" title="GladeFixed">
+<link rel="next" href="gladeui-GladeWidgetAdaptor.html" title="GladeWidgetAdaptor">
+<meta name="generator" content="GTK-Doc V1.10 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="catalog.html" title="Part I. Adding your custom widgets">
+<link rel="part" href="core.html" title="Part II. Glade Core">
+<link rel="part" href="dockables.html" title="Part III. Dockable Glade UI Widgets">
+<link rel="part" href="misc.html" title="Part IV. Miscellaneous utilities">
+<link rel="index" href="ix01.html" title="Index">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GladeFixed.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="core.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Glade UI Builder Reference Manual</th>
+<td><a accesskey="n" href="gladeui-GladeWidgetAdaptor.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#gladeui-glade-property.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#gladeui-glade-property.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#gladeui-glade-property.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#gladeui-glade-property.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#gladeui-glade-property.signals" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="gladeui-glade-property"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gladeui-glade-property.top_of_page"></a>GladeProperty</span></h2>
+<p>GladeProperty — An interface to properties on the <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="gladeui-glade-property.synopsis"></a><h2>Synopsis</h2>
+<a name="GladeProperty"></a><pre class="synopsis">
+#define             <a class="link" href="gladeui-glade-property.html#GLADE-PROPERTY-KLASS:CAPS" title="GLADE_PROPERTY_KLASS()">GLADE_PROPERTY_KLASS</a>                (klass)
+#define             <a class="link" href="gladeui-glade-property.html#GLADE-IS-PROPERTY-KLASS:CAPS" title="GLADE_IS_PROPERTY_KLASS()">GLADE_IS_PROPERTY_KLASS</a>             (klass)
+#define             <a class="link" href="gladeui-glade-property.html#GLADE-PROPERTY-GET-KLASS:CAPS" title="GLADE_PROPERTY_GET_KLASS()">GLADE_PROPERTY_GET_KLASS</a>            (o)
+                    <a class="link" href="gladeui-glade-property.html#GladePropertyKlass" title="GladePropertyKlass">GladePropertyKlass</a>;
+struct              <a class="link" href="gladeui-glade-property.html#GladeProperty-struct" title="struct GladeProperty">GladeProperty</a>;
+<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      <a class="link" href="gladeui-glade-property.html#glade-property-new" title="glade_property_new ()">glade_property_new</a>                  (GladePropertyClass *klass,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GValue *value);
+<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      <a class="link" href="gladeui-glade-property.html#glade-property-dup" title="glade_property_dup ()">glade_property_dup</a>                  (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *template_prop,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-reset" title="glade_property_reset ()">glade_property_reset</a>                (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-original-reset" title="glade_property_original_reset ()">glade_property_original_reset</a>       (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-default" title="glade_property_default ()">glade_property_default</a>              (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-original-default" title="glade_property_original_default ()">glade_property_original_default</a>     (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-equals-value" title="glade_property_equals_value ()">glade_property_equals_value</a>         (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         const GValue *value);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-equals" title="glade_property_equals ()">glade_property_equals</a>               (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         ...);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-set-value" title="glade_property_set_value ()">glade_property_set_value</a>            (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         const GValue *value);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-set-va-list" title="glade_property_set_va_list ()">glade_property_set_va_list</a>          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         va_list vl);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-set" title="glade_property_set ()">glade_property_set</a>                  (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         ...);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-get-value" title="glade_property_get_value ()">glade_property_get_value</a>            (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GValue *value);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-get-default" title="glade_property_get_default ()">glade_property_get_default</a>          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GValue *value);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-get-va-list" title="glade_property_get_va_list ()">glade_property_get_va_list</a>          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         va_list vl);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-get" title="glade_property_get ()">glade_property_get</a>                  (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         ...);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-add-object" title="glade_property_add_object ()">glade_property_add_object</a>           (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GObject *object);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-remove-object" title="glade_property_remove_object ()">glade_property_remove_object</a>        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GObject *object);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-sync" title="glade_property_sync ()">glade_property_sync</a>                 (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-load" title="glade_property_load ()">glade_property_load</a>                 (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+GValue*             <a class="link" href="gladeui-glade-property.html#glade-property-read" title="glade_property_read ()">glade_property_read</a>                 (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GladePropertyClass *pclass,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project,
+                                                         gpointer info,
+                                                         gboolean free_value);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-write" title="glade_property_write ()">glade_property_write</a>                (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeInterface"
+>GladeInterface</a> *interface,
+                                                         GArray *props);
+const gchar*        <a class="link" href="gladeui-glade-property.html#glade-property-get-tooltip" title="glade_property_get_tooltip ()">glade_property_get_tooltip</a>          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-set-sensitive" title="glade_property_set_sensitive ()">glade_property_set_sensitive</a>        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean sensitive,
+                                                         const gchar *reason);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-get-sensitive" title="glade_property_get_sensitive ()">glade_property_get_sensitive</a>        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-set-save-always" title="glade_property_set_save_always ()">glade_property_set_save_always</a>      (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean setting);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-get-save-always" title="glade_property_get_save_always ()">glade_property_get_save_always</a>      (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-set-enabled" title="glade_property_set_enabled ()">glade_property_set_enabled</a>          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean enabled);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-get-enabled" title="glade_property_get_enabled ()">glade_property_get_enabled</a>          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-i18n-set-comment" title="glade_property_i18n_set_comment ()">glade_property_i18n_set_comment</a>     (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         const gchar *str);
+const gchar*        <a class="link" href="gladeui-glade-property.html#glade-property-i18n-get-comment" title="glade_property_i18n_get_comment ()">glade_property_i18n_get_comment</a>     (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-i18n-set-translatable" title="glade_property_i18n_set_translatable ()">glade_property_i18n_set_translatable</a>
+                                                        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean translatable);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-i18n-get-translatable" title="glade_property_i18n_get_translatable ()">glade_property_i18n_get_translatable</a>
+                                                        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-i18n-set-has-context" title="glade_property_i18n_set_has_context ()">glade_property_i18n_set_has_context</a> (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean has_context);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-i18n-get-has-context" title="glade_property_i18n_get_has_context ()">glade_property_i18n_get_has_context</a> (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-push-superuser" title="glade_property_push_superuser ()">glade_property_push_superuser</a>       (void);
+void                <a class="link" href="gladeui-glade-property.html#glade-property-pop-superuser" title="glade_property_pop_superuser ()">glade_property_pop_superuser</a>        (void);
+gboolean            <a class="link" href="gladeui-glade-property.html#glade-property-superuser" title="glade_property_superuser ()">glade_property_superuser</a>            (void);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-glade-property.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GladeProperty
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-glade-property.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="gladeui-glade-property.html#GladeProperty--enabled" title='The "enabled" property'>enabled</a>"                  gboolean              : Read / Write
+  "<a class="link" href="gladeui-glade-property.html#GladeProperty--i18n-comment" title='The "i18n-comment" property'>i18n-comment</a>"             gchar*                : Read / Write
+  "<a class="link" href="gladeui-glade-property.html#GladeProperty--i18n-has-context" title='The "i18n-has-context" property'>i18n-has-context</a>"         gboolean              : Read / Write
+  "<a class="link" href="gladeui-glade-property.html#GladeProperty--i18n-translatable" title='The "i18n-translatable" property'>i18n-translatable</a>"        gboolean              : Read / Write
+  "<a class="link" href="gladeui-glade-property.html#GladeProperty--sensitive" title='The "sensitive" property'>sensitive</a>"                gboolean              : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-glade-property.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="gladeui-glade-property.html#GladeProperty-tooltip-changed" title='The "tooltip-changed" signal'>tooltip-changed</a>"                                : Run Last
+  "<a class="link" href="gladeui-glade-property.html#GladeProperty-value-changed" title='The "value-changed" signal'>value-changed</a>"                                  : Run Last
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-glade-property.description"></a><h2>Description</h2>
+<p>
+Every object property of every <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> in every <a class="link" href="GladeProject.html" title="GladeProject"><span class="type">GladeProject</span></a> has
+a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> to interface with, <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> provides a means
+to handle properties in the runtime environment.
+</p>
+<p>
+A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> can be seen as an instance of a <span class="type">GladePropertyClass</span>, 
+the <span class="type">GladePropertyClass</span> describes how a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> will function.</p>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-glade-property.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="GLADE-PROPERTY-KLASS:CAPS"></a><h3>GLADE_PROPERTY_KLASS()</h3>
+<pre class="programlisting">#define GLADE_PROPERTY_KLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GLADE_TYPE_PROPERTY, GladePropertyKlass))
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GLADE-IS-PROPERTY-KLASS:CAPS"></a><h3>GLADE_IS_PROPERTY_KLASS()</h3>
+<pre class="programlisting">#define GLADE_IS_PROPERTY_KLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GLADE_TYPE_PROPERTY))
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GLADE-PROPERTY-GET-KLASS:CAPS"></a><h3>GLADE_PROPERTY_GET_KLASS()</h3>
+<pre class="programlisting">#define GLADE_PROPERTY_GET_KLASS(o)    (G_TYPE_INSTANCE_GET_CLASS ((o), GLADE_PROPERTY, GladePropertyKlass))
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>o</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladePropertyKlass"></a><h3>GladePropertyKlass</h3>
+<pre class="programlisting">typedef struct {
+	GObjectClass  parent_class;
+
+	/* Class methods */
+	GladeProperty *         (* dup)                   (GladeProperty *, GladeWidget *);
+	gboolean                (* equals_value)          (GladeProperty *, const GValue *);
+	void                    (* set_value)             (GladeProperty *, const GValue *);
+	void                    (* get_value)             (GladeProperty *, GValue *);
+	void                    (* get_default)           (GladeProperty *, GValue *);
+	void                    (* sync)                  (GladeProperty *);
+	void                    (* load)                  (GladeProperty *);
+	gboolean                (* write)                 (GladeProperty *, GladeInterface *, GArray *);
+	G_CONST_RETURN gchar *  (* get_tooltip)           (GladeProperty *);
+
+	/* Signals */
+	void             (* value_changed)         (GladeProperty *, GValue *, GValue *);
+	void             (* tooltip_changed)       (GladeProperty *, const gchar *);
+} GladePropertyKlass;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeProperty-struct"></a><h3>struct GladeProperty</h3>
+<pre class="programlisting">struct GladeProperty;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-new"></a><h3>glade_property_new ()</h3>
+<pre class="programlisting"><a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      glade_property_new                  (GladePropertyClass *klass,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget,
+                                                         GValue *value);</pre>
+<p>
+Creates a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> of type <em class="parameter"><code>klass</code></em> for <em class="parameter"><code>widget</code></em> with <em class="parameter"><code>value</code></em>; if
+<em class="parameter"><code>value</code></em> is <code class="literal">NULL</code>, then the introspected default value for that property
+will be used.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td> A <span class="type">GladePropertyClass</span> defining this property
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> The <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a> this property is created for
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> The initial <span class="type">GValue</span> of the property or <code class="literal">NULL</code>
+        (the <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> will assume ownership of <em class="parameter"><code>value</code></em>)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The newly created <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-dup"></a><h3>glade_property_dup ()</h3>
+<pre class="programlisting"><a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a>*      glade_property_dup                  (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *template_prop,
+                                                         <a class="link" href="GladeWidget.html" title="GladeWidget">GladeWidget</a> *widget);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>template_prop</code></em> :</span></p></td>
+<td> A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>widget</code></em> :</span></p></td>
+<td> A <a class="link" href="GladeWidget.html" title="GladeWidget"><span class="type">GladeWidget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly duplicated property based on the new widget
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-reset"></a><h3>glade_property_reset ()</h3>
+<pre class="programlisting">void                glade_property_reset                (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+Resets this property to its default value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-original-reset"></a><h3>glade_property_original_reset ()</h3>
+<pre class="programlisting">void                glade_property_original_reset       (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+Resets this property to its original default value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-default"></a><h3>glade_property_default ()</h3>
+<pre class="programlisting">gboolean            glade_property_default              (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Whether this property is at its default value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-original-default"></a><h3>glade_property_original_default ()</h3>
+<pre class="programlisting">gboolean            glade_property_original_default     (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Whether this property is at its original default value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-equals-value"></a><h3>glade_property_equals_value ()</h3>
+<pre class="programlisting">gboolean            glade_property_equals_value         (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         const GValue *value);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> a <span class="type">GValue</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Whether this property is equal to the value provided
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-equals"></a><h3>glade_property_equals ()</h3>
+<pre class="programlisting">gboolean            glade_property_equals               (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         ...);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> a provided property value
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Whether this property is equal to the value provided
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-set-value"></a><h3>glade_property_set_value ()</h3>
+<pre class="programlisting">void                glade_property_set_value            (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         const GValue *value);</pre>
+<p>
+Sets the property's value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> a <span class="type">GValue</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-set-va-list"></a><h3>glade_property_set_va_list ()</h3>
+<pre class="programlisting">void                glade_property_set_va_list          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         va_list vl);</pre>
+<p>
+Sets the property's value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vl</code></em> :</span></p></td>
+<td> a va_list with value to set
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-set"></a><h3>glade_property_set ()</h3>
+<pre class="programlisting">void                glade_property_set                  (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         ...);</pre>
+<p>
+Sets the property's value (in a convenient way)</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> the value to set
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get-value"></a><h3>glade_property_get_value ()</h3>
+<pre class="programlisting">void                glade_property_get_value            (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GValue *value);</pre>
+<p>
+Retrieve the property value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> a <span class="type">GValue</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get-default"></a><h3>glade_property_get_default ()</h3>
+<pre class="programlisting">void                glade_property_get_default          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GValue *value);</pre>
+<p>
+Retrieve the default property value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td> a <span class="type">GValue</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get-va-list"></a><h3>glade_property_get_va_list ()</h3>
+<pre class="programlisting">void                glade_property_get_va_list          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         va_list vl);</pre>
+<p>
+Retrieve the property value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>vl</code></em> :</span></p></td>
+<td> a va_list
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get"></a><h3>glade_property_get ()</h3>
+<pre class="programlisting">void                glade_property_get                  (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         ...);</pre>
+<p>
+Retrieve the property value</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td> An address to store the value
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-add-object"></a><h3>glade_property_add_object ()</h3>
+<pre class="programlisting">void                glade_property_add_object           (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GObject *object);</pre>
+<p>
+Adds <em class="parameter"><code>object</code></em> to the object list in <em class="parameter"><code>property</code></em>.
+</p>
+<p>
+Note: This function expects <em class="parameter"><code>property</code></em> to be a <span class="type">GladeParamSpecObjects</span>
+or <span class="type">GParamSpecObject</span> type property.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td> The <span class="type">GObject</span> to add
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-remove-object"></a><h3>glade_property_remove_object ()</h3>
+<pre class="programlisting">void                glade_property_remove_object        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GObject *object);</pre>
+<p>
+Removes <em class="parameter"><code>object</code></em> from the object list in <em class="parameter"><code>property</code></em>.
+</p>
+<p>
+Note: This function expects <em class="parameter"><code>property</code></em> to be a <span class="type">GladeParamSpecObjects</span>
+or <span class="type">GParamSpecObject</span> type property.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td> The <span class="type">GObject</span> to add
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-sync"></a><h3>glade_property_sync ()</h3>
+<pre class="programlisting">void                glade_property_sync                 (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+Synchronize the object with this property</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-load"></a><h3>glade_property_load ()</h3>
+<pre class="programlisting">void                glade_property_load                 (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+Loads the value of <em class="parameter"><code>property</code></em> from the coresponding object instance</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-read"></a><h3>glade_property_read ()</h3>
+<pre class="programlisting">GValue*             glade_property_read                 (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         GladePropertyClass *pclass,
+                                                         <a class="link" href="GladeProject.html" title="GladeProject">GladeProject</a> *project,
+                                                         gpointer info,
+                                                         gboolean free_value);</pre>
+<p>
+Read the value and any attributes for <em class="parameter"><code>property</code></em> from <em class="parameter"><code>info</code></em>, assumes
+<em class="parameter"><code>property</code></em> is being loaded for <em class="parameter"><code>project</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a> or <span class="type">NULL</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pclass</code></em> :</span></p></td>
+<td> the <span class="type">GladePropertyClass</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>project</code></em> :</span></p></td>
+<td> the <a class="link" href="GladeProject.html" title="GladeProject"><span class="type">GladeProject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>info</code></em> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeWidgetInfo"
+><span class="type">GladeWidgetInfo</span></a> struct or a <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeChildInfo"
+><span class="type">GladeChildInfo</span></a> struct if
+       a packing property is passed.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>free_value</code></em> :</span></p></td>
+<td> Whether the return value should be freed after applying
+             it to the property or if it should be returned in tact.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The newly created <span class="type">GValue</span> if successfull (and if <em class="parameter"><code>free_value</code></em> == FALSE)
+
+Note that object values will only be resolved after the project is
+completely loaded
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-write"></a><h3>glade_property_write ()</h3>
+<pre class="programlisting">gboolean            glade_property_write                (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeInterface"
+>GladeInterface</a> *interface,
+                                                         GArray *props);</pre>
+<p>
+Write this property to the GladeInterface metadata</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>interface</code></em> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/libglade/libglade-Libglade-SAX-Parser.html#GladeInterface"
+><span class="type">GladeInterface</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>props</code></em> :</span></p></td>
+<td> a GArray of <span class="type">GladePropInfo</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get-tooltip"></a><h3>glade_property_get_tooltip ()</h3>
+<pre class="programlisting">const gchar*        glade_property_get_tooltip          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> a <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The appropriate tooltip for the editor
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-set-sensitive"></a><h3>glade_property_set_sensitive ()</h3>
+<pre class="programlisting">void                glade_property_set_sensitive        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean sensitive,
+                                                         const gchar *reason);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sensitive</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>reason</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get-sensitive"></a><h3>glade_property_get_sensitive ()</h3>
+<pre class="programlisting">gboolean            glade_property_get_sensitive        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-set-save-always"></a><h3>glade_property_set_save_always ()</h3>
+<pre class="programlisting">void                glade_property_set_save_always      (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean setting);</pre>
+<p>
+Sets whether this property should be special cased
+to always be saved regardless of its default value.
+(used for some special cases like properties
+that are assigned initial values in composite widgets
+or derived widget code).</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>setting</code></em> :</span></p></td>
+<td> the value to set
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get-save-always"></a><h3>glade_property_get_save_always ()</h3>
+<pre class="programlisting">gboolean            glade_property_get_save_always      (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td> A <a class="link" href="gladeui-glade-property.html#GladeProperty"><span class="type">GladeProperty</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>whether this property is special cased
+to always be saved regardless of its default value.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-set-enabled"></a><h3>glade_property_set_enabled ()</h3>
+<pre class="programlisting">void                glade_property_set_enabled          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean enabled);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>enabled</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-get-enabled"></a><h3>glade_property_get_enabled ()</h3>
+<pre class="programlisting">gboolean            glade_property_get_enabled          (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-i18n-set-comment"></a><h3>glade_property_i18n_set_comment ()</h3>
+<pre class="programlisting">void                glade_property_i18n_set_comment     (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         const gchar *str);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-i18n-get-comment"></a><h3>glade_property_i18n_get_comment ()</h3>
+<pre class="programlisting">const gchar*        glade_property_i18n_get_comment     (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-i18n-set-translatable"></a><h3>glade_property_i18n_set_translatable ()</h3>
+<pre class="programlisting">void                glade_property_i18n_set_translatable
+                                                        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean translatable);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>translatable</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-i18n-get-translatable"></a><h3>glade_property_i18n_get_translatable ()</h3>
+<pre class="programlisting">gboolean            glade_property_i18n_get_translatable
+                                                        (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-i18n-set-has-context"></a><h3>glade_property_i18n_set_has_context ()</h3>
+<pre class="programlisting">void                glade_property_i18n_set_has_context (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property,
+                                                         gboolean has_context);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>has_context</code></em> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-i18n-get-has-context"></a><h3>glade_property_i18n_get_has_context ()</h3>
+<pre class="programlisting">gboolean            glade_property_i18n_get_has_context (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *property);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-push-superuser"></a><h3>glade_property_push_superuser ()</h3>
+<pre class="programlisting">void                glade_property_push_superuser       (void);</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-pop-superuser"></a><h3>glade_property_pop_superuser ()</h3>
+<pre class="programlisting">void                glade_property_pop_superuser        (void);</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="glade-property-superuser"></a><h3>glade_property_superuser ()</h3>
+<pre class="programlisting">gboolean            glade_property_superuser            (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-glade-property.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="GladeProperty--enabled"></a><h3>The <code class="literal">"enabled"</code> property</h3>
+<pre class="programlisting">  "enabled"                  gboolean              : Read / Write</pre>
+<p>If the property is optional, this is its enabled state.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeProperty--i18n-comment"></a><h3>The <code class="literal">"i18n-comment"</code> property</h3>
+<pre class="programlisting">  "i18n-comment"             gchar*                : Read / Write</pre>
+<p>Comment for translators.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeProperty--i18n-has-context"></a><h3>The <code class="literal">"i18n-has-context"</code> property</h3>
+<pre class="programlisting">  "i18n-has-context"         gboolean              : Read / Write</pre>
+<p>Whether or not the translatable string has a context prefix.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeProperty--i18n-translatable"></a><h3>The <code class="literal">"i18n-translatable"</code> property</h3>
+<pre class="programlisting">  "i18n-translatable"        gboolean              : Read / Write</pre>
+<p>Whether this property is translatable or not.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeProperty--sensitive"></a><h3>The <code class="literal">"sensitive"</code> property</h3>
+<pre class="programlisting">  "sensitive"                gboolean              : Read / Write</pre>
+<p>This gives backends control to set property sensitivity.</p>
+<p>Default value: TRUE</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="gladeui-glade-property.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="GladeProperty-tooltip-changed"></a><h3>The <code class="literal">"tooltip-changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *gladeproperty,
+                                                        gpointer       arg1,
+                                                        gpointer       user_data)          : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladeproperty</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GladeProperty-value-changed"></a><h3>The <code class="literal">"value-changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="gladeui-glade-property.html#GladeProperty">GladeProperty</a> *gladeproperty,
+                                                        gpointer       arg1,
+                                                        gpointer       arg2,
+                                                        gpointer       user_data)          : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>gladeproperty</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.10</div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Property Class Definitions</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="Glade UI Builder Reference Manual">
+<link rel="up" href="catalog.html" title="Part I. Adding your custom widgets">
+<link rel="prev" href="widgetclasses.html" title="Widget Class Definitions">
+<link rel="next" href="children.html" title="Container Objects">
+<meta name="generator" content="GTK-Doc V1.10 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="part" href="catalog.html" title="Part I. Adding your custom widgets">
+<link rel="part" href="core.html" title="Part II. Glade Core">
+<link rel="part" href="dockables.html" title="Part III. Dockable Glade UI Widgets">
+<link rel="part" href="misc.html" title="Part IV. Miscellaneous utilities">
+<link rel="index" href="ix01.html" title="Index">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="widgetclasses.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="catalog.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Glade UI Builder Reference Manual</th>
+<td><a accesskey="n" href="children.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry" lang="en">
+<a name="properties"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle">Property Class Definitions</span></h2>
+<p>Property Classes — 
+How to augment or define a <span class="type">GladePropertyClass</span>
+    </p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1" lang="en">
+<a name="id343336"></a><h2>Property Class Parameters</h2>
+<p>
+There are alot of things that can be done with properties in glade; properties
+can be added and removed from widget classes, lets list all the different
+things you can do with properties.
+    </p>
+<p>
+Properties of the 'property' tag:
+      </p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term">name</span></p></td>
+<td><p>
+The name to be used in the interface, this string is translated.
+(if name is not specified; it defaults to the nickname of the <span class="type">GParamSpec</span>)
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">id</span></p></td>
+<td><p>
+This is manditory and specifies the property that we are modifying (or adding)
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">disabled</span></p></td>
+<td><p>
+Remove this property from this widget class and derived classes
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">default</span></p></td>
+<td><p>
+A default value to be used for this property
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">translatable</span></p></td>
+<td><p>
+For text properties, whether the property value is translatable in glade
+interfaces (this will enable the i18n dialog on text properties). Defaults to False.
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">common</span></p></td>
+<td><p>
+If set to "True", the property will end up on the common tab even if
+its not a property of GtkWidgetClass.
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">optional</span></p></td>
+<td><p>
+Whether this property is an optional property, this will make the property
+insensitive and add a check box to enable it (like width/height-request for
+example).
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">optional-default</span></p></td>
+<td><p>
+If this is in fact an optional property; whether it is enabled by default.
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">query</span></p></td>
+<td><p>
+If query is set; the property will be queried from the user in a dialog
+when adding the owning widget class instance to the project.
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">save</span></p></td>
+<td><p>
+Whether to save this property to the glade file (default "True")
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">visible</span></p></td>
+<td><p>
+Whether to show the property in the editor (default "True")
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">ignore</span></p></td>
+<td><p>
+Whether to set the property on the object instance (via g_object_set_property or
+plugin override functions) when it changes in the editor (the value in the editor
+is the value saved).
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">resource</span></p></td>
+<td><p>
+This is for string properties that represent filenames that are packaged with
+the glade file (like pixbufs); you can set this to "True" and the string
+property will be treated like a resource.
+            </p></td>
+</tr>
+</tbody>
+</table></div>
+<p>
+    </p>
+<p>
+Child tags of the 'property' tag:
+      </p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term">spec</span></p></td>
+<td><p>
+Specifies a function to be used to return a <span class="type">GParamSpec</span> for this property;
+this is used to add virtual properties to an object (like the "size" property
+on <span class="type">GtkBox</span>).
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">tooltip</span></p></td>
+<td><p>
+The tooltip to be displayed in the property editor for this property, this
+is also translated. The tooltip defaults to the blurb of the associated
+<span class="type">GParamSpec</span>.
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">visible-lines</span></p></td>
+<td><p>
+An integer value to specify how many lines will be shown for text properties
+in the editor (this doesnt really work because of the complexity of calculating
+size of rendered text; instead, just set this to 2 if you want the text property
+to be edited in a textview with a scrolled window as opposed to a simple text entry).
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">set-function</span></p></td>
+<td><p>
+A <a class="link" href="gladeui-GladeWidgetAdaptor.html#GladeSetPropertyFunc" title="GladeSetPropertyFunc ()"><span class="type">GladeSetPropertyFunc</span></a> used to set the property instead of <code class="function">g_object_set()</code>
+            </p></td>
+</tr>
+<tr>
+<td><p><span class="term">get-function</span></p></td>
+<td>
+<p>
+A <a class="link" href="gladeui-GladeWidgetAdaptor.html#GladeSetPropertyFunc" title="GladeSetPropertyFunc ()"><span class="type">GladeSetPropertyFunc</span></a> function used to set the property instead of <code class="function">g_object_get()</code>
+            </p>
+<p>
+Technical note: that the get-function is hardly ever used, the only 
+time glade-3 will actually ask the object what a property's value should be; 
+is when adding a widget to a container and introspecting the values that 
+the container assigned the child as packing properties.
+            </p>
+</td>
+</tr>
+<tr>
+<td><p><span class="term">verify-function</span></p></td>
+<td>
+<p>
+A <a class="link" href="gladeui-GladeWidgetAdaptor.html#GladeVerifyPropertyFunc" title="GladeVerifyPropertyFunc ()"><span class="type">GladeVerifyPropertyFunc</span></a> function to verify whether the requested value is valid. 
+If specified; the editor will not allow the user to commit a value that this 
+function returns False for.
+            </p>
+<p>
+Technical note: verify functions are nescisary in glade-3 because of
+the abstraction between the value maintained in the glade-3 core and
+the value that is actually on the said GObject's property. In other words,
+if verify-function returns false; glade's value won't change and set-function
+won't be called, if set-function decides not commit the said value, thats
+its own rotten business (hehe) and if the property is set to ignore="True",
+verify functions will still function properly even if set-functions are not
+called for that property.
+            </p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p>
+    </p>
+</div>
+<div class="refsect2" lang="en">
+<a name="id343698"></a><h3>Displayable Values, Packing defaults and such</h3>
+<p>
+Enum and Flag type properties tend to have long complicated names unsuited for the glade
+environment, glade will allow you to substitute these names using the displayable-values
+child tag; the form looks like this:
+      </p>
+<pre class="programlisting">
+&lt;property id="pack-type"&gt;
+  &lt;displayable-values&gt;
+    &lt;value id="GTK_PACK_START" name="Start"&gt;&lt;/value&gt;
+    &lt;value id="GTK_PACK_END" name="End"&gt;&lt;/value&gt;
+  &lt;/displayable-values&gt;
+&lt;/property&gt;</pre>
+<p>
+Note that the "name" (which will be the resulting name for each `id') is a translated
+string.
+    </p>
+<p>
+A widget class may have default packing properties for each type of container that
+it can be added to; a short example should suffice as a description of how this works:
+      </p>
+<pre class="programlisting">
+&lt;packing-defaults&gt;
+  &lt;parent-class name="GtkVBox"&gt;
+    &lt;child-property id="expand" default="false"/&gt;
+  &lt;/parent-class&gt;
+&lt;/packing-defaults&gt;</pre>
+<p>
+Note that you can list any number of 'packing-defaults' in a row.
+    </p>
+<p>
+Properties can have additional parameters; these are completely unused by glade
+but may be usefull for a plugin writer who may want to use the GladeParameter
+api to find parameters on property classes; the form looks like this:
+      </p>
+<pre class="programlisting">
+&lt;property id="foo"&gt;
+  &lt;parameters&gt;
+    &lt;parameter key="Min" value="1"/&gt;
+    &lt;parameter key="Max" value="10000"/&gt;
+  &lt;/parameters&gt;
+&lt;/property&gt;</pre>
+<p>
+    </p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.10</div>
+</body>
+</html>
