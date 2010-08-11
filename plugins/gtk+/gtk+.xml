@@ -1697,21 +1697,5 @@
     <glade-widget-class-ref name="GtkFileChooserWidget"/>
   </glade-widget-group>
 
-  <glade-widget-group name="gtk-obsolete" title="Gtk+ Obsolete">
-
-    <default-palette-state expanded="False"/>
-
-    <glade-widget-class-ref name="GtkCombo"/>
-    <glade-widget-class-ref name="GtkOptionMenu"/>
-    <glade-widget-class-ref name="GtkHRuler"/>
-    <glade-widget-class-ref name="GtkVRuler"/>
-    <glade-widget-class-ref name="GtkList"/>
-    <glade-widget-class-ref name="GtkCList"/>
-    <glade-widget-class-ref name="GtkColorSelection"/>
-    <glade-widget-class-ref name="GtkFontSelection"/>
-    <glade-widget-class-ref name="GtkCurve"/>
-    <glade-widget-class-ref name="GtkGammaCurve"/>
-    <glade-widget-class-ref name="GtkFileSelection"/>
-    <glade-widget-class-ref name="Custom"/>
-  </glade-widget-group>
+  
 </glade-catalog>

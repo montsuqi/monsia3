@@ -1,0 +1,27 @@
+<glade-catalog name="gtkpanda2"
+               library="gladegtkpanda2"
+               depends="gtk+"
+               domain="glade3">
+  <init-function>glade_gtkpanda2_init</init-function>
+
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaEntry" generic-name="pandaentry" _title="GtkPandaEntry"/>
+<!--
+      <properties>
+        <property id="input_mode">
+	      <displayable-values>
+	        <value id="GTK_PANDA_ENTRY_ASCII_MODE" _name="ASCII"/>
+	        <value id="GTK_PANDA_ENTRY_KANA_MODE" _name="KANA"/>
+	        <value id="GTK_PANDA_ENTRY_IM_MODE" _name="IM"/>
+	      </displayable-values>
+        </property>
+      </properties>
+    </glade-widget-class>
+-->
+  </glade-widget-classes>
+
+  <glade-widget-group name="gtkpanda-base" _title="GTK+Panda Widgets">
+    <glade-widget-class-ref name="GtkPandaEntry"/>
+  </glade-widget-group>
+
+</glade-catalog>

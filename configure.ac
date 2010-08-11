@@ -143,6 +143,8 @@ else
   have_gnome=no
 fi
 
+AM_CONDITIONAL(BUILD_GNOME, test x"$have_gnome" = "xyes")
+
 dnl ================================================================
 dnl Check for optional gtk+panda2 libs
 dnl ================================================================
@@ -234,6 +236,10 @@ plugins/gnome/Makefile
 plugins/gnome/icons/Makefile
 plugins/gnome/icons/16x16/Makefile
 plugins/gnome/icons/22x22/Makefile
+plugins/gtkpanda2/Makefile
+plugins/gtkpanda2/icons/Makefile
+plugins/gtkpanda2/icons/16x16/Makefile
+plugins/gtkpanda2/icons/22x22/Makefile
 po/Makefile.in
 doc/Makefile
 doc/version.xml
@@ -250,4 +256,5 @@ Configuration:
 	Compiler:		 ${CC}
 	GTK+ UNIX Print Widgets: ${have_unix_print}
 	GNOME UI Widgets:	 ${have_gnome}
+	GTK+Panda2 Widgets:	 ${have_gtkpanda2}
 "
