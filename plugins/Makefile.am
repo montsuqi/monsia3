@@ -2,11 +2,7 @@
 
 SUBDIRS = gtk+
 
-if BUILD_GNOME
-# don't use gnome plugin
-#SUBDIRS += gnome
-endif
 if BUILD_GTKPANDA2
-SUBDIRS += gtkpanda2
+SUBDIRS += panda
 endif
 

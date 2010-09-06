@@ -73,18 +73,6 @@ AM_CONDITIONAL(GLADE_UNSTABLE, test "x$GLADE_UNSTABLE" = "xyes")
 
 # ================================================================
 
-GNOME_COMMON_INIT
-GNOME_DEBUG_CHECK
-GNOME_COMPILE_WARNINGS([maximum])
-GNOME_MAINTAINER_MODE_DEFINES
-
-# For the plugins, we don't use the warning flags defined by GNOME_COMPILE_WARNINGS.
-# These flags include -Wmissing-prototypes, which we prefer not to use.
-if test "x$GCC" = "xyes"; then
-    PLUGINS_WARN_CFLAGS="-Wall -Wnested-externs -Wpointer-arith"
-fi
-AC_SUBST(PLUGINS_WARN_CFLAGS)
-
 dnl ================================================================
 dnl Gettext stuff.
 dnl ================================================================
@@ -128,24 +116,6 @@ AC_CHECK_FUNCS(gtk_print_unix_dialog_new,[have_unix_print=yes]; break,[have_unix
 AM_CONDITIONAL(HAVE_GTK_UNIX_PRINT, test x"$have_unix_print" = "xyes")
 
 dnl ================================================================
-dnl Check for optional gnome libs
-dnl ================================================================
-AC_ARG_ENABLE(gnome,
-    AS_HELP_STRING([--disable-gnome], [disable gnome catalog]),
-    check_gnome=$enableval, check_gnome=yes)
-
-if test x"$check_gnome" = x"yes"; then
-  PKG_CHECK_MODULES(GNOME, [libbonoboui-2.0 libgnomeui-2.0],
-    [have_gnome=yes],[have_gnome=no])
-  AC_SUBST(GNOME_LIBS)
-  AC_SUBST(GNOME_CFLAGS)
-else
-  have_gnome=no
-fi
-
-AM_CONDITIONAL(BUILD_GNOME, test x"$have_gnome" = "xyes")
-
-dnl ================================================================
 dnl Check for optional gtk+panda2 libs
 dnl ================================================================
 AC_ARG_ENABLE(gtkpanda2,
@@ -162,12 +132,6 @@ else
 fi
 
 AM_CONDITIONAL(BUILD_GTKPANDA2, test x"$have_gtkpanda2" = "xyes")
-
-# ==================================================================
-# Glade User Manual (requires gnome-doc-utils)
-# ==================================================================
-
-GNOME_DOC_INIT([0.9.0],[],[:])
 
 dnl ================================================================
 dnl Check for windows
@@ -232,18 +196,11 @@ plugins/gtk+/Makefile
 plugins/gtk+/icons/Makefile
 plugins/gtk+/icons/16x16/Makefile
 plugins/gtk+/icons/22x22/Makefile
-plugins/gnome/Makefile
-plugins/gnome/icons/Makefile
-plugins/gnome/icons/16x16/Makefile
-plugins/gnome/icons/22x22/Makefile
-plugins/gtkpanda2/Makefile
-plugins/gtkpanda2/icons/Makefile
-plugins/gtkpanda2/icons/16x16/Makefile
-plugins/gtkpanda2/icons/22x22/Makefile
+plugins/panda/Makefile
+plugins/panda/icons/Makefile
+plugins/panda/icons/16x16/Makefile
+plugins/panda/icons/22x22/Makefile
 po/Makefile.in
-doc/Makefile
-doc/version.xml
-help/Makefile
 ])
 
 AC_OUTPUT

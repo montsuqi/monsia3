@@ -32,7 +32,6 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 target_triplet = @target@
-@HAVE_GNOME_DOC_UTILS_TRUE@am__append_1 = help
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
@@ -40,9 +39,8 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	TODO compile config.guess config.sub depcomp install-sh \
 	ltmain.sh missing mkinstalldirs
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/gnome-doc-utils.m4 \
-	$(top_srcdir)/m4/gtk-doc.m4 $(top_srcdir)/m4/intltool.m4 \
-	$(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
+	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
@@ -63,7 +61,7 @@ RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = po data gladeui src plugins doc help
+DIST_SUBDIRS = $(SUBDIRS)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -76,7 +74,6 @@ DIST_ARCHIVES = $(distdir).tar.bz2
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
 ACLOCAL = @ACLOCAL@
-ACLOCAL_AMFLAGS = -I m4
 ALL_LINGUAS = @ALL_LINGUAS@
 AMTAR = @AMTAR@
 AM_CFLAGS = @AM_CFLAGS@
@@ -104,10 +101,7 @@ CYGPATH_W = @CYGPATH_W@
 DATADIRNAME = @DATADIRNAME@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
-DISABLE_DEPRECATED = @DISABLE_DEPRECATED@
-DISTCHECK_CONFIGURE_FLAGS = --disable-scrollkeeper --enable-gtk-doc
 DLLTOOL = @DLLTOOL@
-DOC_USER_FORMATS = @DOC_USER_FORMATS@
 DSYMUTIL = @DSYMUTIL@
 ECHO = @ECHO@
 ECHO_C = @ECHO_C@
@@ -129,15 +123,12 @@ GLADE_UNSTABLE = @GLADE_UNSTABLE@
 GLIB_GENMARSHAL = @GLIB_GENMARSHAL@
 GMOFILES = @GMOFILES@
 GMSGFMT = @GMSGFMT@
-GNOME_CFLAGS = @GNOME_CFLAGS@
-GNOME_LIBS = @GNOME_LIBS@
 GREP = @GREP@
 GTKDOC_CHECK = @GTKDOC_CHECK@
 GTKPANDA2_CFLAGS = @GTKPANDA2_CFLAGS@
 GTKPANDA2_LIBS = @GTKPANDA2_LIBS@
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_LIBS = @GTK_LIBS@
-HELP_DIR = @HELP_DIR@
 HTML_DIR = @HTML_DIR@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -185,7 +176,6 @@ MSGMERGE = @MSGMERGE@
 NMEDIT = @NMEDIT@
 OBJDUMP = @OBJDUMP@
 OBJEXT = @OBJEXT@
-OMF_DIR = @OMF_DIR@
 PACKAGE = @PACKAGE@
 PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
 PACKAGE_NAME = @PACKAGE_NAME@
@@ -194,7 +184,6 @@ PACKAGE_TARNAME = @PACKAGE_TARNAME@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PKG_CONFIG = @PKG_CONFIG@
-PLUGINS_WARN_CFLAGS = @PLUGINS_WARN_CFLAGS@
 POFILES = @POFILES@
 POSUB = @POSUB@
 PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
@@ -206,7 +195,6 @@ SHELL = @SHELL@
 STRIP = @STRIP@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
-WARN_CFLAGS = @WARN_CFLAGS@
 WINDRES = @WINDRES@
 XGETTEXT = @XGETTEXT@
 abs_builddir = @abs_builddir@
@@ -264,21 +252,21 @@ target_os = @target_os@
 target_vendor = @target_vendor@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-SUBDIRS = po data gladeui src plugins doc $(am__append_1)
+SUBDIRS = po data gladeui src plugins 
+ACLOCAL_AMFLAGS = -I m4
 EXTRA_DIST = \
 	autogen.sh \
 	COPYING.GPL \
 	COPYING.LGPL \
 	intltool-extract.in \
 	intltool-merge.in \
-	intltool-update.in \
-	gnome-doc-utils.make
+	intltool-update.in
 
 DISTCLEANFILES = intltool-extract \
                  intltool-merge \
-                 intltool-update \
-                 gnome-doc-utils.make
+                 intltool-update
 
+DISTCHECK_CONFIGURE_FLAGS = --disable-scrollkeeper --enable-gtk-doc
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 

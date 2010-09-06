@@ -922,10 +922,6 @@ GLADE_CURRENT_MINUS_AGE
 GLADE_UNSTABLE
 GLADE_UNSTABLE_TRUE
 GLADE_UNSTABLE_FALSE
-ACLOCAL_AMFLAGS
-WARN_CFLAGS
-DISABLE_DEPRECATED
-PLUGINS_WARN_CFLAGS
 GETTEXT_PACKAGE
 USE_NLS
 MSGFMT_OPTS
@@ -951,22 +947,10 @@ GTK_CFLAGS
 GTK_LIBS
 HAVE_GTK_UNIX_PRINT_TRUE
 HAVE_GTK_UNIX_PRINT_FALSE
-GNOME_CFLAGS
-GNOME_LIBS
-BUILD_GNOME_TRUE
-BUILD_GNOME_FALSE
 GTKPANDA2_CFLAGS
 GTKPANDA2_LIBS
 BUILD_GTKPANDA2_TRUE
 BUILD_GTKPANDA2_FALSE
-HELP_DIR
-OMF_DIR
-DOC_USER_FORMATS
-ENABLE_SK_TRUE
-ENABLE_SK_FALSE
-DISTCHECK_CONFIGURE_FLAGS
-HAVE_GNOME_DOC_UTILS_TRUE
-HAVE_GNOME_DOC_UTILS_FALSE
 PLATFORM_WIN32_TRUE
 PLATFORM_WIN32_FALSE
 NATIVE_WIN32_TRUE
@@ -997,8 +981,6 @@ FFLAGS
 PKG_CONFIG
 GTK_CFLAGS
 GTK_LIBS
-GNOME_CFLAGS
-GNOME_LIBS
 GTKPANDA2_CFLAGS
 GTKPANDA2_LIBS'
 
@@ -1590,14 +1572,8 @@ Optional Features:
   --enable-fast-install[=PKGS]
                           optimize for fast installation [default=yes]
   --disable-libtool-lock  avoid locking (might break parallel builds)
-  --enable-debug          turn on debugging
-  --enable-compile-warnings=[no/minimum/yes/maximum/error]
-                          Turn on compiler warnings
-  --enable-iso-c          Try to warn if code is not ISO C
   --enable-gtk-doc        use gtk-doc to build documentation [default=no]
-  --disable-gnome         disable gnome catalog
   --disable-gtkpanda2     disable gtk+panda2 catalog
-  --disable-scrollkeeper  do not make updates to the scrollkeeper database
 
 Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
@@ -1607,10 +1583,6 @@ Optional Packages:
                           both]
   --with-tags[=TAGS]      include additional configurations [automatic]
   --with-html-dir=PATH    path to installed docs
-  --with-help-dir=DIR     path to help docs
-  --with-omf-dir=DIR      path to OMF files
-  --with-help-formats=FORMATS
-                          list of formats
 
 Some influential environment variables:
   CC          C compiler command
@@ -1629,9 +1601,6 @@ Some influential environment variables:
   PKG_CONFIG  path to pkg-config utility
   GTK_CFLAGS  C compiler flags for GTK, overriding pkg-config
   GTK_LIBS    linker flags for GTK, overriding pkg-config
-  GNOME_CFLAGS
-              C compiler flags for GNOME, overriding pkg-config
-  GNOME_LIBS  linker flags for GNOME, overriding pkg-config
   GTKPANDA2_CFLAGS
               C compiler flags for GTKPANDA2, overriding pkg-config
   GTKPANDA2_LIBS
@@ -6035,7 +6004,7 @@ ia64-*-hpux*)
   ;;
 *-*-irix6*)
   # Find out which ABI we are using.
-  echo '#line 6038 "configure"' > conftest.$ac_ext
+  echo '#line 6007 "configure"' > conftest.$ac_ext
   if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
   (eval $ac_compile) 2>&5
   ac_status=$?
@@ -9382,11 +9351,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:9385: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:9354: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:9389: \$? = $ac_status" >&5
+   echo "$as_me:9358: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -9672,11 +9641,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:9675: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:9644: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:9679: \$? = $ac_status" >&5
+   echo "$as_me:9648: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -9776,11 +9745,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:9779: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:9748: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:9783: \$? = $ac_status" >&5
+   echo "$as_me:9752: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -12153,7 +12122,7 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<EOF
-#line 12156 "configure"
+#line 12125 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -12253,7 +12222,7 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<EOF
-#line 12256 "configure"
+#line 12225 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -14654,11 +14623,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:14657: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:14626: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:14661: \$? = $ac_status" >&5
+   echo "$as_me:14630: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -14758,11 +14727,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:14761: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:14730: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:14765: \$? = $ac_status" >&5
+   echo "$as_me:14734: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -16356,11 +16325,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:16359: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:16328: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:16363: \$? = $ac_status" >&5
+   echo "$as_me:16332: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -16460,11 +16429,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:16463: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:16432: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:16467: \$? = $ac_status" >&5
+   echo "$as_me:16436: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -18680,11 +18649,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:18683: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:18652: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:18687: \$? = $ac_status" >&5
+   echo "$as_me:18656: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -18970,11 +18939,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:18973: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:18942: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:18977: \$? = $ac_status" >&5
+   echo "$as_me:18946: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -19074,11 +19043,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:19077: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:19046: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:19081: \$? = $ac_status" >&5
+   echo "$as_me:19050: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -21801,183 +21770,6 @@ fi
 
 # ================================================================
 
-
-
-
-      ACLOCAL_AMFLAGS="\${ACLOCAL_FLAGS}"
-  if test -n "$ac_macro_dir"; then
-    ACLOCAL_AMFLAGS="-I $ac_macro_dir $ACLOCAL_AMFLAGS"
-  fi
-
-
-
-
-	# Check whether --enable-debug was given.
-if test "${enable_debug+set}" = set; then
-  enableval=$enable_debug;
-else
-  enable_debug=no
-fi
-
-
-	if test x$enable_debug = xyes ; then
-
-cat >>confdefs.h <<\_ACEOF
-#define GNOME_ENABLE_DEBUG 1
-_ACEOF
-
-	fi
-
-
-
-    # Check whether --enable-compile-warnings was given.
-if test "${enable_compile_warnings+set}" = set; then
-  enableval=$enable_compile_warnings;
-else
-  enable_compile_warnings="maximum"
-fi
-
-
-    warnCFLAGS=
-    if test "x$GCC" != xyes; then
-	enable_compile_warnings=no
-    fi
-
-    warning_flags=
-    realsave_CFLAGS="$CFLAGS"
-
-    case "$enable_compile_warnings" in
-    no)
-	warning_flags=
-	;;
-    minimum)
-	warning_flags="-Wall"
-	;;
-    yes)
-	warning_flags="-Wall -Wmissing-prototypes"
-	;;
-    maximum|error)
-	warning_flags="-Wall -Wmissing-prototypes -Wnested-externs -Wpointer-arith"
-	CFLAGS="$warning_flags $CFLAGS"
-	for option in -Wno-sign-compare; do
-		SAVE_CFLAGS="$CFLAGS"
-		CFLAGS="$CFLAGS $option"
-		{ echo "$as_me:$LINENO: checking whether gcc understands $option" >&5
-echo $ECHO_N "checking whether gcc understands $option... $ECHO_C" >&6; }
-		cat >conftest.$ac_ext <<_ACEOF
-/* confdefs.h.  */
-_ACEOF
-cat confdefs.h >>conftest.$ac_ext
-cat >>conftest.$ac_ext <<_ACEOF
-/* end confdefs.h.  */
-
-int
-main ()
-{
-
-  ;
-  return 0;
-}
-_ACEOF
-rm -f conftest.$ac_objext
-if { (ac_try="$ac_compile"
-case "(($ac_try" in
-  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
-  *) ac_try_echo=$ac_try;;
-esac
-eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
-  (eval "$ac_compile") 2>conftest.er1
-  ac_status=$?
-  grep -v '^ *+' conftest.er1 >conftest.err
-  rm -f conftest.er1
-  cat conftest.err >&5
-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-  (exit $ac_status); } && {
-	 test -z "$ac_c_werror_flag" ||
-	 test ! -s conftest.err
-       } && test -s conftest.$ac_objext; then
-  has_option=yes
-else
-  echo "$as_me: failed program was:" >&5
-sed 's/^/| /' conftest.$ac_ext >&5
-
-	has_option=no
-fi
-
-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-		CFLAGS="$SAVE_CFLAGS"
-		{ echo "$as_me:$LINENO: result: $has_option" >&5
-echo "${ECHO_T}$has_option" >&6; }
-		if test $has_option = yes; then
-		  warning_flags="$warning_flags $option"
-		fi
-		unset has_option
-		unset SAVE_CFLAGS
-	done
-	unset option
-	if test "$enable_compile_warnings" = "error" ; then
-	    warning_flags="$warning_flags -Werror"
-	fi
-	;;
-    *)
-	{ { echo "$as_me:$LINENO: error: Unknown argument '$enable_compile_warnings' to --enable-compile-warnings" >&5
-echo "$as_me: error: Unknown argument '$enable_compile_warnings' to --enable-compile-warnings" >&2;}
-   { (exit 1); exit 1; }; }
-	;;
-    esac
-    CFLAGS="$realsave_CFLAGS"
-    { echo "$as_me:$LINENO: checking what warning flags to pass to the C compiler" >&5
-echo $ECHO_N "checking what warning flags to pass to the C compiler... $ECHO_C" >&6; }
-    { echo "$as_me:$LINENO: result: $warning_flags" >&5
-echo "${ECHO_T}$warning_flags" >&6; }
-
-    # Check whether --enable-iso-c was given.
-if test "${enable_iso_c+set}" = set; then
-  enableval=$enable_iso_c;
-else
-  enable_iso_c=no
-fi
-
-
-    { echo "$as_me:$LINENO: checking what language compliance flags to pass to the C compiler" >&5
-echo $ECHO_N "checking what language compliance flags to pass to the C compiler... $ECHO_C" >&6; }
-    complCFLAGS=
-    if test "x$enable_iso_c" != "xno"; then
-	if test "x$GCC" = "xyes"; then
-	case " $CFLAGS " in
-	    *\ \	-ansi\ \	*) ;;
-	    *) complCFLAGS="$complCFLAGS -ansi" ;;
-	esac
-	case " $CFLAGS " in
-	    *\ \	-pedantic\ \	*) ;;
-	    *) complCFLAGS="$complCFLAGS -pedantic" ;;
-	esac
-	fi
-    fi
-    { echo "$as_me:$LINENO: result: $complCFLAGS" >&5
-echo "${ECHO_T}$complCFLAGS" >&6; }
-
-    WARN_CFLAGS="$warning_flags $complCFLAGS"
-
-
-
-
-
-	if test $USE_MAINTAINER_MODE = yes; then
-		DISABLE_DEPRECATED="-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DPANGO_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGCONF_DISABLE_DEPRECATED -DBONOBO_DISABLE_DEPRECATED -DBONOBO_UI_DISABLE_DEPRECATED -DGNOME_VFS_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED -DLIBGLADE_DISABLE_DEPRECATED"
-	else
-		DISABLE_DEPRECATED=""
-	fi
-
-
-
-# For the plugins, we don't use the warning flags defined by GNOME_COMPILE_WARNINGS.
-# These flags include -Wmissing-prototypes, which we prefer not to use.
-if test "x$GCC" = "xyes"; then
-    PLUGINS_WARN_CFLAGS="-Wall -Wnested-externs -Wpointer-arith"
-fi
-
-
 GETTEXT_PACKAGE=monsia3
 
 
@@ -24059,101 +23851,6 @@ else
 fi
 
 
-# Check whether --enable-gnome was given.
-if test "${enable_gnome+set}" = set; then
-  enableval=$enable_gnome; check_gnome=$enableval
-else
-  check_gnome=yes
-fi
-
-
-if test x"$check_gnome" = x"yes"; then
-
-pkg_failed=no
-{ echo "$as_me:$LINENO: checking for GNOME" >&5
-echo $ECHO_N "checking for GNOME... $ECHO_C" >&6; }
-
-if test -n "$PKG_CONFIG"; then
-    if test -n "$GNOME_CFLAGS"; then
-        pkg_cv_GNOME_CFLAGS="$GNOME_CFLAGS"
-    else
-        if test -n "$PKG_CONFIG" && \
-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libbonoboui-2.0 libgnomeui-2.0\"") >&5
-  ($PKG_CONFIG --exists --print-errors "libbonoboui-2.0 libgnomeui-2.0") 2>&5
-  ac_status=$?
-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-  (exit $ac_status); }; then
-  pkg_cv_GNOME_CFLAGS=`$PKG_CONFIG --cflags "libbonoboui-2.0 libgnomeui-2.0" 2>/dev/null`
-else
-  pkg_failed=yes
-fi
-    fi
-else
-	pkg_failed=untried
-fi
-if test -n "$PKG_CONFIG"; then
-    if test -n "$GNOME_LIBS"; then
-        pkg_cv_GNOME_LIBS="$GNOME_LIBS"
-    else
-        if test -n "$PKG_CONFIG" && \
-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"libbonoboui-2.0 libgnomeui-2.0\"") >&5
-  ($PKG_CONFIG --exists --print-errors "libbonoboui-2.0 libgnomeui-2.0") 2>&5
-  ac_status=$?
-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-  (exit $ac_status); }; then
-  pkg_cv_GNOME_LIBS=`$PKG_CONFIG --libs "libbonoboui-2.0 libgnomeui-2.0" 2>/dev/null`
-else
-  pkg_failed=yes
-fi
-    fi
-else
-	pkg_failed=untried
-fi
-
-
-
-if test $pkg_failed = yes; then
-
-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
-        _pkg_short_errors_supported=yes
-else
-        _pkg_short_errors_supported=no
-fi
-        if test $_pkg_short_errors_supported = yes; then
-	        GNOME_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "libbonoboui-2.0 libgnomeui-2.0"`
-        else
-	        GNOME_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libbonoboui-2.0 libgnomeui-2.0"`
-        fi
-	# Put the nasty error message in config.log where it belongs
-	echo "$GNOME_PKG_ERRORS" >&5
-
-	{ echo "$as_me:$LINENO: result: no" >&5
-echo "${ECHO_T}no" >&6; }
-                have_gnome=no
-elif test $pkg_failed = untried; then
-	have_gnome=no
-else
-	GNOME_CFLAGS=$pkg_cv_GNOME_CFLAGS
-	GNOME_LIBS=$pkg_cv_GNOME_LIBS
-        { echo "$as_me:$LINENO: result: yes" >&5
-echo "${ECHO_T}yes" >&6; }
-	have_gnome=yes
-fi
-
-
-else
-  have_gnome=no
-fi
-
- if test x"$have_gnome" = "xyes"; then
-  BUILD_GNOME_TRUE=
-  BUILD_GNOME_FALSE='#'
-else
-  BUILD_GNOME_TRUE='#'
-  BUILD_GNOME_FALSE=
-fi
-
-
 # Check whether --enable-gtkpanda2 was given.
 if test "${enable_gtkpanda2+set}" = set; then
   enableval=$enable_gtkpanda2; check_gtkpanda2=$enableval
@@ -24247,94 +23944,6 @@ else
   BUILD_GTKPANDA2_TRUE='#'
   BUILD_GTKPANDA2_FALSE=
 fi
-
-
-# ==================================================================
-# Glade User Manual (requires gnome-doc-utils)
-# ==================================================================
-
-
-gdu_cv_version_required=0.9.0
-
-if test -n "$PKG_CONFIG" && \
-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"gnome-doc-utils >= \$gdu_cv_version_required\"") >&5
-  ($PKG_CONFIG --exists --print-errors "gnome-doc-utils >= $gdu_cv_version_required") 2>&5
-  ac_status=$?
-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-  (exit $ac_status); }; then
-  gdu_cv_have_gdu=yes
-else
-  gdu_cv_have_gdu=no
-fi
-
-if test "$gdu_cv_have_gdu" = "yes"; then
-	:
-else
-	:
-fi
-
-
-
-# Check whether --with-help-dir was given.
-if test "${with_help_dir+set}" = set; then
-  withval=$with_help_dir;
-else
-  with_help_dir='${datadir}/gnome/help'
-fi
-
-HELP_DIR="$with_help_dir"
-
-
-
-# Check whether --with-omf-dir was given.
-if test "${with_omf_dir+set}" = set; then
-  withval=$with_omf_dir;
-else
-  with_omf_dir='${datadir}/omf'
-fi
-
-OMF_DIR="$with_omf_dir"
-
-
-
-# Check whether --with-help-formats was given.
-if test "${with_help_formats+set}" = set; then
-  withval=$with_help_formats;
-else
-  with_help_formats=''
-fi
-
-DOC_USER_FORMATS="$with_help_formats"
-
-
-# Check whether --enable-scrollkeeper was given.
-if test "${enable_scrollkeeper+set}" = set; then
-  enableval=$enable_scrollkeeper;
-else
-  enable_scrollkeeper=yes
-fi
-
- if test "$gdu_cv_have_gdu" = "yes" -a "$enable_scrollkeeper" = "yes"; then
-  ENABLE_SK_TRUE=
-  ENABLE_SK_FALSE='#'
-else
-  ENABLE_SK_TRUE='#'
-  ENABLE_SK_FALSE=
-fi
-
-
-DISTCHECK_CONFIGURE_FLAGS="--disable-scrollkeeper $DISTCHECK_CONFIGURE_FLAGS"
-
-
- if test "$gdu_cv_have_gdu" = "yes"; then
-  HAVE_GNOME_DOC_UTILS_TRUE=
-  HAVE_GNOME_DOC_UTILS_FALSE='#'
-else
-  HAVE_GNOME_DOC_UTILS_TRUE='#'
-  HAVE_GNOME_DOC_UTILS_FALSE=
-fi
-
-
 
 
 case $host_os in
@@ -24480,7 +24089,7 @@ fi
 
 
 
-ac_config_files="$ac_config_files Makefile data/gladeui-1.0.pc data/glade-3.desktop.in data/Makefile data/icons/Makefile data/icons/hicolor/Makefile data/icons/hicolor/16x16/Makefile data/icons/hicolor/16x16/apps/Makefile data/icons/hicolor/22x22/Makefile data/icons/hicolor/22x22/apps/Makefile data/icons/hicolor/24x24/Makefile data/icons/hicolor/24x24/apps/Makefile data/icons/hicolor/32x32/Makefile data/icons/hicolor/32x32/apps/Makefile data/icons/hicolor/48x48/Makefile data/icons/hicolor/48x48/apps/Makefile data/icons/hicolor/scalable/Makefile data/icons/hicolor/scalable/apps/Makefile gladeui/Makefile gladeui/gladeui.rc src/Makefile src/glade-3.rc plugins/Makefile plugins/gtk+/Makefile plugins/gtk+/icons/Makefile plugins/gtk+/icons/16x16/Makefile plugins/gtk+/icons/22x22/Makefile plugins/gnome/Makefile plugins/gnome/icons/Makefile plugins/gnome/icons/16x16/Makefile plugins/gnome/icons/22x22/Makefile plugins/gtkpanda2/Makefile plugins/gtkpanda2/icons/Makefile plugins/gtkpanda2/icons/16x16/Makefile plugins/gtkpanda2/icons/22x22/Makefile po/Makefile.in doc/Makefile doc/version.xml help/Makefile"
+ac_config_files="$ac_config_files Makefile data/gladeui-1.0.pc data/glade-3.desktop.in data/Makefile data/icons/Makefile data/icons/hicolor/Makefile data/icons/hicolor/16x16/Makefile data/icons/hicolor/16x16/apps/Makefile data/icons/hicolor/22x22/Makefile data/icons/hicolor/22x22/apps/Makefile data/icons/hicolor/24x24/Makefile data/icons/hicolor/24x24/apps/Makefile data/icons/hicolor/32x32/Makefile data/icons/hicolor/32x32/apps/Makefile data/icons/hicolor/48x48/Makefile data/icons/hicolor/48x48/apps/Makefile data/icons/hicolor/scalable/Makefile data/icons/hicolor/scalable/apps/Makefile gladeui/Makefile gladeui/gladeui.rc src/Makefile src/glade-3.rc plugins/Makefile plugins/gtk+/Makefile plugins/gtk+/icons/Makefile plugins/gtk+/icons/16x16/Makefile plugins/gtk+/icons/22x22/Makefile plugins/panda/Makefile plugins/panda/icons/Makefile plugins/panda/icons/16x16/Makefile plugins/panda/icons/22x22/Makefile po/Makefile.in"
 
 
 cat >confcache <<\_ACEOF
@@ -24646,31 +24255,10 @@ echo "$as_me: error: conditional \"HAVE_GTK_UNIX_PRINT\" was never defined.
 Usually this means the macro was only invoked conditionally." >&2;}
    { (exit 1); exit 1; }; }
 fi
-if test -z "${BUILD_GNOME_TRUE}" && test -z "${BUILD_GNOME_FALSE}"; then
-  { { echo "$as_me:$LINENO: error: conditional \"BUILD_GNOME\" was never defined.
-Usually this means the macro was only invoked conditionally." >&5
-echo "$as_me: error: conditional \"BUILD_GNOME\" was never defined.
-Usually this means the macro was only invoked conditionally." >&2;}
-   { (exit 1); exit 1; }; }
-fi
 if test -z "${BUILD_GTKPANDA2_TRUE}" && test -z "${BUILD_GTKPANDA2_FALSE}"; then
   { { echo "$as_me:$LINENO: error: conditional \"BUILD_GTKPANDA2\" was never defined.
 Usually this means the macro was only invoked conditionally." >&5
 echo "$as_me: error: conditional \"BUILD_GTKPANDA2\" was never defined.
-Usually this means the macro was only invoked conditionally." >&2;}
-   { (exit 1); exit 1; }; }
-fi
-if test -z "${ENABLE_SK_TRUE}" && test -z "${ENABLE_SK_FALSE}"; then
-  { { echo "$as_me:$LINENO: error: conditional \"ENABLE_SK\" was never defined.
-Usually this means the macro was only invoked conditionally." >&5
-echo "$as_me: error: conditional \"ENABLE_SK\" was never defined.
-Usually this means the macro was only invoked conditionally." >&2;}
-   { (exit 1); exit 1; }; }
-fi
-if test -z "${HAVE_GNOME_DOC_UTILS_TRUE}" && test -z "${HAVE_GNOME_DOC_UTILS_FALSE}"; then
-  { { echo "$as_me:$LINENO: error: conditional \"HAVE_GNOME_DOC_UTILS\" was never defined.
-Usually this means the macro was only invoked conditionally." >&5
-echo "$as_me: error: conditional \"HAVE_GNOME_DOC_UTILS\" was never defined.
 Usually this means the macro was only invoked conditionally." >&2;}
    { (exit 1); exit 1; }; }
 fi
@@ -25190,18 +24778,11 @@ do
     "plugins/gtk+/icons/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gtk+/icons/Makefile" ;;
     "plugins/gtk+/icons/16x16/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gtk+/icons/16x16/Makefile" ;;
     "plugins/gtk+/icons/22x22/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gtk+/icons/22x22/Makefile" ;;
-    "plugins/gnome/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gnome/Makefile" ;;
-    "plugins/gnome/icons/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gnome/icons/Makefile" ;;
-    "plugins/gnome/icons/16x16/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gnome/icons/16x16/Makefile" ;;
-    "plugins/gnome/icons/22x22/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gnome/icons/22x22/Makefile" ;;
-    "plugins/gtkpanda2/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gtkpanda2/Makefile" ;;
-    "plugins/gtkpanda2/icons/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gtkpanda2/icons/Makefile" ;;
-    "plugins/gtkpanda2/icons/16x16/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gtkpanda2/icons/16x16/Makefile" ;;
-    "plugins/gtkpanda2/icons/22x22/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/gtkpanda2/icons/22x22/Makefile" ;;
+    "plugins/panda/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/panda/Makefile" ;;
+    "plugins/panda/icons/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/panda/icons/Makefile" ;;
+    "plugins/panda/icons/16x16/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/panda/icons/16x16/Makefile" ;;
+    "plugins/panda/icons/22x22/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/panda/icons/22x22/Makefile" ;;
     "po/Makefile.in") CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
-    "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
-    "doc/version.xml") CONFIG_FILES="$CONFIG_FILES doc/version.xml" ;;
-    "help/Makefile") CONFIG_FILES="$CONFIG_FILES help/Makefile" ;;
     "po/stamp-it") CONFIG_COMMANDS="$CONFIG_COMMANDS po/stamp-it" ;;
 
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
@@ -25459,10 +25040,6 @@ GLADE_CURRENT_MINUS_AGE!$GLADE_CURRENT_MINUS_AGE$ac_delim
 GLADE_UNSTABLE!$GLADE_UNSTABLE$ac_delim
 GLADE_UNSTABLE_TRUE!$GLADE_UNSTABLE_TRUE$ac_delim
 GLADE_UNSTABLE_FALSE!$GLADE_UNSTABLE_FALSE$ac_delim
-ACLOCAL_AMFLAGS!$ACLOCAL_AMFLAGS$ac_delim
-WARN_CFLAGS!$WARN_CFLAGS$ac_delim
-DISABLE_DEPRECATED!$DISABLE_DEPRECATED$ac_delim
-PLUGINS_WARN_CFLAGS!$PLUGINS_WARN_CFLAGS$ac_delim
 GETTEXT_PACKAGE!$GETTEXT_PACKAGE$ac_delim
 USE_NLS!$USE_NLS$ac_delim
 MSGFMT_OPTS!$MSGFMT_OPTS$ac_delim
@@ -25488,21 +25065,24 @@ GTK_CFLAGS!$GTK_CFLAGS$ac_delim
 GTK_LIBS!$GTK_LIBS$ac_delim
 HAVE_GTK_UNIX_PRINT_TRUE!$HAVE_GTK_UNIX_PRINT_TRUE$ac_delim
 HAVE_GTK_UNIX_PRINT_FALSE!$HAVE_GTK_UNIX_PRINT_FALSE$ac_delim
-GNOME_CFLAGS!$GNOME_CFLAGS$ac_delim
-GNOME_LIBS!$GNOME_LIBS$ac_delim
-BUILD_GNOME_TRUE!$BUILD_GNOME_TRUE$ac_delim
-BUILD_GNOME_FALSE!$BUILD_GNOME_FALSE$ac_delim
 GTKPANDA2_CFLAGS!$GTKPANDA2_CFLAGS$ac_delim
 GTKPANDA2_LIBS!$GTKPANDA2_LIBS$ac_delim
 BUILD_GTKPANDA2_TRUE!$BUILD_GTKPANDA2_TRUE$ac_delim
 BUILD_GTKPANDA2_FALSE!$BUILD_GTKPANDA2_FALSE$ac_delim
-HELP_DIR!$HELP_DIR$ac_delim
-OMF_DIR!$OMF_DIR$ac_delim
-DOC_USER_FORMATS!$DOC_USER_FORMATS$ac_delim
-ENABLE_SK_TRUE!$ENABLE_SK_TRUE$ac_delim
+PLATFORM_WIN32_TRUE!$PLATFORM_WIN32_TRUE$ac_delim
+PLATFORM_WIN32_FALSE!$PLATFORM_WIN32_FALSE$ac_delim
+NATIVE_WIN32_TRUE!$NATIVE_WIN32_TRUE$ac_delim
+NATIVE_WIN32_FALSE!$NATIVE_WIN32_FALSE$ac_delim
+WINDRES!$WINDRES$ac_delim
+AM_CPPFLAGS!$AM_CPPFLAGS$ac_delim
+AM_CFLAGS!$AM_CFLAGS$ac_delim
+AM_CXXFLAGS!$AM_CXXFLAGS$ac_delim
+AM_LDFLAGS!$AM_LDFLAGS$ac_delim
+LIBOBJS!$LIBOBJS$ac_delim
+LTLIBOBJS!$LTLIBOBJS$ac_delim
 _ACEOF
 
-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 96; then
     break
   elif $ac_last_try; then
     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
@@ -25534,64 +25114,6 @@ N; s/^.*\n//; s/[,\\&]/\\&/g; s/@/@|#_!!_#|/g; b n
 ' >>$CONFIG_STATUS <conf$$subs.sed
 rm -f conf$$subs.sed
 cat >>$CONFIG_STATUS <<_ACEOF
-CEOF$ac_eof
-_ACEOF
-
-
-ac_delim='%!_!# '
-for ac_last_try in false false false false false :; do
-  cat >conf$$subs.sed <<_ACEOF
-ENABLE_SK_FALSE!$ENABLE_SK_FALSE$ac_delim
-DISTCHECK_CONFIGURE_FLAGS!$DISTCHECK_CONFIGURE_FLAGS$ac_delim
-HAVE_GNOME_DOC_UTILS_TRUE!$HAVE_GNOME_DOC_UTILS_TRUE$ac_delim
-HAVE_GNOME_DOC_UTILS_FALSE!$HAVE_GNOME_DOC_UTILS_FALSE$ac_delim
-PLATFORM_WIN32_TRUE!$PLATFORM_WIN32_TRUE$ac_delim
-PLATFORM_WIN32_FALSE!$PLATFORM_WIN32_FALSE$ac_delim
-NATIVE_WIN32_TRUE!$NATIVE_WIN32_TRUE$ac_delim
-NATIVE_WIN32_FALSE!$NATIVE_WIN32_FALSE$ac_delim
-WINDRES!$WINDRES$ac_delim
-AM_CPPFLAGS!$AM_CPPFLAGS$ac_delim
-AM_CFLAGS!$AM_CFLAGS$ac_delim
-AM_CXXFLAGS!$AM_CXXFLAGS$ac_delim
-AM_LDFLAGS!$AM_LDFLAGS$ac_delim
-LIBOBJS!$LIBOBJS$ac_delim
-LTLIBOBJS!$LTLIBOBJS$ac_delim
-_ACEOF
-
-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 15; then
-    break
-  elif $ac_last_try; then
-    { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
-echo "$as_me: error: could not make $CONFIG_STATUS" >&2;}
-   { (exit 1); exit 1; }; }
-  else
-    ac_delim="$ac_delim!$ac_delim _$ac_delim!! "
-  fi
-done
-
-ac_eof=`sed -n '/^CEOF[0-9]*$/s/CEOF/0/p' conf$$subs.sed`
-if test -n "$ac_eof"; then
-  ac_eof=`echo "$ac_eof" | sort -nru | sed 1q`
-  ac_eof=`expr $ac_eof + 1`
-fi
-
-cat >>$CONFIG_STATUS <<_ACEOF
-cat >"\$tmp/subs-3.sed" <<\CEOF$ac_eof
-/@[a-zA-Z_][a-zA-Z_0-9]*@/!b end
-_ACEOF
-sed '
-s/[,\\&]/\\&/g; s/@/@|#_!!_#|/g
-s/^/s,@/; s/!/@,|#_!!_#|/
-:n
-t n
-s/'"$ac_delim"'$/,g/; t
-s/$/\\/; p
-N; s/^.*\n//; s/[,\\&]/\\&/g; s/@/@|#_!!_#|/g; b n
-' >>$CONFIG_STATUS <conf$$subs.sed
-rm -f conf$$subs.sed
-cat >>$CONFIG_STATUS <<_ACEOF
-:end
-s/|#_!!_#|//g
 CEOF$ac_eof
 _ACEOF
 
@@ -25845,7 +25367,7 @@ s&@abs_top_builddir@&$ac_abs_top_builddir&;t t
 s&@INSTALL@&$ac_INSTALL&;t t
 s&@MKDIR_P@&$ac_MKDIR_P&;t t
 $ac_datarootdir_hack
-" $ac_file_inputs | sed -f "$tmp/subs-1.sed" | sed -f "$tmp/subs-2.sed" | sed -f "$tmp/subs-3.sed" >$tmp/out
+" $ac_file_inputs | sed -f "$tmp/subs-1.sed" | sed -f "$tmp/subs-2.sed" | sed 's/|#_!!_#|//g' >$tmp/out
 
 test -z "$ac_datarootdir_hack$ac_datarootdir_seen" &&
   { ac_out=`sed -n '/\${datarootdir}/p' "$tmp/out"`; test -n "$ac_out"; } &&

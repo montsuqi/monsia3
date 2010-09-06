@@ -1,0 +1,55 @@
+<glade-catalog name="panda"
+               library="gladepanda"
+               depends="gtk+"
+               domain="glade3">
+  <init-function>glade_panda_init</init-function>
+
+  <glade-widget-classes>
+    <glade-widget-class name="GtkNumberEntry" generic-name="numberentry" _title="GtkNumberEntry"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaCList" generic-name="pandaclist" _title="GtkPandaCList"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaCombo" generic-name="pandacombo" _title="GtkPandaCombo"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaDownload" generic-name="pandadownload" _title="GtkPandaDownload"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaEntry" generic-name="pandaentry" _title="GtkPandaEntry"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaFileentry" generic-name="pandafileentry" _title="GtkPandaFileentry"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaHTML" generic-name="pandahtml" _title="GtkPandaHTML" get-type-function="gtk_panda_html_get_type"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaPDF" generic-name="pandapdf" _title="GtkPandaPDF" get-type-function="gtk_panda_pdf_get_type"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaPrint" generic-name="pandaprint" _title="GtkPandaPrint"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaText" generic-name="pandatext" _title="GtkPandaText"/>
+  </glade-widget-classes>
+  <glade-widget-classes>
+    <glade-widget-class name="GtkPandaTimer" generic-name="pandatimer" _title="GtkPandaTimer"/>
+  </glade-widget-classes>
+
+  <glade-widget-group name="gtkpanda-base" _title="GTK+Panda Widgets">
+    <glade-widget-class-ref name="GtkNumberEntry"/>
+    <glade-widget-class-ref name="GtkPandaCList"/>
+    <glade-widget-class-ref name="GtkPandaCombo"/>
+    <glade-widget-class-ref name="GtkPandaDownload"/>
+    <glade-widget-class-ref name="GtkPandaEntry"/>
+    <glade-widget-class-ref name="GtkPandaFileentry"/>
+    <glade-widget-class-ref name="GtkPandaHTML"/>
+    <glade-widget-class-ref name="GtkPandaPDF"/>
+    <glade-widget-class-ref name="GtkPandaPrint"/>
+    <glade-widget-class-ref name="GtkPandaText"/>
+    <glade-widget-class-ref name="GtkPandaTimer"/>
+  </glade-widget-group>
+
+</glade-catalog>
