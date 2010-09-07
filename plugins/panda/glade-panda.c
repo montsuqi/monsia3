@@ -33,7 +33,9 @@
  * (and is for use in overriding post_create functions).
  */
 void
-empty (GObject *container, GladeCreateReason reason)
+empty (GladeWidgetAdaptor *adaptor,
+	GObject *container, 
+	GladeCreateReason reason)
 {
 }
 
