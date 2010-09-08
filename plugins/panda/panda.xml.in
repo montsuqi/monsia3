@@ -7,9 +7,22 @@
   <glade-widget-classes>
     <glade-widget-class name="GtkNumberEntry" generic-name="numberentry" _title="GtkNumberEntry"/>
     <glade-widget-class name="GtkPandaCList" generic-name="pandaclist" _title="GtkPandaCList"/>
-    <glade-widget-class name="GtkPandaCombo" generic-name="pandacombo" _title="GtkPandaCombo"/>
+    <glade-widget-class name="GtkPandaCombo" generic-name="pandacombo" _title="GtkPandaCombo">
+      <post-create-function>glade_gtk_panda_combo_post_create</post-create-function>
+      <get-internal-child-function>glade_gtk_panda_combo_get_internal_child</get-internal-child-function>
+    </glade-widget-class>
     <glade-widget-class name="GtkPandaDownload" generic-name="pandadownload" _title="GtkPandaDownload"/>
-    <glade-widget-class name="GtkPandaEntry" generic-name="pandaentry" _title="GtkPandaEntry"/>
+    <glade-widget-class name="GtkPandaEntry" generic-name="pandaentry" _title="GtkPandaEntry">
+      <properties>
+        <property id="input_mode">
+          <displayable-values>
+            <value id="GTK_PANDA_ENTRY_ASCII_MODE" _name="ascii"/>
+            <value id="GTK_PANDA_ENTRY_KANA_MODE" _name="kana"/>
+            <value id="GTK_PANDA_ENTRY_IM_MODE" _name="im"/>
+          </displayable-values>
+        </property>
+      </properties>
+    </glade-widget-class>
     <glade-widget-class name="GtkPandaFileentry" generic-name="pandafileentry" _title="GtkPandaFileentry"/>
     <glade-widget-class name="GtkPandaHTML" generic-name="pandahtml" _title="GtkPandaHTML" get-type-function="gtk_panda_html_get_type">
       <properties>

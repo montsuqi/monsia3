@@ -39,6 +39,36 @@ empty (GladeWidgetAdaptor *adaptor,
 {
 }
 
+void
+glade_gtk_panda_combo_post_create (GladeWidgetAdaptor *adaptor,
+				       GObject            *object, 
+				       GladeCreateReason   reason)
+{
+	GladeWidget *gcombo = glade_widget_get_from_gobject (object);
+
+	/* Chain up */
+	GWA_GET_CLASS (GTK_TYPE_CONTAINER)->post_create (adaptor, object, reason);
+
+	glade_widget_adaptor_create_internal
+		(gcombo, G_OBJECT (GTK_BIN (object)->child),
+		 "pandaentry", "pandacomboentry", FALSE, reason);
+}
+
+GObject *
+glade_gtk_panda_combo_get_internal_child (GladeWidgetAdaptor *adaptor,
+					      GObject *object, 
+					      const gchar *name)
+{
+	GObject *child = NULL;
+	g_return_val_if_fail (GTK_IS_COMBO_BOX_ENTRY (object), NULL);
+	
+	if (strcmp ("pandaentry", name) == 0)
+		child = G_OBJECT (gtk_bin_get_child (GTK_BIN (object)));
+
+	return child;
+}
+
+
 /* Catalog init function */
 void
 glade_panda_init (void)
