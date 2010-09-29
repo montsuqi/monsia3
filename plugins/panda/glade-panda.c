@@ -51,23 +51,96 @@ glade_gtk_panda_combo_post_create (GladeWidgetAdaptor *adaptor,
 
 	glade_widget_adaptor_create_internal
 		(gcombo, G_OBJECT (GTK_BIN (object)->child),
-		 "pandaentry", "pandacomboentry", FALSE, reason);
+		 "entry", "pandacombo", FALSE, reason);
 }
 
-GObject *
-glade_gtk_panda_combo_get_internal_child (GladeWidgetAdaptor *adaptor,
-					      GObject *object, 
-					      const gchar *name)
+#if 0
+void
+glade_gtk_panda_clist_add_child (GladeWidgetAdaptor  *adaptor,
+				GObject	*parent,
+				GObject	*child)
 {
-	GObject *child = NULL;
-	g_return_val_if_fail (GTK_IS_COMBO_BOX_ENTRY (object), NULL);
-	
-	if (strcmp ("pandaentry", name) == 0)
-		child = G_OBJECT (gtk_bin_get_child (GTK_BIN (object)));
+	GtkPandaCList *clist = GTK_PANDA_CLIST(parent);
+	GtkTreeViewColumn *column;
+	GList *list = NULL;
+	int i;
 
-	return child;
+	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
+		if (gtk_tree_view_column_get_widget(column) == NULL) {
+			gtk_tree_view_column_set_widget(column,GTK_WIDGET(child));
+		}
+	}
 }
 
+void
+glade_gtk_panda_clist_remove_child (GladeWidgetAdaptor  *adaptor,
+				GObject	*parent,
+				GObject	*child)
+{
+	GtkPandaCList *clist = GTK_PANDA_CLIST(parent);
+	GtkTreeViewColumn *column;
+	GtkWidget *_child;
+	GList *list = NULL;
+	int i;
+
+	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
+		_child = gtk_tree_view_column_get_widget(column);
+		if (GTK_WIDGET(child) == GTK_WIDGET(_child)) {
+			gtk_tree_view_column_set_widget(column,NULL);
+		}
+	}
+}
+#endif
+
+GList *
+glade_gtk_panda_clist_get_children (GladeWidgetAdaptor  *adaptor,
+				  GObject        *object)
+{
+	GladeWidget *gclist = glade_widget_get_from_gobject (object);
+	GtkPandaCList *clist = GTK_PANDA_CLIST(object);
+	GtkTreeViewColumn *column;
+	GtkWidget *child;
+	GList *list = NULL;
+	int i;
+
+	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
+		child = gtk_tree_view_column_get_widget(column);
+		if (child != NULL) {
+			list = g_list_append(list,child);
+		}
+	}
+	return list;
+}
+
+void
+glade_gtk_panda_clist_set_property (GladeWidgetAdaptor *adaptor,
+			    GObject            *object, 
+			    const gchar        *id,
+			    const GValue       *value)
+{
+	GladeWidget *gclist = glade_widget_get_from_gobject (object);
+	GtkPandaCList *clist = GTK_PANDA_CLIST(object);
+	GtkTreeViewColumn *column;
+	GtkWidget *child;
+	int i;
+
+	g_object_set_property(object,id,value);
+
+	if (!strcmp (id, "n-columns")) {
+		for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+			column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
+			child = gtk_tree_view_column_get_widget(column);
+			if (child != NULL) {
+				glade_widget_adaptor_create_internal
+					(gclist, G_OBJECT (child),
+					 "child", "pandaclist", FALSE, GLADE_CREATE_USER);
+			}
+		}
+	}
+}
 
 /* Catalog init function */
 void
@@ -80,3 +153,4 @@ glade_panda_init (void)
 	gtk_init(&argc,&argvv);
 	gtk_panda_init(&argc,&argvv);
 }
+

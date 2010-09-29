@@ -5,13 +5,47 @@
   <init-function>glade_panda_init</init-function>
 
   <glade-widget-classes>
+
     <glade-widget-class name="GtkNumberEntry" generic-name="numberentry" _title="GtkNumberEntry"/>
-    <glade-widget-class name="GtkPandaCList" generic-name="pandaclist" _title="GtkPandaCList"/>
+
+    <glade-widget-class name="GtkPandaCList" generic-name="pandaclist" _title="GtkPandaCList">
+      <get-children-function>glade_gtk_panda_clist_get_children</get-children-function>
+      <post-create-function>empty</post-create-function>
+      <get-internal-child-function>glade_gtk_panda_clist_get_children</get-internal-child-function>
+      <set-property-function>glade_gtk_panda_clist_set_property</set-property-function>
+
+      <properties>
+	    <property id="column_widths" default="100,100,100,100,100,100,100,100,100,100,100,100,100" />
+	    <property id="n_columns" _name="Number of columns" query="True" default="3" save="False" common="True">
+	      <spec>glade_standard_int_spec</spec>
+	      <_tooltip>The number of columns</_tooltip>
+	    </property>
+        <property id="enable-grid-lines" disabled="True"/>
+        <property id="enable-search" disabled="True"/>
+        <property id="enable-tree-lines" disabled="True"/>
+        <property id="expander-column" disabled="True"/>
+        <property id="fixed-height-mode" disabled="True"/>
+        <property id="headers-clickable" disabled="True"/>
+        <property id="headers-visible" disabled="True"/>
+        <property id="hover-expand" disabled="True"/>
+        <property id="hover-selection" disabled="True"/>
+        <property id="level-indentation" disabled="True"/>
+        <property id="model" disabled="True"/>
+        <property id="reorderable" disabled="True"/>
+        <property id="rubber-banding" disabled="True"/>
+        <property id="rules-hint" disabled="True"/>
+        <property id="search-column" disabled="True"/>
+        <property id="show-expanders" disabled="True"/>
+        <property id="tooltip-column" disabled="True"/>
+      </properties>
+    </glade-widget-class>
+
     <glade-widget-class name="GtkPandaCombo" generic-name="pandacombo" _title="GtkPandaCombo">
       <post-create-function>glade_gtk_panda_combo_post_create</post-create-function>
-      <get-internal-child-function>glade_gtk_panda_combo_get_internal_child</get-internal-child-function>
     </glade-widget-class>
+
     <glade-widget-class name="GtkPandaDownload" generic-name="pandadownload" _title="GtkPandaDownload"/>
+
     <glade-widget-class name="GtkPandaEntry" generic-name="pandaentry" _title="GtkPandaEntry">
       <properties>
         <property id="input_mode">
@@ -23,20 +57,27 @@
         </property>
       </properties>
     </glade-widget-class>
+
     <glade-widget-class name="GtkPandaFileentry" generic-name="pandafileentry" _title="GtkPandaFileentry"/>
+
     <glade-widget-class name="GtkPandaHTML" generic-name="pandahtml" _title="GtkPandaHTML" get-type-function="gtk_panda_html_get_type">
       <properties>
         <property id="size" disabled="True"/>
       </properties>
     </glade-widget-class>
+
     <glade-widget-class name="GtkPandaPDF" generic-name="pandapdf" _title="GtkPandaPDF" get-type-function="gtk_panda_pdf_get_type">
       <properties>
         <property id="size" disabled="True"/>
       </properties>
     </glade-widget-class>
+
     <glade-widget-class name="GtkPandaPrint" generic-name="pandaprint" _title="GtkPandaPrint"/>
+
     <glade-widget-class name="GtkPandaText" generic-name="pandatext" _title="GtkPandaText"/>
+
     <glade-widget-class name="GtkPandaTimer" generic-name="pandatimer" _title="GtkPandaTimer"/>
+
   </glade-widget-classes>
 
   <glade-widget-group name="gtkpanda-base" _title="GTK+Panda Widgets">
