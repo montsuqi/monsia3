@@ -39,6 +39,12 @@ typedef struct _GladeChildInfo       GladeChildInfo;
 typedef struct _GladeInterface       GladeInterface;
 typedef struct _GladeAtkRelationInfo GladeAtkRelationInfo;
 typedef struct _GladePackingDefault  GladePackingDefault;
+typedef struct _GladeAttribute       GladeAttribute;
+
+struct _GladeAttribute {
+	gchar *name;
+	gchar *value;
+};
 
 struct _GladePropInfo {
     gchar *name;
@@ -104,6 +110,8 @@ struct _GladeWidgetInfo {
 
     GladeChildInfo *children;
     guint n_children;
+
+	GList *attrs;
 };
 
 struct _GladeChildInfo {
