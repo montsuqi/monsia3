@@ -18,10 +18,16 @@
 
       <properties>
 	    <property id="column_widths" default="100,100,100,100,100,100,100,100,100,100,100,100,100" />
-	    <property id="n_columns" _name="Number of columns" query="True" default="3" save="False" common="True">
+	    <property id="n_columns" _name="Number of columns" query="True" default="3" save="False">
 	      <spec>glade_standard_int_spec</spec>
 	      <_tooltip>The number of columns</_tooltip>
 	    </property>
+        <property id="selection_mode">
+          <displayable-values>
+            <value id="GTK_SELECTION_SINGLE" _name="single"/>
+            <value id="GTK_SELECTION_MULTIPLE" _name="multi"/>
+          </displayable-values>
+        </property>
         <property id="enable-grid-lines" disabled="True"/>
         <property id="enable-search" disabled="True"/>
         <property id="enable-tree-lines" disabled="True"/>
@@ -38,7 +44,7 @@
         <property id="rules-hint" disabled="True"/>
         <property id="search-column" disabled="True"/>
         <property id="show-expanders" disabled="True"/>
-        <property id="tooltip-column" disabled="True"/>
+        <property id="tooltip-column" disabled="True" default="False"/>
       </properties>
     </glade-widget-class>
 
