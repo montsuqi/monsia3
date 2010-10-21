@@ -13,6 +13,8 @@
       <post-create-function>empty</post-create-function>
       <get-internal-child-function>glade_gtk_panda_clist_get_children</get-internal-child-function>
       <set-property-function>glade_gtk_panda_clist_set_property</set-property-function>
+      <add-child-function>glade_gtk_panda_clist_add_child</add-child-function>
+      <remove-child-function>glade_gtk_panda_clist_remove_child</remove-child-function>
 
       <properties>
 	    <property id="column_widths" default="100,100,100,100,100,100,100,100,100,100,100,100,100" />

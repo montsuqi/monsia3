@@ -50,7 +50,6 @@ typedef enum {
     PARSER_UNKNOWN
 } ParserState;
 
-#ifdef DEBUG
 static const gchar *state_names[] = {
     "PARSER_START",
     "PARSER_GTK_INTERFACE",
@@ -65,7 +64,6 @@ static const gchar *state_names[] = {
     "PARSER_FINISH",
     "PARSER_UNKNOWN"
 };
-#endif
 
 typedef struct _GladeParseState GladeParseState;
 struct _GladeParseState {
@@ -104,8 +102,9 @@ flush_properties(GladeParseState *state)
 		return;
 	}
 	
-	prop.has_context = FALSE;
-	prop.translatable = FALSE;
+	prop.has_context = 0;
+	prop.translatable = 0;
+	prop.comment = "";
 	for (i = 0; i < g_list_length(state->widget->attrs); i++) {
 		attr = (GladeAttribute*)g_list_nth_data(state->widget->attrs,i);
 		if (
@@ -137,12 +136,13 @@ flush_properties(GladeParseState *state)
 	state->widget->n_properties = props->len;
 	g_array_free(props, FALSE);
 
-	for(i = 0; i < parent->n_children; i++) {
-		child_info = &parent->children[i];
-		if (child_info->child == state->widget) {
-			child_info->properties = (GladePropInfo*)child_props->data;
-			child_info->n_properties = child_props->len;
-			g_array_free(child_props, FALSE);
+	if (parent != NULL) {
+		for(i = 0; i < parent->n_children; i++) {
+			child_info = &parent->children[i];
+			if (child_info->child == state->widget) {
+				child_info->properties = (GladePropInfo*)child_props->data;
+				child_info->n_properties = child_props->len;
+			}
 		}
 	}
 	state->widget->attrs = NULL;
@@ -243,8 +243,6 @@ glade_parser_start_element(GladeParseState *state,
 			state->accel_info = NULL;
 		    state->state = PARSER_WIDGET;
 		} else {
-		    g_warning("Unexpected element <%s> inside <GTK-Interface>.",
-			      name);
 		    state->prev_state = state->state;
 		    state->state = PARSER_UNKNOWN;
 		    state->unknown_depth++;
@@ -331,6 +329,9 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 				 name, state_names[state->state]));
 
     switch (state->state) {
+    case PARSER_GTK_INTERFACE:
+        state->state = PARSER_FINISH;
+        break;
     case PARSER_UNKNOWN:
 		state->unknown_depth--;
 		if (state->unknown_depth == 0)
@@ -374,9 +375,9 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 		}
 		break;
     case PARSER_CHILD:
+		state->state = PARSER_WIDGET;
 		if (xmlStrcmp(name, BAD_CAST("child")) != 0)
 	   		g_warning("should find </child> here.  Found </%s>", name);
-		state->state = PARSER_WIDGET;
 		break;
     case PARSER_WIDGET:
 		if (xmlStrcmp(name, BAD_CAST("widget")) != 0)
@@ -538,37 +539,6 @@ static xmlSAXHandler glade_parser = {
     (fatalErrorSAXFunc)glade_parser_fatal_error, /* fatalError */
 };
 
-/*********************************************************
- * glade-panda
- *********************************************************/
-
-static xmlSAXHandler panda_parser = {
-    0, /* internalSubset */
-    0, /* isStandalone */
-    0, /* hasInternalSubset */
-    0, /* hasExternalSubset */
-    0, /* resolveEntity */
-    (getEntitySAXFunc)glade_parser_get_entity, /* getEntity */
-    0, /* entityDecl */
-    0, /* notationDecl */
-    0, /* attributeDecl */
-    0, /* elementDecl */
-    0, /* unparsedEntityDecl */
-    0, /* setDocumentLocator */
-    (startDocumentSAXFunc)glade_parser_start_document, /* startDocument */
-    (endDocumentSAXFunc)glade_parser_end_document, /* endDocument */
-    (startElementSAXFunc)glade_parser_start_element, /* startElement */
-    (endElementSAXFunc)glade_parser_end_element, /* endElement */
-    0, /* reference */
-    (charactersSAXFunc)glade_parser_characters, /* characters */
-    0, /* ignorableWhitespace */
-    0, /* processingInstruction */
-    (commentSAXFunc)glade_parser_comment, /* comment */
-    (warningSAXFunc)glade_parser_warning, /* warning */
-    (errorSAXFunc)glade_parser_error, /* error */
-    (fatalErrorSAXFunc)glade_parser_fatal_error, /* fatalError */
-};
-
 static void
 widget_info_free(GladeWidgetInfo *info)
 {
@@ -638,6 +608,19 @@ glade_parser_interface_destroy (GladeInterface *interface)
     g_free(interface);
 }
 
+gchar* 
+to_utf8 (const gchar *str) {
+  gsize br, bw;
+  GError *err = NULL;
+  gchar *tstr = g_convert(str, -1, "utf-8", "euc-jisx0213", &br, &bw, &err);
+  if ( err != NULL ) { 
+    g_log(G_LOG_DOMAIN, G_LOG_LEVEL_CRITICAL, 
+      "convert error(euc-jisx0213 to utf8):%s:%s\n", err->message,str); 
+    exit(1);
+  }
+  return tstr;
+}
+
 /**
  * glade_parser_interface_new_from_file
  * @file: the filename of the glade XML file.
@@ -658,6 +641,10 @@ glade_parser_interface_new_from_file (const gchar *file, const gchar *domain)
     GladeParseState state = { 0 };
     int prevSubstituteEntities;
     int rc;
+    gchar *buf1;
+    gchar *buf2;
+    gsize size;
+    GError *error = NULL;
 
     if (!g_file_test(file, G_FILE_TEST_IS_REGULAR)) {
 	glade_util_ui_message (glade_app_get_window (), 
@@ -674,7 +661,16 @@ glade_parser_interface_new_from_file (const gchar *file, const gchar *domain)
 
     prevSubstituteEntities = xmlSubstituteEntitiesDefault(1);
 
-    rc = xmlSAXUserParseFile(&glade_parser, &state, file);
+    g_file_get_contents(file, &buf1, &size, &error);
+    if (error != NULL) {
+        g_error_free(error);
+        return NULL;
+    }
+    buf2 = to_utf8(buf1);
+    g_free(buf1);
+
+    rc = xmlSAXUserParseMemory(&glade_parser, &state, buf2, strlen(buf2));
+    g_free(buf2);
 
     xmlSubstituteEntitiesDefault(prevSubstituteEntities);
 

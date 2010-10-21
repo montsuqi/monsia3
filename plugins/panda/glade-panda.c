@@ -54,7 +54,7 @@ glade_gtk_panda_combo_post_create (GladeWidgetAdaptor *adaptor,
 		 "entry", "pandacombo", FALSE, reason);
 }
 
-#if 0
+#if 1
 void
 glade_gtk_panda_clist_add_child (GladeWidgetAdaptor  *adaptor,
 				GObject	*parent,
