@@ -126,6 +126,10 @@ flush_properties(GladeParseState *state)
 			prop.name = xmlStrdup("height_request");
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
+		} else if (!xmlStrcmp(attr->name,BAD_CAST("columns"))) {
+			prop.name = xmlStrdup("n_columns");
+			prop.value = attr->value;
+			g_array_append_val(props, prop);
 		} else {
 			prop.name = attr->name;
 			prop.value = attr->value;

@@ -54,7 +54,6 @@ glade_gtk_panda_combo_post_create (GladeWidgetAdaptor *adaptor,
 		 "entry", "pandacombo", FALSE, reason);
 }
 
-#if 1
 void
 glade_gtk_panda_clist_add_child (GladeWidgetAdaptor  *adaptor,
 				GObject	*parent,
@@ -63,14 +62,25 @@ glade_gtk_panda_clist_add_child (GladeWidgetAdaptor  *adaptor,
 	GtkPandaCList *clist = GTK_PANDA_CLIST(parent);
 	GtkTreeViewColumn *column;
 	GList *list = NULL;
+	GtkWidget *_child;
 	int i;
 
 	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
-		if (gtk_tree_view_column_get_widget(column) == NULL) {
+		_child = gtk_tree_view_column_get_widget(column);
+		if (_child == NULL) {
 			gtk_tree_view_column_set_widget(column,GTK_WIDGET(child));
+			break;
+		} else if (GLADE_IS_PLACEHOLDER(_child)) {
+			gtk_tree_view_column_set_widget(column,GTK_WIDGET(child));
+			gtk_widget_destroy(GTK_WIDGET(_child));
+			break;
 		}
 	}
+
+	GladeWidget *gchild = glade_widget_get_from_gobject (child);
+	if (gchild)
+		glade_widget_remove_pack_action (gchild, "remove_slot");
 }
 
 void
@@ -88,11 +98,40 @@ glade_gtk_panda_clist_remove_child (GladeWidgetAdaptor  *adaptor,
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 		_child = gtk_tree_view_column_get_widget(column);
 		if (GTK_WIDGET(child) == GTK_WIDGET(_child)) {
-			gtk_tree_view_column_set_widget(column,NULL);
+			gtk_tree_view_column_set_widget(column,glade_placeholder_new());
 		}
 	}
 }
-#endif
+
+
+void
+glade_gtk_panda_clist_replace_child (GladeWidgetAdaptor *adaptor,
+			     GObject            *container,
+			     GObject            *current,
+			     GObject            *new_widget)
+{
+	GtkPandaCList *clist = GTK_PANDA_CLIST(container);
+	GtkTreeViewColumn *column;
+	GtkWidget *_child;
+	GList *list = NULL;
+	int i;
+	GladeWidget  *gchild;
+
+	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
+		_child = gtk_tree_view_column_get_widget(column);
+		if (GTK_WIDGET(_child) == GTK_WIDGET(current)) {
+			gtk_tree_view_column_set_widget(column,GTK_WIDGET(new_widget));
+		}
+	}
+
+	if ((gchild = glade_widget_get_from_gobject (new_widget)) != NULL)
+		/* The "Remove Slot" operation only makes sence on placeholders,
+		 * otherwise its a "Delete" operation on the child widget.
+		 */
+		glade_widget_remove_pack_action (gchild, "remove_slot");
+
+}
 
 GList *
 glade_gtk_panda_clist_get_children (GladeWidgetAdaptor  *adaptor,
@@ -115,6 +154,58 @@ glade_gtk_panda_clist_get_children (GladeWidgetAdaptor  *adaptor,
 	return list;
 }
 
+GObject *
+glade_gtk_panda_clist_get_internal_child (GladeWidgetAdaptor *adaptor,
+				  GObject            *object, 
+				  const gchar        *name)
+{
+	GladeWidget *gclist = glade_widget_get_from_gobject (object);
+	GtkPandaCList *clist = GTK_PANDA_CLIST(object);
+	GtkTreeViewColumn *column;
+	GObject *child;
+	int i;
+
+	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
+		child = (GObject*)gtk_tree_view_column_get_widget(column);
+		if (child != NULL) {
+			GladeWidget *gw = glade_widget_get_from_gobject (child);
+			if (gw && gw->internal && strcmp (gw->internal, name) == 0)
+			{
+				break;
+			}
+		}
+	}
+	return child;
+}
+
+gboolean
+glade_gtk_panda_clist_verify_property (GladeWidgetAdaptor *adaptor,
+			       GObject            *object, 
+			       const gchar        *id,
+			       const GValue       *value)
+{
+	GtkPandaCList *clist = GTK_PANDA_CLIST(object);
+	GtkTreeViewColumn *column;
+	GtkWidget *child;
+	int i, current,new;
+
+	if (!strcmp (id, "n-columns")) {
+		new = g_value_get_int(value);
+		current = gtk_panda_clist_get_n_columns(clist);
+		if (new < current) {
+			for(i = new; i < current; i++) {
+				column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
+				child = gtk_tree_view_column_get_widget(column);
+				if (child != NULL && !GLADE_IS_PLACEHOLDER(child)) {
+					return FALSE;
+				}
+			}
+		}
+	}
+	return TRUE;
+}
+
 void
 glade_gtk_panda_clist_set_property (GladeWidgetAdaptor *adaptor,
 			    GObject            *object, 
@@ -133,10 +224,8 @@ glade_gtk_panda_clist_set_property (GladeWidgetAdaptor *adaptor,
 		for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
 			column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 			child = gtk_tree_view_column_get_widget(column);
-			if (child != NULL) {
-				glade_widget_adaptor_create_internal
-					(gclist, G_OBJECT (child),
-					 "child", "pandaclist", FALSE, GLADE_CREATE_USER);
+			if (child == NULL) {
+				gtk_tree_view_column_set_widget(column,glade_placeholder_new());
 			}
 		}
 	}
