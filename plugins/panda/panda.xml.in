@@ -20,7 +20,7 @@
 
       <properties>
 	    <property id="column_widths" default="100,100,100,100,100,100,100,100,100,100,100,100,100" />
-	    <property id="n_columns" _name="Number of columns" query="True" default="3" save="False">
+	    <property id="n_columns" _name="Number of columns" default="0" save="False">
 	      <spec>glade_standard_int_spec</spec>
 	      <_tooltip>The number of columns</_tooltip>
 	    </property>
