@@ -24,6 +24,7 @@
 #endif
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n-lib.h>
@@ -102,8 +103,8 @@ flush_properties(GladeParseState *state)
 		return;
 	}
 	
-	prop.has_context = 0;
-	prop.translatable = 0;
+	prop.has_context = 1;
+	prop.translatable = 1;
 	prop.comment = "";
 	for (i = 0; i < g_list_length(state->widget->attrs); i++) {
 		attr = (GladeAttribute*)g_list_nth_data(state->widget->attrs,i);
@@ -126,11 +127,8 @@ flush_properties(GladeParseState *state)
 			prop.name = xmlStrdup("height_request");
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
-		} else if (!xmlStrcmp(attr->name,BAD_CAST("columns"))) {
-			prop.name = xmlStrdup("n_columns");
-			prop.value = attr->value;
-			g_array_append_val(props, prop);
 		} else {
+fprintf(stderr,"append prop[%s:%s]\n",attr->name,attr->value);
 			prop.name = attr->name;
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
@@ -138,6 +136,7 @@ flush_properties(GladeParseState *state)
 	}
 	state->widget->properties = (GladePropInfo*)props->data;
 	state->widget->n_properties = props->len;
+fprintf(stderr,"n_properties[%s:%d]\n",state->widget->name,state->widget->n_properties);
 	g_array_free(props, FALSE);
 
 	if (parent != NULL) {
@@ -362,6 +361,7 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 		}
 		break;
 	case PARSER_CHILD_ATTR:
+fprintf(stderr,"child_attr[%s:%s]\n",name,state->content->str);
 		state->state = PARSER_CHILD;
 		GladeAttribute *attr = g_new0(GladeAttribute, 1);
 		if (
@@ -670,11 +670,15 @@ glade_parser_interface_new_from_file (const gchar *file, const gchar *domain)
         g_error_free(error);
         return NULL;
     }
-    buf2 = to_utf8(buf1);
-    g_free(buf1);
 
-    rc = xmlSAXUserParseMemory(&glade_parser, &state, buf2, strlen(buf2));
-    g_free(buf2);
+    if (strstr(buf1, "encoding=\"EUC-JP\"")) {
+      rc = xmlSAXUserParseMemory(&glade_parser, &state, buf1, strlen(buf1));
+    } else {
+        buf2 = to_utf8(buf1);
+        rc = xmlSAXUserParseMemory(&glade_parser, &state, buf2, strlen(buf2));
+        g_free(buf2);
+    }
+    g_free(buf1);
 
     xmlSubstituteEntitiesDefault(prevSubstituteEntities);
 
@@ -843,6 +847,263 @@ modifier_string_from_bits (GdkModifierType modifiers)
     g_string_free (string, TRUE);
     return NULL;
 }
+
+/***********************************
+ * panda
+ ***********************************/
+
+static void
+dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *child_info, GladeWidgetInfo *parent)
+{
+    xmlNode *widget, *node;
+    xmlNode *child;
+    gint i, j;
+    gboolean f_child_tag = FALSE;
+
+    if (info == NULL) {
+	    return;
+    }
+
+    widget = xmlNewNode(NULL, BAD_CAST("widget"));
+    xmlAddChild(parent_node, widget);
+
+    node = xmlNewNode(NULL, BAD_CAST("class"));
+    xmlNodeAddContent(node, BAD_CAST(info->classname));
+    xmlAddChild(widget, node);
+
+    /* child_name */
+    if (parent != NULL && !strcmp(parent->classname,"GtkPandaCList")) {
+        node = xmlNewNode(NULL, BAD_CAST("child_name"));
+        xmlNodeAddContent(node, BAD_CAST("CList:title"));
+        xmlAddChild(widget, node);
+    }
+    if (parent != NULL && !strcmp(parent->classname,"GtkPandaCombo")) {
+        node = xmlNewNode(NULL, BAD_CAST("child_name"));
+        xmlNodeAddContent(node, BAD_CAST("GtkPandaCombo:entry"));
+        xmlAddChild(widget, node);
+    }
+
+fprintf(stderr,"name[%s]\n",info->name);
+fprintf(stderr,"class[%s]\n",info->classname);
+    node = xmlNewNode(NULL, BAD_CAST("name"));
+    xmlNodeAddContent(node, BAD_CAST(info->name));
+    xmlAddChild(widget, node);
+
+    if (child_info != NULL) {
+        for (i = 0; i < child_info->n_properties; i++) {
+fprintf(stderr,"child_info prop[%s:%s]\n",child_info->properties[i].name,child_info->properties[i].value);
+            if (!strcmp(child_info->properties[i].name, "left_attach") ||
+                !strcmp(child_info->properties[i].name, "right_attach") ||
+                !strcmp(child_info->properties[i].name, "top_attach") ||
+                !strcmp(child_info->properties[i].name, "bottom_attach")) {
+                f_child_tag = TRUE;
+                continue;
+            } else {
+              node = xmlNewNode(NULL, BAD_CAST(child_info->properties[i].name));
+              xmlNodeAddContent(node, BAD_CAST(child_info->properties[i].value));
+              xmlAddChild(widget, node);
+            }
+        }
+    }
+
+    /* child */
+    if (f_child_tag) {
+        node = xmlNewNode(NULL, BAD_CAST("child"));
+        xmlAddChild(widget, node);
+        for (i = 0; i < child_info->n_properties; i++) {
+            if (!strcmp(child_info->properties[i].name, "left_attach") ||
+                !strcmp(child_info->properties[i].name, "right_attach") ||
+                !strcmp(child_info->properties[i].name, "top_attach") ||
+                !strcmp(child_info->properties[i].name, "bottom_attach")) {
+                child = xmlNewNode(NULL, BAD_CAST(child_info->properties[i].name));
+                xmlNodeAddContent(child, BAD_CAST(child_info->properties[i].value));
+                xmlAddChild(node, child);
+            }
+        }
+    }
+
+fprintf(stderr,"info n_properties[%s:%d]\n",info->name,info->n_properties);
+    for (i = 0; i < info->n_properties; i++) { 
+fprintf(stderr,"\tnormal prop[%s:%s]\n",info->properties[i].name,info->properties[i].value);
+        if (!strcmp(info->properties[i].name,"width_request")) {
+            node = xmlNewNode(NULL, BAD_CAST("width"));
+            xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
+            xmlAddChild(widget, node);
+        } else if (!strcmp(info->properties[i].name,"height_request")) {
+            node = xmlNewNode(NULL, BAD_CAST("height"));
+            xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
+            xmlAddChild(widget, node);
+        } else {
+            node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));
+            xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
+            xmlAddChild(widget, node);
+        }
+    }
+
+    for (i = 0; i < info->n_accels; i++) {
+        node = xmlNewNode(NULL, BAD_CAST("accelerator"));
+        xmlAddChild(widget, node);
+
+        gchar *modifiers = modifier_string_from_bits (info->accels[i].modifiers);
+	    child = xmlNewNode(NULL, BAD_CAST("modifiers"));
+        if (modifiers == NULL || strlen(modifiers) == 0) {
+            xmlNodeAddContent(child, BAD_CAST("0"));
+        } else {
+            xmlNodeAddContent(child, BAD_CAST(modifiers));
+        }
+        xmlAddChild(node, child);
+
+		gchar key[64];
+	    child = xmlNewNode(NULL, BAD_CAST("key"));
+		sprintf(key,"GDK_%s",gdk_keyval_name(info->accels[i].key));
+        xmlNodeAddContent(child, BAD_CAST(key));
+        xmlAddChild(node, child);
+
+	    child = xmlNewNode(NULL, BAD_CAST("signal"));
+        xmlNodeAddContent(child, BAD_CAST(info->accels[i].signal));
+        xmlAddChild(node, child);
+
+        if (modifiers) {
+            g_free (modifiers);
+        }
+    }
+
+    for (i = 0; i < info->n_signals; i++) {
+	    node = xmlNewNode(NULL, BAD_CAST("signal"));
+        xmlAddChild(widget, node);
+
+	    child = xmlNewNode(NULL, BAD_CAST("name"));
+        xmlNodeAddContent(child, BAD_CAST(info->signals[i].name));
+        xmlAddChild(node, child);
+
+	    child = xmlNewNode(NULL, BAD_CAST("handler"));
+        xmlNodeAddContent(child, BAD_CAST(info->signals[i].handler));
+        xmlAddChild(node, child);
+
+	    if (info->signals[i].object) {
+	        child = xmlNewNode(NULL, BAD_CAST("data"));
+            xmlNodeAddContent(child, BAD_CAST(info->signals[i].object));
+            xmlAddChild(node, child);
+        }
+
+	    if (info->signals[i].after) {
+	      child = xmlNewNode(NULL, BAD_CAST("after"));
+          xmlNodeAddContent(child, BAD_CAST("True"));
+          xmlAddChild(node, child);
+        }
+    }
+
+    /* child widget */
+    for (i = 0; i < info->n_children; i++) {
+        dump_widget_panda(widget, info->children[i].child, &(info->children[i]), info);
+    }
+}
+
+static xmlDoc *
+glade_interface_make_doc_panda (GladeInterface *interface)
+{
+    xmlDoc *doc;
+    xmlNode *root, *comment, *node1, *node2;
+    gint i;
+    gchar *name;
+
+    doc = xmlNewDoc(BAD_CAST("1.0"));
+    doc->standalone = FALSE;
+
+    root = xmlNewNode(NULL, BAD_CAST("GTK-Interface"));
+    xmlDocSetRootElement(doc, root);
+
+    if (interface->n_toplevels > 0) {
+      name = interface->toplevels[0]->name;
+    } else {
+      name = "empty";
+    }
+    node1 = xmlNewNode(NULL, BAD_CAST("project"));
+	xmlAddChild(root, node1);
+
+    node2 = xmlNewNode(NULL, BAD_CAST("name"));
+	xmlNodeAddContent(node2, BAD_CAST(name));
+	xmlAddChild(node1, node2);
+
+    node2 = xmlNewNode(NULL, BAD_CAST("program_name"));
+	xmlNodeAddContent(node2, BAD_CAST(name));
+	xmlAddChild(node1, node2);
+#if 0
+    node2 = xmlNewNode(NULL, BAD_CAST("directory"));
+	xmlNodeAddContent(node2, BAD_CAST(""));
+	xmlAddChild(node1, node2);
+#endif
+
+    node2 = xmlNewNode(NULL, BAD_CAST("pixmaps_directory"));
+	xmlNodeAddContent(node2, BAD_CAST("pixmaps"));
+	xmlAddChild(node1, node2);
+
+    node2 = xmlNewNode(NULL, BAD_CAST("gnome_support"));
+	xmlNodeAddContent(node2, BAD_CAST("True"));
+	xmlAddChild(node1, node2);
+
+    node2 = xmlNewNode(NULL, BAD_CAST("gtkpanda_support"));
+	xmlNodeAddContent(node2, BAD_CAST("False"));
+	xmlAddChild(node1, node2);
+
+    for (i = 0; i < interface->n_toplevels; i++) {
+	    dump_widget_panda(root, interface->toplevels[i], NULL, NULL);
+    }
+    return doc;
+}
+
+static gboolean
+eval_cb(
+  const GMatchInfo *info,
+  GString *res,
+  gpointer data)
+{
+  gchar *match;
+
+  match = g_match_info_fetch(info, 1);
+  g_string_append (res, "<");
+  g_string_append (res, match);
+  g_string_append (res, ">");
+  g_string_append (res, "</");
+  g_string_append (res, match);
+  g_string_append (res, ">");
+  g_free(match);
+  return FALSE;
+}
+
+static void
+glade_interface_buffer_panda (GladeInterface  *interface,
+			gpointer        *ret,
+			gint            *size)
+{
+    xmlDoc *doc;
+    gchar *buf;
+    GRegex *reg;
+
+    g_return_if_fail (interface != NULL);
+    g_return_if_fail (ret       != NULL);
+    g_return_if_fail (size      != NULL);
+
+    doc = glade_interface_make_doc_panda (interface);
+    xmlDocDumpFormatMemoryEnc(doc, (xmlChar **)&buf,
+			      size, "EUC-JP",  TRUE);
+
+    reg = g_regex_new("<(.*)/>",G_REGEX_RAW,0,NULL); 
+    *ret = g_regex_replace_eval(reg,buf,-1,0,0,eval_cb,NULL,NULL);
+    if (*ret != NULL) {
+        *size = strlen(*ret);
+    } else {
+        *size = 0;
+    }
+    g_regex_unref(reg);
+    g_free(buf);
+
+    xmlFreeDoc(doc);
+}
+
+/***********************************
+ * end of panda
+ ***********************************/
 
 static void
 dump_widget(xmlNode *parent, GladeWidgetInfo *info, gint indent)
@@ -1045,6 +1306,7 @@ dump_widget(xmlNode *parent, GladeWidgetInfo *info, gint indent)
 	xmlNodeAddContent(widget, BAD_CAST("  "));
 }
 
+
 static xmlDoc *
 glade_interface_make_doc (GladeInterface *interface)
 {
@@ -1121,8 +1383,15 @@ glade_parser_interface_dump (GladeInterface *interface,
 	GIOChannel *fd;
 	gpointer buffer;
 	gint     size, retval = G_IO_STATUS_ERROR;
+    gchar *env;
+   
+    env = getenv("OUTPUT_GLADE_3_FORMAT");
 
-	glade_interface_buffer (interface, &buffer, &size);
+    if (env != NULL && strlen(env) > 0) {
+	    glade_interface_buffer (interface, &buffer, &size);
+    } else {
+	    glade_interface_buffer_panda (interface, &buffer, &size);
+    }
 	
 	if (buffer == NULL)
 	{
@@ -1130,17 +1399,11 @@ glade_parser_interface_dump (GladeInterface *interface,
 			     _("Could not allocate memory for interface"));
 		return FALSE;
 	}
-	
-	if ((fd = g_io_channel_new_file (filename, "w", error)))
-	{
-		retval = g_io_channel_write_chars (fd, buffer, size, NULL, error);
-		g_io_channel_shutdown(fd, TRUE, NULL);
-		g_io_channel_unref (fd);
-	}
-	
+
+    g_file_set_contents(filename, buffer, size, error);
 	xmlFree (buffer);
 	
-	return (retval == G_IO_STATUS_NORMAL) ? TRUE : FALSE;
+	return (*error == NULL) ? TRUE : FALSE;
 }
 
 G_CONST_RETURN gchar *

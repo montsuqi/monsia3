@@ -20,16 +20,17 @@
 
       <properties>
 	    <property id="column_widths" default="100,100,100,100,100,100,100,100,100,100,100,100,100" />
-	    <property id="n_columns" _name="Number of columns" default="0" save="False">
+	    <property id="columns" _name="Number of columns" default="0">
 	      <spec>glade_standard_int_spec</spec>
 	      <_tooltip>The number of columns</_tooltip>
 	    </property>
-        <property id="selection_mode">
+        <property id="selection_mode" save="True" default="GTK_SELECTION_SINGLE">
           <displayable-values>
             <value id="GTK_SELECTION_SINGLE" _name="single"/>
             <value id="GTK_SELECTION_MULTIPLE" _name="multi"/>
           </displayable-values>
         </property>
+	    <property id="show_titles"/>
         <property id="enable-grid-lines" disabled="True"/>
         <property id="enable-search" disabled="True"/>
         <property id="enable-tree-lines" disabled="True"/>

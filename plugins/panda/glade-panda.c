@@ -65,7 +65,7 @@ glade_gtk_panda_clist_add_child (GladeWidgetAdaptor  *adaptor,
 	GtkWidget *_child;
 	int i;
 
-	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+	for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 		_child = gtk_tree_view_column_get_widget(column);
 		if (_child == NULL) {
@@ -94,7 +94,7 @@ glade_gtk_panda_clist_remove_child (GladeWidgetAdaptor  *adaptor,
 	GList *list = NULL;
 	int i;
 
-	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+	for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 		_child = gtk_tree_view_column_get_widget(column);
 		if (GTK_WIDGET(child) == GTK_WIDGET(_child)) {
@@ -117,7 +117,7 @@ glade_gtk_panda_clist_replace_child (GladeWidgetAdaptor *adaptor,
 	int i;
 	GladeWidget  *gchild;
 
-	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+	for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 		_child = gtk_tree_view_column_get_widget(column);
 		if (GTK_WIDGET(_child) == GTK_WIDGET(current)) {
@@ -144,7 +144,7 @@ glade_gtk_panda_clist_get_children (GladeWidgetAdaptor  *adaptor,
 	GList *list = NULL;
 	int i;
 
-	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+	for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 		child = gtk_tree_view_column_get_widget(column);
 		if (child != NULL) {
@@ -165,7 +165,7 @@ glade_gtk_panda_clist_get_internal_child (GladeWidgetAdaptor *adaptor,
 	GObject *child;
 	int i;
 
-	for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+	for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
 		column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 		child = (GObject*)gtk_tree_view_column_get_widget(column);
 		if (child != NULL) {
@@ -190,9 +190,9 @@ glade_gtk_panda_clist_verify_property (GladeWidgetAdaptor *adaptor,
 	GtkWidget *child;
 	int i, current,new;
 
-	if (!strcmp (id, "n-columns")) {
+	if (!strcmp (id, "columns")) {
 		new = g_value_get_int(value);
-		current = gtk_panda_clist_get_n_columns(clist);
+		current = gtk_panda_clist_get_columns(clist);
 		if (new < current) {
 			for(i = new; i < current; i++) {
 				column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
@@ -220,8 +220,8 @@ glade_gtk_panda_clist_set_property (GladeWidgetAdaptor *adaptor,
 
 	g_object_set_property(object,id,value);
 
-	if (!strcmp (id, "n-columns")) {
-		for(i = 0; i < gtk_panda_clist_get_n_columns(clist); i++) {
+	if (!strcmp (id, "columns")) {
+		for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
 			column = gtk_tree_view_get_column(GTK_TREE_VIEW(clist), i);
 			child = gtk_tree_view_column_get_widget(column);
 			if (child == NULL) {
