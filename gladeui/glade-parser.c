@@ -127,8 +127,13 @@ flush_properties(GladeParseState *state)
 			prop.name = xmlStrdup("height_request");
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
+		} else if (!xmlStrcmp(attr->name,BAD_CAST("input_mode"))) {
+            gchar *buf = g_malloc0(64);
+			prop.name = attr->name;
+            sprintf(buf,"GTK_PANDA_ENTRY_%s",attr->value);
+			prop.value = buf;
+			g_array_append_val(props, prop);
 		} else {
-fprintf(stderr,"append prop[%s:%s]\n",attr->name,attr->value);
 			prop.name = attr->name;
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
@@ -932,6 +937,18 @@ fprintf(stderr,"\tnormal prop[%s:%s]\n",info->properties[i].name,info->propertie
         } else if (!strcmp(info->properties[i].name,"height_request")) {
             node = xmlNewNode(NULL, BAD_CAST("height"));
             xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
+            xmlAddChild(widget, node);
+        } else if (!strcmp(info->properties[i].name,"input_mode")) {
+            char *buf;
+            buf = strstr(info->properties[i].value,"GTK_PANDA_ENTRY_");
+            if (buf != NULL) { 
+                buf += strlen("GTK_PANDA_ENTRY_");
+            } else { 
+                buf = "";
+            }
+fprintf(stderr,"input_mode[%s->%s]\n",info->properties[i].value, buf);
+            node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));
+            xmlNodeAddContent(node, BAD_CAST(buf));
             xmlAddChild(widget, node);
         } else {
             node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));

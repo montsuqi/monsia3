@@ -61,9 +61,9 @@
       <properties>
         <property id="input_mode">
           <displayable-values>
-            <value id="GTK_PANDA_ENTRY_ASCII_MODE" _name="ascii"/>
-            <value id="GTK_PANDA_ENTRY_KANA_MODE" _name="kana"/>
-            <value id="GTK_PANDA_ENTRY_IM_MODE" _name="im"/>
+            <value id="GTK_PANDA_ENTRY_ASCII" _name="ASCII"/>
+            <value id="GTK_PANDA_ENTRY_KANA" _name="KANA"/>
+            <value id="GTK_PANDA_ENTRY_XIM" _name="XIM"/>
           </displayable-values>
         </property>
       </properties>
