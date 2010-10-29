@@ -69,7 +69,13 @@
       </properties>
     </glade-widget-class>
 
-    <glade-widget-class name="GtkPandaFileentry" generic-name="pandafileentry" _title="GtkPandaFileentry"/>
+    <glade-widget-class name="GtkPandaFileEntry" generic-name="pandafileentry" _title="GtkPandaFileEntry">
+      <post-create-function>glade_gtk_panda_file_entry_post_create</post-create-function>
+      <add-child-function>glade_gtk_panda_file_entry_add_child</add-child-function>
+      <properties>
+        <property id="size" disabled="True"/>
+      </properties>
+    </glade-widget-class>
 
     <glade-widget-class name="GtkPandaHTML" generic-name="pandahtml" _title="GtkPandaHTML" get-type-function="gtk_panda_html_get_type">
       <properties>
@@ -89,6 +95,26 @@
 
     <glade-widget-class name="GtkPandaTimer" generic-name="pandatimer" _title="GtkPandaTimer"/>
 
+    <glade-widget-class name="GtkPandaPixmap" generic-name="pixmap" _title="GtkPandaPixmap">
+      <properties>
+        <property id="file" disabled="True"/>
+        <property id="gicon" disabled="True"/>
+        <property id="icon-name" disabled="True"/>
+        <property id="icon-set" disabled="True"/>
+        <property id="icon-size" disabled="True"/>
+        <property id="image" disabled="True"/>
+        <property id="mask" disabled="True"/>
+        <property id="pixbuf" disabled="True"/>
+        <property id="pixbuf-animation" disabled="True"/>
+        <property id="pixel-size" disabled="True"/>
+        <property id="pixmap" disabled="True"/>
+        <property id="stock" disabled="True"/>
+        <property id="storage-type" disabled="True"/>
+        <property id="glade-type" disabled="True"/>
+        <property id="glade-stock" disabled="True"/>
+      </properties>
+    </glade-widget-class>
+
   </glade-widget-classes>
 
   <glade-widget-group name="gtkpanda-base" _title="GTK+Panda Widgets">
@@ -97,12 +123,13 @@
     <glade-widget-class-ref name="GtkPandaCombo"/>
     <glade-widget-class-ref name="GtkPandaDownload"/>
     <glade-widget-class-ref name="GtkPandaEntry"/>
-    <glade-widget-class-ref name="GtkPandaFileentry"/>
+    <glade-widget-class-ref name="GtkPandaFileEntry"/>
     <glade-widget-class-ref name="GtkPandaHTML"/>
     <glade-widget-class-ref name="GtkPandaPDF"/>
     <glade-widget-class-ref name="GtkPandaPrint"/>
     <glade-widget-class-ref name="GtkPandaText"/>
     <glade-widget-class-ref name="GtkPandaTimer"/>
+    <glade-widget-class-ref name="GtkPandaPixmap"/>
   </glade-widget-group>
 
 </glade-catalog>

@@ -141,7 +141,6 @@ flush_properties(GladeParseState *state)
 	}
 	state->widget->properties = (GladePropInfo*)props->data;
 	state->widget->n_properties = props->len;
-fprintf(stderr,"n_properties[%s:%d]\n",state->widget->name,state->widget->n_properties);
 	g_array_free(props, FALSE);
 
 	if (parent != NULL) {
@@ -348,8 +347,19 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 	case PARSER_WIDGET_ATTR:
 		state->state = PARSER_WIDGET;
 		if (!xmlStrcmp(name,BAD_CAST("class"))) {
-			state->widget->classname = 
-				glade_xml_alloc_string(state->interface, state->content->str);
+            if (!strcmp(state->content->str,"GtkPandaPS")) {
+			    state->widget->classname = 
+			    	glade_xml_alloc_string(state->interface, "GtkPandaPDF");
+            } else if (!strcmp(state->content->str,"GnomePixmap")) {
+			    state->widget->classname = 
+			    	glade_xml_alloc_string(state->interface, "GtkPandaPixmap");
+            } else if (!strcmp(state->content->str,"GnomeFileEntry")) {
+			    state->widget->classname = 
+			    	glade_xml_alloc_string(state->interface, "GtkPandaFileEntry");
+            } else {
+			    state->widget->classname = 
+			    	glade_xml_alloc_string(state->interface, state->content->str);
+            }
 		} else if (!xmlStrcmp(name,BAD_CAST("name"))) {
 			state->widget->name = 
 				glade_xml_alloc_string(state->interface, state->content->str);
@@ -366,7 +376,6 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 		}
 		break;
 	case PARSER_CHILD_ATTR:
-fprintf(stderr,"child_attr[%s:%s]\n",name,state->content->str);
 		state->state = PARSER_CHILD;
 		GladeAttribute *attr = g_new0(GladeAttribute, 1);
 		if (
@@ -873,30 +882,40 @@ dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *c
     xmlAddChild(parent_node, widget);
 
     node = xmlNewNode(NULL, BAD_CAST("class"));
-    xmlNodeAddContent(node, BAD_CAST(info->classname));
+    if (!strcmp(info->classname,"GtkPandaPDF")) {
+        xmlNodeAddContent(node, BAD_CAST("GtkPandaPS"));
+    } else if (!strcmp(info->classname,"GtkPandaPixmap")) {
+        xmlNodeAddContent(node, BAD_CAST("GnomePixmap"));
+    } else if (!strcmp(info->classname,"GtkPandaFileEntry")) {
+        xmlNodeAddContent(node, BAD_CAST("GnomeFileEntry"));
+    } else {
+        xmlNodeAddContent(node, BAD_CAST(info->classname));
+    }
     xmlAddChild(widget, node);
 
     /* child_name */
-    if (parent != NULL && !strcmp(parent->classname,"GtkPandaCList")) {
-        node = xmlNewNode(NULL, BAD_CAST("child_name"));
-        xmlNodeAddContent(node, BAD_CAST("CList:title"));
-        xmlAddChild(widget, node);
-    }
-    if (parent != NULL && !strcmp(parent->classname,"GtkPandaCombo")) {
-        node = xmlNewNode(NULL, BAD_CAST("child_name"));
-        xmlNodeAddContent(node, BAD_CAST("GtkPandaCombo:entry"));
-        xmlAddChild(widget, node);
+    if (parent != NULL) {
+        if (!strcmp(parent->classname,"GtkPandaCList")) {
+            node = xmlNewNode(NULL, BAD_CAST("child_name"));
+            xmlNodeAddContent(node, BAD_CAST("CList:title"));
+            xmlAddChild(widget, node);
+        } else if (!strcmp(parent->classname,"GtkPandaCombo")) {
+            node = xmlNewNode(NULL, BAD_CAST("child_name"));
+            xmlNodeAddContent(node, BAD_CAST("GtkPandaCombo:entry"));
+            xmlAddChild(widget, node);
+        } else if (!strcmp(parent->classname,"GtkPandaFileEntry")) {
+            node = xmlNewNode(NULL, BAD_CAST("child_name"));
+            xmlNodeAddContent(node, BAD_CAST("GnomeEntry:entry"));
+            xmlAddChild(widget, node);
+        }
     }
 
-fprintf(stderr,"name[%s]\n",info->name);
-fprintf(stderr,"class[%s]\n",info->classname);
     node = xmlNewNode(NULL, BAD_CAST("name"));
     xmlNodeAddContent(node, BAD_CAST(info->name));
     xmlAddChild(widget, node);
 
     if (child_info != NULL) {
         for (i = 0; i < child_info->n_properties; i++) {
-fprintf(stderr,"child_info prop[%s:%s]\n",child_info->properties[i].name,child_info->properties[i].value);
             if (!strcmp(child_info->properties[i].name, "left_attach") ||
                 !strcmp(child_info->properties[i].name, "right_attach") ||
                 !strcmp(child_info->properties[i].name, "top_attach") ||
@@ -927,9 +946,7 @@ fprintf(stderr,"child_info prop[%s:%s]\n",child_info->properties[i].name,child_i
         }
     }
 
-fprintf(stderr,"info n_properties[%s:%d]\n",info->name,info->n_properties);
     for (i = 0; i < info->n_properties; i++) { 
-fprintf(stderr,"\tnormal prop[%s:%s]\n",info->properties[i].name,info->properties[i].value);
         if (!strcmp(info->properties[i].name,"width_request")) {
             node = xmlNewNode(NULL, BAD_CAST("width"));
             xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
@@ -946,7 +963,6 @@ fprintf(stderr,"\tnormal prop[%s:%s]\n",info->properties[i].name,info->propertie
             } else { 
                 buf = "";
             }
-fprintf(stderr,"input_mode[%s->%s]\n",info->properties[i].value, buf);
             node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));
             xmlNodeAddContent(node, BAD_CAST(buf));
             xmlAddChild(widget, node);

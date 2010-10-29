@@ -13,6 +13,7 @@ icons_DATA = \
         widget-panda-pandapdf.png \
         widget-panda-pandaprint.png \
         widget-panda-pandatext.png \
-        widget-panda-pandatimer.png
+        widget-panda-pandatimer.png \
+        widget-panda-pixmap.png
 
 EXTRA_DIST = $(icons_DATA)

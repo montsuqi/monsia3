@@ -55,6 +55,35 @@ glade_gtk_panda_combo_post_create (GladeWidgetAdaptor *adaptor,
 }
 
 void
+glade_gtk_panda_file_entry_post_create (GladeWidgetAdaptor *adaptor,
+				       GObject            *object, 
+				       GladeCreateReason   reason)
+{
+	GladeWidget *gfe = glade_widget_get_from_gobject (object);
+
+	/* Chain up */
+	GWA_GET_CLASS (GTK_TYPE_CONTAINER)->post_create (adaptor, object, reason);
+
+	glade_widget_adaptor_create_internal
+		(gfe, G_OBJECT (GTK_PANDA_FILE_ENTRY(object)->entry),
+		 "entry", "pandafileentry", FALSE, reason);
+}
+
+void
+glade_gtk_panda_file_entry_add_child (GladeWidgetAdaptor  *adaptor,
+				GObject	*parent,
+				GObject	*child)
+{
+    gtk_container_remove(GTK_CONTAINER(parent),
+      GTK_PANDA_FILE_ENTRY(parent)->entry);
+    gtk_widget_destroy(GTK_PANDA_FILE_ENTRY(parent)->entry);
+    GTK_PANDA_FILE_ENTRY(parent)->entry = GTK_WIDGET(child);
+    gtk_box_pack_start_defaults(GTK_BOX(parent),GTK_WIDGET(child));
+    gtk_box_set_child_packing(GTK_BOX(parent),
+      GTK_PANDA_FILE_ENTRY(parent)->button,FALSE,TRUE,2,GTK_PACK_END);
+}
+
+void
 glade_gtk_panda_clist_add_child (GladeWidgetAdaptor  *adaptor,
 				GObject	*parent,
 				GObject	*child)
