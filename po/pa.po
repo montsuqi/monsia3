@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glade3.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-03 03:30+0000\n"
+"POT-Creation-Date: 2010-11-05 15:20+0900\n"
 "PO-Revision-Date: 2007-02-04 08:13+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -25,165 +25,208 @@ msgstr "GTK+ ਕਾਰਜਾਂ ਲਈ ਉਪਭੋਗੀ ਇੰਟਰਫੇਸ 
 msgid "Glade Interface Designer"
 msgstr "ਗਲੇਡ ਇੰਟਰਫੇਸ ਡਿਜ਼ਾਇਨਰ"
 
-#: ../data/glade-3.desktop.in.in.h:3 ../src/glade-project-window.c:212
+#: ../data/glade-3.desktop.in.in.h:3 ../src/glade-window.c:440
 msgid "User Interface Designer"
 msgstr "ਉਪਭੋਗੀ ਇੰਟਰਫੇਸ ਡਿਜ਼ਾਇਨਰ"
 
-#: ../src/main.c:39 ../src/main.c:82
+#: ../src/main.c:42
 msgid "Glade"
 msgstr "ਗਲੇਡ"
 
-#: ../src/main.c:83
+#: ../src/main.c:52
+msgid "Output version information and exit"
+msgstr ""
+
+#: ../src/main.c:55
+msgid "Disable Devhelp integration"
+msgstr ""
+
+#: ../src/main.c:58
+msgid "[FILE...]"
+msgstr ""
+
+#: ../src/main.c:68
+msgid "be verbose"
+msgstr ""
+
+#: ../src/main.c:93
+#, fuzzy
+msgid "Create or edit user interface designs for GTK+ or GNOME applications."
+msgstr "GTK+ ਕਾਰਜਾਂ ਲਈ ਉਪਭੋਗੀ ਇੰਟਰਫੇਸ ਡਿਜ਼ਾਇਨ ਬਣਾਓ ਜਾਂ ਖੋਲ੍ਹੋ"
+
+#: ../src/main.c:97 ../src/main.c:98
 msgid "Glade options"
 msgstr "ਗਲੇਡ ਚੋਣਾਂ"
 
-#: ../src/main.c:132
-msgid "gmodule support not found. gmodule support is required for glade to work"
+#: ../src/main.c:105
+#, fuzzy
+msgid "Glade debug options"
+msgstr "ਗਲੇਡ ਚੋਣਾਂ"
+
+#: ../src/main.c:106
+#, fuzzy
+msgid "Show Glade debug options"
+msgstr "ਗਲੇਡ ਚੋਣਾਂ"
+
+#: ../src/main.c:149
+msgid ""
+"gmodule support not found. gmodule support is required for glade to work"
 msgstr ""
 
-#: ../src/main.c:159
+#: ../src/main.c:176
 #, c-format
 msgid "Unable to open '%s', the file does not exist.\n"
 msgstr "'%s' ਖੋਲ੍ਹਣ ਲਈ ਅਸਫ਼ਲ ਹੈ, ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।\n"
 
-#: ../src/glade-project-window.c:44
+#: ../src/glade-window.c:45
 msgid "[Read Only]"
 msgstr "[ਪੜ੍ਹਨ ਲਈ]"
 
-#: ../src/glade-project-window.c:110
+#: ../src/glade-window.c:155
 #, c-format
 msgid "Could not display the URL '%s'"
 msgstr ""
 
-#: ../src/glade-project-window.c:114
-msgid "No suitable web browser executable could be found."
+#: ../src/glade-window.c:159
+msgid "No suitable web browser could be found."
 msgstr ""
 
-#: ../src/glade-project-window.c:611
-#, c-format
-msgid "Activate %s"
+#. translators: referring to the properties of a widget named '%s [%s]'
+#: ../src/glade-window.c:669
+#, fuzzy, c-format
+msgid "%s [%s] - Properties"
+msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
+
+#: ../src/glade-window.c:682 ../src/glade-window.c:688
+#: ../src/glade-window.c:3121 ../src/glade-window.c:3127
+#: ../gladeui/glade-widget.c:1053
+msgid "Properties"
+msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
+
+#. translators: referring to the action of activating a file named '%s'.
+#. *              we also indicate to users that the file may be read-only with
+#. *              the second '%s'
+#: ../src/glade-window.c:716
+#, fuzzy, c-format
+msgid "Activate '%s' %s"
 msgstr "%s ਸਰਗਰਮ"
 
-#: ../src/glade-project-window.c:729
+#. translators: referring to the action of activating a file named '%s'
+#. FIXME add hint for translators
+#: ../src/glade-window.c:723 ../src/glade-window.c:731
+#, fuzzy, c-format
+msgid "Activate '%s'"
+msgstr "%s ਸਰਗਰਮ"
+
+#: ../src/glade-window.c:1161
 msgid "Open…"
 msgstr "ਖੋਲ੍ਹੋ..."
 
-#: ../src/glade-project-window.c:771
+#: ../src/glade-window.c:1203
 #, c-format
 msgid "The file %s has been modified since reading it"
 msgstr ""
 
-#: ../src/glade-project-window.c:775
+#: ../src/glade-window.c:1207
 msgid "If you save it, all the external changes could be lost. Save it anyway?"
 msgstr ""
 
-#: ../src/glade-project-window.c:779
+#: ../src/glade-window.c:1211
 msgid "_Save Anyway"
 msgstr "ਕਿਸੇ ਤਰ੍ਹਾਂ ਵੀ ਸੰਭਾਲੋ(_S)"
 
-#: ../src/glade-project-window.c:786
+#: ../src/glade-window.c:1218
 msgid "_Don't Save"
 msgstr "ਨਾ ਸੰਭਾਲੋ(_D)"
 
-#: ../src/glade-project-window.c:809
+#: ../src/glade-window.c:1241
 #, c-format
 msgid "Failed to save %s: %s"
 msgstr "%s ਸੰਭਾਲਣ ਲਈ ਫੇਲ੍ਹ: %s"
 
-#: ../src/glade-project-window.c:830
+#: ../src/glade-window.c:1262
 #, c-format
 msgid "Project '%s' saved"
 msgstr "ਪ੍ਰੋਜੈਕਟ '%s' ਸੰਭਾਲਿਆ"
 
-#. Just in case the menu-item is not insensitive
-#. Just in case the menu-item or button is not insensitive
-#: ../src/glade-project-window.c:849 ../src/glade-project-window.c:932
-msgid "No open projects to save"
-msgstr "ਸੰਭਾਲਣ ਲਈ ਕੋਈ ਖੁੱਲ੍ਹਾ ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਹੈ"
-
-#: ../src/glade-project-window.c:853
+#: ../src/glade-window.c:1282
 msgid "Save As…"
 msgstr "ਇੰਝ ਸੰਭਾਲੋ…"
 
-#: ../src/glade-project-window.c:895
+#: ../src/glade-window.c:1327
 #, c-format
-msgid ""
-"Could not save the file %s. You do not have the permissions necessary to "
-"save the file."
+msgid "Could not save the file %s"
 msgstr ""
 
-#: ../src/glade-project-window.c:908
+#: ../src/glade-window.c:1331
+msgid "You do not have the permissions necessary to save the file."
+msgstr ""
+
+#: ../src/glade-window.c:1352
 #, c-format
 msgid "Could not save file %s. Another project with that path is open."
 msgstr ""
 
-#: ../src/glade-project-window.c:960
+#. Just in case the menu-item or button is not insensitive
+#: ../src/glade-window.c:1376
+msgid "No open projects to save"
+msgstr "ਸੰਭਾਲਣ ਲਈ ਕੋਈ ਖੁੱਲ੍ਹਾ ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਹੈ"
+
+#: ../src/glade-window.c:1406
 #, c-format
 msgid ""
 "<span weight=\"bold\" size=\"larger\">Save changes to project \"%s\" before "
 "closing?</span>\n"
 "\n"
-"Your changes will be lost if you don't save them.\n"
+"Your changes will be lost if you don't save them."
 msgstr ""
 
-#: ../src/glade-project-window.c:974
+#: ../src/glade-window.c:1418
 msgid "_Close without Saving"
 msgstr "ਬਿਨਾਂ ਸੰਭਾਲੇ ਬੰਦ ਕਰੋ(_C)"
 
-#: ../src/glade-project-window.c:995
+#: ../src/glade-window.c:1445
 #, c-format
 msgid "Failed to save %s to %s: %s"
 msgstr "%s ਨੂੰ %s ਵਾਂਗ ਸੰਭਾਲਣ ਲਈ ਫੇਲ੍ਹ: %s"
 
-#: ../src/glade-project-window.c:1007
+#: ../src/glade-window.c:1457
 msgid "Save…"
 msgstr "ਸੰਭਾਲੋ..."
 
-#: ../src/glade-project-window.c:1185
-msgid "Glade's Script Console"
-msgstr "ਗਲੇਡ ਦੀ ਸਕ੍ਰਿਪਟ ਕਨਸੋਂਲ"
-
-#: ../src/glade-project-window.c:1465
+#: ../src/glade-window.c:2015
 msgid "Could not display the online user manual"
 msgstr ""
 
-#: ../src/glade-project-window.c:1468 ../src/glade-project-window.c:1506
+#: ../src/glade-window.c:2018 ../src/glade-window.c:2056
 #, c-format
 msgid ""
 "No suitable web browser executable could be found to be executed and to "
 "display the URL: %s"
 msgstr ""
 
-#: ../src/glade-project-window.c:1503
+#: ../src/glade-window.c:2053
 msgid "Could not display the online developer reference manual"
 msgstr ""
 
-#: ../src/glade-project-window.c:1536
+#: ../src/glade-window.c:2096
 msgid ""
-"Glade is a user interface designer for GTK+ and GNOME.\n"
-"This version is a rewrite of the Glade 2 version, originally created by "
-"Damon Chaplin\n"
+"Glade is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version 2 of the License, or (at your option) any later "
+"version.\n"
+"\n"
+"Glade is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License along with "
+"Glade; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/glade-project-window.c:1541
-msgid ""
-"This program is free software; you can redistribute it and/or modify\n"
-"it under the terms of the GNU General Public License as\n"
-"published by the Free Software Foundation; either version 2 of the\n"
-"License, or (at your option) any later version.\n"
-"\n"
-"This program is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details.\n"
-"\n"
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
-"USA."
-msgstr ""
-
-#: ../src/glade-project-window.c:1563
+#: ../src/glade-window.c:2122
 msgid "translator-credits"
 msgstr ""
 "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ <apbrar@gmail.com>\n"
@@ -191,605 +234,656 @@ msgstr ""
 "ਪੰਜਾਬ ਲੀਨਕਸ ਤਕਨਾਲੋਜੀ ਦਾ ਉੱਦਮ\n"
 "http://punlinux.sourceforge.net"
 
+#: ../src/glade-window.c:2123
+#, fuzzy
+msgid "A user interface designer for GTK+ and GNOME."
+msgstr "GTK+ ਕਾਰਜਾਂ ਲਈ ਉਪਭੋਗੀ ਇੰਟਰਫੇਸ ਡਿਜ਼ਾਇਨ ਬਣਾਓ ਜਾਂ ਖੋਲ੍ਹੋ"
+
 #. File
-#: ../src/glade-project-window.c:1636 ../plugins/gtk+/glade-gtk.c:4397
-#: ../plugins/gtk+/glade-gtk.c:4695
+#: ../src/glade-window.c:2196 ../plugins/gtk+/glade-gtk.c:5133
+#: ../plugins/gtk+/glade-gtk.c:5456
 msgid "_File"
 msgstr "ਫਾਇਲ(_F)"
 
 #. Edit
-#: ../src/glade-project-window.c:1637 ../plugins/gtk+/glade-gtk.c:4400
-#: ../plugins/gtk+/glade-gtk.c:4705
+#: ../src/glade-window.c:2197 ../plugins/gtk+/glade-gtk.c:5136
+#: ../plugins/gtk+/glade-gtk.c:5466
 msgid "_Edit"
 msgstr "ਸੋਧ(_E)"
 
 #. View
-#: ../src/glade-project-window.c:1638 ../plugins/gtk+/glade-gtk.c:4403
-#: ../plugins/gtk+/glade-gtk.c:4713
+#: ../src/glade-window.c:2198 ../plugins/gtk+/glade-gtk.c:5139
+#: ../plugins/gtk+/glade-gtk.c:5474
 msgid "_View"
 msgstr "ਵੇਖੋ(_V)"
 
-#: ../src/glade-project-window.c:1639
+#: ../src/glade-window.c:2199
 msgid "_Projects"
 msgstr "ਪ੍ਰੋਜੈਕਟ(_P)"
 
 #. Help
-#: ../src/glade-project-window.c:1640 ../plugins/gtk+/glade-gtk.c:4415
-#: ../plugins/gtk+/glade-gtk.c:4716
+#: ../src/glade-window.c:2200 ../plugins/gtk+/glade-gtk.c:5151
+#: ../plugins/gtk+/glade-gtk.c:5477
 msgid "_Help"
 msgstr "ਸਹਾਇਤਾ(_H)"
 
-#. FileMenu
-#: ../src/glade-project-window.c:1643
-msgid "_New"
-msgstr "ਨਵਾਂ(_N)"
-
-#: ../src/glade-project-window.c:1644
+#: ../src/glade-window.c:2206
 msgid "Create a new project"
 msgstr "ਇੱਕ ਨਵਾਂ ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ"
 
-#: ../src/glade-project-window.c:1646
-msgid "_Open"
-msgstr "ਖੋਲ੍ਹੋ(_O)"
+#: ../src/glade-window.c:2208
+#, fuzzy
+msgid "_Open…"
+msgstr "ਖੋਲ੍ਹੋ..."
 
-#: ../src/glade-project-window.c:1647
+#: ../src/glade-window.c:2209
 msgid "Open a project"
 msgstr "ਇੱਕ ਪ੍ਰੋਜੈਕਟ ਖੋਲ੍ਹੋ"
 
-#: ../src/glade-project-window.c:1649
+#: ../src/glade-window.c:2211
 msgid "Open _Recent"
 msgstr "ਤਾਜ਼ਾ ਖੋਲ੍ਹੇ(_R)"
 
-#: ../src/glade-project-window.c:1651
-msgid "_Quit"
-msgstr "ਬੰਦ ਕਰੋ(_Q)"
-
-#: ../src/glade-project-window.c:1652
+#: ../src/glade-window.c:2214
 msgid "Quit the program"
 msgstr "ਪ੍ਰੋਗਰਾਮ ਬੰਦ ਕਰੋ"
 
-#. HelpMenu
-#: ../src/glade-project-window.c:1658
-msgid "_About"
-msgstr "ਇਸ ਬਾਰੇ(_A)"
+#. ViewMenu
+#: ../src/glade-window.c:2217
+msgid "Palette _Appearance"
+msgstr ""
 
-#: ../src/glade-project-window.c:1659
+#: ../src/glade-window.c:2221
 msgid "About this application"
 msgstr "ਇਹ ਕਾਰਜ ਬਾਰੇ"
 
-#: ../src/glade-project-window.c:1661
+#: ../src/glade-window.c:2223
 msgid "_Contents"
 msgstr "ਭਾਗ(_C)"
 
-#: ../src/glade-project-window.c:1662
+#: ../src/glade-window.c:2224
 msgid "Display the user manual"
 msgstr "ਉਪਭੋਗੀ ਦਸਤਾਵੇਜ਼ ਵੇਖਾਓ"
 
-#: ../src/glade-project-window.c:1664
+#: ../src/glade-window.c:2226
 msgid "_Developer Reference"
 msgstr "ਡੀਵੈਲਪਰ ਹਵਾਲਾ(_D)"
 
-#: ../src/glade-project-window.c:1665
+#: ../src/glade-window.c:2227
 msgid "Display the developer reference manual"
 msgstr ""
 
-#. FileMenu
-#: ../src/glade-project-window.c:1672
-msgid "_Save"
-msgstr "ਸੰਭਾਲੋ(_S)"
-
-#: ../src/glade-project-window.c:1673
+#: ../src/glade-window.c:2236
 msgid "Save the current project"
 msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਜੈਕਟ ਸੰਭਾਲੋ"
 
-#: ../src/glade-project-window.c:1675
+#: ../src/glade-window.c:2238
 msgid "Save _As…"
 msgstr "ਇੰਝ ਸੰਭਾਲੋ(_A)..."
 
-#: ../src/glade-project-window.c:1676
+#: ../src/glade-window.c:2239
 msgid "Save the current project with a different name"
 msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਵੱਖਰੇ ਨਾਂ ਨਾਲ ਸੰਭਾਲੋ"
 
-#: ../src/glade-project-window.c:1678
-msgid "_Close"
-msgstr "ਬੰਦ ਕਰੋ(_C)"
-
-#: ../src/glade-project-window.c:1679
+#: ../src/glade-window.c:2242
 msgid "Close the current project"
 msgstr "ਮੌਜੂਦਾ ਪ੍ਰੋਜੈਕਟ ਬੰਦ ਕਰੋ"
 
-#. EditMenu
-#: ../src/glade-project-window.c:1682 ../src/glade-project-window.c:2264
-msgid "_Undo"
-msgstr "ਵਾਪਿਸ(_U)"
-
-#: ../src/glade-project-window.c:1683
+#: ../src/glade-window.c:2246
 msgid "Undo the last action"
 msgstr "ਆਖਰੀ ਕਾਰਵਾਈ ਵਾਪਿਸ"
 
-#: ../src/glade-project-window.c:1685 ../src/glade-project-window.c:2275
-msgid "_Redo"
-msgstr "ਮੁੜ ਵਾਪਿਸ(_R)"
-
-#: ../src/glade-project-window.c:1686
+#: ../src/glade-window.c:2249
 msgid "Redo the last action"
 msgstr "ਆਖਰੀ ਕਾਰਵਾਈ ਮੁੜ ਕਰੋ"
 
-#: ../src/glade-project-window.c:1688
-msgid "C_ut"
-msgstr "ਕੱਟੋ(_u)"
-
-#: ../src/glade-project-window.c:1689
+#: ../src/glade-window.c:2252
 msgid "Cut the selection"
 msgstr "ਚੋਣ ਨੂੰ ਕੱਟੋ"
 
-#: ../src/glade-project-window.c:1691
-msgid "_Copy"
-msgstr "ਨਕਲ(_C)"
-
-#: ../src/glade-project-window.c:1692
+#: ../src/glade-window.c:2255
 msgid "Copy the selection"
 msgstr "ਚੋਣ ਦੀ ਨਕਲ ਕਰੋ"
 
-#: ../src/glade-project-window.c:1694
-msgid "_Paste"
-msgstr "ਚੇਪੋ(_P)"
-
-#: ../src/glade-project-window.c:1695
+#: ../src/glade-window.c:2258
 msgid "Paste the clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ 'ਚੋਂ ਚੇਪੋ"
 
-#: ../src/glade-project-window.c:1697
-msgid "_Delete"
-msgstr "ਹਟਾਓ(_D)"
-
-#: ../src/glade-project-window.c:1698
+#: ../src/glade-window.c:2261
 msgid "Delete the selection"
 msgstr "ਚੋਣ ਹਟਾਓ"
 
 #. ViewMenu
-#: ../src/glade-project-window.c:1702
+#: ../src/glade-window.c:2265
 msgid "_Clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ(_C)"
 
-#: ../src/glade-project-window.c:1703
+#: ../src/glade-window.c:2266
 msgid "Show the clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਵੇਖਾਓ"
 
-#: ../src/glade-project-window.c:1706
-msgid "C_onsole"
-msgstr "ਕਨਸੋਂਲ(_n)"
-
-#: ../src/glade-project-window.c:1707
-msgid "Show Script-do console"
-msgstr ""
-
 #. ProjectsMenu
-#: ../src/glade-project-window.c:1711
+#: ../src/glade-window.c:2270
 msgid "_Previous Project"
 msgstr "ਪਿਛਲਾ ਪ੍ਰੋਜੈਕਟ(_P)"
 
-#: ../src/glade-project-window.c:1712
+#: ../src/glade-window.c:2271
 msgid "Activate previous project"
 msgstr "ਪਿਛਲਾ ਪ੍ਰੋਜੈਕਟ ਸਰਗਰਮ ਕਰੋ"
 
-#: ../src/glade-project-window.c:1714
+#: ../src/glade-window.c:2273
 msgid "_Next Project"
 msgstr "ਅਗਲਾ ਪ੍ਰੋਜੈਕਟ(_N)"
 
-#: ../src/glade-project-window.c:1715
+#: ../src/glade-window.c:2274
 msgid "Activate next project"
 msgstr "ਅਗਲਾ ਪ੍ਰੋਜੈਕਟ ਸਰਗਰਮ ਕਰੋ"
 
-#: ../src/glade-project-window.c:1723
+#: ../src/glade-window.c:2282
 msgid "_Use Small Icons"
 msgstr "ਛੋਟੇ ਆਈਕਾਨ ਵਰਤੋਂ(_U)"
 
-#: ../src/glade-project-window.c:1724
+#: ../src/glade-window.c:2283
 msgid "Show items using small icons"
 msgstr ""
 
-#: ../src/glade-project-window.c:1727
+#: ../src/glade-window.c:2286
 msgid "Context _Help"
 msgstr "ਭਾਗ ਸਹਾਇਤਾ(_H)"
 
-#: ../src/glade-project-window.c:1728
+#: ../src/glade-window.c:2287
 msgid "Show or hide contextual help buttons in the editor"
 msgstr ""
 
-#: ../src/glade-project-window.c:1735
+#: ../src/glade-window.c:2290
+#, fuzzy
+msgid "Dock _Palette"
+msgstr "ਰੰਗਪੱਟੀ"
+
+#: ../src/glade-window.c:2291
+msgid "Dock the palette into the main window"
+msgstr ""
+
+#: ../src/glade-window.c:2294
+#, fuzzy
+msgid "Dock _Inspector"
+msgstr "ਇੰਸਪੈਕਟਰ"
+
+#: ../src/glade-window.c:2295
+msgid "Dock the inspector into the main window"
+msgstr ""
+
+#: ../src/glade-window.c:2298
+#, fuzzy
+msgid "Dock _Editor"
+msgstr "ਮੇਨੂ ਸੰਪਾਦਕ"
+
+#: ../src/glade-window.c:2299
+msgid "Dock the editor into the main window"
+msgstr ""
+
+#: ../src/glade-window.c:2307 ../plugins/gtk+/gtk+.xml.in.h:410
 msgid "Text beside icons"
 msgstr "ਪਾਠ ਨਾਲ ਆਈਕਾਨ"
 
-#: ../src/glade-project-window.c:1736
+#: ../src/glade-window.c:2308
 msgid "Display items as text beside icons"
 msgstr ""
 
-#: ../src/glade-project-window.c:1738
+#: ../src/glade-window.c:2310
 msgid "_Icons only"
 msgstr "ਆਈਕਾਨ ਹੀ(_I)"
 
-#: ../src/glade-project-window.c:1739
+#: ../src/glade-window.c:2311
 msgid "Display items as icons only"
 msgstr "ਇਕਾਈਆਂ ਸਿਰਫ਼ ਆਈਕਾਨ ਹੀ ਵੇਖਾਓ"
 
-#: ../src/glade-project-window.c:1741
+#: ../src/glade-window.c:2313
 msgid "_Text only"
 msgstr "ਪਾਠ ਹੀ(_T)"
 
-#: ../src/glade-project-window.c:1742
+#: ../src/glade-window.c:2314
 msgid "Display items as text only"
 msgstr "ਇਕਾਈਆਂ ਪਾਠ ਹੀ ਵੇਖਾਓ"
 
-#: ../src/glade-project-window.c:1950
-msgid "Select a widget"
-msgstr "ਇੱਕ ਵਿਦਗਿਟ ਚੁਣੋ"
+#: ../src/glade-window.c:2501
+#, fuzzy
+msgid "Select"
+msgstr "ਚੁਣੋ(_S)"
 
-#: ../src/glade-project-window.c:2039
-msgid "Palette"
-msgstr "ਰੰਗਪੱਟੀ"
+#: ../src/glade-window.c:2505
+msgid "Select widgets in the workspace"
+msgstr ""
 
-#: ../src/glade-project-window.c:2055
-msgid "Inspector"
-msgstr "ਇੰਸਪੈਕਟਰ"
+#: ../src/glade-window.c:2529
+#, fuzzy
+msgid "Drag Resize"
+msgstr "ਪੇਜ਼ ਆਕਾਰ:"
 
-#: ../src/glade-project-window.c:2061 ../gladeui/glade-widget.c:975
-msgid "Properties"
-msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
+#: ../src/glade-window.c:2533
+msgid "Drag and resize widgets in the workspace"
+msgstr ""
 
-#: ../src/glade-project-window.c:2180
+#: ../src/glade-window.c:2571
 msgid "Could not create a new project."
 msgstr ""
 
-#: ../src/glade-project-window.c:2199
+#: ../src/glade-window.c:2625
 #, c-format
-msgid "%s is already open"
-msgstr "%s ਪਹਿਲਾਂ ਹੀ ਖੁੱਲ੍ਹਾ ਹੈ"
+msgid "The project %s has unsaved changes"
+msgstr ""
+
+#: ../src/glade-window.c:2629
+msgid "If you reload it, all unsaved changes could be lost. Reload it anyway?"
+msgstr ""
+
+#: ../src/glade-window.c:2638
+#, c-format
+msgid "The project file %s has been externally modified"
+msgstr ""
+
+#: ../src/glade-window.c:2642
+#, fuzzy
+msgid "Do you want to reload the project?"
+msgstr ""
+"%s ਮੌਜੂਦ ਹੈ।\n"
+"ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬਦਲਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#: ../src/glade-window.c:2648
+#, fuzzy
+msgid "_Reload"
+msgstr "ਮੁੜ ਵਾਪਿਸ(_R)"
+
+#: ../src/glade-window.c:2765
+msgid "_Undo"
+msgstr "ਵਾਪਿਸ(_U)"
 
 #. Change tooltips
-#: ../src/glade-project-window.c:2266 ../gladeui/glade-app.c:238
+#: ../src/glade-window.c:2767 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Undo: %s"
 msgstr "ਵਾਪਿਸ: %s"
 
-#: ../src/glade-project-window.c:2266 ../src/glade-project-window.c:2277
-#: ../gladeui/glade-app.c:239
+#: ../src/glade-window.c:2767 ../src/glade-window.c:2778
+#: ../gladeui/glade-app.c:269
 msgid "the last action"
 msgstr "ਆਖਰੀ ਕਾਰਵਾ"
 
-#: ../src/glade-project-window.c:2277 ../gladeui/glade-app.c:238
+#: ../src/glade-window.c:2776
+msgid "_Redo"
+msgstr "ਮੁੜ ਵਾਪਿਸ(_R)"
+
+#: ../src/glade-window.c:2778 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Redo: %s"
 msgstr "ਮੁੜ-ਕਰੋ: %s"
 
-#: ../gladeui/glade-app.c:362
+#: ../src/glade-window.c:3058
+msgid "Go back in undo history"
+msgstr ""
+
+#: ../src/glade-window.c:3060
+msgid "Go forward in undo history"
+msgstr ""
+
+#: ../src/glade-window.c:3106
+msgid "Palette"
+msgstr "ਰੰਗਪੱਟੀ"
+
+#: ../src/glade-window.c:3117
+msgid "Inspector"
+msgstr "ਇੰਸਪੈਕਟਰ"
+
+#: ../gladeui/glade-app.c:458
 msgid "Clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ"
 
-#: ../gladeui/glade-app.c:436
+#: ../gladeui/glade-app.c:506
 msgid "Active Project"
 msgstr "ਸਰਗਰਮ ਪ੍ਰੋਜੈਕਟ"
 
-#: ../gladeui/glade-app.c:437
+#: ../gladeui/glade-app.c:507
 msgid "The active project"
 msgstr "ਸਰਗਰਮ ਪ੍ਰੋਜੈਕਟ"
 
-#: ../gladeui/glade-app.c:539
+#: ../gladeui/glade-app.c:513
+msgid "Pointer Mode"
+msgstr ""
+
+#: ../gladeui/glade-app.c:514
+msgid "Current mode for the pointer in the workspace"
+msgstr ""
+
+#: ../gladeui/glade-app.c:593
 #, c-format
 msgid ""
 "Trying to save private data to %s directory but it is a regular file.\n"
 "No private data will be saved in this session"
 msgstr ""
 
-#: ../gladeui/glade-app.c:552
+#: ../gladeui/glade-app.c:606
 #, c-format
 msgid ""
 "Failed to create directory %s to save private data.\n"
 "No private data will be saved in this session"
 msgstr ""
 
-#: ../gladeui/glade-app.c:580
+#: ../gladeui/glade-app.c:634
 #, c-format
 msgid ""
 "Error writing private data to %s (%s).\n"
 "No private data will be saved in this session"
 msgstr ""
 
-#: ../gladeui/glade-app.c:592
+#: ../gladeui/glade-app.c:646
 #, c-format
 msgid ""
 "Error serializing configuration data to save (%s).\n"
 "No private data will be saved in this session"
 msgstr ""
 
-#: ../gladeui/glade-app.c:605
+#: ../gladeui/glade-app.c:659
 #, c-format
 msgid ""
 "Error opening %s to write private data (%s).\n"
 "No private data will be saved in this session"
 msgstr ""
 
-#: ../gladeui/glade-app.c:1044
+#: ../gladeui/glade-app.c:1117
 msgid "You cannot copy a widget internal to a composite widget."
 msgstr ""
 
-#: ../gladeui/glade-app.c:1059 ../gladeui/glade-app.c:1112
-#: ../gladeui/glade-app.c:1287
+#: ../gladeui/glade-app.c:1132 ../gladeui/glade-app.c:1185
+#: ../gladeui/glade-app.c:1359
 msgid "No widget selected."
 msgstr "ਕੋਈ ਵਿਦਗਿਟ ਨਹੀਂ ਚੁਣਿਆ।"
 
-#: ../gladeui/glade-app.c:1097
+#: ../gladeui/glade-app.c:1170
 msgid "You cannot cut a widget internal to a composite widget."
 msgstr ""
 
-#: ../gladeui/glade-app.c:1156
+#: ../gladeui/glade-app.c:1229
 msgid "Unable to paste to the selected parent"
 msgstr ""
 
-#: ../gladeui/glade-app.c:1167
+#: ../gladeui/glade-app.c:1240
 msgid "Unable to paste to multiple widgets"
 msgstr ""
 
-#: ../gladeui/glade-app.c:1177 ../gladeui/glade-app.c:1309
+#: ../gladeui/glade-app.c:1250 ../gladeui/glade-app.c:1380
 msgid "No widget selected on the clipboard"
 msgstr ""
 
-#: ../gladeui/glade-app.c:1203
+#: ../gladeui/glade-app.c:1276
 #, c-format
 msgid "Unable to paste widget %s without a parent"
 msgstr ""
 
-#: ../gladeui/glade-app.c:1220
+#: ../gladeui/glade-app.c:1293
 msgid "Only one widget can be pasted at a time to this container"
 msgstr ""
 
-#: ../gladeui/glade-app.c:1232
+#: ../gladeui/glade-app.c:1305
 msgid "Insufficient amount of placeholders in target container"
 msgstr ""
 
-#: ../gladeui/glade-app.c:1272 ../gladeui/glade-app.c:1319
+#: ../gladeui/glade-app.c:1344 ../gladeui/glade-app.c:1390
 msgid "You cannot delete a widget internal to a composite widget."
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:183 ../plugins/gtk+/glade-gtk.c:187
-#: ../plugins/gtk+/glade-gtk.c:207
+#: ../gladeui/glade-builtins.c:265 ../plugins/gtk+/gtk+.xml.in.h:396
 msgid "Stock"
 msgstr "ਸਟਾਕ"
 
-#: ../gladeui/glade-builtins.c:184
+#: ../gladeui/glade-builtins.c:266
 msgid "A builtin stock item"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:192 ../plugins/gtk+/gtk+.xml.in.h:230
+#: ../gladeui/glade-builtins.c:274 ../plugins/gtk+/gtk+.xml.in.h:398
 msgid "Stock Image"
 msgstr "ਸਟਾਕ ਚਿੱਤਰ"
 
-#: ../gladeui/glade-builtins.c:193 ../plugins/gtk+/gtk+.xml.in.h:1
+#: ../gladeui/glade-builtins.c:275 ../plugins/gtk+/gtk+.xml.in.h:1
 msgid "A builtin stock image"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:523
+#: ../gladeui/glade-builtins.c:607
 msgid "Objects"
 msgstr "ਇਕਾਈ"
 
-#: ../gladeui/glade-builtins.c:524
+#: ../gladeui/glade-builtins.c:608
 msgid "A list of objects"
 msgstr "ਇਕਾਈਆਂ ਦੀ ਲਿਸਟ"
 
-#: ../gladeui/glade-builtins.c:533
+#: ../gladeui/glade-builtins.c:617
 msgid "Pixbuf"
 msgstr "Pixbuf"
 
-#: ../gladeui/glade-builtins.c:534
+#: ../gladeui/glade-builtins.c:618
 msgid "A pixbuf value"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:542
+#: ../gladeui/glade-builtins.c:626
 msgid "GdkColor"
 msgstr "GdkColor"
 
-#: ../gladeui/glade-builtins.c:543
+#: ../gladeui/glade-builtins.c:627
 msgid "A gdk color value"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:551 ../gladeui/glade-property-class.c:1192
+#. Accelerators
+#: ../gladeui/glade-builtins.c:635 ../gladeui/glade-property-class.c:1211
+#: ../plugins/gtk+/gtk+.xml.in.h:11
 msgid "Accelerators"
 msgstr "ਅਕਸਲੇਟਰ"
 
-#: ../gladeui/glade-builtins.c:552 ../gladeui/glade-property-class.c:1193
+#: ../gladeui/glade-builtins.c:636 ../gladeui/glade-property-class.c:1212
 msgid "A list of accelerator keys"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:563
+#: ../gladeui/glade-builtins.c:647
 msgid "Integer"
 msgstr "ਪੂਰਨ ਅੰਕ"
 
-#: ../gladeui/glade-builtins.c:564
+#: ../gladeui/glade-builtins.c:648
 msgid "An integer value"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:572
+#: ../gladeui/glade-builtins.c:656
 msgid "Unsigned Integer"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:573
+#: ../gladeui/glade-builtins.c:657
 msgid "An unsigned integer value"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:580
+#: ../gladeui/glade-builtins.c:664
 msgid "String"
 msgstr "ਸਤਰ"
 
-#: ../gladeui/glade-builtins.c:581
+#: ../gladeui/glade-builtins.c:665
 msgid "An entry"
 msgstr "ਇੱਕ ਇੰਦਰਾਜ਼"
 
-#: ../gladeui/glade-builtins.c:588
+#: ../gladeui/glade-builtins.c:672
 msgid "Strv"
 msgstr "Strv"
 
-#: ../gladeui/glade-builtins.c:589
+#: ../gladeui/glade-builtins.c:673
 msgid "String array"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:597
+#: ../gladeui/glade-builtins.c:681
 msgid "Float"
 msgstr "ਤੈਰਦਾ"
 
-#: ../gladeui/glade-builtins.c:598
+#: ../gladeui/glade-builtins.c:682
 msgid "A floating point entry"
 msgstr ""
 
-#: ../gladeui/glade-builtins.c:606
+#: ../gladeui/glade-builtins.c:690
 msgid "Boolean"
 msgstr "ਬੁਲੀਅਨ"
 
-#: ../gladeui/glade-builtins.c:607
+#: ../gladeui/glade-builtins.c:691
 msgid "A boolean value"
 msgstr ""
 
-#: ../gladeui/glade-base-editor.c:470
+#: ../gladeui/glade-base-editor.c:487
 #, c-format
 msgid "Setting object type on %s to %s"
 msgstr ""
 
-#: ../gladeui/glade-base-editor.c:635
+#: ../gladeui/glade-base-editor.c:652
 #, c-format
 msgid "Add a %s to %s"
 msgstr "%s ਨੂੰ %s 'ਚ ਜੋੜੋ"
 
-#: ../gladeui/glade-base-editor.c:712
+#: ../gladeui/glade-base-editor.c:729
 #, c-format
 msgid "Delete %s child from %s"
 msgstr ""
 
-#: ../gladeui/glade-base-editor.c:835
+#: ../gladeui/glade-base-editor.c:852
 #, c-format
 msgid "Reorder %s's children"
 msgstr ""
 
-#: ../gladeui/glade-base-editor.c:1412 ../plugins/gtk+/glade-gtk.c:206
-#: ../plugins/gtk+/gtk+.xml.in.h:132
+#: ../gladeui/glade-base-editor.c:1435 ../plugins/gtk+/gtk+.xml.in.h:219
 msgid "Label"
 msgstr "ਲੇਬਲ"
 
-#: ../gladeui/glade-base-editor.c:1425 ../gladeui/glade-widget-adaptor.c:924
+#: ../gladeui/glade-base-editor.c:1448 ../gladeui/glade-widget-adaptor.c:812
 msgid "Type"
 msgstr "ਕਿਸਮ"
 
 #. Name
-#: ../gladeui/glade-base-editor.c:1598
+#: ../gladeui/glade-base-editor.c:1621
 msgid "Name :"
 msgstr "ਨਾਂ :"
 
 #. Type
-#: ../gladeui/glade-base-editor.c:1608
+#: ../gladeui/glade-base-editor.c:1631
 msgid "Type :"
 msgstr "ਕਿਸਮ :"
 
-#: ../gladeui/glade-clipboard-view.c:205 ../gladeui/glade-project-view.c:721
-#: ../plugins/gtk+/gtk+.xml.in.h:279
+#: ../gladeui/glade-clipboard-view.c:209 ../plugins/gtk+/gtk+.xml.in.h:451
 msgid "Widget"
 msgstr "ਵਿਦਗਿਟ"
 
-#: ../gladeui/glade-command.c:541
+#: ../gladeui/glade-command.c:549
+#, c-format
 msgid "Setting multiple properties"
 msgstr ""
 
-#: ../gladeui/glade-command.c:549
+#: ../gladeui/glade-command.c:557
 #, c-format
 msgid "Setting %s of %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:553
+#: ../gladeui/glade-command.c:561
 #, c-format
 msgid "Setting %s of %s to %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:771 ../gladeui/glade-command.c:798
+#: ../gladeui/glade-command.c:779 ../gladeui/glade-command.c:806
 #, c-format
 msgid "Renaming %s to %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:903
+#: ../gladeui/glade-command.c:911
 #, c-format
 msgid "Add %s"
 msgstr "%s ਸ਼ਾਮਿਲ"
 
-#: ../gladeui/glade-command.c:904 ../gladeui/glade-command.c:1371
-#: ../gladeui/glade-command.c:1374 ../gladeui/glade-command.c:1537
-#: ../gladeui/glade-command.c:1563 ../gladeui/glade-command.c:1584
-#: ../gladeui/glade-command.c:1611 ../gladeui/glade-command.c:1644
-#: ../gladeui/glade-command.c:1672
+#: ../gladeui/glade-command.c:912 ../gladeui/glade-command.c:1570
+#: ../gladeui/glade-command.c:1594 ../gladeui/glade-command.c:1617
+#: ../gladeui/glade-command.c:1642 ../gladeui/glade-command.c:1676
+#: ../gladeui/glade-command.c:1703
 msgid "multiple"
 msgstr "ਕਈ"
 
-#: ../gladeui/glade-command.c:1017
+#: ../gladeui/glade-command.c:1027
 msgid "You cannot remove a widget internal to a composite widget."
 msgstr ""
 
-#: ../gladeui/glade-command.c:1063
+#: ../gladeui/glade-command.c:1074
 #, c-format
 msgid "Remove %s"
 msgstr "%s ਹਟਾਓ"
 
-#: ../gladeui/glade-command.c:1067
+#: ../gladeui/glade-command.c:1078
+#, c-format
 msgid "Remove multiple"
 msgstr "ਬਹੁਤੇ ਹਟਾਓ"
 
-#: ../gladeui/glade-command.c:1371
+#: ../gladeui/glade-command.c:1391
 #, c-format
 msgid "Clipboard add %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:1374
+#: ../gladeui/glade-command.c:1394
+msgid "Clipboard add multiple"
+msgstr ""
+
+#: ../gladeui/glade-command.c:1399
 #, c-format
 msgid "Clipboard remove %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:1537
+#: ../gladeui/glade-command.c:1402
+#, fuzzy
+msgid "Clipboard remove multiple"
+msgstr "ਬਹੁਤੇ ਹਟਾਓ"
+
+#: ../gladeui/glade-command.c:1570
 #, c-format
 msgid "Create %s"
 msgstr "%s ਬਣਾਓ"
 
-#: ../gladeui/glade-command.c:1563
+#: ../gladeui/glade-command.c:1594
 #, c-format
 msgid "Delete %s"
 msgstr "%s ਹਟਾਓ"
 
-#: ../gladeui/glade-command.c:1584
+#: ../gladeui/glade-command.c:1617
 #, c-format
 msgid "Cut %s"
 msgstr "%s ਕੱਟੋ"
 
-#: ../gladeui/glade-command.c:1611
+#: ../gladeui/glade-command.c:1642
 #, c-format
 msgid "Copy %s"
 msgstr "%s ਨਕਲ"
 
-#: ../gladeui/glade-command.c:1644
+#: ../gladeui/glade-command.c:1676
 #, c-format
 msgid "Paste %s"
 msgstr "%s ਚੇਪੋ"
 
-#: ../gladeui/glade-command.c:1672
+#: ../gladeui/glade-command.c:1702
 #, c-format
 msgid "Drag-n-Drop from %s to %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:1794
+#: ../gladeui/glade-command.c:1824
 #, c-format
 msgid "Add signal handler %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:1795
+#: ../gladeui/glade-command.c:1825
 #, c-format
 msgid "Remove signal handler %s"
 msgstr ""
 
-#: ../gladeui/glade-command.c:1796
+#: ../gladeui/glade-command.c:1826
 #, c-format
 msgid "Change signal handler %s"
+msgstr ""
+
+#: ../gladeui/glade-command.c:2030
+#, c-format
+msgid "Setting i18n metadata"
 msgstr ""
 
 #: ../gladeui/glade-cursor.c:186
@@ -797,236 +891,235 @@ msgstr ""
 msgid "Unable to load image (%s)"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:274
+#: ../gladeui/glade-editor-property.c:261
 msgid "View GTK+ documentation for this property"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:576
+#: ../gladeui/glade-editor-property.c:546
 msgid "Property Class"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ ਕਲਾਸ"
 
-#: ../gladeui/glade-editor-property.c:577
+#: ../gladeui/glade-editor-property.c:547
 msgid "The GladePropertyClass this GladeEditorProperty was created for"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:583
+#: ../gladeui/glade-editor-property.c:553
 msgid "Use Command"
 msgstr "ਕਮਾਂਡ ਵਰਤੋਂ"
 
-#: ../gladeui/glade-editor-property.c:584
+#: ../gladeui/glade-editor-property.c:554
 msgid "Whether we should use the command API for the undo/redo stack"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:590
+#: ../gladeui/glade-editor-property.c:560
 msgid "Show Info"
 msgstr "ਜਾਣਕਾਰੀ ਵੇਖਾਓ"
 
-#: ../gladeui/glade-editor-property.c:591
+#: ../gladeui/glade-editor-property.c:561
 msgid "Whether we should show an informational button"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:1118
+#: ../gladeui/glade-editor-property.c:1087
 msgid "Select Fields"
 msgstr "ਖੇਤਰ ਚੁਣੋ"
 
-#: ../gladeui/glade-editor-property.c:1140
+#: ../gladeui/glade-editor-property.c:1109
 msgid "_Select individual fields:"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:1467
+#: ../gladeui/glade-editor-property.c:1633
 msgid "Edit Text"
 msgstr "ਪਾਠ ਸੋਧ"
 
 #. Text
-#: ../gladeui/glade-editor-property.c:1495
+#: ../gladeui/glade-editor-property.c:1662
 msgid "_Text:"
 msgstr "ਪਾਠ(_T):"
 
-#: ../gladeui/glade-editor-property.c:1531
+#: ../gladeui/glade-editor-property.c:1698
 msgid "T_ranslatable"
 msgstr "ਅਨੁਵਾਦਯੋਗ(_r)"
 
-#: ../gladeui/glade-editor-property.c:1544
+#: ../gladeui/glade-editor-property.c:1711
 msgid "_Has context prefix"
 msgstr ""
 
 #. Comments.
-#: ../gladeui/glade-editor-property.c:1562
+#: ../gladeui/glade-editor-property.c:1729
 msgid "Co_mments for translators:"
 msgstr "ਅਨੁਵਾਦਕਾਂ ਲਈ ਟਿੱਪਣੀ(_m):"
 
-#: ../gladeui/glade-editor-property.c:1733
-#: ../gladeui/glade-editor-property.c:1749
+#: ../gladeui/glade-editor-property.c:1898
+#: ../gladeui/glade-editor-property.c:1914
 msgid "Yes"
 msgstr "ਹਾਂ"
 
-#: ../gladeui/glade-editor-property.c:1733
-#: ../gladeui/glade-editor-property.c:1749
-#: ../gladeui/glade-editor-property.c:1764
+#: ../gladeui/glade-editor-property.c:1898
+#: ../gladeui/glade-editor-property.c:1914
+#: ../gladeui/glade-editor-property.c:1929
 msgid "No"
 msgstr "ਨਹੀਂ"
 
-#: ../gladeui/glade-editor-property.c:2354 ../gladeui/glade-widget.c:927
-#: ../gladeui/glade-widget-adaptor.c:916
+#: ../gladeui/glade-editor-property.c:2524 ../gladeui/glade-widget.c:1005
+#: ../gladeui/glade-widget-adaptor.c:804
 msgid "Name"
 msgstr "ਨਾਂ"
 
-#: ../gladeui/glade-editor-property.c:2366
+#: ../gladeui/glade-editor-property.c:2536
 msgid "Class"
 msgstr "ਕਲਾਸ"
 
-#: ../gladeui/glade-editor-property.c:2380
+#: ../gladeui/glade-editor-property.c:2550
 #, c-format
 msgid "Choose %s implementors"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:2380
+#: ../gladeui/glade-editor-property.c:2550
 #, c-format
 msgid "Choose a %s in this project"
 msgstr ""
 
 #. Checklist
-#: ../gladeui/glade-editor-property.c:2444
+#: ../gladeui/glade-editor-property.c:2615
 msgid "O_bjects:"
 msgstr ""
 
 #. Checklist
-#: ../gladeui/glade-editor-property.c:2653
+#: ../gladeui/glade-editor-property.c:2827
 msgid "Objects:"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:2968
+#: ../gladeui/glade-editor-property.c:3140
 msgid "Value:"
 msgstr "ਮੁੱਲ:"
 
-#: ../gladeui/glade-editor-property.c:2969
+#: ../gladeui/glade-editor-property.c:3141
 msgid "The current value"
 msgstr "ਮੌਜੂਦਾ ਮੁੱਲ"
 
-#: ../gladeui/glade-editor-property.c:2971
+#: ../gladeui/glade-editor-property.c:3143
 msgid "Lower:"
 msgstr "ਘੱਟ:"
 
-#: ../gladeui/glade-editor-property.c:2972
+#: ../gladeui/glade-editor-property.c:3144
 msgid "The minimum value"
 msgstr "ਘੱਟੋ-ਘੱਟ ਮੁੱਲ"
 
-#: ../gladeui/glade-editor-property.c:2974
+#: ../gladeui/glade-editor-property.c:3146
 msgid "Upper:"
 msgstr "ਉੱਤਲਾ:"
 
-#: ../gladeui/glade-editor-property.c:2975
+#: ../gladeui/glade-editor-property.c:3147
 msgid "The maximum value"
 msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ"
 
-#: ../gladeui/glade-editor-property.c:2977
+#: ../gladeui/glade-editor-property.c:3149
 msgid "Step inc:"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:2978
+#: ../gladeui/glade-editor-property.c:3150
 msgid "The increment to use to make minor changes to the value"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:2980
+#: ../gladeui/glade-editor-property.c:3152
 msgid "Page inc:"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:2981
+#: ../gladeui/glade-editor-property.c:3153
 msgid "The increment to use to make major changes to the value"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:2983
+#: ../gladeui/glade-editor-property.c:3155
 msgid "Page size:"
 msgstr "ਪੇਜ਼ ਆਕਾਰ:"
 
-#: ../gladeui/glade-editor-property.c:2984
+#: ../gladeui/glade-editor-property.c:3156
 msgid ""
 "The page size (in a GtkScrollbar this is the size of the area which is "
 "currently visible)"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:3061
+#: ../gladeui/glade-editor-property.c:3233
 msgid "Alphanumerical"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:3066
+#: ../gladeui/glade-editor-property.c:3238
 msgid "Extra"
 msgstr "ਵਾਧੂ"
 
-#: ../gladeui/glade-editor-property.c:3071
+#: ../gladeui/glade-editor-property.c:3243
 msgid "Keypad"
 msgstr "ਕੀ-ਪੈਡ"
 
-#: ../gladeui/glade-editor-property.c:3076
+#: ../gladeui/glade-editor-property.c:3248
 msgid "Functions"
 msgstr "ਫੰਕਸ਼ਨ"
 
-#: ../gladeui/glade-editor-property.c:3081 ../plugins/gnome/gnome.xml.in.h:24
+#: ../gladeui/glade-editor-property.c:3253 ../plugins/gtk+/gtk+.xml.in.h:284
 msgid "Other"
 msgstr "ਹੋਰ"
 
-#: ../gladeui/glade-editor-property.c:3252
-#: ../gladeui/glade-editor-property.c:3286
-#: ../gladeui/glade-editor-property.c:3331
+#: ../gladeui/glade-editor-property.c:3424
+#: ../gladeui/glade-editor-property.c:3458
+#: ../gladeui/glade-editor-property.c:3503
 msgid "<choose a key>"
 msgstr ""
 
-#: ../gladeui/glade-editor-property.c:3285 ../plugins/gtk+/gtk+.xml.in.h:153
-#: ../plugins/gnome/bonobo.xml.in.h:13
+#: ../gladeui/glade-editor-property.c:3457 ../plugins/gtk+/gtk+.xml.in.h:246
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
 
-#: ../gladeui/glade-editor-property.c:3411
-#: ../gladeui/glade-signal-editor.c:684
+#: ../gladeui/glade-editor-property.c:3583
+#: ../gladeui/glade-signal-editor.c:694
 msgid "Signal"
 msgstr "ਸਿਗਨਲ"
 
-#: ../gladeui/glade-editor-property.c:3438
+#: ../gladeui/glade-editor-property.c:3610
 msgid "Key"
 msgstr "ਸਵਿੱਚ"
 
-#: ../gladeui/glade-editor-property.c:3452
+#: ../gladeui/glade-editor-property.c:3624
 msgid "Shift"
 msgstr "Shift"
 
-#: ../gladeui/glade-editor-property.c:3468
+#: ../gladeui/glade-editor-property.c:3640
 msgid "Control"
 msgstr "Control"
 
-#: ../gladeui/glade-editor-property.c:3484
+#: ../gladeui/glade-editor-property.c:3656
 msgid "Alt"
 msgstr "Alt"
 
-#: ../gladeui/glade-editor-property.c:3550
+#: ../gladeui/glade-editor-property.c:3722
 msgid "Choose accelerator keys..."
 msgstr "ਐਕਸਲੇਟਰ ਸਵਿੱਚ ਚੁਣੋ..."
 
-#: ../gladeui/glade-editor.c:146
+#: ../gladeui/glade-editor.c:152
 msgid "Show info"
 msgstr "ਜਾਣਕਾਰੀ ਵੇਖਾਓ"
 
-#: ../gladeui/glade-editor.c:147
+#: ../gladeui/glade-editor.c:153
 msgid "Whether to show an informational button for the loaded widget"
 msgstr ""
 
-#: ../gladeui/glade-editor.c:154
+#: ../gladeui/glade-editor.c:160
 msgid "Show context info"
 msgstr ""
 
-#: ../gladeui/glade-editor.c:155
+#: ../gladeui/glade-editor.c:161
 msgid ""
 "Whether to show an informational button for each property and signal in the "
 "editor"
 msgstr ""
 
 #. construct tab label widget
-#: ../gladeui/glade-editor.c:196 ../gladeui/glade-editor.c:322
-#: ../gladeui/glade-editor.c:1178
+#: ../gladeui/glade-editor.c:202 ../gladeui/glade-editor.c:321
+#: ../gladeui/glade-editor.c:1184
 msgid "Accessibility"
 msgstr "ਸਹਾਇਕ"
 
 #. configure page container
-#: ../gladeui/glade-editor.c:212 ../gladeui/glade-editor.c:321
+#: ../gladeui/glade-editor.c:219 ../gladeui/glade-editor.c:320
 msgid "_Signals"
 msgstr "ਸਿਗਨਲ(_S)"
 
@@ -1038,412 +1131,426 @@ msgstr ""
 msgid "Reset widget properties to their defaults"
 msgstr ""
 
-#: ../gladeui/glade-editor.c:318
+#: ../gladeui/glade-editor.c:317
 msgid "_General"
 msgstr "ਸਧਾਰਨ(_G)"
 
-#: ../gladeui/glade-editor.c:319
+#: ../gladeui/glade-editor.c:318
 msgid "_Packing"
 msgstr "ਪੈਕਿੰਗ(_P)"
 
-#: ../gladeui/glade-editor.c:320
+#: ../gladeui/glade-editor.c:319
 msgid "_Common"
 msgstr "ਆਮ(_C)"
 
-#: ../gladeui/glade-editor.c:337
-msgid "_Edit..."
-msgstr "ਸੋਧ(_E)..."
-
 #. Name
-#: ../gladeui/glade-editor.c:483
+#: ../gladeui/glade-editor.c:464
 msgid "Name:"
 msgstr "ਨਾਂ:"
 
 #. Class
-#: ../gladeui/glade-editor.c:511
+#: ../gladeui/glade-editor.c:492
 msgid "Class:"
 msgstr "ਕਲਾਸ:"
 
-#: ../gladeui/glade-editor.c:991
+#: ../gladeui/glade-editor.c:990
 #, c-format
 msgid "Create a %s"
 msgstr "ਇੱਕ %s ਬਣਾਓ"
 
-#: ../gladeui/glade-editor.c:1109
+#: ../gladeui/glade-editor.c:1115
 msgid "Reset"
 msgstr "ਮੁੜ-ਸੈੱਟ"
 
-#: ../gladeui/glade-editor.c:1123
+#: ../gladeui/glade-editor.c:1129
 msgid "Property"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
 
-#: ../gladeui/glade-editor.c:1158
+#: ../gladeui/glade-editor.c:1164
 msgid "General"
 msgstr "ਸਧਾਰਨ"
 
-#: ../gladeui/glade-editor.c:1168
+#: ../gladeui/glade-editor.c:1174
 msgid "Common"
 msgstr "ਆਮ"
 
-#: ../gladeui/glade-editor.c:1213
+#: ../gladeui/glade-editor.c:1219
 msgid "(default)"
 msgstr "(ਮੂਲ)"
 
-#: ../gladeui/glade-editor.c:1228
+#: ../gladeui/glade-editor.c:1234
 msgid "Select the properties that you want to reset to their default values"
 msgstr ""
 
-#: ../gladeui/glade-editor.c:1360
+#: ../gladeui/glade-editor.c:1366
 msgid "Reset Widget Properties"
 msgstr ""
 
 #. Checklist
-#: ../gladeui/glade-editor.c:1377
+#: ../gladeui/glade-editor.c:1383
 msgid "_Properties:"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ(_P):"
 
-#: ../gladeui/glade-editor.c:1406
+#: ../gladeui/glade-editor.c:1412
 msgid "_Select All"
 msgstr "ਸਭ ਚੁਣੋ(_S)"
 
-#: ../gladeui/glade-editor.c:1413
+#: ../gladeui/glade-editor.c:1419
 msgid "_Unselect All"
 msgstr "ਸਭ ਅਣ-ਚੁਣੇ(_U)"
 
 #. Description
-#: ../gladeui/glade-editor.c:1422
+#: ../gladeui/glade-editor.c:1428
 msgid "Property _Description:"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ ਵੇਰਵਾ(_D):"
 
-#: ../gladeui/glade-fixed.c:462 ../plugins/gtk+/glade-gtk.c:1407
+#: ../gladeui/glade-fixed.c:482 ../plugins/gtk+/glade-gtk.c:1677
 #, c-format
 msgid "Placing %s inside %s"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:940
+#: ../gladeui/glade-fixed.c:971
 msgid "X position property"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:941
+#: ../gladeui/glade-fixed.c:972
 msgid "The property used to set the X position of a child object"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:947
+#: ../gladeui/glade-fixed.c:978
 msgid "Y position property"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:948
+#: ../gladeui/glade-fixed.c:979
 msgid "The property used to set the Y position of a child object"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:954
+#: ../gladeui/glade-fixed.c:985
 msgid "Width property"
 msgstr "ਚੌੜਾਈ ਵਿਸ਼ੇਸ਼ਤਾ"
 
-#: ../gladeui/glade-fixed.c:955
+#: ../gladeui/glade-fixed.c:986
 msgid "The property used to set the width of a child object"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:961
+#: ../gladeui/glade-fixed.c:992
 msgid "Height property"
 msgstr "ਉਚਾਈ ਵਿਸ਼ੇਸ਼ਤਾ"
 
-#: ../gladeui/glade-fixed.c:962
+#: ../gladeui/glade-fixed.c:993
 msgid "The property used to set the height of a child object"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:968
+#: ../gladeui/glade-fixed.c:999
 msgid "Can resize"
 msgstr ""
 
-#: ../gladeui/glade-fixed.c:969
+#: ../gladeui/glade-fixed.c:1000
 msgid "Whether this container supports resizes of child widgets"
 msgstr ""
 
-#: ../gladeui/glade-palette.c:617
+#: ../gladeui/glade-palette.c:619
 msgid "Widget selector"
 msgstr ""
 
-#: ../gladeui/glade-parser.c:1192
+#: ../gladeui/glade-parser.c:670
 #, c-format
 msgid "Could not find glade file %s"
 msgstr ""
 
-#: ../gladeui/glade-parser.c:1211 ../gladeui/glade-parser.c:1219
+#: ../gladeui/glade-parser.c:702 ../gladeui/glade-parser.c:710
 #, c-format
 msgid "Errors parsing glade file %s"
 msgstr ""
 
-#: ../gladeui/glade-parser.c:1657
+#: ../gladeui/glade-parser.c:1432
+#, c-format
 msgid "Could not allocate memory for interface"
 msgstr ""
 
-#: ../gladeui/glade-popup.c:254
+#: ../gladeui/glade-popup.c:331
 msgid "_Select"
 msgstr "ਚੁਣੋ(_S)"
 
-#: ../gladeui/glade-project.c:562
-msgid "Has Unsaved Changes"
+#: ../gladeui/glade-project.c:691
+msgid "Whether project has been modified since it was last saved"
 msgstr ""
 
-#: ../gladeui/glade-project.c:563
-msgid "Whether project has unsaved changes"
-msgstr ""
-
-#: ../gladeui/glade-project.c:570
+#: ../gladeui/glade-project.c:698
 msgid "Has Selection"
 msgstr ""
 
-#: ../gladeui/glade-project.c:571
+#: ../gladeui/glade-project.c:699
 msgid "Whether project has a selection"
 msgstr ""
 
-#: ../gladeui/glade-project.c:578
+#: ../gladeui/glade-project.c:706
 msgid "Read Only"
 msgstr "ਪੜ੍ਹਨ ਲਈ"
 
-#: ../gladeui/glade-project.c:579
+#: ../gladeui/glade-project.c:707
 msgid "Whether project is read only or not"
 msgstr ""
 
-#: ../gladeui/glade-project.c:1460
+#: ../gladeui/glade-project.c:714
+#, fuzzy
+msgid "Path"
+msgstr "ਚੇਪੋ(_P)"
+
+#: ../gladeui/glade-project.c:715
+msgid "The filesystem path of the project"
+msgstr ""
+
+#: ../gladeui/glade-project.c:1600
 #, c-format
 msgid ""
 "Failed to load %s.\n"
 "The following required catalogs are unavailable: %s"
 msgstr ""
 
+#: ../gladeui/glade-project.c:2270
+#, c-format
+msgid "Unsaved %i"
+msgstr ""
+
 #. Atk click property
-#: ../gladeui/glade-property-class.c:56 ../plugins/gtk+/gtk+.xml.in.h:47
+#: ../gladeui/glade-property-class.c:67 ../plugins/gtk+/gtk+.xml.in.h:53
 msgid "Click"
 msgstr "ਦਬਾਓ"
 
 #. Atk click property
-#: ../gladeui/glade-property-class.c:57 ../plugins/gtk+/gtk+.xml.in.h:210
-msgid "Set the desctription of the Click atk action"
+#: ../gladeui/glade-property-class.c:68 ../plugins/gtk+/gtk+.xml.in.h:375
+msgid "Set the description of the Click atk action"
 msgstr ""
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:58 ../plugins/gtk+/gtk+.xml.in.h:178
+#: ../gladeui/glade-property-class.c:69 ../plugins/gtk+/gtk+.xml.in.h:297
 msgid "Press"
 msgstr "ਦੱਬੋ"
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:59 ../plugins/gtk+/gtk+.xml.in.h:212
-msgid "Set the desctription of the Press atk action"
+#: ../gladeui/glade-property-class.c:70 ../plugins/gtk+/gtk+.xml.in.h:377
+msgid "Set the description of the Press atk action"
 msgstr ""
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:60 ../plugins/gtk+/gtk+.xml.in.h:194
+#: ../gladeui/glade-property-class.c:71 ../plugins/gtk+/gtk+.xml.in.h:312
 msgid "Release"
 msgstr "ਜਾਰੀ"
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:61 ../plugins/gtk+/gtk+.xml.in.h:214
-msgid "Set the desctription of the Release atk action"
+#: ../gladeui/glade-property-class.c:72 ../plugins/gtk+/gtk+.xml.in.h:379
+msgid "Set the description of the Release atk action"
 msgstr ""
 
 #. Atk activate property
-#: ../gladeui/glade-property-class.c:62 ../plugins/gtk+/gtk+.xml.in.h:14
+#: ../gladeui/glade-property-class.c:73 ../plugins/gtk+/gtk+.xml.in.h:16
 msgid "Activate"
 msgstr "ਸਰਗਰਮ"
 
 #. Atk activate property
-#: ../gladeui/glade-property-class.c:63 ../plugins/gtk+/gtk+.xml.in.h:208
-msgid "Set the desctription of the Activate atk action"
+#: ../gladeui/glade-property-class.c:74 ../plugins/gtk+/gtk+.xml.in.h:373
+msgid "Set the description of the Activate atk action"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:67
+#. Atk relationset properties
+#: ../gladeui/glade-property-class.c:78 ../plugins/gtk+/gtk+.xml.in.h:69
 msgid "Controlled By"
 msgstr "ਕੰਟਰੋਲ ਕੀਤਾ"
 
-#: ../gladeui/glade-property-class.c:68
+#. Atk relationset properties
+#: ../gladeui/glade-property-class.c:79 ../plugins/gtk+/gtk+.xml.in.h:192
 msgid "Indicates an object controlled by one or more target objects"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:70
+#: ../gladeui/glade-property-class.c:81 ../plugins/gtk+/gtk+.xml.in.h:70
 msgid "Controller For"
 msgstr "ਇਸ ਵਾਸਤੇ ਕੰਟਰੋਲ"
 
-#: ../gladeui/glade-property-class.c:71
+#: ../gladeui/glade-property-class.c:82 ../plugins/gtk+/gtk+.xml.in.h:194
 msgid "Indicates an object is a controller for one or more target objects"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:73
+#: ../gladeui/glade-property-class.c:84 ../plugins/gtk+/gtk+.xml.in.h:221
 msgid "Labelled By"
 msgstr "ਲੇਬਲ"
 
-#: ../gladeui/glade-property-class.c:74
+#: ../gladeui/glade-property-class.c:85 ../plugins/gtk+/gtk+.xml.in.h:197
 msgid "Indicates an object is labelled by one or more target objects"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:76
+#: ../gladeui/glade-property-class.c:87 ../plugins/gtk+/gtk+.xml.in.h:220
 msgid "Label For"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:77
+#: ../gladeui/glade-property-class.c:88 ../plugins/gtk+/gtk+.xml.in.h:195
 msgid "Indicates an object is a label for one or more target objects"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:79
+#: ../gladeui/glade-property-class.c:90 ../plugins/gtk+/gtk+.xml.in.h:233
 msgid "Member Of"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:80
-msgid "Indicates an object is a member of a group of one or more target objects"
+#: ../gladeui/glade-property-class.c:91 ../plugins/gtk+/gtk+.xml.in.h:196
+msgid ""
+"Indicates an object is a member of a group of one or more target objects"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:82
+#: ../gladeui/glade-property-class.c:93
 msgid "Child Node Of"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:83
+#: ../gladeui/glade-property-class.c:94 ../plugins/gtk+/gtk+.xml.in.h:193
 msgid ""
 "Indicates an object is a cell in a treetable which is displayed because a "
 "cell in the same column is expanded and identifies that cell"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:86
+#: ../gladeui/glade-property-class.c:97 ../plugins/gtk+/gtk+.xml.in.h:160
 msgid "Flows To"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:87
+#: ../gladeui/glade-property-class.c:98
 msgid ""
 "Indicates that the object has content that flows logically to another "
-"AtkObject in a sequential way, (for instance text-flow)"
+"AtkObject in a sequential way (text-flow, for instance)."
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:90
+#: ../gladeui/glade-property-class.c:101 ../plugins/gtk+/gtk+.xml.in.h:159
 msgid "Flows From"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:91
+#: ../gladeui/glade-property-class.c:102 ../plugins/gtk+/gtk+.xml.in.h:202
 msgid ""
 "Indicates that the object has content that flows logically from another "
 "AtkObject in a sequential way, (for instance text-flow)"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:94
+#: ../gladeui/glade-property-class.c:105 ../plugins/gtk+/gtk+.xml.in.h:402
 msgid "Subwindow Of"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:95
+#: ../gladeui/glade-property-class.c:106 ../plugins/gtk+/gtk+.xml.in.h:190
 msgid ""
 "Indicates a subwindow attached to a component but otherwise has no "
-"connection in  the UI hierarchy to that component"
+"connection in the UI hierarchy to that component"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:98
+#: ../gladeui/glade-property-class.c:109 ../plugins/gtk+/gtk+.xml.in.h:119
 msgid "Embeds"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:99
+#: ../gladeui/glade-property-class.c:110 ../plugins/gtk+/gtk+.xml.in.h:204
 msgid ""
 "Indicates that the object visually embeds another object's content, i.e. "
 "this object's content flows around another's content"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:102
+#: ../gladeui/glade-property-class.c:113 ../plugins/gtk+/gtk+.xml.in.h:118
 msgid "Embedded By"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:103
+#: ../gladeui/glade-property-class.c:114 ../plugins/gtk+/gtk+.xml.in.h:215
 msgid ""
-"Inverse of 'Embeds', indicates that this object's content is visualy "
+"Inverse of 'Embeds', indicates that this object's content is visually "
 "embedded in another object"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:106
+#: ../gladeui/glade-property-class.c:117 ../plugins/gtk+/gtk+.xml.in.h:293
 msgid "Popup For"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:107
+#: ../gladeui/glade-property-class.c:118 ../plugins/gtk+/gtk+.xml.in.h:199
 msgid "Indicates that an object is a popup for another object"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:109
+#: ../gladeui/glade-property-class.c:120 ../plugins/gtk+/gtk+.xml.in.h:288
 msgid "Parent Window Of"
 msgstr ""
 
-#: ../gladeui/glade-property-class.c:110
+#: ../gladeui/glade-property-class.c:121 ../plugins/gtk+/gtk+.xml.in.h:198
 msgid "Indicates that an object is a parent window of another object"
 msgstr ""
 
-#: ../gladeui/glade-property.c:587
+#: ../gladeui/glade-property.c:607
 msgid "Enabled"
 msgstr "ਯੋਗ"
 
-#: ../gladeui/glade-property.c:588
+#: ../gladeui/glade-property.c:608
 msgid "If the property is optional, this is its enabled state"
 msgstr ""
 
-#: ../gladeui/glade-property.c:594
+#: ../gladeui/glade-property.c:614 ../gladeui/glade-widget-action.c:158
 msgid "Sensitive"
 msgstr "ਸੰਵੇਦਨਸ਼ੀਲ"
 
-#: ../gladeui/glade-property.c:595
+#: ../gladeui/glade-property.c:615
 msgid "This gives backends control to set property sensitivity"
 msgstr ""
 
-#: ../gladeui/glade-property.c:601
+#: ../gladeui/glade-property.c:621
 msgid "Comment"
 msgstr "ਟਿੱਪਣੀ"
 
-#: ../gladeui/glade-property.c:602
+#: ../gladeui/glade-property.c:622
 msgid "Comment for translators"
 msgstr "ਅਨੁਵਾਦਕਾਂ ਲਈ ਟਿੱਪਣੀ"
 
-#: ../gladeui/glade-property.c:608
+#: ../gladeui/glade-property.c:628
 msgid "Translatable"
 msgstr "ਅਨੁਵਾਦ-ਯੋਗ"
 
-#: ../gladeui/glade-property.c:609
+#: ../gladeui/glade-property.c:629
 msgid "Whether this property is translatable or not"
 msgstr ""
 
-#: ../gladeui/glade-property.c:615
+#: ../gladeui/glade-property.c:635
 msgid "Has Context"
 msgstr ""
 
-#: ../gladeui/glade-property.c:616
+#: ../gladeui/glade-property.c:636
 msgid "Whether or not the translatable string has a context prefix"
 msgstr ""
 
-#: ../gladeui/glade-signal-editor.c:704
+#: ../gladeui/glade-signal-editor.c:67
+msgid "<Type here>"
+msgstr ""
+
+#: ../gladeui/glade-signal-editor.c:714
 msgid "Handler"
 msgstr "ਹੈਂਡਲਰ"
 
-#: ../gladeui/glade-signal-editor.c:726
+#: ../gladeui/glade-signal-editor.c:736
 msgid "User data"
 msgstr "ਉਪਭੋਗੀ ਡਾਟਾ"
 
-#: ../gladeui/glade-signal-editor.c:740
+#: ../gladeui/glade-signal-editor.c:750
 msgid "Lookup"
 msgstr "ਖੋਜ"
 
-#: ../gladeui/glade-signal-editor.c:751
+#: ../gladeui/glade-signal-editor.c:761 ../plugins/gtk+/gtk+.xml.in.h:18
 msgid "After"
 msgstr "ਬਾਅਦ"
 
-#: ../gladeui/glade-utils.c:169 ../gladeui/glade-utils.c:200
+#: ../gladeui/glade-utils.c:144 ../gladeui/glade-utils.c:175
 #, c-format
 msgid "We could not find the symbol \"%s\""
 msgstr ""
 
-#: ../gladeui/glade-utils.c:176
+#: ../gladeui/glade-utils.c:151
 #, c-format
 msgid "Could not get the type from \"%s\""
 msgstr ""
 
-#: ../gladeui/glade-utils.c:541
+#: ../gladeui/glade-utils.c:516
 msgid "All Files"
 msgstr "ਸਭ ਫਾਇਲਾਂ"
 
-#: ../gladeui/glade-utils.c:546
+#: ../gladeui/glade-utils.c:521
 msgid "Glade Files"
 msgstr "ਗਲੇਡ ਫਾਇਲਾਂ"
 
-#: ../gladeui/glade-utils.c:1296
+#: ../gladeui/glade-utils.c:1236
 #, c-format
 msgid ""
 "%s exists.\n"
@@ -1452,394 +1559,499 @@ msgstr ""
 "%s ਮੌਜੂਦ ਹੈ।\n"
 "ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬਦਲਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../gladeui/glade-utils.c:1324
+#: ../gladeui/glade-utils.c:1264
 #, c-format
 msgid "Error writing to %s: %s"
 msgstr "%s ਲਿਖਣ ਦੌਰਾਨ ਗਲਤੀ: %s"
 
-#: ../gladeui/glade-utils.c:1338
+#: ../gladeui/glade-utils.c:1278
 #, c-format
 msgid "Error reading %s: %s"
 msgstr "%s ਪੜ੍ਹਨ ਦੌਰਾਨ ਗਲਤੀ: %s"
 
-#: ../gladeui/glade-utils.c:1353
+#: ../gladeui/glade-utils.c:1293
 #, c-format
 msgid "Error shutting down I/O channel %s: %s"
 msgstr ""
 
-#: ../gladeui/glade-utils.c:1363
+#: ../gladeui/glade-utils.c:1303
 #, c-format
 msgid "Failed to open %s for writing: %s"
 msgstr ""
 
-#: ../gladeui/glade-utils.c:1374
+#: ../gladeui/glade-utils.c:1314
 #, c-format
 msgid "Error shutting down io channel %s: %s"
 msgstr ""
 
-#: ../gladeui/glade-utils.c:1383
+#: ../gladeui/glade-utils.c:1323
 #, c-format
 msgid "Failed to open %s for reading: %s"
 msgstr ""
 
-#: ../gladeui/glade-utils.c:1441
-#, c-format
-msgid "Unable to open the module %s (%s)."
-msgstr ""
-
-#: ../gladeui/glade-widget.c:928
+#: ../gladeui/glade-widget.c:1006
 msgid "The name of the widget"
 msgstr "ਵਿਦਗਿਟ ਦਾ ਨਾਂ"
 
-#: ../gladeui/glade-widget.c:935
+#: ../gladeui/glade-widget.c:1013
 msgid "Internal name"
 msgstr "ਅੰਦਰੂਨੀ ਨਾਂ"
 
-#: ../gladeui/glade-widget.c:936
+#: ../gladeui/glade-widget.c:1014
 msgid "The internal name of the widget"
 msgstr ""
 
-#: ../gladeui/glade-widget.c:942
+#: ../gladeui/glade-widget.c:1020
 msgid "Anarchist"
 msgstr ""
 
-#: ../gladeui/glade-widget.c:943
-msgid "Whether this composite child is an ancestral child or an anarchist child"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:950
-msgid "Object"
-msgstr "ਇਕਾਈ"
-
-#: ../gladeui/glade-widget.c:951
-msgid "The object associated"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:958
-msgid "Adaptor"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:959
-msgid "The class adaptor for the associated widget"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:966
-msgid "Project"
-msgstr "ਪ੍ਰੋਜੈਕਟ"
-
-#: ../gladeui/glade-widget.c:967
-msgid "The glade project that this widget belongs to"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:976
-msgid "A list of GladeProperties"
-msgstr "GladeProperties ਦੀ ਲਿਸਟ"
-
-#: ../gladeui/glade-widget.c:982 ../plugins/gtk+/gtk+.xml.in.h:171
-msgid "Parent"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:983
-msgid "A pointer to the parenting GladeWidget"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:990
-msgid "Internal Name"
-msgstr "ਅੰਦਰੂਨੀ ਨਾਂ"
-
-#: ../gladeui/glade-widget.c:991
-msgid "A generic name prefix for internal widgets"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:996
-msgid "Template"
-msgstr "ਨਮੂਨਾ"
-
-#: ../gladeui/glade-widget.c:997
-msgid "A GladeWidget template to base a new widget on"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:1003 ../plugins/gtk+/gtk+.xml.in.h:126
-msgid "Info"
-msgstr "ਜਾਣਕਾਰੀ"
-
-#: ../gladeui/glade-widget.c:1004
-msgid "A GladeWidgetInfo struct to base a new widget on"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:1009
-msgid "Reason"
-msgstr "ਕਾਰਨ"
-
-#: ../gladeui/glade-widget.c:1010
-msgid "A GladeCreateReason for this creation"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:1018
-msgid "Toplevel Width"
-msgstr ""
-
-#: ../gladeui/glade-widget.c:1019
-msgid "The width of the widget when toplevel in the GladeDesignLayout"
+#: ../gladeui/glade-widget.c:1021
+msgid ""
+"Whether this composite child is an ancestral child or an anarchist child"
 msgstr ""
 
 #: ../gladeui/glade-widget.c:1028
+msgid "Object"
+msgstr "ਇਕਾਈ"
+
+#: ../gladeui/glade-widget.c:1029
+msgid "The object associated"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1036
+msgid "Adaptor"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1037
+msgid "The class adaptor for the associated widget"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1044 ../gladeui/glade-inspector.c:199
+msgid "Project"
+msgstr "ਪ੍ਰੋਜੈਕਟ"
+
+#: ../gladeui/glade-widget.c:1045
+msgid "The glade project that this widget belongs to"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1054
+msgid "A list of GladeProperties"
+msgstr "GladeProperties ਦੀ ਲਿਸਟ"
+
+#: ../gladeui/glade-widget.c:1060 ../plugins/gtk+/gtk+.xml.in.h:287
+msgid "Parent"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1061
+msgid "A pointer to the parenting GladeWidget"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1068
+msgid "Internal Name"
+msgstr "ਅੰਦਰੂਨੀ ਨਾਂ"
+
+#: ../gladeui/glade-widget.c:1069
+msgid "A generic name prefix for internal widgets"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1074
+msgid "Template"
+msgstr "ਨਮੂਨਾ"
+
+#: ../gladeui/glade-widget.c:1075
+msgid "A GladeWidget template to base a new widget on"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1081 ../plugins/gtk+/gtk+.xml.in.h:205
+msgid "Info"
+msgstr "ਜਾਣਕਾਰੀ"
+
+#: ../gladeui/glade-widget.c:1082
+msgid "A GladeWidgetInfo struct to base a new widget on"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1087
+msgid "Reason"
+msgstr "ਕਾਰਨ"
+
+#: ../gladeui/glade-widget.c:1088
+msgid "A GladeCreateReason for this creation"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1096
+msgid "Toplevel Width"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1097
+msgid "The width of the widget when toplevel in the GladeDesignLayout"
+msgstr ""
+
+#: ../gladeui/glade-widget.c:1106
 msgid "Toplevel Height"
 msgstr ""
 
-#: ../gladeui/glade-widget.c:1029
+#: ../gladeui/glade-widget.c:1107
 msgid "The height of the widget when toplevel in the GladeDesignLayout"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:184 ../gladeui/glade-widget-adaptor.c:224
-#, c-format
-msgid "Unable to load icon for %s (%s)"
-msgstr "%s (%s) ਲਈ ਆਈਕਾਨ ਲੋਡ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
-
-#: ../gladeui/glade-widget-adaptor.c:199 ../gladeui/glade-widget-adaptor.c:239
-#, c-format
-msgid "Unable to load stock icon (%s)"
-msgstr ""
-
-#: ../gladeui/glade-widget-adaptor.c:333
+#: ../gladeui/glade-widget-adaptor.c:254
 #, c-format
 msgid "A derived adaptor (%s) of %s already exist!"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:917
+#: ../gladeui/glade-widget-adaptor.c:805
 msgid "Name of the class"
 msgstr "ਕਲਾਸ ਦਾ ਨਾਂ"
 
-#: ../gladeui/glade-widget-adaptor.c:925
+#: ../gladeui/glade-widget-adaptor.c:813
 msgid "GType of the class"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:932 ../plugins/gnome/gnome.xml.in.h:45
+#: ../gladeui/glade-widget-adaptor.c:820
 msgid "Title"
 msgstr "ਟਾਇਟਲ"
 
-#: ../gladeui/glade-widget-adaptor.c:933
+#: ../gladeui/glade-widget-adaptor.c:821
 msgid "Translated title for the class used in the glade UI"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:940
+#: ../gladeui/glade-widget-adaptor.c:828
 msgid "Generic Name"
 msgstr "ਆਮ ਨਾਂ"
 
-#: ../gladeui/glade-widget-adaptor.c:941
+#: ../gladeui/glade-widget-adaptor.c:829
 msgid "Used to generate names of new widgets"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:948
+#: ../gladeui/glade-widget-adaptor.c:836 ../plugins/gtk+/gtk+.xml.in.h:179
+msgid "Icon Name"
+msgstr "ਆਈਕਾਨ ਨਾਂ"
+
+#: ../gladeui/glade-widget-adaptor.c:837
+#, fuzzy
+msgid "The icon name"
+msgstr "ਸਕੈਲਸ਼ਨ ਢੰਗ"
+
+#: ../gladeui/glade-widget-adaptor.c:844
 msgid "Catalog"
 msgstr "ਸੂਚੀ"
 
-#: ../gladeui/glade-widget-adaptor.c:949
+#: ../gladeui/glade-widget-adaptor.c:845
 msgid "The name of the widget catalog this class was declared by"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:956
+#: ../gladeui/glade-widget-adaptor.c:852
 msgid "Book"
 msgstr "ਕਿਤਾਬ"
 
-#: ../gladeui/glade-widget-adaptor.c:957
+#: ../gladeui/glade-widget-adaptor.c:853
 msgid "DevHelp search namespace for this widget class"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:964
+#: ../gladeui/glade-widget-adaptor.c:860
 msgid "Special Child Type"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:965
+#: ../gladeui/glade-widget-adaptor.c:861
 msgid ""
 "Holds the name of the packing property to depict special children for this "
 "container class"
 msgstr ""
 
-#: ../gladeui/glade-widget-adaptor.c:973
-msgid "Large Icon"
-msgstr "ਵੱਡਾ ਆਈਕਾਨ"
-
-#: ../gladeui/glade-widget-adaptor.c:974
-msgid "The 22x22 icon for this widget class"
-msgstr ""
-
-#: ../gladeui/glade-widget-adaptor.c:981
-msgid "Small Icon"
-msgstr "ਛੋਟਾ ਆਈਕਾਨ"
-
-#: ../gladeui/glade-widget-adaptor.c:982
-msgid "The 16x16 icon for this widget class"
-msgstr ""
-
-#: ../gladeui/glade-widget-adaptor.c:989 ../plugins/gtk+/gtk+.xml.in.h:63
+#: ../gladeui/glade-widget-adaptor.c:869 ../plugins/gtk+/gtk+.xml.in.h:93
 msgid "Cursor"
 msgstr "ਕਰਸਰ"
 
-#: ../gladeui/glade-widget-adaptor.c:990
+#: ../gladeui/glade-widget-adaptor.c:870
 msgid "A cursor for inserting widgets in the UI"
 msgstr ""
 
-#: ../gladeui/glade-project-view.c:646
+#: ../gladeui/glade-inspector.c:200
+msgid "The project being inspected"
+msgstr ""
+
+#: ../gladeui/glade-inspector.c:591
 #, c-format
 msgid "(internal %s)"
 msgstr "(ਅੰਦਰੂਨੀ %s)"
 
-#: ../gladeui/glade-project-view.c:650
+#: ../gladeui/glade-inspector.c:595
 #, c-format
 msgid "(%s child)"
 msgstr ""
 
-#: ../gladeui/glade-custom.c:217
+#: ../gladeui/glade-custom.c:216
 msgid "Creation Function"
 msgstr "ਫੰਕਸ਼ਨ ਬਣਾਓ"
 
-#: ../gladeui/glade-custom.c:218
+#: ../gladeui/glade-custom.c:217
 msgid "The function which creates this widget"
 msgstr ""
 
-#: ../gladeui/glade-custom.c:224
+#: ../gladeui/glade-custom.c:223
 msgid "String 1"
 msgstr "ਸਤਰ 1"
 
-#: ../gladeui/glade-custom.c:225
+#: ../gladeui/glade-custom.c:224
 msgid "The first string argument to pass to the function"
 msgstr ""
 
-#: ../gladeui/glade-custom.c:231
+#: ../gladeui/glade-custom.c:230
 msgid "String 2"
 msgstr "ਸਤਰ 2"
 
-#: ../gladeui/glade-custom.c:232
+#: ../gladeui/glade-custom.c:231
 msgid "The second string argument to pass to the function"
 msgstr ""
 
-#: ../gladeui/glade-custom.c:238
+#: ../gladeui/glade-custom.c:237
 msgid "Integer 1"
 msgstr ""
 
-#: ../gladeui/glade-custom.c:239
+#: ../gladeui/glade-custom.c:238
 msgid "The first integer argument to pass to the function"
 msgstr ""
 
-#: ../gladeui/glade-custom.c:245
+#: ../gladeui/glade-custom.c:244
 msgid "Integer 2"
 msgstr ""
 
-#: ../gladeui/glade-custom.c:246
+#: ../gladeui/glade-custom.c:245
 msgid "The second integer argument to pass to the function"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:169
+#: ../gladeui/glade-widget-action.c:151
+#, fuzzy
+msgid "class"
+msgstr "ਕਲਾਸ"
+
+#: ../gladeui/glade-widget-action.c:152
+msgid "GladeWidgetActionClass structure pointer"
+msgstr ""
+
+#: ../gladeui/glade-widget-action.c:159
+msgid "Whether or not this action is sensitive"
+msgstr ""
+
+#: ../gladeui/glade-named-icon-chooser-dialog.c:479
+#, fuzzy
+msgid "All Contexts"
+msgstr "ਭਾਗ(_C)"
+
+#: ../gladeui/glade-named-icon-chooser-dialog.c:1363
+#, fuzzy
+msgid "Named Icon Chooser"
+msgstr "ਤਾਜ਼ਾ ਚੋਣਕਾਰ"
+
+#: ../gladeui/glade-named-icon-chooser-dialog.c:1401
+#, fuzzy
+msgid "Icon _Name:"
+msgstr "ਆਈਕਾਨ ਨਾਂ"
+
+#: ../gladeui/glade-named-icon-chooser-dialog.c:1484
+#, fuzzy
+msgid "_List standard icons only"
+msgstr "ਇਕਾਈਆਂ ਸਿਰਫ਼ ਆਈਕਾਨ ਹੀ ਵੇਖਾਓ"
+
+#: ../gladeui/glade-named-icon-chooser-dialog.c:1700
+#, c-format
+msgid "Could not create directory: %s"
+msgstr ""
+
+#: ../gladeui/icon-naming-spec.c:35
+#, fuzzy
+msgid "Actions"
+msgstr "ਫੰਕਸ਼ਨ"
+
+#: ../gladeui/icon-naming-spec.c:36
+#, fuzzy
+msgid "Applications"
+msgstr "ਇਹ ਕਾਰਜ ਬਾਰੇ"
+
+#: ../gladeui/icon-naming-spec.c:37
+msgid "Categories"
+msgstr ""
+
+#: ../gladeui/icon-naming-spec.c:38
+msgid "Devices"
+msgstr ""
+
+#: ../gladeui/icon-naming-spec.c:39
+msgid "Emblems"
+msgstr ""
+
+#: ../gladeui/icon-naming-spec.c:40
+msgid "Emotes"
+msgstr ""
+
+#: ../gladeui/icon-naming-spec.c:41
+#, fuzzy
+msgid "International"
+msgstr "ਅੰਦਰੂਨੀ ਨਾਂ"
+
+#: ../gladeui/icon-naming-spec.c:42
+#, fuzzy
+msgid "MIME Types"
+msgstr "ਕਿਸਮ ਸੋਧ"
+
+#: ../gladeui/icon-naming-spec.c:43
+#, fuzzy
+msgid "Places"
+msgstr "ਪਲੇਸਮਿੰਟ"
+
+#: ../gladeui/icon-naming-spec.c:44
+#, fuzzy
+msgid "Status"
+msgstr "ਹਾਲਤ-ਪੱਟੀ"
+
+#: ../plugins/gtk+/glade-gtk.c:170
 msgid "GnomeUIInfo"
 msgstr "GnomeUIInfo"
 
-#: ../plugins/gtk+/glade-gtk.c:170
+#: ../plugins/gtk+/glade-gtk.c:171
 msgid "Choose the GnomeUIInfo stock item"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:186
-msgid "Filename"
-msgstr "ਫਾਇਲ ਨਾਂ"
-
-#: ../plugins/gtk+/glade-gtk.c:188
-msgid "Icon Theme"
-msgstr "ਆਈਕਾਨ ਥੀਮ"
-
-#: ../plugins/gtk+/glade-gtk.c:208 ../plugins/gtk+/gtk+.xml.in.h:57
-msgid "Container"
-msgstr ""
-
-#: ../plugins/gtk+/glade-gtk.c:218 ../plugins/gtk+/glade-gtk.c:227
+#: ../plugins/gtk+/glade-gtk.c:213 ../plugins/gtk+/glade-gtk.c:222
 msgid "Method"
 msgstr "ਢੰਗ"
 
-#: ../plugins/gtk+/glade-gtk.c:219
+#: ../plugins/gtk+/glade-gtk.c:214
 msgid "The method to use to edit this image"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:228
+#: ../plugins/gtk+/glade-gtk.c:223
 msgid "The method to use to edit this button"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:585
+#: ../plugins/gtk+/glade-gtk.c:365
+#, fuzzy, c-format
+msgid "Removing parent of %s"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/glade-gtk.c:416
+#, fuzzy, c-format
+msgid "Adding parent %s to %s"
+msgstr "%s ਨੂੰ %s 'ਚ ਜੋੜੋ"
+
+#: ../plugins/gtk+/glade-gtk.c:784
 #, c-format
 msgid "Ordering children of %s"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3262 ../plugins/gtk+/glade-gtk.c:3266
-#: ../plugins/gtk+/glade-gtk.c:3441 ../plugins/gtk+/glade-gtk.c:3445
+#: ../plugins/gtk+/glade-gtk.c:1263 ../plugins/gtk+/glade-gtk.c:1270
+#, c-format
+msgid "Insert placeholder to %s"
+msgstr ""
+
+#: ../plugins/gtk+/glade-gtk.c:1277
+#, c-format
+msgid "Remove placeholder from %s"
+msgstr ""
+
+#: ../plugins/gtk+/glade-gtk.c:2192 ../plugins/gtk+/glade-gtk.c:2200
+#, c-format
+msgid "Insert Row on %s"
+msgstr ""
+
+#: ../plugins/gtk+/glade-gtk.c:2208 ../plugins/gtk+/glade-gtk.c:2216
+#, c-format
+msgid "Insert Column on %s"
+msgstr ""
+
+#: ../plugins/gtk+/glade-gtk.c:2224
+#, fuzzy, c-format
+msgid "Remove Column on %s"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/glade-gtk.c:2232
+#, fuzzy, c-format
+msgid "Remove Row on %s"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/glade-gtk.c:3172 ../plugins/gtk+/glade-gtk.c:3179
+#, c-format
+msgid "Insert page on %s"
+msgstr ""
+
+#: ../plugins/gtk+/glade-gtk.c:3186
+#, fuzzy, c-format
+msgid "Remove page from %s"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/glade-gtk.c:3931 ../plugins/gtk+/glade-gtk.c:3935
+#: ../plugins/gtk+/glade-gtk.c:4110 ../plugins/gtk+/glade-gtk.c:4114
 msgid "This only applies with label type buttons"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3277 ../plugins/gtk+/glade-gtk.c:3281
-#: ../plugins/gtk+/glade-gtk.c:3433 ../plugins/gtk+/glade-gtk.c:3437
+#: ../plugins/gtk+/glade-gtk.c:3946 ../plugins/gtk+/glade-gtk.c:3950
+#: ../plugins/gtk+/glade-gtk.c:4102 ../plugins/gtk+/glade-gtk.c:4106
 msgid "This only applies with stock type buttons"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3541 ../plugins/gtk+/glade-gtk.c:3563
+#: ../plugins/gtk+/glade-gtk.c:4210 ../plugins/gtk+/glade-gtk.c:4232
 msgid "You must remove any children before you can set the type"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3587 ../plugins/gtk+/glade-gtk.c:4945
+#: ../plugins/gtk+/glade-gtk.c:4256 ../plugins/gtk+/glade-gtk.c:5769
 msgid "This only applies with file type images"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3595 ../plugins/gtk+/glade-gtk.c:4949
+#: ../plugins/gtk+/glade-gtk.c:4264 ../plugins/gtk+/glade-gtk.c:5773
 msgid "This only applies to Icon Theme type images"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3604 ../plugins/gtk+/glade-gtk.c:4947
+#: ../plugins/gtk+/glade-gtk.c:4274 ../plugins/gtk+/glade-gtk.c:5771
 msgid "This only applies with stock type images"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3616
+#: ../plugins/gtk+/glade-gtk.c:4286
 msgid ""
 "Pixel Size takes precedence over Icon Size; if you want to use Icon Size, "
 "set Pixel size to -1"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3642
+#: ../plugins/gtk+/glade-gtk.c:4312
 msgid "Pixel Size takes precedence over Icon size"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:3929 ../plugins/gtk+/glade-gtk.c:4836
+#: ../plugins/gtk+/glade-gtk.c:4625 ../plugins/gtk+/glade-gtk.c:5619
 msgid "<separator>"
 msgstr "<separator>"
 
-#: ../plugins/gtk+/glade-gtk.c:4103 ../plugins/gtk+/gtk+.xml.in.h:154
+#: ../plugins/gtk+/glade-gtk.c:4799 ../plugins/gtk+/gtk+.xml.in.h:247
 msgid "Normal"
 msgstr "ਸਧਾਰਨ"
 
-#: ../plugins/gtk+/glade-gtk.c:4104 ../plugins/gtk+/gtk+.xml.in.h:121
+#: ../plugins/gtk+/glade-gtk.c:4800 ../plugins/gtk+/gtk+.xml.in.h:184
 msgid "Image"
 msgstr "ਚਿੱਤਰ"
 
-#: ../plugins/gtk+/glade-gtk.c:4105
+#: ../plugins/gtk+/glade-gtk.c:4801
 msgid "Check"
 msgstr "ਪੜਤਾਲ"
 
-#: ../plugins/gtk+/glade-gtk.c:4106 ../plugins/gtk+/glade-gtk.c:4895
+#: ../plugins/gtk+/glade-gtk.c:4802 ../plugins/gtk+/glade-gtk.c:5683
 msgid "Radio"
 msgstr "ਰੇਡੀਓ"
 
-#: ../plugins/gtk+/glade-gtk.c:4107 ../plugins/gtk+/glade-gtk.c:4898
+#: ../plugins/gtk+/glade-gtk.c:4803 ../plugins/gtk+/glade-gtk.c:5686
 msgid "Separator"
 msgstr "ਵੱਖਰੇਵਾਂ"
 
-#: ../plugins/gtk+/glade-gtk.c:4111
+#: ../plugins/gtk+/glade-gtk.c:4807
 msgid "Add Item"
 msgstr "ਇਕਾਈ ਜੋੜੋ"
 
-#: ../plugins/gtk+/glade-gtk.c:4112
+#: ../plugins/gtk+/glade-gtk.c:4808
 msgid "Add Child Item"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:4113 ../plugins/gtk+/glade-gtk.c:4907
+#: ../plugins/gtk+/glade-gtk.c:4809 ../plugins/gtk+/glade-gtk.c:5695
 msgid "Add Separator"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:4126
+#: ../plugins/gtk+/glade-gtk.c:4822
 msgid ""
 "<big><b>Tips:</b></big>\n"
 "  * Right click over the treeview to add items.\n"
@@ -1848,140 +2060,143 @@ msgid ""
 "  * Type column is editable."
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:4355
+#: ../plugins/gtk+/glade-gtk.c:4838 ../plugins/gtk+/glade-gtk.c:5353
+#, fuzzy
+msgid "Edit Menu Bar"
+msgstr "ਮੇਨੂ ਪੱਟੀ"
+
+#: ../plugins/gtk+/glade-gtk.c:4840 ../plugins/gtk+/glade-gtk.c:5355
+#, fuzzy
+msgid "Edit Menu"
+msgstr "ਪਾਠ ਸੋਧ"
+
+#: ../plugins/gtk+/glade-gtk.c:5091
 msgid "Print S_etup"
 msgstr "ਛਪਾਈ ਸੈੱਟਅੱਪ(_e)"
 
-#: ../plugins/gtk+/glade-gtk.c:4359
+#: ../plugins/gtk+/glade-gtk.c:5095
 msgid "Find Ne_xt"
 msgstr "ਅੱਗੇ ਖੋਜ(_x)"
 
-#: ../plugins/gtk+/glade-gtk.c:4363
+#: ../plugins/gtk+/glade-gtk.c:5099
 msgid "_Undo Move"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:4367
+#: ../plugins/gtk+/glade-gtk.c:5103
 msgid "_Redo Move"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:4370
+#: ../plugins/gtk+/glade-gtk.c:5106
 msgid "Select _All"
 msgstr "ਸਭ ਚੁਣੋ(_A)"
 
-#: ../plugins/gtk+/glade-gtk.c:4373
+#: ../plugins/gtk+/glade-gtk.c:5109
 msgid "_New Game"
 msgstr "ਨਵੀਂ ਖੇਡ(_N)"
 
-#: ../plugins/gtk+/glade-gtk.c:4376
+#: ../plugins/gtk+/glade-gtk.c:5112
 msgid "_Pause game"
 msgstr "ਖੇਡ ਵਿਰਾਮ(_P)"
 
-#: ../plugins/gtk+/glade-gtk.c:4379
+#: ../plugins/gtk+/glade-gtk.c:5115
 msgid "_Restart Game"
 msgstr "ਖੇਡ ਮੁੜ-ਸ਼ੁਰੂ(_R)"
 
-#: ../plugins/gtk+/glade-gtk.c:4382
+#: ../plugins/gtk+/glade-gtk.c:5118
 msgid "_Hint"
 msgstr "ਇਸ਼ਾਰ(_H)"
 
-#: ../plugins/gtk+/glade-gtk.c:4385
+#: ../plugins/gtk+/glade-gtk.c:5121
 msgid "_Scores..."
 msgstr "ਸਕੋਰ(_S)..."
 
-#: ../plugins/gtk+/glade-gtk.c:4388
+#: ../plugins/gtk+/glade-gtk.c:5124
 msgid "_End Game"
 msgstr "ਖੇਡ ਖਤਮ(_E)"
 
-#: ../plugins/gtk+/glade-gtk.c:4391
+#: ../plugins/gtk+/glade-gtk.c:5127
 msgid "Create New _Window"
 msgstr "ਨਵੀਂ ਵਿੰਡੋ (ਝਰੋਖਾ) ਬਣਾਓ(_W)"
 
-#: ../plugins/gtk+/glade-gtk.c:4394
+#: ../plugins/gtk+/glade-gtk.c:5130
 msgid "_Close This Window"
 msgstr "ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰੋ(_C)"
 
-#: ../plugins/gtk+/glade-gtk.c:4406
+#: ../plugins/gtk+/glade-gtk.c:5142
 msgid "_Settings"
 msgstr "ਸੈਟਿੰਗ(_S)"
 
-#: ../plugins/gtk+/glade-gtk.c:4409
+#: ../plugins/gtk+/glade-gtk.c:5145
 msgid "Fi_les"
 msgstr "ਫਾਇਲਾਂ(_l)"
 
-#: ../plugins/gtk+/glade-gtk.c:4412
+#: ../plugins/gtk+/glade-gtk.c:5148
 msgid "_Windows"
 msgstr "ਵਿੰਡੋ (ਝਰੋਖੇ)(_W)"
 
-#: ../plugins/gtk+/glade-gtk.c:4418
+#: ../plugins/gtk+/glade-gtk.c:5154
 msgid "_Game"
 msgstr "ਖੇਡ(_G)"
 
-#: ../plugins/gtk+/glade-gtk.c:4514
+#: ../plugins/gtk+/glade-gtk.c:5250
 msgid "This does not apply with stock items"
 msgstr ""
 
-#: ../plugins/gtk+/glade-gtk.c:4724
-msgid "Menu Bar Editor"
-msgstr "ਮੇਨੂ ਪੱਟੀ ਸੰਪਾਦਕ"
-
-#: ../plugins/gtk+/glade-gtk.c:4731
-msgid "Menu Editor"
-msgstr "ਮੇਨੂ ਸੰਪਾਦਕ"
-
-#: ../plugins/gtk+/glade-gtk.c:4845
+#: ../plugins/gtk+/glade-gtk.c:5628
 msgid "<custom>"
 msgstr "<custom>"
 
-#: ../plugins/gtk+/glade-gtk.c:4893 ../plugins/gtk+/gtk+.xml.in.h:31
+#: ../plugins/gtk+/glade-gtk.c:5681 ../plugins/gtk+/gtk+.xml.in.h:36
 msgid "Button"
 msgstr "ਬਟਨ"
 
-#: ../plugins/gtk+/glade-gtk.c:4894
+#: ../plugins/gtk+/glade-gtk.c:5682
 msgid "Toggle"
 msgstr "ਤਬਦੀਲ"
 
-#: ../plugins/gtk+/glade-gtk.c:4896 ../plugins/gtk+/gtk+.xml.in.h:143
+#: ../plugins/gtk+/glade-gtk.c:5684 ../plugins/gtk+/gtk+.xml.in.h:234
 msgid "Menu"
 msgstr "ਮੇਨੂ"
 
-#: ../plugins/gtk+/glade-gtk.c:4897
+#: ../plugins/gtk+/glade-gtk.c:5685
 msgid "Item"
 msgstr "ਇਕਾਈ"
 
-#: ../plugins/gtk+/glade-gtk.c:4902
+#: ../plugins/gtk+/glade-gtk.c:5690
 msgid "Add Tool Button"
 msgstr "ਸੰਦ ਬਟਨ ਸ਼ਾਮਿਲ"
 
-#: ../plugins/gtk+/glade-gtk.c:4903
+#: ../plugins/gtk+/glade-gtk.c:5691
 msgid "Add Toggle Button"
 msgstr "ਤਬਦੀਲ ਬਟਨ ਸ਼ਾਮਿਲ"
 
-#: ../plugins/gtk+/glade-gtk.c:4904
+#: ../plugins/gtk+/glade-gtk.c:5692
 msgid "Add Radio Button"
 msgstr "ਰੇਡੀਓ ਬਟਨ ਸ਼ਾਮਿਲ"
 
-#: ../plugins/gtk+/glade-gtk.c:4905
+#: ../plugins/gtk+/glade-gtk.c:5693
 msgid "Add Menu Button"
 msgstr "ਮੇਨੂ ਬਟਨ ਸ਼ਾਮਿਲ"
 
-#: ../plugins/gtk+/glade-gtk.c:4906
+#: ../plugins/gtk+/glade-gtk.c:5694
 msgid "Add Tool Item"
 msgstr "ਸੰਦ ਇਕਾਈ ਸ਼ਾਮਿਲ"
 
-#: ../plugins/gtk+/glade-gtk.c:4915
+#: ../plugins/gtk+/glade-gtk.c:5703
 msgid "Tool Bar Editor"
 msgstr "ਸੰਦ ਪੱਟੀ ਸੰਪਾਦਕ"
 
-#: ../plugins/gtk+/glade-gtk.c:5668
+#: ../plugins/gtk+/glade-gtk.c:6519
 msgid "Introduction page"
 msgstr "ਜਾਣ ਪਛਾਣ ਸਫ਼ਾ"
 
-#: ../plugins/gtk+/glade-gtk.c:5672
+#: ../plugins/gtk+/glade-gtk.c:6523
 msgid "Content page"
 msgstr "ਭਾਗ ਸਫ਼ਾ"
 
-#: ../plugins/gtk+/glade-gtk.c:5676
-msgid "Confirm page"
+#: ../plugins/gtk+/glade-gtk.c:6527
+#, fuzzy
+msgid "Confirmation page"
 msgstr "ਪੁਸ਼ਟੀ ਸਫ਼ਾ"
 
 #: ../plugins/gtk+/gtk+.xml.in.h:2
@@ -2004,1322 +2219,1553 @@ msgstr "ਇਸ ਬਾਰੇ ਵਾਰਤਾਲਾਪ"
 msgid "Accel Label"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:10
+#: ../plugins/gtk+/gtk+.xml.in.h:12
 msgid "Accessible Description"
 msgstr ""
 
 #. Atk name and description properties
-#: ../plugins/gtk+/gtk+.xml.in.h:12
+#: ../plugins/gtk+/gtk+.xml.in.h:14
 msgid "Accessible Name"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:15
+#: ../plugins/gtk+/gtk+.xml.in.h:17
+msgid "Add Parent"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:19
 msgid "Alignment"
 msgstr "ਇਕਸਾਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:16
+#: ../plugins/gtk+/gtk+.xml.in.h:20
 msgid "All"
 msgstr "ਸਭ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:17
+#: ../plugins/gtk+/gtk+.xml.in.h:21
 msgid "All Events"
 msgstr "ਸਭ ਘਟਨਾਵਾਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:18 ../plugins/gnome/gnome.xml.in.h:2
+#: ../plugins/gtk+/gtk+.xml.in.h:22
 msgid "Always"
 msgstr "ਹਮੇਸ਼ਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:19
+#: ../plugins/gtk+/gtk+.xml.in.h:23
 msgid "Always Center"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:20
+#: ../plugins/gtk+/gtk+.xml.in.h:24
 msgid "Arrow"
 msgstr "ਤੀਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:21
+#: ../plugins/gtk+/gtk+.xml.in.h:25
+msgid "Ascending"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:26
 msgid "Aspect Frame"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:22
+#: ../plugins/gtk+/gtk+.xml.in.h:27
 msgid "Assistant"
 msgstr "ਸਹਾਇਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:23
+#: ../plugins/gtk+/gtk+.xml.in.h:28
 msgid "Automatic"
 msgstr "ਆਟੋਮੈਟਿਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:24
-msgid "Both"
-msgstr "ਦੋਵੇਂ"
+#: ../plugins/gtk+/gtk+.xml.in.h:29
+msgid "Before"
+msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:25
-msgid "Both Horizontal"
-msgstr "ਦੋਵੇਂ ਖਿਤਿਜੀ"
-
-#: ../plugins/gtk+/gtk+.xml.in.h:26 ../plugins/gnome/bonobo.xml.in.h:1
+#: ../plugins/gtk+/gtk+.xml.in.h:30
 msgid "Bottom"
 msgstr "ਹੇਠਾਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:27
+#: ../plugins/gtk+/gtk+.xml.in.h:31
 msgid "Bottom Left"
 msgstr "ਹੇਠਾਂ ਖੱਬੇ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:28
+#: ../plugins/gtk+/gtk+.xml.in.h:32
 msgid "Bottom Right"
 msgstr "ਹੇਠਾਂ ਸੱਜੇ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:29
+#: ../plugins/gtk+/gtk+.xml.in.h:33
 msgid "Bottom to Top"
 msgstr "ਹੇਠਾਂ ਤੋਂ ਉੱਪਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:30
+#: ../plugins/gtk+/gtk+.xml.in.h:34
 msgid "Box"
 msgstr "ਬਕਸਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:32
+#: ../plugins/gtk+/gtk+.xml.in.h:35
+msgid "Browse"
+msgstr "ਝਲਕ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:37
 msgid "Button 1 Motion"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:33
+#: ../plugins/gtk+/gtk+.xml.in.h:38
 msgid "Button 2 Motion"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:34
+#: ../plugins/gtk+/gtk+.xml.in.h:39
 msgid "Button 3 Motion"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:35
+#: ../plugins/gtk+/gtk+.xml.in.h:40
 msgid "Button Box"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:36
+#: ../plugins/gtk+/gtk+.xml.in.h:41
 msgid "Button Motion"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:37
+#: ../plugins/gtk+/gtk+.xml.in.h:42
 msgid "Button Press"
 msgstr "ਬਟਨ ਦੱਬਿਆ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:38
+#: ../plugins/gtk+/gtk+.xml.in.h:43
 msgid "Button Release"
 msgstr "ਬਟਨ ਛੱਡਿਆ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:39
+#: ../plugins/gtk+/gtk+.xml.in.h:44
 msgid "Calendar"
 msgstr "ਕੈਲੰਡਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:40
+#: ../plugins/gtk+/gtk+.xml.in.h:45
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:41
+#: ../plugins/gtk+/gtk+.xml.in.h:46
 msgid "Center"
 msgstr "ਕੇਂਦਰੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:42
+#: ../plugins/gtk+/gtk+.xml.in.h:47
 msgid "Center on Parent"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:43
+#: ../plugins/gtk+/gtk+.xml.in.h:48
+#, fuzzy
+msgid "Centimeters"
+msgstr "ਕੇਂਦਰੀ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:49
 msgid "Character"
 msgstr "ਅੱਖਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:44
+#: ../plugins/gtk+/gtk+.xml.in.h:50
 msgid "Check Button"
 msgstr "ਜਾਂਚ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:45
+#: ../plugins/gtk+/gtk+.xml.in.h:51
 msgid "Check Menu Item"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:48
+#: ../plugins/gtk+/gtk+.xml.in.h:54
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:49
+#: ../plugins/gtk+/gtk+.xml.in.h:55
 msgid "Color Button"
 msgstr "ਰੰਗ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:50
+#: ../plugins/gtk+/gtk+.xml.in.h:56
 msgid "Color Selection"
 msgstr "ਰੰਗ ਚੋਣ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:51
+#: ../plugins/gtk+/gtk+.xml.in.h:57
 msgid "Color Selection Dialog"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:52
+#: ../plugins/gtk+/gtk+.xml.in.h:58
 msgid "Columned List"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:53
+#: ../plugins/gtk+/gtk+.xml.in.h:59
 msgid "Combo"
 msgstr "ਕੰਬੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:54
+#: ../plugins/gtk+/gtk+.xml.in.h:60
 msgid "Combo Box"
 msgstr "ਲਟਕਦਾ ਬਕਸਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:55
+#: ../plugins/gtk+/gtk+.xml.in.h:61
 msgid "Combo Box Entry"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:56
+#: ../plugins/gtk+/gtk+.xml.in.h:62
 msgid "Confirm"
 msgstr "ਪੁਸ਼ਟੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:58
+#: ../plugins/gtk+/gtk+.xml.in.h:63
+msgid "Container"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:64
 msgid "Containers"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:59
+#: ../plugins/gtk+/gtk+.xml.in.h:65
 msgid "Content"
 msgstr "ਸੰਖੇਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:60
+#: ../plugins/gtk+/gtk+.xml.in.h:66
 msgid "Continuous"
 msgstr "ਜਾਰੀ ਰੱਖੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:61
+#: ../plugins/gtk+/gtk+.xml.in.h:67
 msgid "Control and Display"
 msgstr "ਕੰਟਰੋਲਰ ਅਤੇ ਦਰਿਸ਼"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:62 ../plugins/gnome/gnome.xml.in.h:5
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:92
 msgid "Create Folder"
 msgstr "ਫੋਲਡਰ ਬਣਾਓ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:64
+#: ../plugins/gtk+/gtk+.xml.in.h:94
 msgid "Curve"
 msgstr "ਚਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:65
+#: ../plugins/gtk+/gtk+.xml.in.h:95
 msgid "Custom"
 msgstr "ਸੋਧ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:66
+#: ../plugins/gtk+/gtk+.xml.in.h:96
 msgid "Custom widget"
 msgstr "ਕਸਟਮ ਵਿਦਗਿਟ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:67
+#: ../plugins/gtk+/gtk+.xml.in.h:97
 msgid "Default"
 msgstr "ਮੂਲ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:68
+#: ../plugins/gtk+/gtk+.xml.in.h:98
 msgid "Delayed"
 msgstr "ਅੰਤਰਾਲ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:69
+#: ../plugins/gtk+/gtk+.xml.in.h:99
+msgid "Descending"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:100
+msgid "Described By"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:101
+msgid "Description For"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:102
 msgid "Description of an object, formatted for assistive technology access"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:70
+#: ../plugins/gtk+/gtk+.xml.in.h:103
 msgid "Desktop"
 msgstr "ਡਿਸਕਟਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:71
+#: ../plugins/gtk+/gtk+.xml.in.h:104
 msgid "Dialog"
 msgstr "ਵਾਰਤਾਲਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:72
+#: ../plugins/gtk+/gtk+.xml.in.h:105
 msgid "Dialog Box"
 msgstr "ਵਾਰਤਾਲਾਪ ਬਕਸਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:73
+#: ../plugins/gtk+/gtk+.xml.in.h:106
 msgid "Discontinuous"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:74
+#: ../plugins/gtk+/gtk+.xml.in.h:107
 msgid "Discrete"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:75
+#: ../plugins/gtk+/gtk+.xml.in.h:108
 msgid "Dock"
 msgstr "ਡਾਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:76
+#: ../plugins/gtk+/gtk+.xml.in.h:109
 msgid "Down"
 msgstr "ਹੇਠਾਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:77
+#: ../plugins/gtk+/gtk+.xml.in.h:110
+#, fuzzy
+msgid "Drag & Drop"
+msgstr "ਚੁੱਕੋ ਅਤੇ ਸੁੱਟੋ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:111
 msgid "Drag and Drop"
 msgstr "ਚੁੱਕੋ ਅਤੇ ਸੁੱਟੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:78
+#: ../plugins/gtk+/gtk+.xml.in.h:112
 msgid "Drawing Area"
 msgstr "ਡਰਾਇੰਗ ਏਰੀਆ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:79
+#: ../plugins/gtk+/gtk+.xml.in.h:113
 msgid "Drop Down Menu"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:80
+#: ../plugins/gtk+/gtk+.xml.in.h:114
 msgid "East"
 msgstr "ਪੂਰਬੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:81
+#: ../plugins/gtk+/gtk+.xml.in.h:115
 msgid "Edge"
 msgstr "ਕੋਨਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:82
+#: ../plugins/gtk+/gtk+.xml.in.h:116
 msgid "Edit Type"
 msgstr "ਕਿਸਮ ਸੋਧ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:83 ../plugins/gnome/gnome.xml.in.h:7
+#: ../plugins/gtk+/gtk+.xml.in.h:117
+msgid "Edit&#8230;"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:120
 msgid "End"
 msgstr "ਅੰਤ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:84
+#: ../plugins/gtk+/gtk+.xml.in.h:121
 msgid "Enter Notify"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:85 ../plugins/gnome/gnome.xml.in.h:8
+#: ../plugins/gtk+/gtk+.xml.in.h:122
 msgid "Error"
 msgstr "ਗਲਤੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:86 ../plugins/gnome/bonobo.xml.in.h:2
+#: ../plugins/gtk+/gtk+.xml.in.h:123
 msgid "Etched In"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:87 ../plugins/gnome/bonobo.xml.in.h:3
+#: ../plugins/gtk+/gtk+.xml.in.h:124
 msgid "Etched Out"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:88
+#: ../plugins/gtk+/gtk+.xml.in.h:125
 msgid "Event Box"
 msgstr "ਘਟਨਾ ਬਕਸਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:89 ../plugins/gnome/gnome.xml.in.h:9
+#: ../plugins/gtk+/gtk+.xml.in.h:126
 msgid "Expand"
 msgstr "ਫੈਲਾਓ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:90
+#: ../plugins/gtk+/gtk+.xml.in.h:127
 msgid "Expander"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:91
+#: ../plugins/gtk+/gtk+.xml.in.h:128
 msgid "Exposure"
 msgstr "ਐਕਸਪੋਜ਼ਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:92
+#: ../plugins/gtk+/gtk+.xml.in.h:129
+msgid "Extended"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:130
 msgid "File Chooser Button"
 msgstr "ਫਾਇਲ ਚੋਣਕਾਰ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:93
+#: ../plugins/gtk+/gtk+.xml.in.h:131
 msgid "File Chooser Dialog"
 msgstr "ਫਾਇਲ ਚੋਣਕਾਰ ਵਾਰਤਾਲਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:94
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:153
+#, fuzzy
+msgid "File Chooser Widget"
+msgstr "ਫਾਇਲ ਚੋਣਕਾਰ ਵਾਰਤਾਲਾਪ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:154
 msgid "File Name"
 msgstr "ਫਾਇਲ ਨਾਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:95
+#: ../plugins/gtk+/gtk+.xml.in.h:155
 msgid "File Selection"
 msgstr "ਫਾਇਲ ਚੋਣ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:96 ../plugins/gnome/gnome.xml.in.h:11
+#: ../plugins/gtk+/gtk+.xml.in.h:156
+msgid "Filename"
+msgstr "ਫਾਇਲ ਨਾਂ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:157
 msgid "Fill"
 msgstr "ਭਰੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:97
+#: ../plugins/gtk+/gtk+.xml.in.h:158
 msgid "Fixed"
 msgstr "ਸਥਿਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:98
+#: ../plugins/gtk+/gtk+.xml.in.h:161
 msgid "Focus Change"
 msgstr "ਫੋਕਸ ਬਦਲੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:99
+#: ../plugins/gtk+/gtk+.xml.in.h:162
 msgid "Font Button"
 msgstr "ਫੋਂਟ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:100
+#: ../plugins/gtk+/gtk+.xml.in.h:163
 msgid "Font Selection"
 msgstr "ਫੋਂਟ ਚੋਣ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:101
+#: ../plugins/gtk+/gtk+.xml.in.h:164
 msgid "Font Selection Dialog"
 msgstr "ਫੋਂਟ ਸਲੈਕਸ਼ਨ ਡਾਇਲਾਗ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:102
+#: ../plugins/gtk+/gtk+.xml.in.h:165
 msgid "Frame"
 msgstr "ਫਰੇਮ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:103
+#: ../plugins/gtk+/gtk+.xml.in.h:166
 msgid "Free"
 msgstr "ਖਾਲੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:104
+#: ../plugins/gtk+/gtk+.xml.in.h:167
 msgid "Gamma Curve"
 msgstr "ਗਾਮਾ ਕਰਵ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:105
-msgid "Gtk+ Obsolete"
-msgstr "Gtk+ ਬਰਤਰਫ਼"
-
-#: ../plugins/gtk+/gtk+.xml.in.h:106
+#: ../plugins/gtk+/gtk+.xml.in.h:168
 msgid "Half"
 msgstr "ਅੱਧਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:107
+#: ../plugins/gtk+/gtk+.xml.in.h:169
 msgid "Handle Box"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:108 ../plugins/gnome/bonobo.xml.in.h:6
+#: ../plugins/gtk+/gtk+.xml.in.h:170
 msgid "Horizontal"
 msgstr "ਖਿਤਿਜੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:109
+#: ../plugins/gtk+/gtk+.xml.in.h:171
 msgid "Horizontal Box"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:110
+#: ../plugins/gtk+/gtk+.xml.in.h:172
 msgid "Horizontal Button Box"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:111
+#: ../plugins/gtk+/gtk+.xml.in.h:173
 msgid "Horizontal Panes"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:112
+#: ../plugins/gtk+/gtk+.xml.in.h:174
 msgid "Horizontal Ruler"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:113
+#: ../plugins/gtk+/gtk+.xml.in.h:175
 msgid "Horizontal Scale"
 msgstr "ਖਿਤਿਜੀ ਪੈਮਾਨਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:114
+#: ../plugins/gtk+/gtk+.xml.in.h:176
 msgid "Horizontal Scrollbar"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:115
+#: ../plugins/gtk+/gtk+.xml.in.h:177
 msgid "Horizontal Separator"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:116
+#: ../plugins/gtk+/gtk+.xml.in.h:178
 msgid "Horizontal and Vertical"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:117
-msgid "Icon Name"
-msgstr "ਆਈਕਾਨ ਨਾਂ"
+#: ../plugins/gtk+/gtk+.xml.in.h:180
+msgid "Icon Theme"
+msgstr "ਆਈਕਾਨ ਥੀਮ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:118
+#: ../plugins/gtk+/gtk+.xml.in.h:181
 msgid "Icon View"
 msgstr "ਆਈਕਾਨ ਝਲਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:119
-msgid "Icons"
-msgstr "ਆਈਕਾਨ"
+#: ../plugins/gtk+/gtk+.xml.in.h:182
+#, fuzzy
+msgid "Icons only"
+msgstr "ਆਈਕਾਨ ਹੀ(_I)"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:120
+#: ../plugins/gtk+/gtk+.xml.in.h:183
 msgid "If Valid"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:122
+#: ../plugins/gtk+/gtk+.xml.in.h:185
 msgid "Image Menu Item"
 msgstr "ਚਿੱਤਰ ਮੇਨੂ ਇਕਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:123
+#: ../plugins/gtk+/gtk+.xml.in.h:186
 msgid "Image Type"
 msgstr "ਚਿੱਤਰ ਕਿਸਮ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:124
+#: ../plugins/gtk+/gtk+.xml.in.h:187
 msgid "Immediate"
 msgstr "ਤੁਰੰਤ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:125 ../plugins/gnome/bonobo.xml.in.h:7
+#: ../plugins/gtk+/gtk+.xml.in.h:188
 msgid "In"
 msgstr "ਅੰਦਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:127
+#: ../plugins/gtk+/gtk+.xml.in.h:189
+msgid "Inches"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:200
+msgid ""
+"Indicates that an object provides descriptive information about another "
+"object; more verbose than 'Label For'"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:201
+msgid ""
+"Indicates that another object provides descriptive information about this "
+"object; more verbose than 'Labelled By'"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:203
+msgid ""
+"Indicates that the object has content that flows logically to another "
+"AtkObject in a sequential way, (for instance text-flow)"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:206
 msgid "Input Dialog"
 msgstr "ਇੰਪੁੱਟ ਵਾਰਤਾਲਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:128
+#: ../plugins/gtk+/gtk+.xml.in.h:207
+msgid "Insert After"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:208
+#, fuzzy
+msgid "Insert Before"
+msgstr "ਇੰਸਪੈਕਟਰ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:209
+msgid "Insert Column"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:210
+msgid "Insert Page After"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:211
+msgid "Insert Page Before"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:212
+#, fuzzy
+msgid "Insert Row"
+msgstr "ਇੰਸਪੈਕਟਰ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:213
 msgid "Intro"
 msgstr "ਜਾਣ ਪਛਾਣ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:129
+#: ../plugins/gtk+/gtk+.xml.in.h:214
+msgid "Invalid"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:216
 msgid "Items"
 msgstr "ਇਕਾਈਆਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:130
+#: ../plugins/gtk+/gtk+.xml.in.h:217
 msgid "Key Press"
 msgstr "ਸਵਿੱਚ ਦੱਬੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:131
+#: ../plugins/gtk+/gtk+.xml.in.h:218
 msgid "Key Release"
 msgstr "ਸਵਿੱਚ ਛੱਡੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:133
+#: ../plugins/gtk+/gtk+.xml.in.h:222
+#, fuzzy
+msgid "Large Toolbar"
+msgstr "ਸੰਦ-ਪੱਟੀ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:223
 msgid "Layout"
 msgstr "ਖਾਕਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:134
+#: ../plugins/gtk+/gtk+.xml.in.h:224
 msgid "Least Recently Used first"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:135
+#: ../plugins/gtk+/gtk+.xml.in.h:225
 msgid "Leave Notify"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:136 ../plugins/gnome/bonobo.xml.in.h:8
+#: ../plugins/gtk+/gtk+.xml.in.h:226
 msgid "Left"
 msgstr "ਖੱਬਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:137
+#: ../plugins/gtk+/gtk+.xml.in.h:227
 msgid "Left to Right"
 msgstr "ਖੱਬੇ ਤੋਂ ਸੱਜੇ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:138
+#: ../plugins/gtk+/gtk+.xml.in.h:228
 msgid "Linear"
 msgstr "ਰੇਖਿਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:139
+#: ../plugins/gtk+/gtk+.xml.in.h:229
 msgid "Link Button"
 msgstr "ਲਿੰਕ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:140
+#: ../plugins/gtk+/gtk+.xml.in.h:230
 msgid "List"
 msgstr "ਲਿਸਟ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:141
+#: ../plugins/gtk+/gtk+.xml.in.h:231
 msgid "List Item"
 msgstr "ਲਿਸਟ ਇਕਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:142
-msgid "Maximun Width"
+#: ../plugins/gtk+/gtk+.xml.in.h:232
+#, fuzzy
+msgid "Maximum Width"
 msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਚੌੜਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:144
+#: ../plugins/gtk+/gtk+.xml.in.h:235
 msgid "Menu Bar"
 msgstr "ਮੇਨੂ ਪੱਟੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:145
+#: ../plugins/gtk+/gtk+.xml.in.h:236
 msgid "Menu Item"
 msgstr "ਮੇਨੂ ਇਕਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:146
+#: ../plugins/gtk+/gtk+.xml.in.h:237
 msgid "Menu Shell"
 msgstr "ਮੇਨੂ ਸ਼ੈਲ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:147
+#: ../plugins/gtk+/gtk+.xml.in.h:238
 msgid "Menu Tool Button"
 msgstr "ਮੇਨੂ ਸੰਦ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:148
+#: ../plugins/gtk+/gtk+.xml.in.h:239
 msgid "Message Dialog"
 msgstr "ਸੁਨੇਹਾ ਵਾਰਤਾਲਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:149
+#: ../plugins/gtk+/gtk+.xml.in.h:240
 msgid "Middle"
 msgstr "ਮੱਧ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:150
+#: ../plugins/gtk+/gtk+.xml.in.h:241
 msgid "Most Recently Used first"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:151
+#: ../plugins/gtk+/gtk+.xml.in.h:242
 msgid "Mouse"
 msgstr "ਮਾਊਸ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:152 ../plugins/gnome/gnome.xml.in.h:22
+#: ../plugins/gtk+/gtk+.xml.in.h:243
+msgid "Multiple"
+msgstr "ਗੁਣਾਂਕ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:244
 msgid "Never"
 msgstr "ਕਦੇ ਨਹੀਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:155
+#: ../plugins/gtk+/gtk+.xml.in.h:245
+msgid "Node Child Of"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:248
 msgid "North"
 msgstr "ਉੱਤਰੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:156
+#: ../plugins/gtk+/gtk+.xml.in.h:249
 msgid "North East"
 msgstr "ਉੱਤਰੀ ਪੂਰਬੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:157
+#: ../plugins/gtk+/gtk+.xml.in.h:250
 msgid "North West"
 msgstr "ਉੱਤਰੀ ਪੱਛਮੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:158
+#: ../plugins/gtk+/gtk+.xml.in.h:251
 msgid "Notebook"
 msgstr "ਨੋਟਬੁੱਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:159
+#: ../plugins/gtk+/gtk+.xml.in.h:252
 msgid "Notification"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:160
+#: ../plugins/gtk+/gtk+.xml.in.h:253
 msgid "Number of items"
 msgstr "ਇਕਾਈਆਂ ਦੀ ਗਿਣਤੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:161
+#: ../plugins/gtk+/gtk+.xml.in.h:254
 msgid "Number of pages"
 msgstr ""
 
 #. Atk name and description properties
-#: ../plugins/gtk+/gtk+.xml.in.h:163
+#: ../plugins/gtk+/gtk+.xml.in.h:256
 msgid "Object instance's name formatted for assistive technology access"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:164
+#: ../plugins/gtk+/gtk+.xml.in.h:257
+msgid "Off"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:258
 msgid "Ok"
 msgstr "ਠੀਕ ਹੈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:165
+#: ../plugins/gtk+/gtk+.xml.in.h:259
 msgid "Ok, Cancel"
 msgstr "ਠੀਕ ਹੈ, ਰੱਦ ਕੀਤਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:166 ../plugins/gnome/gnome.xml.in.h:23
+#: ../plugins/gtk+/gtk+.xml.in.h:260
+#, fuzzy
+msgid "On"
+msgstr "ਖੋਲ੍ਹੋ"
+
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:282
 msgid "Open"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:167
+#: ../plugins/gtk+/gtk+.xml.in.h:283
 msgid "Option Menu"
 msgstr "ਚੋਣ ਮੇਨੂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:168 ../plugins/gnome/bonobo.xml.in.h:14
+#: ../plugins/gtk+/gtk+.xml.in.h:285
 msgid "Out"
 msgstr "ਬਾਹਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:169
-msgid "Page Setup Dialog"
-msgstr "ਸਫ਼ਾ ਸੈਟਅੱਪ ਵਾਰਤਾਲਾਪ"
-
-#: ../plugins/gtk+/gtk+.xml.in.h:170
+#: ../plugins/gtk+/gtk+.xml.in.h:286
 msgid "Paned"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:172
+#: ../plugins/gtk+/gtk+.xml.in.h:289
+msgid "Pixels"
+msgstr ""
+
+#: ../plugins/gtk+/gtk+.xml.in.h:290
 msgid "Pointer Motion"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:173
+#: ../plugins/gtk+/gtk+.xml.in.h:291
 msgid "Pointer Motion Hint"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:174
+#: ../plugins/gtk+/gtk+.xml.in.h:292
 msgid "Popup"
 msgstr "ਪੋਪਅੱਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:175
+#: ../plugins/gtk+/gtk+.xml.in.h:294
 msgid "Popup Menu"
 msgstr "ਪੋਪਅੱਪ ਮੇਨੂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:176 ../plugins/gnome/glade-gnome.c:655
-#: ../plugins/gnome/gnome.xml.in.h:27
+#: ../plugins/gtk+/gtk+.xml.in.h:295
 msgid "Position"
 msgstr "ਸਥਿਤੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:179
-msgid "Print Dialog"
-msgstr "ਛਾਪਣ ਵਾਰਤਾਲਾਪ"
-
-#: ../plugins/gtk+/gtk+.xml.in.h:180
+#: ../plugins/gtk+/gtk+.xml.in.h:298
 msgid "Progress"
 msgstr "ਤਰੱਕੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:181
+#: ../plugins/gtk+/gtk+.xml.in.h:299
 msgid "Progress Bar"
 msgstr "ਤਰੱਕੀ ਪੱਟੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:182
+#: ../plugins/gtk+/gtk+.xml.in.h:300
 msgid "Property Change"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ ਬਦਲੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:183
+#: ../plugins/gtk+/gtk+.xml.in.h:301
 msgid "Proximity  Out"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:184
+#: ../plugins/gtk+/gtk+.xml.in.h:302
 msgid "Proximity In"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:185 ../plugins/gnome/gnome.xml.in.h:30
+#: ../plugins/gtk+/gtk+.xml.in.h:303
 msgid "Question"
 msgstr "ਸਵਾਲ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:186
+#: ../plugins/gtk+/gtk+.xml.in.h:304
 msgid "Queue"
 msgstr "ਕਤਾਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:187
+#: ../plugins/gtk+/gtk+.xml.in.h:305
 msgid "Radio Button"
 msgstr "ਰੇਡੀਓ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:188
+#: ../plugins/gtk+/gtk+.xml.in.h:306
 msgid "Radio Menu Item"
 msgstr "ਰੇਡੀਓ ਮੇਨੂ ਇਕਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:189
+#: ../plugins/gtk+/gtk+.xml.in.h:307
 msgid "Radio Tool Button"
 msgstr "ਰੇਡੀਓ ਸੰਦ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:190
+#: ../plugins/gtk+/gtk+.xml.in.h:308
 msgid "Range"
 msgstr "ਰੇਜ਼"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:191
+#: ../plugins/gtk+/gtk+.xml.in.h:309
 msgid "Recent Chooser"
 msgstr "ਤਾਜ਼ਾ ਚੋਣਕਾਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:192
+#: ../plugins/gtk+/gtk+.xml.in.h:310
 msgid "Recent Chooser Dialog"
 msgstr "ਤਾਜ਼ਾ ਚੋਣਕਾਰ ਵਾਰਤਾਲਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:195
+#: ../plugins/gtk+/gtk+.xml.in.h:313
+#, fuzzy
+msgid "Remove Column"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:314
+#, fuzzy
+msgid "Remove Page"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:315
+#, fuzzy
+msgid "Remove Parent"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:316
+#, fuzzy
+msgid "Remove Row"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:317
+#, fuzzy
+msgid "Remove Slot"
+msgstr "%s ਹਟਾਓ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:318
 msgid "Response ID"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:196 ../plugins/gnome/bonobo.xml.in.h:15
+#: ../plugins/gtk+/gtk+.xml.in.h:319
 msgid "Right"
 msgstr "ਸੱਜਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:197
+#: ../plugins/gtk+/gtk+.xml.in.h:320
 msgid "Right to Left"
 msgstr "ਸੱਜੇ ਤੋਂ ਖੱਬੇ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:198
+#: ../plugins/gtk+/gtk+.xml.in.h:321
 msgid "Ruler"
 msgstr "ਪੈਮਾਨਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:199 ../plugins/gnome/gnome.xml.in.h:31
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:343
 msgid "Save"
 msgstr "ਸੰਭਾਲੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:200
+#: ../plugins/gtk+/gtk+.xml.in.h:344
 msgid "Scale"
 msgstr "ਮਾਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:201
+#: ../plugins/gtk+/gtk+.xml.in.h:345
 msgid "Scroll"
 msgstr "ਸਕਰੋਲ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:202
+#: ../plugins/gtk+/gtk+.xml.in.h:346
 msgid "Scrolled Window"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:203 ../plugins/gnome/gnome.xml.in.h:34
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:368
 msgid "Select Folder"
 msgstr "ਫੋਲਡਰ ਚੁਣੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:204
+#: ../plugins/gtk+/gtk+.xml.in.h:369
 msgid "Separator Menu Item"
 msgstr "ਵੱਖਰੇਵਾਂ ਮੇਨੂ ਇਕਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:205
+#: ../plugins/gtk+/gtk+.xml.in.h:370
 msgid "Separator Tool Item"
 msgstr "ਵੱਖਰੇਵਾਂ ਸੰਦ ਇਕਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:206
+#: ../plugins/gtk+/gtk+.xml.in.h:371
 msgid "Set the current page (strictly for editing purposes)"
 msgstr ""
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:216
+#: ../plugins/gtk+/gtk+.xml.in.h:381
 msgid "Set the text in the view's text buffer"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:217
+#: ../plugins/gtk+/gtk+.xml.in.h:382
 msgid "Shrink"
 msgstr "ਸੁੰਘੜੋ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:218
+#: ../plugins/gtk+/gtk+.xml.in.h:383
+msgid "Single"
+msgstr "ਇਕਹੇਰੀ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:384
 msgid "Size"
 msgstr "ਆਕਾਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:219
+#: ../plugins/gtk+/gtk+.xml.in.h:385
+#, fuzzy
+msgid "Small Toolbar"
+msgstr "ਸੰਦ-ਪੱਟੀ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:386
 msgid "South"
 msgstr "ਦੱਖਣੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:220
+#: ../plugins/gtk+/gtk+.xml.in.h:387
 msgid "South East"
 msgstr "ਦੱਖਣੀ ਪੂਰਬੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:221
+#: ../plugins/gtk+/gtk+.xml.in.h:388
 msgid "South West"
 msgstr "ਦੱਖਣੀ ਪੱਛਮੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:222
+#: ../plugins/gtk+/gtk+.xml.in.h:389
 msgid "Spin Button"
 msgstr "ਘੁੰਮਾਓ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:223
+#: ../plugins/gtk+/gtk+.xml.in.h:390
 msgid "Splash Screen"
 msgstr "ਸਵਾਗਤੀ ਪਰਦਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:224
+#: ../plugins/gtk+/gtk+.xml.in.h:391
 msgid "Spline"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:225
+#: ../plugins/gtk+/gtk+.xml.in.h:392
 msgid "Spread"
 msgstr "ਫੈਲਿਆ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:226 ../plugins/gnome/gnome.xml.in.h:36
+#: ../plugins/gtk+/gtk+.xml.in.h:393
 msgid "Start"
 msgstr "ਸ਼ੁਰੂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:227
+#: ../plugins/gtk+/gtk+.xml.in.h:394
 msgid "Static"
 msgstr "ਸਥਿਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:228
+#: ../plugins/gtk+/gtk+.xml.in.h:395
 msgid "Status Bar"
 msgstr "ਹਾਲਤ ਪੱਟੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:229
+#: ../plugins/gtk+/gtk+.xml.in.h:397
 msgid "Stock Button"
 msgstr "ਸਟਾਕ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:231
+#: ../plugins/gtk+/gtk+.xml.in.h:399
 msgid "Stock Item"
 msgstr "ਸਟਾਕ ਇਕਾਈ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:232
+#: ../plugins/gtk+/gtk+.xml.in.h:400
 msgid "Structure"
 msgstr "ਢਾਂਚਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:233
+#: ../plugins/gtk+/gtk+.xml.in.h:401
 msgid "Substructure"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:234
+#: ../plugins/gtk+/gtk+.xml.in.h:403
 msgid "Summary"
 msgstr "ਸੰਖੇਪ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:235
+#: ../plugins/gtk+/gtk+.xml.in.h:404
 msgid "Table"
 msgstr "ਸਾਰਣੀ"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:237 ../plugins/gnome/gnome.xml.in.h:39
+#: ../plugins/gtk+/gtk+.xml.in.h:406
 msgid "Text"
 msgstr "ਪਾਠ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:238
+#: ../plugins/gtk+/gtk+.xml.in.h:407
 msgid "Text Entry"
 msgstr "ਪਾਠ ਇੰਦਰਾਜ਼"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:239
+#: ../plugins/gtk+/gtk+.xml.in.h:408
 msgid "Text View"
 msgstr "ਪਾਠ ਝਲਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:240
+#: ../plugins/gtk+/gtk+.xml.in.h:409
+#, fuzzy
+msgid "Text below icons"
+msgstr "ਪਾਠ ਨਾਲ ਆਈਕਾਨ"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:411
+#, fuzzy
+msgid "Text only"
+msgstr "ਪਾਠ ਹੀ(_T)"
+
+#: ../plugins/gtk+/gtk+.xml.in.h:412
 msgid "The items in this combo box"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:241
+#: ../plugins/gtk+/gtk+.xml.in.h:413
 msgid "The number of items in the box"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:242
+#: ../plugins/gtk+/gtk+.xml.in.h:414
 msgid "The number of pages in the notebook"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:243
+#: ../plugins/gtk+/gtk+.xml.in.h:415
 msgid "The page position in the Assistant"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:244
+#: ../plugins/gtk+/gtk+.xml.in.h:416
 msgid "The position of the menu item in the menu shell"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:245
+#: ../plugins/gtk+/gtk+.xml.in.h:417
 msgid "The position of the tool item in the toolbar"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:246
+#: ../plugins/gtk+/gtk+.xml.in.h:418
 msgid ""
 "The response ID of this button in a dialog (it's NOT useful if this button "
 "is not in a GtkDialog)"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:247
+#: ../plugins/gtk+/gtk+.xml.in.h:419
 msgid "The stock item for this button"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:248
+#: ../plugins/gtk+/gtk+.xml.in.h:420
 msgid "The stock item for this image"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:249
+#: ../plugins/gtk+/gtk+.xml.in.h:421
 msgid "The text of the menu item"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:250
+#: ../plugins/gtk+/gtk+.xml.in.h:422
 msgid "The text to display"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:251
+#: ../plugins/gtk+/gtk+.xml.in.h:423
 msgid "Toggle Button"
 msgstr "ਤਬਦੀਲ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:252
+#: ../plugins/gtk+/gtk+.xml.in.h:424
 msgid "Toggle Tool Button"
 msgstr "ਤਬਦੀਲ ਸੰਦ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:253
+#: ../plugins/gtk+/gtk+.xml.in.h:425
 msgid "Tool Bar"
 msgstr "ਸੰਦ ਪੱਟੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:254
+#: ../plugins/gtk+/gtk+.xml.in.h:426
 msgid "Tool Button"
 msgstr "ਸੰਦ ਬਟਨ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:255
+#: ../plugins/gtk+/gtk+.xml.in.h:427
 msgid "Toolbar"
 msgstr "ਸੰਦ-ਪੱਟੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:256
+#: ../plugins/gtk+/gtk+.xml.in.h:428
 msgid "Tooltip"
 msgstr "ਸੰਦ-ਸੰਕੇਤ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:257 ../plugins/gnome/bonobo.xml.in.h:16
+#: ../plugins/gtk+/gtk+.xml.in.h:429
 msgid "Top"
 msgstr "ਉੱਪਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:258
+#: ../plugins/gtk+/gtk+.xml.in.h:430
 msgid "Top Left"
 msgstr "ਉੱਪਰ ਖੱਬੇ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:259
+#: ../plugins/gtk+/gtk+.xml.in.h:431
 msgid "Top Level"
 msgstr "ਉੱਚ ਪੱਧਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:260
+#: ../plugins/gtk+/gtk+.xml.in.h:432
 msgid "Top Right"
 msgstr "ਉੱਪਰ ਸੱਜੇ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:261
+#: ../plugins/gtk+/gtk+.xml.in.h:433
 msgid "Top to Bottom"
 msgstr "ਉੱਤੇ ਤੋਂ ਹੇਠਾਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:262
+#: ../plugins/gtk+/gtk+.xml.in.h:434
 msgid "Toplevels"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:263
+#: ../plugins/gtk+/gtk+.xml.in.h:435
 msgid "Tree View"
 msgstr "ਲੜੀ ਝਲਕ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:264
+#: ../plugins/gtk+/gtk+.xml.in.h:436
 msgid "Up"
 msgstr "ਉੱਪਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:265
+#: ../plugins/gtk+/gtk+.xml.in.h:437
 msgid "Use Underline"
 msgstr "ਹੇਠਾਂ ਰੇਖਾ ਵਰਤੋਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:266
+#: ../plugins/gtk+/gtk+.xml.in.h:438
 msgid "Utility"
 msgstr "ਯੂਟੈਲਟੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:267 ../plugins/gnome/bonobo.xml.in.h:17
+#: ../plugins/gtk+/gtk+.xml.in.h:439
 msgid "Vertical"
 msgstr "ਲੰਬਕਾਰੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:268
+#: ../plugins/gtk+/gtk+.xml.in.h:440
 msgid "Vertical Box"
 msgstr "ਲੰਬਕਾਰੀ ਬਕਸਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:269
+#: ../plugins/gtk+/gtk+.xml.in.h:441
 msgid "Vertical Button Box"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:270
+#: ../plugins/gtk+/gtk+.xml.in.h:442
 msgid "Vertical Panes"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:271
+#: ../plugins/gtk+/gtk+.xml.in.h:443
 msgid "Vertical Ruler"
 msgstr "ਲੰਬਕਾਰੀ ਪੈਮਾਨਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:272
+#: ../plugins/gtk+/gtk+.xml.in.h:444
 msgid "Vertical Scale"
 msgstr "ਲੰਬਕਾਰੀ ਪੈਮਾਨਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:273
+#: ../plugins/gtk+/gtk+.xml.in.h:445
 msgid "Vertical Scrollbar"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:274
+#: ../plugins/gtk+/gtk+.xml.in.h:446
 msgid "Vertical Separator"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:275
+#: ../plugins/gtk+/gtk+.xml.in.h:447
 msgid "Viewport"
 msgstr "ਝਲਕ-ਪੋਰਟ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:276
+#: ../plugins/gtk+/gtk+.xml.in.h:448
 msgid "Visibility Notify"
 msgstr ""
 
-#: ../plugins/gtk+/gtk+.xml.in.h:277 ../plugins/gnome/gnome.xml.in.h:53
+#: ../plugins/gtk+/gtk+.xml.in.h:449
 msgid "Warning"
 msgstr "ਚੇਤਾਵਨੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:278
+#: ../plugins/gtk+/gtk+.xml.in.h:450
 msgid "West"
 msgstr "ਪੱਛਮੀ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:280
+#: ../plugins/gtk+/gtk+.xml.in.h:452
 msgid "Window"
 msgstr "ਝਰੋਖਾ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:281
+#: ../plugins/gtk+/gtk+.xml.in.h:453
 msgid "Word"
 msgstr "ਸ਼ਬਦ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:282
+#: ../plugins/gtk+/gtk+.xml.in.h:454
 msgid "Word Character"
 msgstr "ਸ਼ਬਦ ਅੱਖਰ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:283
+#: ../plugins/gtk+/gtk+.xml.in.h:455
 msgid "Yes, No"
 msgstr "ਹਾਂ, ਨਹੀਂ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:284
+#: ../plugins/gtk+/gtk+.xml.in.h:456
 msgid ""
 "You can mark this as translatable and set one name/address if you want to "
 "show a translation specific translator, otherwise you should list all "
 "translators and unmark this string for translation"
 msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:298
-msgid "Status Message."
-msgstr "ਹਾਲਤ ਸੁਨੇਹਾ।"
-
-#: ../plugins/gnome/glade-gnome.c:656
-msgid "The position in the druid"
+#: ../plugins/gtk+/gtkunixprint.xml.in.h:1
+msgid "GTK+ Unix Print Toplevels"
 msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1008
-msgid "Message box type"
-msgstr "ਸੁਨੇਹਾ ਬਕਸਾ ਕਿਸਮ"
+#: ../plugins/gtk+/gtkunixprint.xml.in.h:2
+msgid "Page Setup Dialog"
+msgstr "ਸਫ਼ਾ ਸੈਟਅੱਪ ਵਾਰਤਾਲਾਪ"
 
-#: ../plugins/gnome/glade-gnome.c:1009
-msgid "The type of the message box"
-msgstr "ਸੁਨੇਹੇ ਬਕਸੇ ਦੀ ਕਿਸਮ"
+#: ../plugins/gtk+/gtkunixprint.xml.in.h:3
+msgid "Print Dialog"
+msgstr "ਛਾਪਣ ਵਾਰਤਾਲਾਪ"
 
-#: ../plugins/gnome/glade-gnome.c:1225
-msgid "This property is valid only in font information mode"
+#: ../plugins/panda/panda.xml.in.h:1
+msgid "ASCII"
 msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1313 ../plugins/gnome/canvas.xml.in.h:14
-msgid "Selection Mode"
-msgstr "ਚੋਣ ਢੰਗ"
-
-#: ../plugins/gnome/glade-gnome.c:1314
-msgid "Choose the Selection Mode"
-msgstr "ਚੋਣ ਢੰਗ ਚੁਣੋ"
-
-#: ../plugins/gnome/glade-gnome.c:1464
-msgid "Placement"
-msgstr "ਪਲੇਸਮਿੰਟ"
-
-#: ../plugins/gnome/glade-gnome.c:1465
-msgid "Choose the BonoboDockPlacement type"
-msgstr "BonoboDockPlacement ਕਿਸਮ ਚੁਣੋ"
-
-#: ../plugins/gnome/glade-gnome.c:1493
-msgid "Behavior"
-msgstr "ਰਵੱਈਆ"
-
-#: ../plugins/gnome/glade-gnome.c:1494
-msgid "Choose the BonoboDockItemBehavior type"
+#: ../plugins/panda/panda.xml.in.h:2
+msgid "GTK+Panda Widgets"
 msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1503
-msgid "Pack Type"
-msgstr "ਪੈਕ ਕਿਸਮ"
-
-#: ../plugins/gnome/glade-gnome.c:1504
-msgid "Choose the Pack Type"
-msgstr "ਪੈਕ ਕਿਸਮ ਚੁਣੋ"
-
-#: ../plugins/gnome/gnome.xml.in.h:1
-msgid "24-Hour Format"
-msgstr "24-ਘੰਟੇ ਫਾਰਮੈਟ"
-
-#: ../plugins/gnome/gnome.xml.in.h:3
-msgid "Background Color"
-msgstr "ਬੈਕਗਰਾਊਂਡ ਰੰਗ"
-
-#: ../plugins/gnome/gnome.xml.in.h:4
-msgid "Contents Background Color"
+#: ../plugins/panda/panda.xml.in.h:3
+msgid "GtkNumberEntry"
 msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:6
-msgid "Dither"
+#: ../plugins/panda/panda.xml.in.h:4
+msgid "GtkPandaCList"
 msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:10
-msgid "File"
-msgstr "ਫਾਇਲ"
+#: ../plugins/panda/panda.xml.in.h:5
+msgid "GtkPandaCombo"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:12
-msgid "Font Information"
-msgstr "ਫੋਂਟ ਜਾਣਕਾਰੀ"
+#: ../plugins/panda/panda.xml.in.h:6
+msgid "GtkPandaDownload"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:13
-msgid "GNOME UI Obsolete"
-msgstr "GNOME UI ਬਰਤਰਫ਼"
+#: ../plugins/panda/panda.xml.in.h:7
+msgid "GtkPandaEntry"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:14
-msgid "GNOME User Interface"
-msgstr "ਗਨੋਮ ਉਪਭੋਗੀ ਇੰਟਰਫੇਸ"
+#: ../plugins/panda/panda.xml.in.h:8
+msgid "GtkPandaFileEntry"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:15
-msgid "Generic"
-msgstr "ਸਧਾਰਨ"
+#: ../plugins/panda/panda.xml.in.h:9
+msgid "GtkPandaHTML"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:16
-msgid "Information"
-msgstr "ਜਾਣਕਾਰੀ"
+#: ../plugins/panda/panda.xml.in.h:10
+msgid "GtkPandaPDF"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:17
-msgid "Logo"
-msgstr "ਲੋਗੋ"
-
-#: ../plugins/gnome/gnome.xml.in.h:18
-msgid "Logo Background Color"
-msgstr "ਲੋਗੋ ਬੈਕਗਰਾਊਂਡ ਰੰਗ"
-
-#: ../plugins/gnome/gnome.xml.in.h:19
-msgid "Max Saved"
-msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਸੰਭਾਲੇ"
-
-#: ../plugins/gnome/gnome.xml.in.h:20
-msgid "Message"
-msgstr "ਸੁਨੇਹਾ"
-
-#: ../plugins/gnome/gnome.xml.in.h:21
-msgid "Monday First"
-msgstr "ਸੋਮਵਾਰ ਪਹਿਲਾਂ"
-
-#: ../plugins/gnome/gnome.xml.in.h:25
-msgid "Padding"
-msgstr "ਪੈਡਿੰਗ"
-
-#: ../plugins/gnome/gnome.xml.in.h:26
-msgid "Pixmap"
+#: ../plugins/panda/panda.xml.in.h:11
+#, fuzzy
+msgid "GtkPandaPixmap"
 msgstr "ਪਿਕਸਮੈਪ"
 
-#: ../plugins/gnome/gnome.xml.in.h:28
-msgid "Program Name"
-msgstr "ਪ੍ਰੋਗਰਾਮ ਨਾਂ"
-
-#: ../plugins/gnome/gnome.xml.in.h:29
-msgid "Program Version"
-msgstr "ਪ੍ਰੋਗਰਾਮ ਨਾਂ"
-
-#: ../plugins/gnome/gnome.xml.in.h:32
-msgid "Scaled Height"
+#: ../plugins/panda/panda.xml.in.h:12
+msgid "GtkPandaPrint"
 msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:33
-msgid "Scaled Width"
+#: ../plugins/panda/panda.xml.in.h:13
+msgid "GtkPandaText"
 msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:35
-msgid "Show Time"
-msgstr "ਸਮਾਂ ਵੇਖਾਓ"
-
-#: ../plugins/gnome/gnome.xml.in.h:37
-msgid "StatusBar"
-msgstr "ਹਾਲਤ-ਪੱਟੀ"
-
-#: ../plugins/gnome/gnome.xml.in.h:38
-msgid "Store Config"
+#: ../plugins/panda/panda.xml.in.h:14
+msgid "GtkPandaTimer"
 msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:40
-msgid "Text Foreground Color"
-msgstr "ਪਾਠ ਫਾਰਗਰਾਊਂਡ ਰੰਗ"
-
-#: ../plugins/gnome/gnome.xml.in.h:41
-msgid "The height to scale the pixmap to"
+#: ../plugins/panda/panda.xml.in.h:15
+msgid "KANA"
 msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:42
-msgid "The maximum number of history entries saved"
+#: ../plugins/panda/panda.xml.in.h:16
+#, fuzzy
+msgid "The number of columns"
+msgstr "ਇਕਾਈਆਂ ਦੀ ਗਿਣਤੀ"
+
+#: ../plugins/panda/panda.xml.in.h:17
+msgid "XIM"
 msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:43
-msgid "The pixmap file"
-msgstr "ਪਿਕਸਮੈਪ ਫਾਇਲ"
+#: ../plugins/panda/panda.xml.in.h:18
+#, fuzzy
+msgid "multi"
+msgstr "ਕਈ"
 
-#: ../plugins/gnome/gnome.xml.in.h:44
-msgid "The width to scale the pixmap to"
-msgstr ""
-
-#: ../plugins/gnome/gnome.xml.in.h:46
-msgid "Title Foreground Color"
-msgstr "ਟਾਇਟਲ ਫਾਰਗਰਾਊਂਡ ਰੰਗ"
-
-#: ../plugins/gnome/gnome.xml.in.h:47
-msgid "Top Watermark"
-msgstr "ਵਾਟਰਮਾਰਕ ਉੱਤੇ"
-
-#: ../plugins/gnome/gnome.xml.in.h:48
-msgid "Unknown"
-msgstr "ਅਣਜਾਣ"
-
-#: ../plugins/gnome/gnome.xml.in.h:49
-msgid "Use Alpha"
-msgstr "ਐਲਫ਼ਾ ਵਰਤੋਂ"
-
-#: ../plugins/gnome/gnome.xml.in.h:50
-msgid ""
-"Used to pass around information about the position of a GnomeDruidPage "
-"within the overall GnomeDruid. This enables the correct \"surrounding\" "
-"content for the page to be drawn"
-msgstr ""
-
-#: ../plugins/gnome/gnome.xml.in.h:51
-msgid "User"
-msgstr "ਉਪਭੋਗੀ"
-
-#: ../plugins/gnome/gnome.xml.in.h:52
-msgid "User Widget"
-msgstr "ਉਪਭੋਗੀ ਵਿਦਗਿਟ"
-
-#: ../plugins/gnome/gnome.xml.in.h:54
-msgid "Watermark"
-msgstr "ਵਾਟਰਮਾਰਕ"
-
-#: ../plugins/gnome/bonobo.xml.in.h:4
-msgid "Exclusive"
-msgstr ""
-
-#: ../plugins/gnome/bonobo.xml.in.h:5
-msgid "Floating"
-msgstr "ਤਰਦਾ"
-
-#: ../plugins/gnome/bonobo.xml.in.h:9
-msgid "Locked"
-msgstr "ਤਾਲਾਬੰਦ"
-
-#: ../plugins/gnome/bonobo.xml.in.h:10
-msgid "Never Floating"
-msgstr "ਤਰਦਾ ਕਦੇ ਨਹੀਂ"
-
-#: ../plugins/gnome/bonobo.xml.in.h:11
-msgid "Never Horizontal"
-msgstr "ਖਿਤਿਜੀ ਕਦੇ ਨਹੀਂ"
-
-#: ../plugins/gnome/bonobo.xml.in.h:12
-msgid "Never Vertical"
-msgstr "ਲੰਬਕਾਰੀ ਕਦੇ ਨਹੀਂ"
-
-#: ../plugins/gnome/canvas.xml.in.h:1
-msgid "Browse"
-msgstr "ਝਲਕ"
-
-#: ../plugins/gnome/canvas.xml.in.h:2
-msgid "Column Spacing"
-msgstr "ਕਾਲਮ ਫਾਸਲਾ"
-
-#: ../plugins/gnome/canvas.xml.in.h:3
-msgid "GNOME Canvas"
-msgstr ""
-
-#: ../plugins/gnome/canvas.xml.in.h:4
-msgid "Icon Width"
-msgstr "ਆਈਕਾਨ ਚੌੜਾਈ"
-
-#: ../plugins/gnome/canvas.xml.in.h:5
-msgid "If the icon text can be edited by the user"
-msgstr ""
-
-#: ../plugins/gnome/canvas.xml.in.h:6
-msgid ""
-"If the icon text is static, in which case it will not be copied by the "
-"GnomeIconList"
-msgstr ""
-
-#: ../plugins/gnome/canvas.xml.in.h:7
-msgid "Max X"
-msgstr ""
-
-#: ../plugins/gnome/canvas.xml.in.h:8
-msgid "Max Y"
-msgstr ""
-
-#: ../plugins/gnome/canvas.xml.in.h:9
-msgid "Min X"
-msgstr ""
-
-#: ../plugins/gnome/canvas.xml.in.h:10
-msgid "Min Y"
-msgstr ""
-
-#: ../plugins/gnome/canvas.xml.in.h:11
-msgid "Multiple"
-msgstr "ਗੁਣਾਂਕ"
-
-#: ../plugins/gnome/canvas.xml.in.h:12
-msgid "Pixels per unit"
-msgstr "ਪਿਕਸਲ ਪ੍ਰਤੀ ਇਕਾਈ"
-
-#: ../plugins/gnome/canvas.xml.in.h:13
-msgid "Row Spacing"
-msgstr "ਕਤਾਰ ਫਾਸਲਾ"
-
-#: ../plugins/gnome/canvas.xml.in.h:15
-msgid "Single"
+#: ../plugins/panda/panda.xml.in.h:19
+#, fuzzy
+msgid "single"
 msgstr "ਇਕਹੇਰੀ"
 
-#: ../plugins/gnome/canvas.xml.in.h:16
-msgid "Text Editable"
-msgstr "ਪਾਠ ਸੋਧਯੋਗ"
+#~ msgid "Glade's Script Console"
+#~ msgstr "ਗਲੇਡ ਦੀ ਸਕ੍ਰਿਪਟ ਕਨਸੋਂਲ"
 
-#: ../plugins/gnome/canvas.xml.in.h:17
-msgid "Text Spacing"
-msgstr "ਪਾਠ ਵਿੱਥ"
+#~ msgid "_New"
+#~ msgstr "ਨਵਾਂ(_N)"
 
-#: ../plugins/gnome/canvas.xml.in.h:18
-msgid "Text Static"
-msgstr "ਪਾਠ ਸਥਿਰ"
+#~ msgid "_Open"
+#~ msgstr "ਖੋਲ੍ਹੋ(_O)"
 
-#: ../plugins/gnome/canvas.xml.in.h:19
-msgid "The maximum x coordinate"
-msgstr ""
+#~ msgid "_Quit"
+#~ msgstr "ਬੰਦ ਕਰੋ(_Q)"
 
-#: ../plugins/gnome/canvas.xml.in.h:20
-msgid "The maximum y coordinate"
-msgstr ""
+#~ msgid "_About"
+#~ msgstr "ਇਸ ਬਾਰੇ(_A)"
 
-#: ../plugins/gnome/canvas.xml.in.h:21
-msgid "The minimum x coordinate"
-msgstr ""
+#~ msgid "_Save"
+#~ msgstr "ਸੰਭਾਲੋ(_S)"
 
-#: ../plugins/gnome/canvas.xml.in.h:22
-msgid "The minimum y coordinate"
-msgstr ""
+#~ msgid "_Close"
+#~ msgstr "ਬੰਦ ਕਰੋ(_C)"
 
-#: ../plugins/gnome/canvas.xml.in.h:23
-msgid "The number of pixels between columns of icons"
-msgstr ""
+#~ msgid "C_ut"
+#~ msgstr "ਕੱਟੋ(_u)"
 
-#: ../plugins/gnome/canvas.xml.in.h:24
-msgid "The number of pixels between rows of icons"
-msgstr ""
+#~ msgid "_Copy"
+#~ msgstr "ਨਕਲ(_C)"
 
-#: ../plugins/gnome/canvas.xml.in.h:25
-msgid "The number of pixels between the text and the icon"
-msgstr ""
+#~ msgid "_Delete"
+#~ msgstr "ਹਟਾਓ(_D)"
 
-#: ../plugins/gnome/canvas.xml.in.h:26
-msgid "The number of pixels corresponding to one unit"
-msgstr ""
+#~ msgid "C_onsole"
+#~ msgstr "ਕਨਸੋਂਲ(_n)"
 
-#: ../plugins/gnome/canvas.xml.in.h:27
-msgid "The selection mode"
-msgstr "ਸਕੈਲਸ਼ਨ ਢੰਗ"
+#~ msgid "Select a widget"
+#~ msgstr "ਇੱਕ ਵਿਦਗਿਟ ਚੁਣੋ"
 
-#: ../plugins/gnome/canvas.xml.in.h:28
-msgid "The width of each icon"
-msgstr "ਹਰੇਕ ਆਈਕਾਨ ਦੀ ਚੌੜਾਈ"
+#~ msgid "%s is already open"
+#~ msgstr "%s ਪਹਿਲਾਂ ਹੀ ਖੁੱਲ੍ਹਾ ਹੈ"
 
+#~ msgid "_Edit..."
+#~ msgstr "ਸੋਧ(_E)..."
+
+#~ msgid "Unable to load icon for %s (%s)"
+#~ msgstr "%s (%s) ਲਈ ਆਈਕਾਨ ਲੋਡ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
+
+#~ msgid "Large Icon"
+#~ msgstr "ਵੱਡਾ ਆਈਕਾਨ"
+
+#~ msgid "Small Icon"
+#~ msgstr "ਛੋਟਾ ਆਈਕਾਨ"
+
+#~ msgid "Menu Bar Editor"
+#~ msgstr "ਮੇਨੂ ਪੱਟੀ ਸੰਪਾਦਕ"
+
+#~ msgid "Both"
+#~ msgstr "ਦੋਵੇਂ"
+
+#~ msgid "Both Horizontal"
+#~ msgstr "ਦੋਵੇਂ ਖਿਤਿਜੀ"
+
+#~ msgid "Gtk+ Obsolete"
+#~ msgstr "Gtk+ ਬਰਤਰਫ਼"
+
+#~ msgid "Icons"
+#~ msgstr "ਆਈਕਾਨ"
+
+#~ msgid "Status Message."
+#~ msgstr "ਹਾਲਤ ਸੁਨੇਹਾ।"
+
+#~ msgid "Message box type"
+#~ msgstr "ਸੁਨੇਹਾ ਬਕਸਾ ਕਿਸਮ"
+
+#~ msgid "The type of the message box"
+#~ msgstr "ਸੁਨੇਹੇ ਬਕਸੇ ਦੀ ਕਿਸਮ"
+
+#~ msgid "Selection Mode"
+#~ msgstr "ਚੋਣ ਢੰਗ"
+
+#~ msgid "Choose the Selection Mode"
+#~ msgstr "ਚੋਣ ਢੰਗ ਚੁਣੋ"
+
+#~ msgid "Choose the BonoboDockPlacement type"
+#~ msgstr "BonoboDockPlacement ਕਿਸਮ ਚੁਣੋ"
+
+#~ msgid "Behavior"
+#~ msgstr "ਰਵੱਈਆ"
+
+#~ msgid "Pack Type"
+#~ msgstr "ਪੈਕ ਕਿਸਮ"
+
+#~ msgid "Choose the Pack Type"
+#~ msgstr "ਪੈਕ ਕਿਸਮ ਚੁਣੋ"
+
+#~ msgid "24-Hour Format"
+#~ msgstr "24-ਘੰਟੇ ਫਾਰਮੈਟ"
+
+#~ msgid "Background Color"
+#~ msgstr "ਬੈਕਗਰਾਊਂਡ ਰੰਗ"
+
+#~ msgid "File"
+#~ msgstr "ਫਾਇਲ"
+
+#~ msgid "Font Information"
+#~ msgstr "ਫੋਂਟ ਜਾਣਕਾਰੀ"
+
+#~ msgid "GNOME UI Obsolete"
+#~ msgstr "GNOME UI ਬਰਤਰਫ਼"
+
+#~ msgid "GNOME User Interface"
+#~ msgstr "ਗਨੋਮ ਉਪਭੋਗੀ ਇੰਟਰਫੇਸ"
+
+#~ msgid "Generic"
+#~ msgstr "ਸਧਾਰਨ"
+
+#~ msgid "Information"
+#~ msgstr "ਜਾਣਕਾਰੀ"
+
+#~ msgid "Logo"
+#~ msgstr "ਲੋਗੋ"
+
+#~ msgid "Logo Background Color"
+#~ msgstr "ਲੋਗੋ ਬੈਕਗਰਾਊਂਡ ਰੰਗ"
+
+#~ msgid "Max Saved"
+#~ msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਸੰਭਾਲੇ"
+
+#~ msgid "Message"
+#~ msgstr "ਸੁਨੇਹਾ"
+
+#~ msgid "Monday First"
+#~ msgstr "ਸੋਮਵਾਰ ਪਹਿਲਾਂ"
+
+#~ msgid "Padding"
+#~ msgstr "ਪੈਡਿੰਗ"
+
+#~ msgid "Program Name"
+#~ msgstr "ਪ੍ਰੋਗਰਾਮ ਨਾਂ"
+
+#~ msgid "Program Version"
+#~ msgstr "ਪ੍ਰੋਗਰਾਮ ਨਾਂ"
+
+#~ msgid "Show Time"
+#~ msgstr "ਸਮਾਂ ਵੇਖਾਓ"
+
+#~ msgid "Text Foreground Color"
+#~ msgstr "ਪਾਠ ਫਾਰਗਰਾਊਂਡ ਰੰਗ"
+
+#~ msgid "The pixmap file"
+#~ msgstr "ਪਿਕਸਮੈਪ ਫਾਇਲ"
+
+#~ msgid "Title Foreground Color"
+#~ msgstr "ਟਾਇਟਲ ਫਾਰਗਰਾਊਂਡ ਰੰਗ"
+
+#~ msgid "Top Watermark"
+#~ msgstr "ਵਾਟਰਮਾਰਕ ਉੱਤੇ"
+
+#~ msgid "Unknown"
+#~ msgstr "ਅਣਜਾਣ"
+
+#~ msgid "Use Alpha"
+#~ msgstr "ਐਲਫ਼ਾ ਵਰਤੋਂ"
+
+#~ msgid "User"
+#~ msgstr "ਉਪਭੋਗੀ"
+
+#~ msgid "User Widget"
+#~ msgstr "ਉਪਭੋਗੀ ਵਿਦਗਿਟ"
+
+#~ msgid "Watermark"
+#~ msgstr "ਵਾਟਰਮਾਰਕ"
+
+#~ msgid "Floating"
+#~ msgstr "ਤਰਦਾ"
+
+#~ msgid "Locked"
+#~ msgstr "ਤਾਲਾਬੰਦ"
+
+#~ msgid "Never Floating"
+#~ msgstr "ਤਰਦਾ ਕਦੇ ਨਹੀਂ"
+
+#~ msgid "Never Horizontal"
+#~ msgstr "ਖਿਤਿਜੀ ਕਦੇ ਨਹੀਂ"
+
+#~ msgid "Never Vertical"
+#~ msgstr "ਲੰਬਕਾਰੀ ਕਦੇ ਨਹੀਂ"
+
+#~ msgid "Column Spacing"
+#~ msgstr "ਕਾਲਮ ਫਾਸਲਾ"
+
+#~ msgid "Icon Width"
+#~ msgstr "ਆਈਕਾਨ ਚੌੜਾਈ"
+
+#~ msgid "Pixels per unit"
+#~ msgstr "ਪਿਕਸਲ ਪ੍ਰਤੀ ਇਕਾਈ"
+
+#~ msgid "Row Spacing"
+#~ msgstr "ਕਤਾਰ ਫਾਸਲਾ"
+
+#~ msgid "Text Editable"
+#~ msgstr "ਪਾਠ ਸੋਧਯੋਗ"
+
+#~ msgid "Text Spacing"
+#~ msgstr "ਪਾਠ ਵਿੱਥ"
+
+#~ msgid "Text Static"
+#~ msgstr "ਪਾਠ ਸਥਿਰ"
+
+#~ msgid "The width of each icon"
+#~ msgstr "ਹਰੇਕ ਆਈਕਾਨ ਦੀ ਚੌੜਾਈ"

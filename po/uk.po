@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glade3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-25 16:22+0200\n"
+"POT-Creation-Date: 2010-11-05 15:20+0900\n"
 "PO-Revision-Date: 2008-01-25 23:14+0300\n"
 "Last-Translator: Maxim V. Dziumanenko <dziumanenko@softprom.kiev.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -256,20 +256,20 @@ msgid "A user interface designer for GTK+ and GNOME."
 msgstr "Редактор інтерфейсу користувача для GTK+ та GNOME."
 
 #. File
-#: ../src/glade-window.c:2196 ../plugins/gtk+/glade-gtk.c:5123
-#: ../plugins/gtk+/glade-gtk.c:5446
+#: ../src/glade-window.c:2196 ../plugins/gtk+/glade-gtk.c:5133
+#: ../plugins/gtk+/glade-gtk.c:5456
 msgid "_File"
 msgstr "_Файл"
 
 #. Edit
-#: ../src/glade-window.c:2197 ../plugins/gtk+/glade-gtk.c:5126
-#: ../plugins/gtk+/glade-gtk.c:5456
+#: ../src/glade-window.c:2197 ../plugins/gtk+/glade-gtk.c:5136
+#: ../plugins/gtk+/glade-gtk.c:5466
 msgid "_Edit"
 msgstr "_Правка"
 
 #. View
-#: ../src/glade-window.c:2198 ../plugins/gtk+/glade-gtk.c:5129
-#: ../plugins/gtk+/glade-gtk.c:5464
+#: ../src/glade-window.c:2198 ../plugins/gtk+/glade-gtk.c:5139
+#: ../plugins/gtk+/glade-gtk.c:5474
 msgid "_View"
 msgstr "_Вигляд"
 
@@ -278,8 +278,8 @@ msgid "_Projects"
 msgstr "П_роекти"
 
 #. Help
-#: ../src/glade-window.c:2200 ../plugins/gtk+/glade-gtk.c:5141
-#: ../plugins/gtk+/glade-gtk.c:5467
+#: ../src/glade-window.c:2200 ../plugins/gtk+/glade-gtk.c:5151
+#: ../plugins/gtk+/glade-gtk.c:5477
 msgid "_Help"
 msgstr "_Довідка"
 
@@ -434,7 +434,7 @@ msgstr "Прикріпити р_едактор"
 msgid "Dock the editor into the main window"
 msgstr "Прикріпити редактор до головного вікна"
 
-#: ../src/glade-window.c:2307 ../plugins/gtk+/gtk+.xml.in.h:306
+#: ../src/glade-window.c:2307 ../plugins/gtk+/gtk+.xml.in.h:410
 msgid "Text beside icons"
 msgstr "Текст поруч зі значками"
 
@@ -507,13 +507,13 @@ msgid "_Undo"
 msgstr "В_ернути"
 
 #. Change tooltips
-#: ../src/glade-window.c:2767 ../gladeui/glade-app.c:267
+#: ../src/glade-window.c:2767 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Undo: %s"
 msgstr "Вернути: %s"
 
 #: ../src/glade-window.c:2767 ../src/glade-window.c:2778
-#: ../gladeui/glade-app.c:268
+#: ../gladeui/glade-app.c:269
 msgid "the last action"
 msgstr "остання дія"
 
@@ -521,7 +521,7 @@ msgstr "остання дія"
 msgid "_Redo"
 msgstr "Повт_орити"
 
-#: ../src/glade-window.c:2778 ../gladeui/glade-app.c:267
+#: ../src/glade-window.c:2778 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Redo: %s"
 msgstr "Повторити: %s"
@@ -542,27 +542,27 @@ msgstr "Елементи"
 msgid "Inspector"
 msgstr "Структура проекту"
 
-#: ../gladeui/glade-app.c:457
+#: ../gladeui/glade-app.c:458
 msgid "Clipboard"
 msgstr "Буфер обміну"
 
-#: ../gladeui/glade-app.c:505
+#: ../gladeui/glade-app.c:506
 msgid "Active Project"
 msgstr "Активний проект"
 
-#: ../gladeui/glade-app.c:506
+#: ../gladeui/glade-app.c:507
 msgid "The active project"
 msgstr "Поточний проект"
 
-#: ../gladeui/glade-app.c:512
+#: ../gladeui/glade-app.c:513
 msgid "Pointer Mode"
 msgstr "Режим вказівника"
 
-#: ../gladeui/glade-app.c:513
+#: ../gladeui/glade-app.c:514
 msgid "Current mode for the pointer in the workspace"
 msgstr "Поточний режим вказівника у робочій області"
 
-#: ../gladeui/glade-app.c:592
+#: ../gladeui/glade-app.c:593
 #, c-format
 msgid ""
 "Trying to save private data to %s directory but it is a regular file.\n"
@@ -571,7 +571,7 @@ msgstr ""
 "Не вдається зберегти дані у каталог %s, тому що натомість вказано звичайний\n"
 "файл. Дані не будуть збережені у цей сеанс."
 
-#: ../gladeui/glade-app.c:605
+#: ../gladeui/glade-app.c:606
 #, c-format
 msgid ""
 "Failed to create directory %s to save private data.\n"
@@ -580,7 +580,7 @@ msgstr ""
 "Не вдається створити каталог %s для збереження даних.\n"
 "Дані не будуть збережені у цей сеанс."
 
-#: ../gladeui/glade-app.c:633
+#: ../gladeui/glade-app.c:634
 #, c-format
 msgid ""
 "Error writing private data to %s (%s).\n"
@@ -589,7 +589,7 @@ msgstr ""
 "При запису даних у %s виникла помилка (%s).\n"
 "Дані не будуть збережені у цей сеанс."
 
-#: ../gladeui/glade-app.c:645
+#: ../gladeui/glade-app.c:646
 #, c-format
 msgid ""
 "Error serializing configuration data to save (%s).\n"
@@ -598,7 +598,7 @@ msgstr ""
 "При пакуванні конфігурації для збереження даних виникла помилка (%s).\n"
 "Дані не будуть збережені у цей сеанс."
 
-#: ../gladeui/glade-app.c:658
+#: ../gladeui/glade-app.c:659
 #, c-format
 msgid ""
 "Error opening %s to write private data (%s).\n"
@@ -607,49 +607,49 @@ msgstr ""
 "Не вдається відкрити %s для запису даних програми (%s).\n"
 "Дані не будуть збережені у цей сеанс."
 
-#: ../gladeui/glade-app.c:1096
+#: ../gladeui/glade-app.c:1117
 msgid "You cannot copy a widget internal to a composite widget."
 msgstr "Некоректно копіювати віджет, що є частиною складеного віджету."
 
-#: ../gladeui/glade-app.c:1111 ../gladeui/glade-app.c:1164
-#: ../gladeui/glade-app.c:1338
+#: ../gladeui/glade-app.c:1132 ../gladeui/glade-app.c:1185
+#: ../gladeui/glade-app.c:1359
 msgid "No widget selected."
 msgstr "Віджет не виділений."
 
-#: ../gladeui/glade-app.c:1149
+#: ../gladeui/glade-app.c:1170
 msgid "You cannot cut a widget internal to a composite widget."
 msgstr "Некоректно вирізати віджет, що є частиною складеного віджету."
 
-#: ../gladeui/glade-app.c:1208
+#: ../gladeui/glade-app.c:1229
 msgid "Unable to paste to the selected parent"
 msgstr "Не вдається вставити у виділене місце"
 
-#: ../gladeui/glade-app.c:1219
+#: ../gladeui/glade-app.c:1240
 msgid "Unable to paste to multiple widgets"
 msgstr "Не вдається вставити декілька елементів"
 
-#: ../gladeui/glade-app.c:1229 ../gladeui/glade-app.c:1359
+#: ../gladeui/glade-app.c:1250 ../gladeui/glade-app.c:1380
 msgid "No widget selected on the clipboard"
 msgstr "Буфер обміну порожній"
 
-#: ../gladeui/glade-app.c:1255
+#: ../gladeui/glade-app.c:1276
 #, c-format
 msgid "Unable to paste widget %s without a parent"
 msgstr "Не можна вставити віджет %s без батьківського віджету"
 
-#: ../gladeui/glade-app.c:1272
+#: ../gladeui/glade-app.c:1293
 msgid "Only one widget can be pasted at a time to this container"
 msgstr "У цей контейнер за раз може бути вставлений лише один віджет"
 
-#: ../gladeui/glade-app.c:1284
+#: ../gladeui/glade-app.c:1305
 msgid "Insufficient amount of placeholders in target container"
 msgstr "Недостатньо комірок у контейнері"
 
-#: ../gladeui/glade-app.c:1323 ../gladeui/glade-app.c:1369
+#: ../gladeui/glade-app.c:1344 ../gladeui/glade-app.c:1390
 msgid "You cannot delete a widget internal to a composite widget."
 msgstr "Неможливо видалити вбудований віджет складеного віджету."
 
-#: ../gladeui/glade-builtins.c:265 ../plugins/gtk+/gtk+.xml.in.h:292
+#: ../gladeui/glade-builtins.c:265 ../plugins/gtk+/gtk+.xml.in.h:396
 msgid "Stock"
 msgstr "Вбудовані"
 
@@ -657,7 +657,7 @@ msgstr "Вбудовані"
 msgid "A builtin stock item"
 msgstr "Вбудований елемент"
 
-#: ../gladeui/glade-builtins.c:274 ../plugins/gtk+/gtk+.xml.in.h:294
+#: ../gladeui/glade-builtins.c:274 ../plugins/gtk+/gtk+.xml.in.h:398
 msgid "Stock Image"
 msgstr "Готове зображення"
 
@@ -665,127 +665,127 @@ msgstr "Готове зображення"
 msgid "A builtin stock image"
 msgstr "Виберіть готове зображення"
 
-#: ../gladeui/glade-builtins.c:605
+#: ../gladeui/glade-builtins.c:607
 msgid "Objects"
 msgstr "Об'єкти"
 
-#: ../gladeui/glade-builtins.c:606
+#: ../gladeui/glade-builtins.c:608
 msgid "A list of objects"
 msgstr "Список об'єктів"
 
-#: ../gladeui/glade-builtins.c:615
+#: ../gladeui/glade-builtins.c:617
 msgid "Pixbuf"
 msgstr "Зображення"
 
-#: ../gladeui/glade-builtins.c:616
+#: ../gladeui/glade-builtins.c:618
 msgid "A pixbuf value"
 msgstr "Значок"
 
-#: ../gladeui/glade-builtins.c:624
+#: ../gladeui/glade-builtins.c:626
 msgid "GdkColor"
 msgstr "GdkColor"
 
-#: ../gladeui/glade-builtins.c:625
+#: ../gladeui/glade-builtins.c:627
 msgid "A gdk color value"
 msgstr "Значення кольору"
 
 #. Accelerators
-#: ../gladeui/glade-builtins.c:633 ../gladeui/glade-property-class.c:1211
+#: ../gladeui/glade-builtins.c:635 ../gladeui/glade-property-class.c:1211
 #: ../plugins/gtk+/gtk+.xml.in.h:11
 msgid "Accelerators"
 msgstr "Прискорювачі"
 
-#: ../gladeui/glade-builtins.c:634 ../gladeui/glade-property-class.c:1212
+#: ../gladeui/glade-builtins.c:636 ../gladeui/glade-property-class.c:1212
 msgid "A list of accelerator keys"
 msgstr "Список швидких клавіш"
 
-#: ../gladeui/glade-builtins.c:645
+#: ../gladeui/glade-builtins.c:647
 msgid "Integer"
 msgstr "Ціле"
 
-#: ../gladeui/glade-builtins.c:646
+#: ../gladeui/glade-builtins.c:648
 msgid "An integer value"
 msgstr "Ціле значення"
 
-#: ../gladeui/glade-builtins.c:654
+#: ../gladeui/glade-builtins.c:656
 msgid "Unsigned Integer"
 msgstr "Беззнакове ціле"
 
-#: ../gladeui/glade-builtins.c:655
+#: ../gladeui/glade-builtins.c:657
 msgid "An unsigned integer value"
 msgstr "Ціле число без знаку"
 
-#: ../gladeui/glade-builtins.c:662
+#: ../gladeui/glade-builtins.c:664
 msgid "String"
 msgstr "Рядок"
 
-#: ../gladeui/glade-builtins.c:663
+#: ../gladeui/glade-builtins.c:665
 msgid "An entry"
 msgstr "Пункт"
 
-#: ../gladeui/glade-builtins.c:670
+#: ../gladeui/glade-builtins.c:672
 msgid "Strv"
 msgstr "Масив рядків"
 
-#: ../gladeui/glade-builtins.c:671
+#: ../gladeui/glade-builtins.c:673
 msgid "String array"
 msgstr "Масив рядків"
 
-#: ../gladeui/glade-builtins.c:679
+#: ../gladeui/glade-builtins.c:681
 msgid "Float"
 msgstr "Плаваюче"
 
-#: ../gladeui/glade-builtins.c:680
+#: ../gladeui/glade-builtins.c:682
 msgid "A floating point entry"
 msgstr "Число з рухомою комою"
 
-#: ../gladeui/glade-builtins.c:688
+#: ../gladeui/glade-builtins.c:690
 msgid "Boolean"
 msgstr "Логічне"
 
-#: ../gladeui/glade-builtins.c:689
+#: ../gladeui/glade-builtins.c:691
 msgid "A boolean value"
 msgstr "Логічне (бульове) значення"
 
-#: ../gladeui/glade-base-editor.c:477
+#: ../gladeui/glade-base-editor.c:487
 #, c-format
 msgid "Setting object type on %s to %s"
 msgstr "Встановлюється тип об'єкту %s в %s"
 
-#: ../gladeui/glade-base-editor.c:642
+#: ../gladeui/glade-base-editor.c:652
 #, c-format
 msgid "Add a %s to %s"
 msgstr "Додати %s до %s"
 
-#: ../gladeui/glade-base-editor.c:719
+#: ../gladeui/glade-base-editor.c:729
 #, c-format
 msgid "Delete %s child from %s"
 msgstr "Видалити дочірній елемент %s з %s"
 
-#: ../gladeui/glade-base-editor.c:842
+#: ../gladeui/glade-base-editor.c:852
 #, c-format
 msgid "Reorder %s's children"
 msgstr "Перевпорядкувати дочірні віджети %s"
 
-#: ../gladeui/glade-base-editor.c:1419 ../plugins/gtk+/gtk+.xml.in.h:178
+#: ../gladeui/glade-base-editor.c:1435 ../plugins/gtk+/gtk+.xml.in.h:219
 msgid "Label"
 msgstr "Позначка"
 
-#: ../gladeui/glade-base-editor.c:1432 ../gladeui/glade-widget-adaptor.c:812
+#: ../gladeui/glade-base-editor.c:1448 ../gladeui/glade-widget-adaptor.c:812
 msgid "Type"
 msgstr "Тип"
 
 #. Name
-#: ../gladeui/glade-base-editor.c:1605
+#: ../gladeui/glade-base-editor.c:1621
 msgid "Name :"
 msgstr "Назва: "
 
 #. Type
-#: ../gladeui/glade-base-editor.c:1615
+#: ../gladeui/glade-base-editor.c:1631
 msgid "Type :"
 msgstr "Тип:"
 
-#: ../gladeui/glade-clipboard-view.c:209 ../plugins/gtk+/gtk+.xml.in.h:347
+#: ../gladeui/glade-clipboard-view.c:209 ../plugins/gtk+/gtk+.xml.in.h:451
 msgid "Widget"
 msgstr "Віджет"
 
@@ -908,210 +908,208 @@ msgstr "Встановлення метаданих локалізації"
 msgid "Unable to load image (%s)"
 msgstr "Не вдається завантажити зображення (%s)"
 
-#: ../gladeui/glade-editor-property.c:257
+#: ../gladeui/glade-editor-property.c:261
 msgid "View GTK+ documentation for this property"
 msgstr "Показати документацію GTK+ з цієї властивості"
 
-#: ../gladeui/glade-editor-property.c:542
+#: ../gladeui/glade-editor-property.c:546
 msgid "Property Class"
 msgstr "Клас властивості"
 
-#: ../gladeui/glade-editor-property.c:543
+#: ../gladeui/glade-editor-property.c:547
 msgid "The GladePropertyClass this GladeEditorProperty was created for"
 msgstr "GladePropertyClass, створений для роботи з цією властивістю"
 
-#: ../gladeui/glade-editor-property.c:549
+#: ../gladeui/glade-editor-property.c:553
 msgid "Use Command"
 msgstr "Використовувати команду"
 
-#: ../gladeui/glade-editor-property.c:550
+#: ../gladeui/glade-editor-property.c:554
 msgid "Whether we should use the command API for the undo/redo stack"
 msgstr ""
 "Чи потрібно використовувати командний інтерфейс для стеку повернення/"
 "повторення"
 
-#: ../gladeui/glade-editor-property.c:556
+#: ../gladeui/glade-editor-property.c:560
 msgid "Show Info"
 msgstr "Показати інформацію"
 
-#: ../gladeui/glade-editor-property.c:557
+#: ../gladeui/glade-editor-property.c:561
 msgid "Whether we should show an informational button"
 msgstr "Чи показувати кнопку інформації"
 
-#: ../gladeui/glade-editor-property.c:1083
+#: ../gladeui/glade-editor-property.c:1087
 msgid "Select Fields"
 msgstr "Виділити поля"
 
-#: ../gladeui/glade-editor-property.c:1105
+#: ../gladeui/glade-editor-property.c:1109
 msgid "_Select individual fields:"
 msgstr "_Виділити деякі поля:"
 
-#: ../gladeui/glade-editor-property.c:1643
+#: ../gladeui/glade-editor-property.c:1633
 msgid "Edit Text"
 msgstr "Правка тексту"
 
 #. Text
-#: ../gladeui/glade-editor-property.c:1672
+#: ../gladeui/glade-editor-property.c:1662
 msgid "_Text:"
 msgstr "_Текст:"
 
-#: ../gladeui/glade-editor-property.c:1708
+#: ../gladeui/glade-editor-property.c:1698
 msgid "T_ranslatable"
 msgstr "П_ерекладається"
 
-#: ../gladeui/glade-editor-property.c:1721
+#: ../gladeui/glade-editor-property.c:1711
 msgid "_Has context prefix"
 msgstr "_Має контекстний префікс"
 
 #. Comments.
-#: ../gladeui/glade-editor-property.c:1739
+#: ../gladeui/glade-editor-property.c:1729
 msgid "Co_mments for translators:"
 msgstr "К_оментар для перекладачів:"
 
-#: ../gladeui/glade-editor-property.c:1909
-#: ../gladeui/glade-editor-property.c:1925
+#: ../gladeui/glade-editor-property.c:1898
+#: ../gladeui/glade-editor-property.c:1914
 msgid "Yes"
 msgstr "Так"
 
-#: ../gladeui/glade-editor-property.c:1909
-#: ../gladeui/glade-editor-property.c:1925
-#: ../gladeui/glade-editor-property.c:1940
+#: ../gladeui/glade-editor-property.c:1898
+#: ../gladeui/glade-editor-property.c:1914
+#: ../gladeui/glade-editor-property.c:1929
 msgid "No"
 msgstr "Ні"
 
-#: ../gladeui/glade-editor-property.c:2529 ../gladeui/glade-widget.c:1005
+#: ../gladeui/glade-editor-property.c:2524 ../gladeui/glade-widget.c:1005
 #: ../gladeui/glade-widget-adaptor.c:804
 msgid "Name"
 msgstr "Назва"
 
-#: ../gladeui/glade-editor-property.c:2541
+#: ../gladeui/glade-editor-property.c:2536
 msgid "Class"
 msgstr "Клас"
 
-#: ../gladeui/glade-editor-property.c:2555
+#: ../gladeui/glade-editor-property.c:2550
 #, c-format
 msgid "Choose %s implementors"
 msgstr "Виберіть реалізацію %s"
 
-#: ../gladeui/glade-editor-property.c:2555
+#: ../gladeui/glade-editor-property.c:2550
 #, c-format
 msgid "Choose a %s in this project"
 msgstr "Вибрати %s у цьому проекті"
 
 #. Checklist
-#: ../gladeui/glade-editor-property.c:2620
+#: ../gladeui/glade-editor-property.c:2615
 msgid "O_bjects:"
 msgstr "О_б'єкти:"
 
 #. Checklist
-#: ../gladeui/glade-editor-property.c:2829
+#: ../gladeui/glade-editor-property.c:2827
 msgid "Objects:"
 msgstr "Об'єкти:"
 
-#: ../gladeui/glade-editor-property.c:3142
+#: ../gladeui/glade-editor-property.c:3140
 msgid "Value:"
 msgstr "Значення:"
 
-#: ../gladeui/glade-editor-property.c:3143
+#: ../gladeui/glade-editor-property.c:3141
 msgid "The current value"
 msgstr "Поточне значення"
 
-#: ../gladeui/glade-editor-property.c:3145
+#: ../gladeui/glade-editor-property.c:3143
 msgid "Lower:"
 msgstr "Нижня межа:"
 
-#: ../gladeui/glade-editor-property.c:3146
+#: ../gladeui/glade-editor-property.c:3144
 msgid "The minimum value"
 msgstr "Мінімальне значення"
 
-#: ../gladeui/glade-editor-property.c:3148
+#: ../gladeui/glade-editor-property.c:3146
 msgid "Upper:"
 msgstr "Верхня межа:"
 
-#: ../gladeui/glade-editor-property.c:3149
+#: ../gladeui/glade-editor-property.c:3147
 msgid "The maximum value"
 msgstr "Максимальне значення"
 
-#: ../gladeui/glade-editor-property.c:3151
+#: ../gladeui/glade-editor-property.c:3149
 msgid "Step inc:"
 msgstr "Крок зміни:"
 
-#: ../gladeui/glade-editor-property.c:3152
+#: ../gladeui/glade-editor-property.c:3150
 msgid "The increment to use to make minor changes to the value"
 msgstr "Крок зміни при невеликому збільшенні чи зменшенні значення"
 
-#: ../gladeui/glade-editor-property.c:3154
+#: ../gladeui/glade-editor-property.c:3152
 msgid "Page inc:"
 msgstr "Крок зміни за сторінками:"
 
-#: ../gladeui/glade-editor-property.c:3155
+#: ../gladeui/glade-editor-property.c:3153
 msgid "The increment to use to make major changes to the value"
 msgstr "Крок зміни при великих збільшенні чи зменшені"
 
-#: ../gladeui/glade-editor-property.c:3157
+#: ../gladeui/glade-editor-property.c:3155
 msgid "Page size:"
 msgstr "Розмір сторінки:"
 
-#: ../gladeui/glade-editor-property.c:3158
+#: ../gladeui/glade-editor-property.c:3156
 msgid ""
 "The page size (in a GtkScrollbar this is the size of the area which is "
 "currently visible)"
 msgstr "Розмір сторінки, наприклад, для GtkScrollbar це розмір видимої області"
 
-#: ../gladeui/glade-editor-property.c:3235
+#: ../gladeui/glade-editor-property.c:3233
 msgid "Alphanumerical"
 msgstr "Алфавітно-цифрове"
 
-#: ../gladeui/glade-editor-property.c:3240
+#: ../gladeui/glade-editor-property.c:3238
 msgid "Extra"
 msgstr "Додатково"
 
-#: ../gladeui/glade-editor-property.c:3245
+#: ../gladeui/glade-editor-property.c:3243
 msgid "Keypad"
 msgstr "Клавіша"
 
-#: ../gladeui/glade-editor-property.c:3250
+#: ../gladeui/glade-editor-property.c:3248
 msgid "Functions"
 msgstr "Функції"
 
-#: ../gladeui/glade-editor-property.c:3255 ../plugins/gtk+/gtk+.xml.in.h:222
-#: ../plugins/gnome/gnome.xml.in.h:43
+#: ../gladeui/glade-editor-property.c:3253 ../plugins/gtk+/gtk+.xml.in.h:284
 msgid "Other"
 msgstr "Інше"
 
-#: ../gladeui/glade-editor-property.c:3426
-#: ../gladeui/glade-editor-property.c:3460
-#: ../gladeui/glade-editor-property.c:3505
+#: ../gladeui/glade-editor-property.c:3424
+#: ../gladeui/glade-editor-property.c:3458
+#: ../gladeui/glade-editor-property.c:3503
 msgid "<choose a key>"
 msgstr "<виберіть клавішу>"
 
-#: ../gladeui/glade-editor-property.c:3459 ../plugins/gtk+/gtk+.xml.in.h:205
-#: ../plugins/gnome/bonobo.xml.in.h:13
+#: ../gladeui/glade-editor-property.c:3457 ../plugins/gtk+/gtk+.xml.in.h:246
 msgid "None"
 msgstr "немає"
 
-#: ../gladeui/glade-editor-property.c:3585
+#: ../gladeui/glade-editor-property.c:3583
 #: ../gladeui/glade-signal-editor.c:694
 msgid "Signal"
 msgstr "Сигнал"
 
-#: ../gladeui/glade-editor-property.c:3612
+#: ../gladeui/glade-editor-property.c:3610
 msgid "Key"
 msgstr "Клавіша"
 
-#: ../gladeui/glade-editor-property.c:3626
+#: ../gladeui/glade-editor-property.c:3624
 msgid "Shift"
 msgstr "Shift"
 
-#: ../gladeui/glade-editor-property.c:3642
+#: ../gladeui/glade-editor-property.c:3640
 msgid "Control"
 msgstr "Ctrl"
 
-#: ../gladeui/glade-editor-property.c:3658
+#: ../gladeui/glade-editor-property.c:3656
 msgid "Alt"
 msgstr "Alt"
 
-#: ../gladeui/glade-editor-property.c:3724
+#: ../gladeui/glade-editor-property.c:3722
 msgid "Choose accelerator keys..."
 msgstr "Виберіть швидку клавішу..."
 
@@ -1137,7 +1135,7 @@ msgstr ""
 
 #. construct tab label widget
 #: ../gladeui/glade-editor.c:202 ../gladeui/glade-editor.c:321
-#: ../gladeui/glade-editor.c:1173
+#: ../gladeui/glade-editor.c:1184
 msgid "Accessibility"
 msgstr "Допоміжні можливості"
 
@@ -1167,67 +1165,67 @@ msgid "_Common"
 msgstr "Сп_ільні"
 
 #. Name
-#: ../gladeui/glade-editor.c:463
+#: ../gladeui/glade-editor.c:464
 msgid "Name:"
 msgstr "Назва:"
 
 #. Class
-#: ../gladeui/glade-editor.c:491
+#: ../gladeui/glade-editor.c:492
 msgid "Class:"
 msgstr "Клас:"
 
-#: ../gladeui/glade-editor.c:979
+#: ../gladeui/glade-editor.c:990
 #, c-format
 msgid "Create a %s"
 msgstr "Створити %s"
 
-#: ../gladeui/glade-editor.c:1104
+#: ../gladeui/glade-editor.c:1115
 msgid "Reset"
 msgstr "Скинути"
 
-#: ../gladeui/glade-editor.c:1118
+#: ../gladeui/glade-editor.c:1129
 msgid "Property"
 msgstr "Властивість"
 
-#: ../gladeui/glade-editor.c:1153
+#: ../gladeui/glade-editor.c:1164
 msgid "General"
 msgstr "Загальне"
 
-#: ../gladeui/glade-editor.c:1163
+#: ../gladeui/glade-editor.c:1174
 msgid "Common"
 msgstr "Спільні"
 
-#: ../gladeui/glade-editor.c:1208
+#: ../gladeui/glade-editor.c:1219
 msgid "(default)"
 msgstr "(типово)"
 
-#: ../gladeui/glade-editor.c:1223
+#: ../gladeui/glade-editor.c:1234
 msgid "Select the properties that you want to reset to their default values"
 msgstr "Виберіть властивості, які треба скинути у типові значення"
 
-#: ../gladeui/glade-editor.c:1355
+#: ../gladeui/glade-editor.c:1366
 msgid "Reset Widget Properties"
 msgstr "Скинути властивості віджету"
 
 #. Checklist
-#: ../gladeui/glade-editor.c:1372
+#: ../gladeui/glade-editor.c:1383
 msgid "_Properties:"
 msgstr "В_ластивості:"
 
-#: ../gladeui/glade-editor.c:1401
+#: ../gladeui/glade-editor.c:1412
 msgid "_Select All"
 msgstr "Виді_лити все"
 
-#: ../gladeui/glade-editor.c:1408
+#: ../gladeui/glade-editor.c:1419
 msgid "_Unselect All"
 msgstr "Зн_яти виділення"
 
 #. Description
-#: ../gladeui/glade-editor.c:1417
+#: ../gladeui/glade-editor.c:1428
 msgid "Property _Description:"
 msgstr "Опис _властивості:"
 
-#: ../gladeui/glade-fixed.c:482 ../plugins/gtk+/glade-gtk.c:1667
+#: ../gladeui/glade-fixed.c:482 ../plugins/gtk+/glade-gtk.c:1677
 #, c-format
 msgid "Placing %s inside %s"
 msgstr "Помістити %s всередину %s"
@@ -1282,17 +1280,17 @@ msgstr "Чи дозволяє контейнер змінювати розмір
 msgid "Widget selector"
 msgstr "Виділення віджетів"
 
-#: ../gladeui/glade-parser.c:1193
+#: ../gladeui/glade-parser.c:670
 #, c-format
 msgid "Could not find glade file %s"
 msgstr "Не вдається знайти файл glade %s"
 
-#: ../gladeui/glade-parser.c:1212 ../gladeui/glade-parser.c:1220
+#: ../gladeui/glade-parser.c:702 ../gladeui/glade-parser.c:710
 #, c-format
 msgid "Errors parsing glade file %s"
 msgstr "Помилка при розборі файлу у форматі glade %s"
 
-#: ../gladeui/glade-parser.c:1658
+#: ../gladeui/glade-parser.c:1432
 #, c-format
 msgid "Could not allocate memory for interface"
 msgstr "Не вдається отримати пам'ять для інтерфейсу"
@@ -1329,7 +1327,7 @@ msgstr "Шлях"
 msgid "The filesystem path of the project"
 msgstr "Шлях у файловій системі до проекту"
 
-#: ../gladeui/glade-project.c:1573
+#: ../gladeui/glade-project.c:1600
 #, c-format
 msgid ""
 "Failed to load %s.\n"
@@ -1338,7 +1336,7 @@ msgstr ""
 "Не вдається завантажити %s.\n"
 "Потрібні каталоги %s недоступні"
 
-#: ../gladeui/glade-project.c:2243
+#: ../gladeui/glade-project.c:2270
 #, c-format
 msgid "Unsaved %i"
 msgstr "Незбережений %i"
@@ -1349,27 +1347,27 @@ msgid "Click"
 msgstr "Клацання"
 
 #. Atk click property
-#: ../gladeui/glade-property-class.c:68 ../plugins/gtk+/gtk+.xml.in.h:271
+#: ../gladeui/glade-property-class.c:68 ../plugins/gtk+/gtk+.xml.in.h:375
 msgid "Set the description of the Click atk action"
 msgstr "Встановити опис дії atk, що відповідає клацанню"
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:69 ../plugins/gtk+/gtk+.xml.in.h:235
+#: ../gladeui/glade-property-class.c:69 ../plugins/gtk+/gtk+.xml.in.h:297
 msgid "Press"
 msgstr "Натискання"
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:70 ../plugins/gtk+/gtk+.xml.in.h:273
+#: ../gladeui/glade-property-class.c:70 ../plugins/gtk+/gtk+.xml.in.h:377
 msgid "Set the description of the Press atk action"
 msgstr "Встановити опис дії atk, що відповідає натисканню клавіші"
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:71 ../plugins/gtk+/gtk+.xml.in.h:250
+#: ../gladeui/glade-property-class.c:71 ../plugins/gtk+/gtk+.xml.in.h:312
 msgid "Release"
 msgstr "Відпускання"
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:72 ../plugins/gtk+/gtk+.xml.in.h:275
+#: ../gladeui/glade-property-class.c:72 ../plugins/gtk+/gtk+.xml.in.h:379
 msgid "Set the description of the Release atk action"
 msgstr "Встановити опис дії atk, що відповідає відпусканню клавіші"
 
@@ -1379,7 +1377,7 @@ msgid "Activate"
 msgstr "Активувати"
 
 #. Atk activate property
-#: ../gladeui/glade-property-class.c:74 ../plugins/gtk+/gtk+.xml.in.h:269
+#: ../gladeui/glade-property-class.c:74 ../plugins/gtk+/gtk+.xml.in.h:373
 msgid "Set the description of the Activate atk action"
 msgstr "Встановити опис дій atk, що відповідає активації елемент"
 
@@ -1389,7 +1387,7 @@ msgid "Controlled By"
 msgstr "Керується"
 
 #. Atk relationset properties
-#: ../gladeui/glade-property-class.c:79 ../plugins/gtk+/gtk+.xml.in.h:151
+#: ../gladeui/glade-property-class.c:79 ../plugins/gtk+/gtk+.xml.in.h:192
 msgid "Indicates an object controlled by one or more target objects"
 msgstr "Показує, що об'єкт керується одним або більше об'єктами"
 
@@ -1397,31 +1395,31 @@ msgstr "Показує, що об'єкт керується одним або б
 msgid "Controller For"
 msgstr "Керуючий для"
 
-#: ../gladeui/glade-property-class.c:82 ../plugins/gtk+/gtk+.xml.in.h:153
+#: ../gladeui/glade-property-class.c:82 ../plugins/gtk+/gtk+.xml.in.h:194
 msgid "Indicates an object is a controller for one or more target objects"
 msgstr "Показує, що об'єкт керує одним або більше об'єктами"
 
-#: ../gladeui/glade-property-class.c:84 ../plugins/gtk+/gtk+.xml.in.h:180
+#: ../gladeui/glade-property-class.c:84 ../plugins/gtk+/gtk+.xml.in.h:221
 msgid "Labelled By"
 msgstr "Відмічений"
 
-#: ../gladeui/glade-property-class.c:85 ../plugins/gtk+/gtk+.xml.in.h:156
+#: ../gladeui/glade-property-class.c:85 ../plugins/gtk+/gtk+.xml.in.h:197
 msgid "Indicates an object is labelled by one or more target objects"
 msgstr "Показує, що об'єкт відмічений одним або більше об'єктами"
 
-#: ../gladeui/glade-property-class.c:87 ../plugins/gtk+/gtk+.xml.in.h:179
+#: ../gladeui/glade-property-class.c:87 ../plugins/gtk+/gtk+.xml.in.h:220
 msgid "Label For"
 msgstr "Позначка для"
 
-#: ../gladeui/glade-property-class.c:88 ../plugins/gtk+/gtk+.xml.in.h:154
+#: ../gladeui/glade-property-class.c:88 ../plugins/gtk+/gtk+.xml.in.h:195
 msgid "Indicates an object is a label for one or more target objects"
 msgstr "Вказує, що об'єкт є позначкою для одного або більше об'єктів"
 
-#: ../gladeui/glade-property-class.c:90 ../plugins/gtk+/gtk+.xml.in.h:192
+#: ../gladeui/glade-property-class.c:90 ../plugins/gtk+/gtk+.xml.in.h:233
 msgid "Member Of"
 msgstr "Член групи"
 
-#: ../gladeui/glade-property-class.c:91 ../plugins/gtk+/gtk+.xml.in.h:155
+#: ../gladeui/glade-property-class.c:91 ../plugins/gtk+/gtk+.xml.in.h:196
 msgid ""
 "Indicates an object is a member of a group of one or more target objects"
 msgstr "Показує, що об'єкт входить у групу об'єктів"
@@ -1430,7 +1428,7 @@ msgstr "Показує, що об'єкт входить у групу об'єк�
 msgid "Child Node Of"
 msgstr "Дочірня вершина дерева"
 
-#: ../gladeui/glade-property-class.c:94 ../plugins/gtk+/gtk+.xml.in.h:152
+#: ../gladeui/glade-property-class.c:94 ../plugins/gtk+/gtk+.xml.in.h:193
 msgid ""
 "Indicates an object is a cell in a treetable which is displayed because a "
 "cell in the same column is expanded and identifies that cell"
@@ -1438,7 +1436,7 @@ msgstr ""
 "Показує, що об'єкт що помилка у таблиці, відображується тому, що інший "
 "елемент у цій же колонці розкритий та вказує на комірку"
 
-#: ../gladeui/glade-property-class.c:97 ../plugins/gtk+/gtk+.xml.in.h:118
+#: ../gladeui/glade-property-class.c:97 ../plugins/gtk+/gtk+.xml.in.h:160
 msgid "Flows To"
 msgstr "Слідує за"
 
@@ -1450,11 +1448,11 @@ msgstr ""
 "Показує, що зміст об'єкту логічно слідує за змістом іншого об'єкту "
 "AtkObject, наприклад за порядком читання тексту."
 
-#: ../gladeui/glade-property-class.c:101 ../plugins/gtk+/gtk+.xml.in.h:117
+#: ../gladeui/glade-property-class.c:101 ../plugins/gtk+/gtk+.xml.in.h:159
 msgid "Flows From"
 msgstr "Слідує перед"
 
-#: ../gladeui/glade-property-class.c:102 ../plugins/gtk+/gtk+.xml.in.h:161
+#: ../gladeui/glade-property-class.c:102 ../plugins/gtk+/gtk+.xml.in.h:202
 msgid ""
 "Indicates that the object has content that flows logically from another "
 "AtkObject in a sequential way, (for instance text-flow)"
@@ -1462,11 +1460,11 @@ msgstr ""
 "Показує, що зміст об'єкту логічно слідує перед змістом іншого об'єкту, "
 "наприклад, ща порядком читання тексту"
 
-#: ../gladeui/glade-property-class.c:105 ../plugins/gtk+/gtk+.xml.in.h:298
+#: ../gladeui/glade-property-class.c:105 ../plugins/gtk+/gtk+.xml.in.h:402
 msgid "Subwindow Of"
 msgstr "Підвікно"
 
-#: ../gladeui/glade-property-class.c:106 ../plugins/gtk+/gtk+.xml.in.h:149
+#: ../gladeui/glade-property-class.c:106 ../plugins/gtk+/gtk+.xml.in.h:190
 msgid ""
 "Indicates a subwindow attached to a component but otherwise has no "
 "connection in the UI hierarchy to that component"
@@ -1474,11 +1472,11 @@ msgstr ""
 "Показує що підвікно приєднано до компоненту, але не пов'язано жодним іншим "
 "чином з інтерфейсом користувача"
 
-#: ../gladeui/glade-property-class.c:109 ../plugins/gtk+/gtk+.xml.in.h:98
+#: ../gladeui/glade-property-class.c:109 ../plugins/gtk+/gtk+.xml.in.h:119
 msgid "Embeds"
 msgstr "Містить об'єкти"
 
-#: ../gladeui/glade-property-class.c:110 ../plugins/gtk+/gtk+.xml.in.h:163
+#: ../gladeui/glade-property-class.c:110 ../plugins/gtk+/gtk+.xml.in.h:204
 msgid ""
 "Indicates that the object visually embeds another object's content, i.e. "
 "this object's content flows around another's content"
@@ -1486,11 +1484,11 @@ msgstr ""
 "Показує, що об'єкт візуально містить інші об'єкти, наприклад, зміст об'єкту "
 "оточує зміст іншого об'єкту"
 
-#: ../gladeui/glade-property-class.c:113 ../plugins/gtk+/gtk+.xml.in.h:97
+#: ../gladeui/glade-property-class.c:113 ../plugins/gtk+/gtk+.xml.in.h:118
 msgid "Embedded By"
 msgstr "Вбудований у"
 
-#: ../gladeui/glade-property-class.c:114 ../plugins/gtk+/gtk+.xml.in.h:174
+#: ../gladeui/glade-property-class.c:114 ../plugins/gtk+/gtk+.xml.in.h:215
 msgid ""
 "Inverse of 'Embeds', indicates that this object's content is visually "
 "embedded in another object"
@@ -1498,59 +1496,59 @@ msgstr ""
 "Зворотне поняття до поняття 'Містить об'єкти', показує, що зміст об'єкту "
 "візуально вбудовано у інший об'єкт"
 
-#: ../gladeui/glade-property-class.c:117 ../plugins/gtk+/gtk+.xml.in.h:231
+#: ../gladeui/glade-property-class.c:117 ../plugins/gtk+/gtk+.xml.in.h:293
 msgid "Popup For"
 msgstr "Спливаючі для"
 
-#: ../gladeui/glade-property-class.c:118 ../plugins/gtk+/gtk+.xml.in.h:158
+#: ../gladeui/glade-property-class.c:118 ../plugins/gtk+/gtk+.xml.in.h:199
 msgid "Indicates that an object is a popup for another object"
 msgstr "Показує, що об'єкт спливає для іншого вікна"
 
-#: ../gladeui/glade-property-class.c:120 ../plugins/gtk+/gtk+.xml.in.h:226
+#: ../gladeui/glade-property-class.c:120 ../plugins/gtk+/gtk+.xml.in.h:288
 msgid "Parent Window Of"
 msgstr "Батьківське вікно"
 
-#: ../gladeui/glade-property-class.c:121 ../plugins/gtk+/gtk+.xml.in.h:157
+#: ../gladeui/glade-property-class.c:121 ../plugins/gtk+/gtk+.xml.in.h:198
 msgid "Indicates that an object is a parent window of another object"
 msgstr "Показує, що об'єкт є батьківським для іншого об'єкту"
 
-#: ../gladeui/glade-property.c:605
+#: ../gladeui/glade-property.c:607
 msgid "Enabled"
 msgstr "Увімкнено"
 
-#: ../gladeui/glade-property.c:606
+#: ../gladeui/glade-property.c:608
 msgid "If the property is optional, this is its enabled state"
 msgstr "Якщо властивість може бути відсутня, це ознака відсутності"
 
-#: ../gladeui/glade-property.c:612 ../gladeui/glade-widget-action.c:158
+#: ../gladeui/glade-property.c:614 ../gladeui/glade-widget-action.c:158
 msgid "Sensitive"
 msgstr "Чутливий"
 
-#: ../gladeui/glade-property.c:613
+#: ../gladeui/glade-property.c:615
 msgid "This gives backends control to set property sensitivity"
 msgstr "Керуючий вхід для встановлення властивості чутливості"
 
-#: ../gladeui/glade-property.c:619
+#: ../gladeui/glade-property.c:621
 msgid "Comment"
 msgstr "Коментар"
 
-#: ../gladeui/glade-property.c:620
+#: ../gladeui/glade-property.c:622
 msgid "Comment for translators"
 msgstr "Коментар для перекладачів"
 
-#: ../gladeui/glade-property.c:626
+#: ../gladeui/glade-property.c:628
 msgid "Translatable"
 msgstr "Перекладається"
 
-#: ../gladeui/glade-property.c:627
+#: ../gladeui/glade-property.c:629
 msgid "Whether this property is translatable or not"
 msgstr "Чи перекладається ця властивість або ні"
 
-#: ../gladeui/glade-property.c:633
+#: ../gladeui/glade-property.c:635
 msgid "Has Context"
 msgstr "Має контекст"
 
-#: ../gladeui/glade-property.c:634
+#: ../gladeui/glade-property.c:636
 msgid "Whether or not the translatable string has a context prefix"
 msgstr ""
 "Чи має заголовок цей рядок, що перекладається, який вказує на контекст "
@@ -1684,7 +1682,7 @@ msgstr "Проект glade, якому належить цей віджет"
 msgid "A list of GladeProperties"
 msgstr "Список властивостей GladeProperties"
 
-#: ../gladeui/glade-widget.c:1060 ../plugins/gtk+/gtk+.xml.in.h:225
+#: ../gladeui/glade-widget.c:1060 ../plugins/gtk+/gtk+.xml.in.h:287
 msgid "Parent"
 msgstr "Батьківський"
 
@@ -1708,7 +1706,7 @@ msgstr "Шаблон"
 msgid "A GladeWidget template to base a new widget on"
 msgstr "Шаблон віджету Glade для створення нових віджетів"
 
-#: ../gladeui/glade-widget.c:1081 ../plugins/gtk+/gtk+.xml.in.h:164
+#: ../gladeui/glade-widget.c:1081 ../plugins/gtk+/gtk+.xml.in.h:205
 msgid "Info"
 msgstr "Інформація"
 
@@ -1753,7 +1751,7 @@ msgstr "Назва класу"
 msgid "GType of the class"
 msgstr "GType класу"
 
-#: ../gladeui/glade-widget-adaptor.c:820 ../plugins/gnome/gnome.xml.in.h:64
+#: ../gladeui/glade-widget-adaptor.c:820
 msgid "Title"
 msgstr "Заголовок"
 
@@ -1770,7 +1768,7 @@ msgstr "Загальна назва"
 msgid "Used to generate names of new widgets"
 msgstr "Використовується для створення назв нових віджетів"
 
-#: ../gladeui/glade-widget-adaptor.c:836 ../plugins/gtk+/gtk+.xml.in.h:138
+#: ../gladeui/glade-widget-adaptor.c:836 ../plugins/gtk+/gtk+.xml.in.h:179
 msgid "Icon Name"
 msgstr "Назва значка"
 
@@ -1805,7 +1803,7 @@ msgid ""
 msgstr ""
 "Містить тип пакування, щоб відобразити спеціальні дочірні елементи контейнера"
 
-#: ../gladeui/glade-widget-adaptor.c:869 ../plugins/gtk+/gtk+.xml.in.h:72
+#: ../gladeui/glade-widget-adaptor.c:869 ../plugins/gtk+/gtk+.xml.in.h:93
 msgid "Cursor"
 msgstr "Курсор"
 
@@ -1960,88 +1958,88 @@ msgstr "Метод, що використовується для правки ц
 msgid "The method to use to edit this button"
 msgstr "Метод, що використовується для правки цієї кнопки"
 
-#: ../plugins/gtk+/glade-gtk.c:355
+#: ../plugins/gtk+/glade-gtk.c:365
 #, c-format
 msgid "Removing parent of %s"
 msgstr "Видалення батьківського елементу %s"
 
-#: ../plugins/gtk+/glade-gtk.c:406
+#: ../plugins/gtk+/glade-gtk.c:416
 #, c-format
 msgid "Adding parent %s to %s"
 msgstr "Додавання батьківського елементу %s до %s"
 
-#: ../plugins/gtk+/glade-gtk.c:774
+#: ../plugins/gtk+/glade-gtk.c:784
 #, c-format
 msgid "Ordering children of %s"
 msgstr "Впорядкування дочірніх елементів %s"
 
-#: ../plugins/gtk+/glade-gtk.c:1253 ../plugins/gtk+/glade-gtk.c:1260
+#: ../plugins/gtk+/glade-gtk.c:1263 ../plugins/gtk+/glade-gtk.c:1270
 #, c-format
 msgid "Insert placeholder to %s"
 msgstr "Вставка заповнювача місця до %s"
 
-#: ../plugins/gtk+/glade-gtk.c:1267
+#: ../plugins/gtk+/glade-gtk.c:1277
 #, c-format
 msgid "Remove placeholder from %s"
 msgstr "Видалення заповнювача місця %s"
 
-#: ../plugins/gtk+/glade-gtk.c:2182 ../plugins/gtk+/glade-gtk.c:2190
+#: ../plugins/gtk+/glade-gtk.c:2192 ../plugins/gtk+/glade-gtk.c:2200
 #, c-format
 msgid "Insert Row on %s"
 msgstr "Вставка рядка у %s"
 
-#: ../plugins/gtk+/glade-gtk.c:2198 ../plugins/gtk+/glade-gtk.c:2206
+#: ../plugins/gtk+/glade-gtk.c:2208 ../plugins/gtk+/glade-gtk.c:2216
 #, c-format
 msgid "Insert Column on %s"
 msgstr "Вставка стовпчика у %s"
 
-#: ../plugins/gtk+/glade-gtk.c:2214
+#: ../plugins/gtk+/glade-gtk.c:2224
 #, c-format
 msgid "Remove Column on %s"
 msgstr "Видалення стовпчика з %s"
 
-#: ../plugins/gtk+/glade-gtk.c:2222
+#: ../plugins/gtk+/glade-gtk.c:2232
 #, c-format
 msgid "Remove Row on %s"
 msgstr "Видалення рядка з  %s"
 
-#: ../plugins/gtk+/glade-gtk.c:3162 ../plugins/gtk+/glade-gtk.c:3169
+#: ../plugins/gtk+/glade-gtk.c:3172 ../plugins/gtk+/glade-gtk.c:3179
 #, c-format
 msgid "Insert page on %s"
 msgstr "Вставка сторінки до %s"
 
-#: ../plugins/gtk+/glade-gtk.c:3176
+#: ../plugins/gtk+/glade-gtk.c:3186
 #, c-format
 msgid "Remove page from %s"
 msgstr "Видалення сторінки з %s"
 
-#: ../plugins/gtk+/glade-gtk.c:3921 ../plugins/gtk+/glade-gtk.c:3925
-#: ../plugins/gtk+/glade-gtk.c:4100 ../plugins/gtk+/glade-gtk.c:4104
+#: ../plugins/gtk+/glade-gtk.c:3931 ../plugins/gtk+/glade-gtk.c:3935
+#: ../plugins/gtk+/glade-gtk.c:4110 ../plugins/gtk+/glade-gtk.c:4114
 msgid "This only applies with label type buttons"
 msgstr "Це застосовується лише до кнопок з позначкою"
 
-#: ../plugins/gtk+/glade-gtk.c:3936 ../plugins/gtk+/glade-gtk.c:3940
-#: ../plugins/gtk+/glade-gtk.c:4092 ../plugins/gtk+/glade-gtk.c:4096
+#: ../plugins/gtk+/glade-gtk.c:3946 ../plugins/gtk+/glade-gtk.c:3950
+#: ../plugins/gtk+/glade-gtk.c:4102 ../plugins/gtk+/glade-gtk.c:4106
 msgid "This only applies with stock type buttons"
 msgstr "Це застосовується лише до кнопкам з готовими зображеннями"
 
-#: ../plugins/gtk+/glade-gtk.c:4200 ../plugins/gtk+/glade-gtk.c:4222
+#: ../plugins/gtk+/glade-gtk.c:4210 ../plugins/gtk+/glade-gtk.c:4232
 msgid "You must remove any children before you can set the type"
 msgstr "Необхідно видалити нащадків кнопки перед встановленням її типу"
 
-#: ../plugins/gtk+/glade-gtk.c:4246 ../plugins/gtk+/glade-gtk.c:5759
+#: ../plugins/gtk+/glade-gtk.c:4256 ../plugins/gtk+/glade-gtk.c:5769
 msgid "This only applies with file type images"
 msgstr "Це застосовується лише до зображень з файлу"
 
-#: ../plugins/gtk+/glade-gtk.c:4254 ../plugins/gtk+/glade-gtk.c:5763
+#: ../plugins/gtk+/glade-gtk.c:4264 ../plugins/gtk+/glade-gtk.c:5773
 msgid "This only applies to Icon Theme type images"
 msgstr "Це застосовується лише до зображень з теми"
 
-#: ../plugins/gtk+/glade-gtk.c:4264 ../plugins/gtk+/glade-gtk.c:5761
+#: ../plugins/gtk+/glade-gtk.c:4274 ../plugins/gtk+/glade-gtk.c:5771
 msgid "This only applies with stock type images"
 msgstr "Це застосовується лише до вбудованих елементів"
 
-#: ../plugins/gtk+/glade-gtk.c:4276
+#: ../plugins/gtk+/glade-gtk.c:4286
 msgid ""
 "Pixel Size takes precedence over Icon Size; if you want to use Icon Size, "
 "set Pixel size to -1"
@@ -2049,47 +2047,47 @@ msgstr ""
 "Розмір у точках більш пріоритетний, ніж розмір значка. Якщо потрібно "
 "використовувати розмір вказаний для значка, встановіть розмір у точках у -1"
 
-#: ../plugins/gtk+/glade-gtk.c:4302
+#: ../plugins/gtk+/glade-gtk.c:4312
 msgid "Pixel Size takes precedence over Icon size"
 msgstr "Розмір у точках для перевизначення розміру значка"
 
-#: ../plugins/gtk+/glade-gtk.c:4615 ../plugins/gtk+/glade-gtk.c:5609
+#: ../plugins/gtk+/glade-gtk.c:4625 ../plugins/gtk+/glade-gtk.c:5619
 msgid "<separator>"
 msgstr "<розділювач>"
 
-#: ../plugins/gtk+/glade-gtk.c:4789 ../plugins/gtk+/gtk+.xml.in.h:206
+#: ../plugins/gtk+/glade-gtk.c:4799 ../plugins/gtk+/gtk+.xml.in.h:247
 msgid "Normal"
 msgstr "Нормальний"
 
-#: ../plugins/gtk+/glade-gtk.c:4790 ../plugins/gtk+/gtk+.xml.in.h:143
+#: ../plugins/gtk+/glade-gtk.c:4800 ../plugins/gtk+/gtk+.xml.in.h:184
 msgid "Image"
 msgstr "Зображення"
 
-#: ../plugins/gtk+/glade-gtk.c:4791
+#: ../plugins/gtk+/glade-gtk.c:4801
 msgid "Check"
 msgstr "Відмітка"
 
-#: ../plugins/gtk+/glade-gtk.c:4792 ../plugins/gtk+/glade-gtk.c:5673
+#: ../plugins/gtk+/glade-gtk.c:4802 ../plugins/gtk+/glade-gtk.c:5683
 msgid "Radio"
 msgstr "Радіо"
 
-#: ../plugins/gtk+/glade-gtk.c:4793 ../plugins/gtk+/glade-gtk.c:5676
+#: ../plugins/gtk+/glade-gtk.c:4803 ../plugins/gtk+/glade-gtk.c:5686
 msgid "Separator"
 msgstr "Розділювач"
 
-#: ../plugins/gtk+/glade-gtk.c:4797
+#: ../plugins/gtk+/glade-gtk.c:4807
 msgid "Add Item"
 msgstr "Додати елемент"
 
-#: ../plugins/gtk+/glade-gtk.c:4798
+#: ../plugins/gtk+/glade-gtk.c:4808
 msgid "Add Child Item"
 msgstr "Добавить дочірній елемент"
 
-#: ../plugins/gtk+/glade-gtk.c:4799 ../plugins/gtk+/glade-gtk.c:5685
+#: ../plugins/gtk+/glade-gtk.c:4809 ../plugins/gtk+/glade-gtk.c:5695
 msgid "Add Separator"
 msgstr "Додати розділювач"
 
-#: ../plugins/gtk+/glade-gtk.c:4812
+#: ../plugins/gtk+/glade-gtk.c:4822
 msgid ""
 "<big><b>Tips:</b></big>\n"
 "  * Right click over the treeview to add items.\n"
@@ -2103,139 +2101,139 @@ msgstr ""
 "  * Переносіть елементи мишею, щоб впорядкувати їх.\n"
 "  * Колонку типу можна редагувати."
 
-#: ../plugins/gtk+/glade-gtk.c:4828 ../plugins/gtk+/glade-gtk.c:5343
+#: ../plugins/gtk+/glade-gtk.c:4838 ../plugins/gtk+/glade-gtk.c:5353
 msgid "Edit Menu Bar"
 msgstr "Редагування рядка меню"
 
-#: ../plugins/gtk+/glade-gtk.c:4830 ../plugins/gtk+/glade-gtk.c:5345
+#: ../plugins/gtk+/glade-gtk.c:4840 ../plugins/gtk+/glade-gtk.c:5355
 msgid "Edit Menu"
 msgstr "Правка меню"
 
-#: ../plugins/gtk+/glade-gtk.c:5081
+#: ../plugins/gtk+/glade-gtk.c:5091
 msgid "Print S_etup"
 msgstr "Пара_метри друку"
 
-#: ../plugins/gtk+/glade-gtk.c:5085
+#: ../plugins/gtk+/glade-gtk.c:5095
 msgid "Find Ne_xt"
 msgstr "Зна_йти далі"
 
-#: ../plugins/gtk+/glade-gtk.c:5089
+#: ../plugins/gtk+/glade-gtk.c:5099
 msgid "_Undo Move"
 msgstr "В_ернути переміщення"
 
-#: ../plugins/gtk+/glade-gtk.c:5093
+#: ../plugins/gtk+/glade-gtk.c:5103
 msgid "_Redo Move"
 msgstr "Пов_торити переміщення"
 
-#: ../plugins/gtk+/glade-gtk.c:5096
+#: ../plugins/gtk+/glade-gtk.c:5106
 msgid "Select _All"
 msgstr "Виді_лити все"
 
-#: ../plugins/gtk+/glade-gtk.c:5099
+#: ../plugins/gtk+/glade-gtk.c:5109
 msgid "_New Game"
 msgstr "_Нова гра"
 
-#: ../plugins/gtk+/glade-gtk.c:5102
+#: ../plugins/gtk+/glade-gtk.c:5112
 msgid "_Pause game"
 msgstr "_Пауза"
 
-#: ../plugins/gtk+/glade-gtk.c:5105
+#: ../plugins/gtk+/glade-gtk.c:5115
 msgid "_Restart Game"
 msgstr "П_ерезапустити"
 
-#: ../plugins/gtk+/glade-gtk.c:5108
+#: ../plugins/gtk+/glade-gtk.c:5118
 msgid "_Hint"
 msgstr "П_ідказка"
 
-#: ../plugins/gtk+/glade-gtk.c:5111
+#: ../plugins/gtk+/glade-gtk.c:5121
 msgid "_Scores..."
 msgstr "_Результати..."
 
-#: ../plugins/gtk+/glade-gtk.c:5114
+#: ../plugins/gtk+/glade-gtk.c:5124
 msgid "_End Game"
 msgstr "_Завершити гру"
 
-#: ../plugins/gtk+/glade-gtk.c:5117
+#: ../plugins/gtk+/glade-gtk.c:5127
 msgid "Create New _Window"
 msgstr "Створити нове _вікно"
 
-#: ../plugins/gtk+/glade-gtk.c:5120
+#: ../plugins/gtk+/glade-gtk.c:5130
 msgid "_Close This Window"
 msgstr "_Закрити це вікно"
 
-#: ../plugins/gtk+/glade-gtk.c:5132
+#: ../plugins/gtk+/glade-gtk.c:5142
 msgid "_Settings"
 msgstr "П_араметри"
 
-#: ../plugins/gtk+/glade-gtk.c:5135
+#: ../plugins/gtk+/glade-gtk.c:5145
 msgid "Fi_les"
 msgstr "Фай_ли"
 
-#: ../plugins/gtk+/glade-gtk.c:5138
+#: ../plugins/gtk+/glade-gtk.c:5148
 msgid "_Windows"
 msgstr "_Вікна"
 
-#: ../plugins/gtk+/glade-gtk.c:5144
+#: ../plugins/gtk+/glade-gtk.c:5154
 msgid "_Game"
 msgstr "_Гра"
 
-#: ../plugins/gtk+/glade-gtk.c:5240
+#: ../plugins/gtk+/glade-gtk.c:5250
 msgid "This does not apply with stock items"
 msgstr "Це не сумісно з вбудованими елементами"
 
-#: ../plugins/gtk+/glade-gtk.c:5618
+#: ../plugins/gtk+/glade-gtk.c:5628
 msgid "<custom>"
 msgstr "<інший>"
 
-#: ../plugins/gtk+/glade-gtk.c:5671 ../plugins/gtk+/gtk+.xml.in.h:36
+#: ../plugins/gtk+/glade-gtk.c:5681 ../plugins/gtk+/gtk+.xml.in.h:36
 msgid "Button"
 msgstr "Кнопка"
 
-#: ../plugins/gtk+/glade-gtk.c:5672
+#: ../plugins/gtk+/glade-gtk.c:5682
 msgid "Toggle"
 msgstr "Кнопка-перемикач"
 
-#: ../plugins/gtk+/glade-gtk.c:5674 ../plugins/gtk+/gtk+.xml.in.h:193
+#: ../plugins/gtk+/glade-gtk.c:5684 ../plugins/gtk+/gtk+.xml.in.h:234
 msgid "Menu"
 msgstr "Меню"
 
-#: ../plugins/gtk+/glade-gtk.c:5675
+#: ../plugins/gtk+/glade-gtk.c:5685
 msgid "Item"
 msgstr "Елемент"
 
-#: ../plugins/gtk+/glade-gtk.c:5680
+#: ../plugins/gtk+/glade-gtk.c:5690
 msgid "Add Tool Button"
 msgstr "Додати кнопку-інструмент"
 
-#: ../plugins/gtk+/glade-gtk.c:5681
+#: ../plugins/gtk+/glade-gtk.c:5691
 msgid "Add Toggle Button"
 msgstr "Додати кнопку-перемикач"
 
-#: ../plugins/gtk+/glade-gtk.c:5682
+#: ../plugins/gtk+/glade-gtk.c:5692
 msgid "Add Radio Button"
 msgstr "Додати радіо-кнопку"
 
-#: ../plugins/gtk+/glade-gtk.c:5683
+#: ../plugins/gtk+/glade-gtk.c:5693
 msgid "Add Menu Button"
 msgstr "Додати кнопку меню"
 
-#: ../plugins/gtk+/glade-gtk.c:5684
+#: ../plugins/gtk+/glade-gtk.c:5694
 msgid "Add Tool Item"
 msgstr "Додати інструмент"
 
-#: ../plugins/gtk+/glade-gtk.c:5693
+#: ../plugins/gtk+/glade-gtk.c:5703
 msgid "Tool Bar Editor"
 msgstr "Правка панелі інструментів"
 
-#: ../plugins/gtk+/glade-gtk.c:6509
+#: ../plugins/gtk+/glade-gtk.c:6519
 msgid "Introduction page"
 msgstr "Вступна сторінка"
 
-#: ../plugins/gtk+/glade-gtk.c:6513
+#: ../plugins/gtk+/glade-gtk.c:6523
 msgid "Content page"
 msgstr "Сторінка зі змістом"
 
-#: ../plugins/gtk+/glade-gtk.c:6517
+#: ../plugins/gtk+/glade-gtk.c:6527
 msgid "Confirmation page"
 msgstr "Сторінка підтвердження"
 
@@ -2285,7 +2283,7 @@ msgstr "Все"
 msgid "All Events"
 msgstr "Усі події"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:22 ../plugins/gnome/gnome.xml.in.h:2
+#: ../plugins/gtk+/gtk+.xml.in.h:22
 msgid "Always"
 msgstr "Завжди"
 
@@ -2317,7 +2315,7 @@ msgstr "Автоматично"
 msgid "Before"
 msgstr "Перед"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:30 ../plugins/gnome/bonobo.xml.in.h:1
+#: ../plugins/gtk+/gtk+.xml.in.h:30
 msgid "Bottom"
 msgstr "Внизу"
 
@@ -2337,8 +2335,7 @@ msgstr "Знизу вгору"
 msgid "Box"
 msgstr "Група"
 
-#. This is deprecated
-#: ../plugins/gtk+/gtk+.xml.in.h:35 ../plugins/gnome/canvas.xml.in.h:2
+#: ../plugins/gtk+/gtk+.xml.in.h:35
 msgid "Browse"
 msgstr "Огляд"
 
@@ -2458,291 +2455,329 @@ msgstr "Безперервно"
 msgid "Control and Display"
 msgstr "Керування й відображення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:71 ../plugins/gnome/gnome.xml.in.h:5
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:92
 msgid "Create Folder"
 msgstr "Створити каталог"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:73
+#: ../plugins/gtk+/gtk+.xml.in.h:94
 msgid "Curve"
 msgstr "Крива"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:74
+#: ../plugins/gtk+/gtk+.xml.in.h:95
 msgid "Custom"
 msgstr "Додатково"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:75
+#: ../plugins/gtk+/gtk+.xml.in.h:96
 msgid "Custom widget"
 msgstr "Додаткові віджети"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:76
+#: ../plugins/gtk+/gtk+.xml.in.h:97
 msgid "Default"
 msgstr "Типовий"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:77
+#: ../plugins/gtk+/gtk+.xml.in.h:98
 msgid "Delayed"
 msgstr "Відкладений"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:78
+#: ../plugins/gtk+/gtk+.xml.in.h:99
 msgid "Descending"
 msgstr "Спадаючий"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:79
+#: ../plugins/gtk+/gtk+.xml.in.h:100
 msgid "Described By"
 msgstr "Описується"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:80
+#: ../plugins/gtk+/gtk+.xml.in.h:101
 msgid "Description For"
 msgstr "Опис для"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:81
+#: ../plugins/gtk+/gtk+.xml.in.h:102
 msgid "Description of an object, formatted for assistive technology access"
 msgstr "Опис об'єкту, відформатований для доступу допоміжних технологій"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:82
+#: ../plugins/gtk+/gtk+.xml.in.h:103
 msgid "Desktop"
 msgstr "Робочий стіл"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:83
+#: ../plugins/gtk+/gtk+.xml.in.h:104
 msgid "Dialog"
 msgstr "Діалог"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:84
+#: ../plugins/gtk+/gtk+.xml.in.h:105
 msgid "Dialog Box"
 msgstr "Вікно діалогу"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:85
+#: ../plugins/gtk+/gtk+.xml.in.h:106
 msgid "Discontinuous"
 msgstr "Дискретне"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:86
+#: ../plugins/gtk+/gtk+.xml.in.h:107
 msgid "Discrete"
 msgstr "Дискретне"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:87
+#: ../plugins/gtk+/gtk+.xml.in.h:108
 msgid "Dock"
 msgstr "Причал"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:88
+#: ../plugins/gtk+/gtk+.xml.in.h:109
 msgid "Down"
 msgstr "Вниз"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:89
+#: ../plugins/gtk+/gtk+.xml.in.h:110
 msgid "Drag & Drop"
 msgstr "Перетягування"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:90
+#: ../plugins/gtk+/gtk+.xml.in.h:111
 msgid "Drag and Drop"
 msgstr "Перетягування"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:91
+#: ../plugins/gtk+/gtk+.xml.in.h:112
 msgid "Drawing Area"
 msgstr "Область малювання"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:92
+#: ../plugins/gtk+/gtk+.xml.in.h:113
 msgid "Drop Down Menu"
 msgstr "Розкривне меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:93
+#: ../plugins/gtk+/gtk+.xml.in.h:114
 msgid "East"
 msgstr "Східний"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:94
+#: ../plugins/gtk+/gtk+.xml.in.h:115
 msgid "Edge"
 msgstr "Край"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:95
+#: ../plugins/gtk+/gtk+.xml.in.h:116
 msgid "Edit Type"
 msgstr "Правка типу"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:96
+#: ../plugins/gtk+/gtk+.xml.in.h:117
 msgid "Edit&#8230;"
 msgstr "Правка&#8230;"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:99 ../plugins/gnome/gnome.xml.in.h:7
+#: ../plugins/gtk+/gtk+.xml.in.h:120
 msgid "End"
 msgstr "Кінець"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:100
+#: ../plugins/gtk+/gtk+.xml.in.h:121
 msgid "Enter Notify"
 msgstr "Ввести сповіщення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:101 ../plugins/gnome/gnome.xml.in.h:8
+#: ../plugins/gtk+/gtk+.xml.in.h:122
 msgid "Error"
 msgstr "Помилка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:102 ../plugins/gnome/bonobo.xml.in.h:2
+#: ../plugins/gtk+/gtk+.xml.in.h:123
 msgid "Etched In"
 msgstr "Увігнута всередину"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:103 ../plugins/gnome/bonobo.xml.in.h:3
+#: ../plugins/gtk+/gtk+.xml.in.h:124
 msgid "Etched Out"
 msgstr "Увігнута назовні"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:104
+#: ../plugins/gtk+/gtk+.xml.in.h:125
 msgid "Event Box"
 msgstr "Область подій"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:105 ../plugins/gnome/gnome.xml.in.h:9
+#: ../plugins/gtk+/gtk+.xml.in.h:126
 msgid "Expand"
 msgstr "Розкрити"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:106
+#: ../plugins/gtk+/gtk+.xml.in.h:127
 msgid "Expander"
 msgstr "Розширювач"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:107
+#: ../plugins/gtk+/gtk+.xml.in.h:128
 msgid "Exposure"
 msgstr "Витримка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:108
+#: ../plugins/gtk+/gtk+.xml.in.h:129
 msgid "Extended"
 msgstr "Розширюється"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:109
+#: ../plugins/gtk+/gtk+.xml.in.h:130
 msgid "File Chooser Button"
 msgstr "Кнопка вибору файлів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:110
+#: ../plugins/gtk+/gtk+.xml.in.h:131
 msgid "File Chooser Dialog"
 msgstr "Діалог вибору файлів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:111
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:153
 msgid "File Chooser Widget"
 msgstr "Віджет вибору файлів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:112
+#: ../plugins/gtk+/gtk+.xml.in.h:154
 msgid "File Name"
 msgstr "Назва файла"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:113
+#: ../plugins/gtk+/gtk+.xml.in.h:155
 msgid "File Selection"
 msgstr "Вибір файлів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:114
+#: ../plugins/gtk+/gtk+.xml.in.h:156
 msgid "Filename"
 msgstr "Назва файлу"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:115 ../plugins/gnome/gnome.xml.in.h:11
+#: ../plugins/gtk+/gtk+.xml.in.h:157
 msgid "Fill"
 msgstr "Заповнення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:116
+#: ../plugins/gtk+/gtk+.xml.in.h:158
 msgid "Fixed"
 msgstr "Фіксований"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:119
+#: ../plugins/gtk+/gtk+.xml.in.h:161
 msgid "Focus Change"
 msgstr "Зміна фокусу"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:120
+#: ../plugins/gtk+/gtk+.xml.in.h:162
 msgid "Font Button"
 msgstr "Кнопка шрифту"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:121
+#: ../plugins/gtk+/gtk+.xml.in.h:163
 msgid "Font Selection"
 msgstr "Вибір шрифту"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:122
+#: ../plugins/gtk+/gtk+.xml.in.h:164
 msgid "Font Selection Dialog"
 msgstr "Діалог вибору шрифту"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:123
+#: ../plugins/gtk+/gtk+.xml.in.h:165
 msgid "Frame"
 msgstr "Рамка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:124
+#: ../plugins/gtk+/gtk+.xml.in.h:166
 msgid "Free"
 msgstr "Вільно"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:125
+#: ../plugins/gtk+/gtk+.xml.in.h:167
 msgid "Gamma Curve"
 msgstr "Гамма-крива"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:126
-msgid "Gtk+ Obsolete"
-msgstr "Застарілі Gtk+"
-
-#: ../plugins/gtk+/gtk+.xml.in.h:127
+#: ../plugins/gtk+/gtk+.xml.in.h:168
 msgid "Half"
 msgstr "Половина"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:128
+#: ../plugins/gtk+/gtk+.xml.in.h:169
 msgid "Handle Box"
 msgstr "Повзунок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:129 ../plugins/gnome/bonobo.xml.in.h:6
+#: ../plugins/gtk+/gtk+.xml.in.h:170
 msgid "Horizontal"
 msgstr "Горизонтально"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:130
+#: ../plugins/gtk+/gtk+.xml.in.h:171
 msgid "Horizontal Box"
 msgstr "Горизонтальний блок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:131
+#: ../plugins/gtk+/gtk+.xml.in.h:172
 msgid "Horizontal Button Box"
 msgstr "Горизонтальна група кнопок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:132
+#: ../plugins/gtk+/gtk+.xml.in.h:173
 msgid "Horizontal Panes"
 msgstr "Горизонтальна панель"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:133
+#: ../plugins/gtk+/gtk+.xml.in.h:174
 msgid "Horizontal Ruler"
 msgstr "Горизонтальна лінійка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:134
+#: ../plugins/gtk+/gtk+.xml.in.h:175
 msgid "Horizontal Scale"
 msgstr "Горизонтальна шкала"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:135
+#: ../plugins/gtk+/gtk+.xml.in.h:176
 msgid "Horizontal Scrollbar"
 msgstr "Горизонтальна смуга прокрутки"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:136
+#: ../plugins/gtk+/gtk+.xml.in.h:177
 msgid "Horizontal Separator"
 msgstr "Горизонтальний розділювач"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:137
+#: ../plugins/gtk+/gtk+.xml.in.h:178
 msgid "Horizontal and Vertical"
 msgstr "Горизонтальний та вертикальний"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:139
+#: ../plugins/gtk+/gtk+.xml.in.h:180
 msgid "Icon Theme"
 msgstr "Тема значків"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:140
+#: ../plugins/gtk+/gtk+.xml.in.h:181
 msgid "Icon View"
 msgstr "Перегляд значків"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:141
+#: ../plugins/gtk+/gtk+.xml.in.h:182
 msgid "Icons only"
 msgstr "Лише значки"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:142
+#: ../plugins/gtk+/gtk+.xml.in.h:183
 msgid "If Valid"
 msgstr "Якщо коректно"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:144
+#: ../plugins/gtk+/gtk+.xml.in.h:185
 msgid "Image Menu Item"
 msgstr "Елемент меню значок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:145
+#: ../plugins/gtk+/gtk+.xml.in.h:186
 msgid "Image Type"
 msgstr "Тип зображення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:146
+#: ../plugins/gtk+/gtk+.xml.in.h:187
 msgid "Immediate"
 msgstr "Негайно"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:147 ../plugins/gnome/bonobo.xml.in.h:7
+#: ../plugins/gtk+/gtk+.xml.in.h:188
 msgid "In"
 msgstr "У"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:148
+#: ../plugins/gtk+/gtk+.xml.in.h:189
 msgid "Inches"
 msgstr "Дюйми"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:159
+#: ../plugins/gtk+/gtk+.xml.in.h:200
 msgid ""
 "Indicates that an object provides descriptive information about another "
 "object; more verbose than 'Label For'"
@@ -2750,7 +2785,7 @@ msgstr ""
 "Показує, що об'єкт надає опис іншого компоненту; більш докладний ніж "
 "'Позначка для'"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:160
+#: ../plugins/gtk+/gtk+.xml.in.h:201
 msgid ""
 "Indicates that another object provides descriptive information about this "
 "object; more verbose than 'Labelled By'"
@@ -2758,7 +2793,7 @@ msgstr ""
 "Показує, що інший об'єкт надає опис іншого компоненту про цього об'єкту; "
 "більш докладний ніж 'Відмічений'"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:162
+#: ../plugins/gtk+/gtk+.xml.in.h:203
 msgid ""
 "Indicates that the object has content that flows logically to another "
 "AtkObject in a sequential way, (for instance text-flow)"
@@ -2766,485 +2801,545 @@ msgstr ""
 "Показує, що зміст об'єкту логічно слідує за змістом іншого об'єкту, "
 "наприклад за порядком читання тексту."
 
-#: ../plugins/gtk+/gtk+.xml.in.h:165
+#: ../plugins/gtk+/gtk+.xml.in.h:206
 msgid "Input Dialog"
 msgstr "Діалог вводу"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:166
+#: ../plugins/gtk+/gtk+.xml.in.h:207
 msgid "Insert After"
 msgstr "Вставити після"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:167
+#: ../plugins/gtk+/gtk+.xml.in.h:208
 msgid "Insert Before"
 msgstr "Вставити перед"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:168
+#: ../plugins/gtk+/gtk+.xml.in.h:209
 msgid "Insert Column"
 msgstr "Вставити стовпчик"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:169
+#: ../plugins/gtk+/gtk+.xml.in.h:210
 msgid "Insert Page After"
 msgstr "Вставити сторінку після"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:170
+#: ../plugins/gtk+/gtk+.xml.in.h:211
 msgid "Insert Page Before"
 msgstr "Вставити сторінку перед"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:171
+#: ../plugins/gtk+/gtk+.xml.in.h:212
 msgid "Insert Row"
 msgstr "Вставити рядок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:172
+#: ../plugins/gtk+/gtk+.xml.in.h:213
 msgid "Intro"
 msgstr "Вступ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:173
+#: ../plugins/gtk+/gtk+.xml.in.h:214
 msgid "Invalid"
 msgstr "Некоректний"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:175
+#: ../plugins/gtk+/gtk+.xml.in.h:216
 msgid "Items"
 msgstr "Елементи"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:176
+#: ../plugins/gtk+/gtk+.xml.in.h:217
 msgid "Key Press"
 msgstr "Натискання клавіші"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:177
+#: ../plugins/gtk+/gtk+.xml.in.h:218
 msgid "Key Release"
 msgstr "Відпускання клавіші"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:181
+#: ../plugins/gtk+/gtk+.xml.in.h:222
 msgid "Large Toolbar"
 msgstr "Велика панель інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:182
+#: ../plugins/gtk+/gtk+.xml.in.h:223
 msgid "Layout"
 msgstr "Розташування"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:183
+#: ../plugins/gtk+/gtk+.xml.in.h:224
 msgid "Least Recently Used first"
 msgstr "Спочатку, що давніше використовувався"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:184
+#: ../plugins/gtk+/gtk+.xml.in.h:225
 msgid "Leave Notify"
 msgstr "Залишити сповіщення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:185 ../plugins/gnome/bonobo.xml.in.h:8
+#: ../plugins/gtk+/gtk+.xml.in.h:226
 msgid "Left"
 msgstr "Ліворуч"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:186
+#: ../plugins/gtk+/gtk+.xml.in.h:227
 msgid "Left to Right"
 msgstr "Зліва направо"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:187
+#: ../plugins/gtk+/gtk+.xml.in.h:228
 msgid "Linear"
 msgstr "Лінійний"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:188
+#: ../plugins/gtk+/gtk+.xml.in.h:229
 msgid "Link Button"
 msgstr "Кнопка з посиланням"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:189
+#: ../plugins/gtk+/gtk+.xml.in.h:230
 msgid "List"
 msgstr "Список"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:190
+#: ../plugins/gtk+/gtk+.xml.in.h:231
 msgid "List Item"
 msgstr "Елемент списку"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:191
+#: ../plugins/gtk+/gtk+.xml.in.h:232
 msgid "Maximum Width"
 msgstr "Максимальна ширина"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:194
+#: ../plugins/gtk+/gtk+.xml.in.h:235
 msgid "Menu Bar"
 msgstr "Рядок меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:195
+#: ../plugins/gtk+/gtk+.xml.in.h:236
 msgid "Menu Item"
 msgstr "Елемент меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:196
+#: ../plugins/gtk+/gtk+.xml.in.h:237
 msgid "Menu Shell"
 msgstr "Меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:197
+#: ../plugins/gtk+/gtk+.xml.in.h:238
 msgid "Menu Tool Button"
 msgstr "Кнопка-інструмент"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:198
+#: ../plugins/gtk+/gtk+.xml.in.h:239
 msgid "Message Dialog"
 msgstr "Діалог повідомлення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:199
+#: ../plugins/gtk+/gtk+.xml.in.h:240
 msgid "Middle"
 msgstr "Середина"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:200
+#: ../plugins/gtk+/gtk+.xml.in.h:241
 msgid "Most Recently Used first"
 msgstr "Спочатку, що давніше використовувався"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:201
+#: ../plugins/gtk+/gtk+.xml.in.h:242
 msgid "Mouse"
 msgstr "Миша"
 
-#. This is deprecated
-#: ../plugins/gtk+/gtk+.xml.in.h:202 ../plugins/gnome/canvas.xml.in.h:17
+#: ../plugins/gtk+/gtk+.xml.in.h:243
 msgid "Multiple"
 msgstr "Декілька"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:203 ../plugins/gnome/gnome.xml.in.h:41
+#: ../plugins/gtk+/gtk+.xml.in.h:244
 msgid "Never"
 msgstr "Ніколи"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:204
+#: ../plugins/gtk+/gtk+.xml.in.h:245
 msgid "Node Child Of"
 msgstr "Дочірній вузол"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:207
+#: ../plugins/gtk+/gtk+.xml.in.h:248
 msgid "North"
 msgstr "Північний"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:208
+#: ../plugins/gtk+/gtk+.xml.in.h:249
 msgid "North East"
 msgstr "Північний схід"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:209
+#: ../plugins/gtk+/gtk+.xml.in.h:250
 msgid "North West"
 msgstr "Північний захід"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:210
+#: ../plugins/gtk+/gtk+.xml.in.h:251
 msgid "Notebook"
 msgstr "Записник"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:211
+#: ../plugins/gtk+/gtk+.xml.in.h:252
 msgid "Notification"
 msgstr "Сповіщення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:212
+#: ../plugins/gtk+/gtk+.xml.in.h:253
 msgid "Number of items"
 msgstr "Кількість елементів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:213
+#: ../plugins/gtk+/gtk+.xml.in.h:254
 msgid "Number of pages"
 msgstr "Кількість сторінок"
 
 #. Atk name and description properties
-#: ../plugins/gtk+/gtk+.xml.in.h:215
+#: ../plugins/gtk+/gtk+.xml.in.h:256
 msgid "Object instance's name formatted for assistive technology access"
 msgstr "Назва об'єкту, відформатована для доступу до допоміжних технологій"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:216
+#: ../plugins/gtk+/gtk+.xml.in.h:257
 msgid "Off"
 msgstr "Вимкнути"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:217
+#: ../plugins/gtk+/gtk+.xml.in.h:258
 msgid "Ok"
 msgstr "Гаразд"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:218
+#: ../plugins/gtk+/gtk+.xml.in.h:259
 msgid "Ok, Cancel"
 msgstr "Гаразд, Скасувати"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:219
+#: ../plugins/gtk+/gtk+.xml.in.h:260
 msgid "On"
 msgstr "Увімкнути"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:220 ../plugins/gnome/gnome.xml.in.h:42
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:282
 msgid "Open"
 msgstr "Відкрити"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:221
+#: ../plugins/gtk+/gtk+.xml.in.h:283
 msgid "Option Menu"
 msgstr "Меню параметрів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:223 ../plugins/gnome/bonobo.xml.in.h:14
+#: ../plugins/gtk+/gtk+.xml.in.h:285
 msgid "Out"
 msgstr "Вихід"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:224
+#: ../plugins/gtk+/gtk+.xml.in.h:286
 msgid "Paned"
 msgstr "Вікно, що розділюється"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:227
+#: ../plugins/gtk+/gtk+.xml.in.h:289
 msgid "Pixels"
 msgstr "Точки"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:228
+#: ../plugins/gtk+/gtk+.xml.in.h:290
 msgid "Pointer Motion"
 msgstr "Рух вказівника"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:229
+#: ../plugins/gtk+/gtk+.xml.in.h:291
 msgid "Pointer Motion Hint"
 msgstr "Підказка на рух вказівника"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:230
+#: ../plugins/gtk+/gtk+.xml.in.h:292
 msgid "Popup"
 msgstr "Контекстне"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:232
+#: ../plugins/gtk+/gtk+.xml.in.h:294
 msgid "Popup Menu"
 msgstr "Контекстне меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:233 ../plugins/gnome/glade-gnome.c:649
-#: ../plugins/gnome/gnome.xml.in.h:46
+#: ../plugins/gtk+/gtk+.xml.in.h:295
 msgid "Position"
 msgstr "Позиція"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:236
+#: ../plugins/gtk+/gtk+.xml.in.h:298
 msgid "Progress"
 msgstr "Індикатор поступу"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:237
+#: ../plugins/gtk+/gtk+.xml.in.h:299
 msgid "Progress Bar"
 msgstr "Індикатор використання"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:238
+#: ../plugins/gtk+/gtk+.xml.in.h:300
 msgid "Property Change"
 msgstr "Зміна властивості"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:239
+#: ../plugins/gtk+/gtk+.xml.in.h:301
 msgid "Proximity  Out"
 msgstr "Близько"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:240
+#: ../plugins/gtk+/gtk+.xml.in.h:302
 msgid "Proximity In"
 msgstr "У безпосередній близькості"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:241 ../plugins/gnome/gnome.xml.in.h:49
+#: ../plugins/gtk+/gtk+.xml.in.h:303
 msgid "Question"
 msgstr "Питання"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:242
+#: ../plugins/gtk+/gtk+.xml.in.h:304
 msgid "Queue"
 msgstr "Черга"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:243
+#: ../plugins/gtk+/gtk+.xml.in.h:305
 msgid "Radio Button"
 msgstr "Радіо-кнопка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:244
+#: ../plugins/gtk+/gtk+.xml.in.h:306
 msgid "Radio Menu Item"
 msgstr "Радіо елемент меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:245
+#: ../plugins/gtk+/gtk+.xml.in.h:307
 msgid "Radio Tool Button"
 msgstr "Радіо-кнопка панелі інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:246
+#: ../plugins/gtk+/gtk+.xml.in.h:308
 msgid "Range"
 msgstr "Проміжок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:247
+#: ../plugins/gtk+/gtk+.xml.in.h:309
 msgid "Recent Chooser"
 msgstr "Недавні файли"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:248
+#: ../plugins/gtk+/gtk+.xml.in.h:310
 msgid "Recent Chooser Dialog"
 msgstr "Діалог вибору недавніх файлів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:251
+#: ../plugins/gtk+/gtk+.xml.in.h:313
 msgid "Remove Column"
 msgstr "Видалити стовпчик"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:252
+#: ../plugins/gtk+/gtk+.xml.in.h:314
 msgid "Remove Page"
 msgstr "Видалити панель"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:253
+#: ../plugins/gtk+/gtk+.xml.in.h:315
 msgid "Remove Parent"
 msgstr "Видалити батьківський"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:254
+#: ../plugins/gtk+/gtk+.xml.in.h:316
 msgid "Remove Row"
 msgstr "Видалити рядок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:255
+#: ../plugins/gtk+/gtk+.xml.in.h:317
 msgid "Remove Slot"
 msgstr "Видалити слот"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:256
+#: ../plugins/gtk+/gtk+.xml.in.h:318
 msgid "Response ID"
 msgstr "Ідентифікатор відповіді"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:257 ../plugins/gnome/bonobo.xml.in.h:15
+#: ../plugins/gtk+/gtk+.xml.in.h:319
 msgid "Right"
 msgstr "Праворуч"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:258
+#: ../plugins/gtk+/gtk+.xml.in.h:320
 msgid "Right to Left"
 msgstr "Справа наліво"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:259
+#: ../plugins/gtk+/gtk+.xml.in.h:321
 msgid "Ruler"
 msgstr "Лінійка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:260 ../plugins/gnome/gnome.xml.in.h:50
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:343
 msgid "Save"
 msgstr "Зберегти"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:261
+#: ../plugins/gtk+/gtk+.xml.in.h:344
 msgid "Scale"
 msgstr "Шкала"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:262
+#: ../plugins/gtk+/gtk+.xml.in.h:345
 msgid "Scroll"
 msgstr "Прокрутка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:263
+#: ../plugins/gtk+/gtk+.xml.in.h:346
 msgid "Scrolled Window"
 msgstr "Вікно з прокруткою"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:264 ../plugins/gnome/gnome.xml.in.h:53
+#. Commenting out new widgets untill string freeze is over
+#.
+#. <glade-widget-class name="GtkScaleButton" generic-name="scalebutton" _title="Scale Button">
+#. <properties>
+#. <property id="size">
+#. <displayable-values>
+#. <value id="GTK_ICON_SIZE_INVALID" _name="Invalid"/>
+#. <value id="GTK_ICON_SIZE_MENU" _name="Menu"/>
+#. <value id="GTK_ICON_SIZE_SMALL_TOOLBAR" _name="Small Toolbar"/>
+#. <value id="GTK_ICON_SIZE_LARGE_TOOLBAR" _name="Large Toolbar"/>
+#. <value id="GTK_ICON_SIZE_BUTTON" _name="Button"/>
+#. <value id="GTK_ICON_SIZE_DND" _name="Drag'n Drop"/>
+#. <value id="GTK_ICON_SIZE_DIALOG" _name="Dialog"/>
+#. </displayable-values>
+#. </property>
+#. </properties>
+#. </glade-widget-class>
+#.
+#. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
+#.
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:368
 msgid "Select Folder"
 msgstr "Вибір каталогу"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:265
+#: ../plugins/gtk+/gtk+.xml.in.h:369
 msgid "Separator Menu Item"
 msgstr "Розділювач у меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:266
+#: ../plugins/gtk+/gtk+.xml.in.h:370
 msgid "Separator Tool Item"
 msgstr "Розділювач на панелі інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:267
+#: ../plugins/gtk+/gtk+.xml.in.h:371
 msgid "Set the current page (strictly for editing purposes)"
 msgstr "Встановити поточну сторінку (лише для редагування)"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:277
+#: ../plugins/gtk+/gtk+.xml.in.h:381
 msgid "Set the text in the view's text buffer"
 msgstr "Встановити текст у буфері текстового віджету"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:278
+#: ../plugins/gtk+/gtk+.xml.in.h:382
 msgid "Shrink"
 msgstr "Стискається"
 
-#. This is deprecated
-#: ../plugins/gtk+/gtk+.xml.in.h:279 ../plugins/gnome/canvas.xml.in.h:24
+#: ../plugins/gtk+/gtk+.xml.in.h:383
 msgid "Single"
 msgstr "Єдиний"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:280
+#: ../plugins/gtk+/gtk+.xml.in.h:384
 msgid "Size"
 msgstr "Розмір"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:281
+#: ../plugins/gtk+/gtk+.xml.in.h:385
 msgid "Small Toolbar"
 msgstr "Невелика панель інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:282
+#: ../plugins/gtk+/gtk+.xml.in.h:386
 msgid "South"
 msgstr "Південь"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:283
+#: ../plugins/gtk+/gtk+.xml.in.h:387
 msgid "South East"
 msgstr "Південний схід"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:284
+#: ../plugins/gtk+/gtk+.xml.in.h:388
 msgid "South West"
 msgstr "Південний захід"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:285
+#: ../plugins/gtk+/gtk+.xml.in.h:389
 msgid "Spin Button"
 msgstr "Кнопка з обертанням"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:286
+#: ../plugins/gtk+/gtk+.xml.in.h:390
 msgid "Splash Screen"
 msgstr "Заставка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:287
+#: ../plugins/gtk+/gtk+.xml.in.h:391
 msgid "Spline"
 msgstr "Сплайн"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:288
+#: ../plugins/gtk+/gtk+.xml.in.h:392
 msgid "Spread"
 msgstr "Розсіювання"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:289 ../plugins/gnome/gnome.xml.in.h:55
+#: ../plugins/gtk+/gtk+.xml.in.h:393
 msgid "Start"
 msgstr "Початок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:290
+#: ../plugins/gtk+/gtk+.xml.in.h:394
 msgid "Static"
 msgstr "Статичне"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:291
+#: ../plugins/gtk+/gtk+.xml.in.h:395
 msgid "Status Bar"
 msgstr "Рядок стану"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:293
+#: ../plugins/gtk+/gtk+.xml.in.h:397
 msgid "Stock Button"
 msgstr "Вбудована кнопка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:295
+#: ../plugins/gtk+/gtk+.xml.in.h:399
 msgid "Stock Item"
 msgstr "Вбудований елемент"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:296
+#: ../plugins/gtk+/gtk+.xml.in.h:400
 msgid "Structure"
 msgstr "Структура"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:297
+#: ../plugins/gtk+/gtk+.xml.in.h:401
 msgid "Substructure"
 msgstr "Підструктура"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:299
+#: ../plugins/gtk+/gtk+.xml.in.h:403
 msgid "Summary"
 msgstr "Зведення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:300
+#: ../plugins/gtk+/gtk+.xml.in.h:404
 msgid "Table"
 msgstr "Таблиця"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:302 ../plugins/gnome/gnome.xml.in.h:58
+#: ../plugins/gtk+/gtk+.xml.in.h:406
 msgid "Text"
 msgstr "Текст"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:303
+#: ../plugins/gtk+/gtk+.xml.in.h:407
 msgid "Text Entry"
 msgstr "Поле вводу тексту"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:304
+#: ../plugins/gtk+/gtk+.xml.in.h:408
 msgid "Text View"
 msgstr "Перегляд тексту"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:305
+#: ../plugins/gtk+/gtk+.xml.in.h:409
 msgid "Text below icons"
 msgstr "Текст під значками"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:307
+#: ../plugins/gtk+/gtk+.xml.in.h:411
 msgid "Text only"
 msgstr "Лише текст"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:308
+#: ../plugins/gtk+/gtk+.xml.in.h:412
 msgid "The items in this combo box"
 msgstr "Пункти цього розкривного списку"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:309
+#: ../plugins/gtk+/gtk+.xml.in.h:413
 msgid "The number of items in the box"
 msgstr "Кількість елементів у контейнері"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:310
+#: ../plugins/gtk+/gtk+.xml.in.h:414
 msgid "The number of pages in the notebook"
 msgstr "Кількість сторінок у записнику"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:311
+#: ../plugins/gtk+/gtk+.xml.in.h:415
 msgid "The page position in the Assistant"
 msgstr "Позиція сторінки у помічнику"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:312
+#: ../plugins/gtk+/gtk+.xml.in.h:416
 msgid "The position of the menu item in the menu shell"
 msgstr "Позиція елементу меню у меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:313
+#: ../plugins/gtk+/gtk+.xml.in.h:417
 msgid "The position of the tool item in the toolbar"
 msgstr "Позиція елементу на панелі інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:314
+#: ../plugins/gtk+/gtk+.xml.in.h:418
 msgid ""
 "The response ID of this button in a dialog (it's NOT useful if this button "
 "is not in a GtkDialog)"
@@ -3252,151 +3347,151 @@ msgstr ""
 "Ідентифікатор відповіді цієї кнопки у діалозі (не використовуються для "
 "кнопок, що не упаковані у діалог)"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:315
+#: ../plugins/gtk+/gtk+.xml.in.h:419
 msgid "The stock item for this button"
 msgstr "Готовий елемент для цієї кнопки"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:316
+#: ../plugins/gtk+/gtk+.xml.in.h:420
 msgid "The stock item for this image"
 msgstr "Готовий елемент для цього зображення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:317
+#: ../plugins/gtk+/gtk+.xml.in.h:421
 msgid "The text of the menu item"
 msgstr "Текст елементу меню"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:318
+#: ../plugins/gtk+/gtk+.xml.in.h:422
 msgid "The text to display"
 msgstr "Текст, що відображується"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:319
+#: ../plugins/gtk+/gtk+.xml.in.h:423
 msgid "Toggle Button"
 msgstr "Кнопка перемикання"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:320
+#: ../plugins/gtk+/gtk+.xml.in.h:424
 msgid "Toggle Tool Button"
 msgstr "Кнопка перемикання на панелі інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:321
+#: ../plugins/gtk+/gtk+.xml.in.h:425
 msgid "Tool Bar"
 msgstr "Панель інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:322
+#: ../plugins/gtk+/gtk+.xml.in.h:426
 msgid "Tool Button"
 msgstr "Кнопка на панелі інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:323
+#: ../plugins/gtk+/gtk+.xml.in.h:427
 msgid "Toolbar"
 msgstr "Панель інструментів"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:324
+#: ../plugins/gtk+/gtk+.xml.in.h:428
 msgid "Tooltip"
 msgstr "Підказка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:325 ../plugins/gnome/bonobo.xml.in.h:16
+#: ../plugins/gtk+/gtk+.xml.in.h:429
 msgid "Top"
 msgstr "Зверху"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:326
+#: ../plugins/gtk+/gtk+.xml.in.h:430
 msgid "Top Left"
 msgstr "Зверху зліва"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:327
+#: ../plugins/gtk+/gtk+.xml.in.h:431
 msgid "Top Level"
 msgstr "Верхній рівень"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:328
+#: ../plugins/gtk+/gtk+.xml.in.h:432
 msgid "Top Right"
 msgstr "Зверху справа"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:329
+#: ../plugins/gtk+/gtk+.xml.in.h:433
 msgid "Top to Bottom"
 msgstr "Зверну вниз"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:330
+#: ../plugins/gtk+/gtk+.xml.in.h:434
 msgid "Toplevels"
 msgstr "Вікна"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:331
+#: ../plugins/gtk+/gtk+.xml.in.h:435
 msgid "Tree View"
 msgstr "Перегляд деревом"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:332
+#: ../plugins/gtk+/gtk+.xml.in.h:436
 msgid "Up"
 msgstr "Вверх"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:333
+#: ../plugins/gtk+/gtk+.xml.in.h:437
 msgid "Use Underline"
 msgstr "Використовувати підкреслення"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:334
+#: ../plugins/gtk+/gtk+.xml.in.h:438
 msgid "Utility"
 msgstr "Допоміжні"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:335 ../plugins/gnome/bonobo.xml.in.h:17
+#: ../plugins/gtk+/gtk+.xml.in.h:439
 msgid "Vertical"
 msgstr "Вертикальне"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:336
+#: ../plugins/gtk+/gtk+.xml.in.h:440
 msgid "Vertical Box"
 msgstr "Вертикальний контейнер"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:337
+#: ../plugins/gtk+/gtk+.xml.in.h:441
 msgid "Vertical Button Box"
 msgstr "Вертикальна група кнопок"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:338
+#: ../plugins/gtk+/gtk+.xml.in.h:442
 msgid "Vertical Panes"
 msgstr "Вертикальна панель"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:339
+#: ../plugins/gtk+/gtk+.xml.in.h:443
 msgid "Vertical Ruler"
 msgstr "Вертикальна лінійка"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:340
+#: ../plugins/gtk+/gtk+.xml.in.h:444
 msgid "Vertical Scale"
 msgstr "Вертикальна шкала"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:341
+#: ../plugins/gtk+/gtk+.xml.in.h:445
 msgid "Vertical Scrollbar"
 msgstr "Вертикальна смуга прокрутки"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:342
+#: ../plugins/gtk+/gtk+.xml.in.h:446
 msgid "Vertical Separator"
 msgstr "Вертикальний розділювач"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:343
+#: ../plugins/gtk+/gtk+.xml.in.h:447
 msgid "Viewport"
 msgstr "Вікно перегляду"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:344
+#: ../plugins/gtk+/gtk+.xml.in.h:448
 msgid "Visibility Notify"
 msgstr "Сповіщення про показ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:345 ../plugins/gnome/gnome.xml.in.h:72
+#: ../plugins/gtk+/gtk+.xml.in.h:449
 msgid "Warning"
 msgstr "Попередження"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:346
+#: ../plugins/gtk+/gtk+.xml.in.h:450
 msgid "West"
 msgstr "Захід"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:348
+#: ../plugins/gtk+/gtk+.xml.in.h:452
 msgid "Window"
 msgstr "Вікно"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:349
+#: ../plugins/gtk+/gtk+.xml.in.h:453
 msgid "Word"
 msgstr "Слово"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:350
+#: ../plugins/gtk+/gtk+.xml.in.h:454
 msgid "Word Character"
 msgstr "Символ слова"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:351
+#: ../plugins/gtk+/gtk+.xml.in.h:455
 msgid "Yes, No"
 msgstr "Так, Ні"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:352
+#: ../plugins/gtk+/gtk+.xml.in.h:456
 msgid ""
 "You can mark this as translatable and set one name/address if you want to "
 "show a translation specific translator, otherwise you should list all "
@@ -3419,416 +3514,384 @@ msgstr "Діалог параметрів сторінки"
 msgid "Print Dialog"
 msgstr "Діалог друку"
 
-#: ../plugins/gnome/glade-gnome.c:292
-msgid "Status Message."
-msgstr "Повідомлення про стан."
+#: ../plugins/panda/panda.xml.in.h:1
+msgid "ASCII"
+msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:650
-msgid "The position in the druid"
-msgstr "Позиція помічника"
+#: ../plugins/panda/panda.xml.in.h:2
+msgid "GTK+Panda Widgets"
+msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1002
-msgid "Message box type"
-msgstr "Тип діалогу повідомлення"
+#: ../plugins/panda/panda.xml.in.h:3
+msgid "GtkNumberEntry"
+msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1003
-msgid "The type of the message box"
-msgstr "Тип діалогового вікна повідомлення"
+#: ../plugins/panda/panda.xml.in.h:4
+msgid "GtkPandaCList"
+msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1211
-msgid "This property is valid only in font information mode"
-msgstr "Ця властивість діє лише у режимі відображення шрифту"
+#: ../plugins/panda/panda.xml.in.h:5
+msgid "GtkPandaCombo"
+msgstr ""
 
-#. This is deprecated
-#: ../plugins/gnome/glade-gnome.c:1299 ../plugins/gnome/canvas.xml.in.h:22
-msgid "Selection Mode"
-msgstr "Режим виділення"
+#: ../plugins/panda/panda.xml.in.h:6
+msgid "GtkPandaDownload"
+msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1300
-msgid "Choose the Selection Mode"
-msgstr "Виберіть режим виділення"
+#: ../plugins/panda/panda.xml.in.h:7
+msgid "GtkPandaEntry"
+msgstr ""
 
-#: ../plugins/gnome/glade-gnome.c:1437
-msgid "Placement"
-msgstr "Розташування"
-
-#: ../plugins/gnome/glade-gnome.c:1438
-msgid "Choose the BonoboDockPlacement type"
-msgstr "Виберіть тип розміщення елементу BonoboDockItem"
-
-#: ../plugins/gnome/glade-gnome.c:1466
-msgid "Behavior"
-msgstr "Поведінка"
-
-#: ../plugins/gnome/glade-gnome.c:1467
-msgid "Choose the BonoboDockItemBehavior type"
-msgstr "Виберіть модель поведінки елементу BonoboDockItem"
-
-#: ../plugins/gnome/glade-gnome.c:1476
-msgid "Pack Type"
-msgstr "Тип пакування"
-
-#: ../plugins/gnome/glade-gnome.c:1477
-msgid "Choose the Pack Type"
-msgstr "Виберіть тип упаковки"
-
-#: ../plugins/gnome/gnome.xml.in.h:1
-msgid "24-Hour Format"
-msgstr "24-годинний формат"
-
-#: ../plugins/gnome/gnome.xml.in.h:3
-msgid "Background Color"
-msgstr "Колір тла"
-
-#: ../plugins/gnome/gnome.xml.in.h:4
-msgid "Contents Background Color"
-msgstr "Колір тла вмісту"
-
-#: ../plugins/gnome/gnome.xml.in.h:6
-msgid "Dither"
-msgstr "Розмити:"
-
-#: ../plugins/gnome/gnome.xml.in.h:10
-msgid "File"
-msgstr "Файл"
-
-#: ../plugins/gnome/gnome.xml.in.h:12
-msgid "Font Information"
-msgstr "Інформація про шрифт"
-
-#: ../plugins/gnome/gnome.xml.in.h:13
-msgid "GNOME About"
-msgstr "Про програму GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:14
-msgid "GNOME App"
-msgstr "Програма GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:15
-msgid "GNOME App Bar"
-msgstr "Панель програми GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:16
-msgid "GNOME Color Picker"
-msgstr "Вибір кольору GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:17
-msgid "GNOME Date Edit"
-msgstr "Редактор дати GNOME"
-
-#. Deprecated Widget Classes :)
-#: ../plugins/gnome/gnome.xml.in.h:19
-msgid "GNOME Dialog"
-msgstr "Діалог GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:20
-msgid "GNOME Druid"
-msgstr "Помічник GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:21
-msgid "GNOME Druid Page Edge"
-msgstr "Крайня сторінка помічника GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:22
-msgid "GNOME Druid Page Standard"
-msgstr "Стандартна сторінка помічника GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:23
-msgid "GNOME File Entry"
+#: ../plugins/panda/panda.xml.in.h:8
+#, fuzzy
+msgid "GtkPandaFileEntry"
 msgstr "Ввід назви файлу GNOME"
 
-#: ../plugins/gnome/gnome.xml.in.h:24
-msgid "GNOME Font Picker"
-msgstr "Вибір шрифту GNOME"
+#: ../plugins/panda/panda.xml.in.h:9
+msgid "GtkPandaHTML"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:25
-msgid "GNOME HRef"
-msgstr "Гіперпосилання GNOME"
+#: ../plugins/panda/panda.xml.in.h:10
+msgid "GtkPandaPDF"
+msgstr ""
 
-#: ../plugins/gnome/gnome.xml.in.h:26
-msgid "GNOME Icon Entry"
-msgstr "Ввід значка GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:27
-msgid "GNOME Icon Selection"
-msgstr "Вибір значка GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:28
-msgid "GNOME Message Box"
-msgstr "Діалог повідомлення GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:29
-msgid "GNOME Pixmap"
-msgstr "Зображення GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:30
-msgid "GNOME Pixmap Entry"
-msgstr "Ввід зображення GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:31
-msgid "GNOME Property Box"
-msgstr "Властивість GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:32
-msgid "GNOME UI Obsolete"
-msgstr "Застарілі GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:33
-msgid "GNOME User Interface"
-msgstr "Інтерфейс GNOME"
-
-#: ../plugins/gnome/gnome.xml.in.h:34
-msgid "Generic"
-msgstr "Загальні"
-
-#: ../plugins/gnome/gnome.xml.in.h:35
-msgid "Information"
-msgstr "Інформація"
-
-#: ../plugins/gnome/gnome.xml.in.h:36
-msgid "Logo"
-msgstr "Емблема"
-
-#: ../plugins/gnome/gnome.xml.in.h:37
-msgid "Logo Background Color"
-msgstr "Колір тла емблеми"
-
-#: ../plugins/gnome/gnome.xml.in.h:38
-msgid "Max Saved"
-msgstr "Максимальна кількість для збереження"
-
-#: ../plugins/gnome/gnome.xml.in.h:39
-msgid "Message"
-msgstr "Повідомлення"
-
-#: ../plugins/gnome/gnome.xml.in.h:40
-msgid "Monday First"
-msgstr "Починаючи з понеділка"
-
-#: ../plugins/gnome/gnome.xml.in.h:44
-msgid "Padding"
-msgstr "Проміжки"
-
-#: ../plugins/gnome/gnome.xml.in.h:45
-msgid "Pixmap"
+#: ../plugins/panda/panda.xml.in.h:11
+#, fuzzy
+msgid "GtkPandaPixmap"
 msgstr "Зображення на сервері"
 
-#: ../plugins/gnome/gnome.xml.in.h:47
-msgid "Program Name"
-msgstr "Назва програми"
-
-#: ../plugins/gnome/gnome.xml.in.h:48
-msgid "Program Version"
-msgstr "Версія програми"
-
-#: ../plugins/gnome/gnome.xml.in.h:51
-msgid "Scaled Height"
-msgstr "Висота масштабування"
-
-#: ../plugins/gnome/gnome.xml.in.h:52
-msgid "Scaled Width"
-msgstr "Ширина масштабування"
-
-#: ../plugins/gnome/gnome.xml.in.h:54
-msgid "Show Time"
-msgstr "Показувати час"
-
-#: ../plugins/gnome/gnome.xml.in.h:56
-msgid "StatusBar"
-msgstr "Рядок стану"
-
-#: ../plugins/gnome/gnome.xml.in.h:57
-msgid "Store Config"
-msgstr "Зберегти конфігурацію"
-
-#: ../plugins/gnome/gnome.xml.in.h:59
-msgid "Text Foreground Color"
-msgstr "Колір тексту"
-
-#: ../plugins/gnome/gnome.xml.in.h:60
-msgid "The height to scale the pixmap to"
-msgstr "Висота для масштабування зображення"
-
-#: ../plugins/gnome/gnome.xml.in.h:61
-msgid "The maximum number of history entries saved"
-msgstr "Максимальна кількість елементів у історії"
-
-#: ../plugins/gnome/gnome.xml.in.h:62
-msgid "The pixmap file"
-msgstr "Файл із зображенням"
-
-#: ../plugins/gnome/gnome.xml.in.h:63
-msgid "The width to scale the pixmap to"
-msgstr "Ширина для масштабування зображення"
-
-#: ../plugins/gnome/gnome.xml.in.h:65
-msgid "Title Foreground Color"
-msgstr "Колір заголовку"
-
-#: ../plugins/gnome/gnome.xml.in.h:66
-msgid "Top Watermark"
-msgstr "Верхня позначка"
-
-#: ../plugins/gnome/gnome.xml.in.h:67
-msgid "Unknown"
-msgstr "Невідомо"
-
-#: ../plugins/gnome/gnome.xml.in.h:68
-msgid "Use Alpha"
-msgstr "Використовувати альфа-канал"
-
-#: ../plugins/gnome/gnome.xml.in.h:69
-msgid ""
-"Used to pass around information about the position of a GnomeDruidPage "
-"within the overall GnomeDruid. This enables the correct \"surrounding\" "
-"content for the page to be drawn"
+#: ../plugins/panda/panda.xml.in.h:12
+msgid "GtkPandaPrint"
 msgstr ""
-"Використовується для передачі інформації про позицію сторінки помічника "
-"GnomeDruid Таким чином створюється правильне 'оточення' для змісту сторінки"
 
-#: ../plugins/gnome/gnome.xml.in.h:70
-msgid "User"
-msgstr "Користувач"
-
-#: ../plugins/gnome/gnome.xml.in.h:71
-msgid "User Widget"
-msgstr "Віджет для відображення користувачів"
-
-#: ../plugins/gnome/gnome.xml.in.h:73
-msgid "Watermark"
-msgstr "Відмітка"
-
-#: ../plugins/gnome/bonobo.xml.in.h:4
-msgid "Exclusive"
-msgstr "Виняткове"
-
-#: ../plugins/gnome/bonobo.xml.in.h:5
-msgid "Floating"
-msgstr "Плаваюче"
-
-#: ../plugins/gnome/bonobo.xml.in.h:9
-msgid "Locked"
-msgstr "Закріплене"
-
-#: ../plugins/gnome/bonobo.xml.in.h:10
-msgid "Never Floating"
-msgstr "Ніколи не плаваюче"
-
-#: ../plugins/gnome/bonobo.xml.in.h:11
-msgid "Never Horizontal"
-msgstr "Ніколи не горизонтальне"
-
-#: ../plugins/gnome/bonobo.xml.in.h:12
-msgid "Never Vertical"
-msgstr "Ніколи не вертикальне"
-
-#. This is deprecated
-#: ../plugins/gnome/canvas.xml.in.h:4
-msgid "Column Spacing"
-msgstr "Інтервал між стовпчиками"
-
-#: ../plugins/gnome/canvas.xml.in.h:5
-msgid "GNOME Canvas"
-msgstr "Канва GNOME"
-
-#. This is deprecated
-#: ../plugins/gnome/canvas.xml.in.h:7
-msgid "GNOME Icon List"
-msgstr "Список значків GNOME"
-
-#. This is deprecated
-#: ../plugins/gnome/canvas.xml.in.h:9
-msgid "Icon Width"
-msgstr "Ширина значка"
-
-#: ../plugins/gnome/canvas.xml.in.h:10
-msgid "If the icon text can be edited by the user"
-msgstr "Текст значка може змінюватися користувачем"
-
-#: ../plugins/gnome/canvas.xml.in.h:11
-msgid ""
-"If the icon text is static, in which case it will not be copied by the "
-"GnomeIconList"
+#: ../plugins/panda/panda.xml.in.h:13
+msgid "GtkPandaText"
 msgstr ""
-"Якщо текст значка статичний, у якому випадку він не буде копіюватись у "
-"GnomeIconList"
 
-#: ../plugins/gnome/canvas.xml.in.h:12
-msgid "Max X"
-msgstr "Максимум по X"
+#: ../plugins/panda/panda.xml.in.h:14
+msgid "GtkPandaTimer"
+msgstr ""
 
-#: ../plugins/gnome/canvas.xml.in.h:13
-msgid "Max Y"
-msgstr "Максимум по Y"
+#: ../plugins/panda/panda.xml.in.h:15
+msgid "KANA"
+msgstr ""
 
-#: ../plugins/gnome/canvas.xml.in.h:14
-msgid "Min X"
-msgstr "Мінімум X"
-
-#: ../plugins/gnome/canvas.xml.in.h:15
-msgid "Min Y"
-msgstr "Мінімум Y"
-
-#: ../plugins/gnome/canvas.xml.in.h:18
-msgid "Pixels per unit"
-msgstr "Точок у елементі"
-
-#. This is deprecated
-#: ../plugins/gnome/canvas.xml.in.h:20
-msgid "Row Spacing"
-msgstr "Міжрядковий інтервал"
-
-#. This is deprecated
-#: ../plugins/gnome/canvas.xml.in.h:26
-msgid "Text Editable"
-msgstr "Текст редагується"
-
-#. This is deprecated
-#: ../plugins/gnome/canvas.xml.in.h:28
-msgid "Text Spacing"
-msgstr "Інтервали між текстом"
-
-#. This is deprecated
-#: ../plugins/gnome/canvas.xml.in.h:30
-msgid "Text Static"
-msgstr "Статичний текст"
-
-#: ../plugins/gnome/canvas.xml.in.h:31
-msgid "The maximum x coordinate"
-msgstr "Максимальна x-координата"
-
-#: ../plugins/gnome/canvas.xml.in.h:32
-msgid "The maximum y coordinate"
-msgstr "Максимальна y-координата"
-
-#: ../plugins/gnome/canvas.xml.in.h:33
-msgid "The minimum x coordinate"
-msgstr "Мінімальна x-координата"
-
-#: ../plugins/gnome/canvas.xml.in.h:34
-msgid "The minimum y coordinate"
-msgstr "Мінімальна y-координата"
-
-#: ../plugins/gnome/canvas.xml.in.h:35
-msgid "The number of pixels between columns of icons"
+#: ../plugins/panda/panda.xml.in.h:16
+#, fuzzy
+msgid "The number of columns"
 msgstr "Кількість точок між колонками значків"
 
-#: ../plugins/gnome/canvas.xml.in.h:36
-msgid "The number of pixels between rows of icons"
-msgstr "Кількість точок між рядками значків"
+#: ../plugins/panda/panda.xml.in.h:17
+msgid "XIM"
+msgstr ""
 
-#: ../plugins/gnome/canvas.xml.in.h:37
-msgid "The number of pixels between the text and the icon"
-msgstr "Кількість точок між текстом та значком"
+#: ../plugins/panda/panda.xml.in.h:18
+#, fuzzy
+msgid "multi"
+msgstr "декілька"
 
-#: ../plugins/gnome/canvas.xml.in.h:38
-msgid "The number of pixels corresponding to one unit"
-msgstr "Кількість точок на одну одиницю довжини"
+#: ../plugins/panda/panda.xml.in.h:19
+#, fuzzy
+msgid "single"
+msgstr "Єдиний"
 
-#: ../plugins/gnome/canvas.xml.in.h:39
-msgid "The selection mode"
-msgstr "Режим виділення"
+#~ msgid "Gtk+ Obsolete"
+#~ msgstr "Застарілі Gtk+"
 
-#: ../plugins/gnome/canvas.xml.in.h:40
-msgid "The width of each icon"
-msgstr "Ширина кожного значка"
+#~ msgid "Status Message."
+#~ msgstr "Повідомлення про стан."
+
+#~ msgid "The position in the druid"
+#~ msgstr "Позиція помічника"
+
+#~ msgid "Message box type"
+#~ msgstr "Тип діалогу повідомлення"
+
+#~ msgid "The type of the message box"
+#~ msgstr "Тип діалогового вікна повідомлення"
+
+#~ msgid "This property is valid only in font information mode"
+#~ msgstr "Ця властивість діє лише у режимі відображення шрифту"
+
+#~ msgid "Selection Mode"
+#~ msgstr "Режим виділення"
+
+#~ msgid "Choose the Selection Mode"
+#~ msgstr "Виберіть режим виділення"
+
+#~ msgid "Placement"
+#~ msgstr "Розташування"
+
+#~ msgid "Choose the BonoboDockPlacement type"
+#~ msgstr "Виберіть тип розміщення елементу BonoboDockItem"
+
+#~ msgid "Behavior"
+#~ msgstr "Поведінка"
+
+#~ msgid "Choose the BonoboDockItemBehavior type"
+#~ msgstr "Виберіть модель поведінки елементу BonoboDockItem"
+
+#~ msgid "Pack Type"
+#~ msgstr "Тип пакування"
+
+#~ msgid "Choose the Pack Type"
+#~ msgstr "Виберіть тип упаковки"
+
+#~ msgid "24-Hour Format"
+#~ msgstr "24-годинний формат"
+
+#~ msgid "Background Color"
+#~ msgstr "Колір тла"
+
+#~ msgid "Contents Background Color"
+#~ msgstr "Колір тла вмісту"
+
+#~ msgid "Dither"
+#~ msgstr "Розмити:"
+
+#~ msgid "File"
+#~ msgstr "Файл"
+
+#~ msgid "Font Information"
+#~ msgstr "Інформація про шрифт"
+
+#~ msgid "GNOME About"
+#~ msgstr "Про програму GNOME"
+
+#~ msgid "GNOME App"
+#~ msgstr "Програма GNOME"
+
+#~ msgid "GNOME App Bar"
+#~ msgstr "Панель програми GNOME"
+
+#~ msgid "GNOME Color Picker"
+#~ msgstr "Вибір кольору GNOME"
+
+#~ msgid "GNOME Date Edit"
+#~ msgstr "Редактор дати GNOME"
+
+#~ msgid "GNOME Dialog"
+#~ msgstr "Діалог GNOME"
+
+#~ msgid "GNOME Druid"
+#~ msgstr "Помічник GNOME"
+
+#~ msgid "GNOME Druid Page Edge"
+#~ msgstr "Крайня сторінка помічника GNOME"
+
+#~ msgid "GNOME Druid Page Standard"
+#~ msgstr "Стандартна сторінка помічника GNOME"
+
+#~ msgid "GNOME Font Picker"
+#~ msgstr "Вибір шрифту GNOME"
+
+#~ msgid "GNOME HRef"
+#~ msgstr "Гіперпосилання GNOME"
+
+#~ msgid "GNOME Icon Entry"
+#~ msgstr "Ввід значка GNOME"
+
+#~ msgid "GNOME Icon Selection"
+#~ msgstr "Вибір значка GNOME"
+
+#~ msgid "GNOME Message Box"
+#~ msgstr "Діалог повідомлення GNOME"
+
+#~ msgid "GNOME Pixmap"
+#~ msgstr "Зображення GNOME"
+
+#~ msgid "GNOME Pixmap Entry"
+#~ msgstr "Ввід зображення GNOME"
+
+#~ msgid "GNOME Property Box"
+#~ msgstr "Властивість GNOME"
+
+#~ msgid "GNOME UI Obsolete"
+#~ msgstr "Застарілі GNOME"
+
+#~ msgid "GNOME User Interface"
+#~ msgstr "Інтерфейс GNOME"
+
+#~ msgid "Generic"
+#~ msgstr "Загальні"
+
+#~ msgid "Information"
+#~ msgstr "Інформація"
+
+#~ msgid "Logo"
+#~ msgstr "Емблема"
+
+#~ msgid "Logo Background Color"
+#~ msgstr "Колір тла емблеми"
+
+#~ msgid "Max Saved"
+#~ msgstr "Максимальна кількість для збереження"
+
+#~ msgid "Message"
+#~ msgstr "Повідомлення"
+
+#~ msgid "Monday First"
+#~ msgstr "Починаючи з понеділка"
+
+#~ msgid "Padding"
+#~ msgstr "Проміжки"
+
+#~ msgid "Program Name"
+#~ msgstr "Назва програми"
+
+#~ msgid "Program Version"
+#~ msgstr "Версія програми"
+
+#~ msgid "Scaled Height"
+#~ msgstr "Висота масштабування"
+
+#~ msgid "Scaled Width"
+#~ msgstr "Ширина масштабування"
+
+#~ msgid "Show Time"
+#~ msgstr "Показувати час"
+
+#~ msgid "StatusBar"
+#~ msgstr "Рядок стану"
+
+#~ msgid "Store Config"
+#~ msgstr "Зберегти конфігурацію"
+
+#~ msgid "Text Foreground Color"
+#~ msgstr "Колір тексту"
+
+#~ msgid "The height to scale the pixmap to"
+#~ msgstr "Висота для масштабування зображення"
+
+#~ msgid "The maximum number of history entries saved"
+#~ msgstr "Максимальна кількість елементів у історії"
+
+#~ msgid "The pixmap file"
+#~ msgstr "Файл із зображенням"
+
+#~ msgid "The width to scale the pixmap to"
+#~ msgstr "Ширина для масштабування зображення"
+
+#~ msgid "Title Foreground Color"
+#~ msgstr "Колір заголовку"
+
+#~ msgid "Top Watermark"
+#~ msgstr "Верхня позначка"
+
+#~ msgid "Unknown"
+#~ msgstr "Невідомо"
+
+#~ msgid "Use Alpha"
+#~ msgstr "Використовувати альфа-канал"
+
+#~ msgid ""
+#~ "Used to pass around information about the position of a GnomeDruidPage "
+#~ "within the overall GnomeDruid. This enables the correct \"surrounding\" "
+#~ "content for the page to be drawn"
+#~ msgstr ""
+#~ "Використовується для передачі інформації про позицію сторінки помічника "
+#~ "GnomeDruid Таким чином створюється правильне 'оточення' для змісту "
+#~ "сторінки"
+
+#~ msgid "User"
+#~ msgstr "Користувач"
+
+#~ msgid "User Widget"
+#~ msgstr "Віджет для відображення користувачів"
+
+#~ msgid "Watermark"
+#~ msgstr "Відмітка"
+
+#~ msgid "Exclusive"
+#~ msgstr "Виняткове"
+
+#~ msgid "Floating"
+#~ msgstr "Плаваюче"
+
+#~ msgid "Locked"
+#~ msgstr "Закріплене"
+
+#~ msgid "Never Floating"
+#~ msgstr "Ніколи не плаваюче"
+
+#~ msgid "Never Horizontal"
+#~ msgstr "Ніколи не горизонтальне"
+
+#~ msgid "Never Vertical"
+#~ msgstr "Ніколи не вертикальне"
+
+#~ msgid "Column Spacing"
+#~ msgstr "Інтервал між стовпчиками"
+
+#~ msgid "GNOME Canvas"
+#~ msgstr "Канва GNOME"
+
+#~ msgid "GNOME Icon List"
+#~ msgstr "Список значків GNOME"
+
+#~ msgid "Icon Width"
+#~ msgstr "Ширина значка"
+
+#~ msgid "If the icon text can be edited by the user"
+#~ msgstr "Текст значка може змінюватися користувачем"
+
+#~ msgid ""
+#~ "If the icon text is static, in which case it will not be copied by the "
+#~ "GnomeIconList"
+#~ msgstr ""
+#~ "Якщо текст значка статичний, у якому випадку він не буде копіюватись у "
+#~ "GnomeIconList"
+
+#~ msgid "Max X"
+#~ msgstr "Максимум по X"
+
+#~ msgid "Max Y"
+#~ msgstr "Максимум по Y"
+
+#~ msgid "Min X"
+#~ msgstr "Мінімум X"
+
+#~ msgid "Min Y"
+#~ msgstr "Мінімум Y"
+
+#~ msgid "Pixels per unit"
+#~ msgstr "Точок у елементі"
+
+#~ msgid "Row Spacing"
+#~ msgstr "Міжрядковий інтервал"
+
+#~ msgid "Text Editable"
+#~ msgstr "Текст редагується"
+
+#~ msgid "Text Spacing"
+#~ msgstr "Інтервали між текстом"
+
+#~ msgid "Text Static"
+#~ msgstr "Статичний текст"
+
+#~ msgid "The maximum x coordinate"
+#~ msgstr "Максимальна x-координата"
+
+#~ msgid "The maximum y coordinate"
+#~ msgstr "Максимальна y-координата"
+
+#~ msgid "The minimum x coordinate"
+#~ msgstr "Мінімальна x-координата"
+
+#~ msgid "The minimum y coordinate"
+#~ msgstr "Мінімальна y-координата"
+
+#~ msgid "The number of pixels between rows of icons"
+#~ msgstr "Кількість точок між рядками значків"
+
+#~ msgid "The number of pixels between the text and the icon"
+#~ msgstr "Кількість точок між текстом та значком"
+
+#~ msgid "The number of pixels corresponding to one unit"
+#~ msgstr "Кількість точок на одну одиницю довжини"
+
+#~ msgid "The selection mode"
+#~ msgstr "Режим виділення"
+
+#~ msgid "The width of each icon"
+#~ msgstr "Ширина кожного значка"

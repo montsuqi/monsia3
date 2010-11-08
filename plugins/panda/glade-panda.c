@@ -260,6 +260,39 @@ glade_gtk_panda_clist_set_property (GladeWidgetAdaptor *adaptor,
 	}
 }
 
+#if 0
+static void
+glade_gtk_panda_text_view_set_text (GObject *object, const GValue *value)
+{
+	GtkTextBuffer *buffy;
+	GladeWidget *gtext;
+	const gchar *text;
+
+	g_return_if_fail (GTK_IS_TEXT_VIEW (object));
+	gtext = glade_widget_get_from_gobject (object);
+	g_return_if_fail (GLADE_IS_WIDGET (gtext));
+	
+	buffy = gtk_text_view_get_buffer (GTK_TEXT_VIEW (object));
+	
+	if ((text = g_value_get_string (value)) == NULL) return;
+
+	g_signal_handlers_block_by_func (buffy, glade_gtk_text_view_changed, gtext);
+	gtk_text_buffer_set_text (buffy, text, -1);
+	g_signal_handlers_unblock_by_func (buffy, glade_gtk_text_view_changed, gtext);
+}
+#endif
+
+void
+glade_gtk_panda_text_set_property (GladeWidgetAdaptor *adaptor,
+				  GObject            *object, 
+				  const gchar        *id,
+				  const GValue       *value)
+{
+		GWA_GET_CLASS (GTK_TYPE_CONTAINER)->set_property (adaptor,
+								  object,
+								  id, value);
+}
+
 /* Catalog init function */
 void
 glade_panda_init (void)
@@ -270,5 +303,6 @@ glade_panda_init (void)
 	
 	gtk_init(&argc,&argvv);
 	gtk_panda_init(&argc,&argvv);
+	gtk_set_locale();
 }
 

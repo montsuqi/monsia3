@@ -45,8 +45,6 @@ plugins/gtk+/glade-gtk.c
 plugins/gtk+/gtk+.xml.in
 plugins/gtk+/gtkunixprint.xml.in
 
-# gnome plugin backend
-plugins/gnome/glade-gnome.c
-plugins/gnome/gnome.xml.in
-plugins/gnome/bonobo.xml.in
-plugins/gnome/canvas.xml.in
+# panda plugin backend
+plugins/panda/glade-panda.c
+plugins/panda/panda.xml.in
