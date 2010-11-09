@@ -133,6 +133,22 @@ flush_properties(GladeParseState *state)
             sprintf(buf,"GTK_PANDA_ENTRY_%s",attr->value);
 			prop.value = buf;
 			g_array_append_val(props, prop);
+		} else if (!xmlStrcmp(attr->name,BAD_CAST("type"))) {
+			prop.name = attr->name;
+			if (!xmlStrcmp(attr->value,BAD_CAST("GTK_WINDOW_DIALOG"))) {
+				prop.value = "popup";
+			} else {
+				prop.value = "toplevel";
+			}
+			g_array_append_val(props, prop);
+		} else if (!xmlStrcmp(attr->name,BAD_CAST("position"))) {
+			prop.name = "window_position";
+			if (!xmlStrcmp(attr->value,BAD_CAST("GTK_WIN_POS_CENTER"))) {
+				prop.value = "center";
+			} else {
+				prop.value = "none";
+			}
+			g_array_append_val(props, prop);
 		} else {
 			prop.name = attr->name;
 			prop.value = attr->value;
@@ -965,6 +981,22 @@ dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *c
             }
             node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));
             xmlNodeAddContent(node, BAD_CAST(buf));
+            xmlAddChild(widget, node);
+        } else if (!strcmp(info->properties[i].name,"type")) {
+            node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));
+			if (!strcmp(info->properties[i].value,"GTK_WINDOW_POPUP")) {
+            	xmlNodeAddContent(node, BAD_CAST("GTK_WINDOW_DIALOG"));
+			} else {
+            	xmlNodeAddContent(node, BAD_CAST("GTK_WINDOW_TOPLEVEL"));
+			}
+            xmlAddChild(widget, node);
+        } else if (!strcmp(info->properties[i].name,"window_position")) {
+            node = xmlNewNode(NULL, BAD_CAST("position"));
+			if (!strcmp(info->properties[i].value,"GTK_WIN_POS_CENTER")) {
+            	xmlNodeAddContent(node, BAD_CAST("GTK_WIN_POS_CENTER"));
+			} else {
+            	xmlNodeAddContent(node, BAD_CAST("GTK_WIN_POS_NONE"));
+			}
             xmlAddChild(widget, node);
         } else {
             node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));

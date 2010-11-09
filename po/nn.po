@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glade 0.6.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-05 15:20+0900\n"
+"POT-Creation-Date: 2010-11-09 10:46+0900\n"
 "PO-Revision-Date: 2001-06-25 18:55+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian (Nynorsk)\n"
@@ -3489,7 +3489,7 @@ msgid "Set the current page (strictly for editing purposes)"
 msgstr ""
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:381
+#: ../plugins/gtk+/gtk+.xml.in.h:381 ../plugins/panda/panda.xml.in.h:17
 msgid "Set the text in the view's text buffer"
 msgstr ""
 
@@ -3586,7 +3586,7 @@ msgid "Table"
 msgstr "Tabell-liste"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:406
+#: ../plugins/gtk+/gtk+.xml.in.h:406 ../plugins/panda/panda.xml.in.h:18
 #, fuzzy
 msgid "Text"
 msgstr "Tekst:"
@@ -3844,79 +3844,84 @@ msgid "ASCII"
 msgstr ""
 
 #: ../plugins/panda/panda.xml.in.h:2
+#, fuzzy
+msgid "Columns"
+msgstr "Kolonnar:"
+
+#: ../plugins/panda/panda.xml.in.h:3
 msgid "GTK+Panda Widgets"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:3
+#: ../plugins/panda/panda.xml.in.h:4
 #, fuzzy
 msgid "GtkNumberEntry"
 msgstr "Spelnummer"
 
-#: ../plugins/panda/panda.xml.in.h:4
+#: ../plugins/panda/panda.xml.in.h:5
 msgid "GtkPandaCList"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:5
+#: ../plugins/panda/panda.xml.in.h:6
 msgid "GtkPandaCombo"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:6
+#: ../plugins/panda/panda.xml.in.h:7
 msgid "GtkPandaDownload"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:7
+#: ../plugins/panda/panda.xml.in.h:8
 msgid "GtkPandaEntry"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:8
+#: ../plugins/panda/panda.xml.in.h:9
 #, fuzzy
 msgid "GtkPandaFileEntry"
 msgstr "Gå til oppføring"
 
-#: ../plugins/panda/panda.xml.in.h:9
+#: ../plugins/panda/panda.xml.in.h:10
 msgid "GtkPandaHTML"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:10
+#: ../plugins/panda/panda.xml.in.h:11
 msgid "GtkPandaPDF"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:11
+#: ../plugins/panda/panda.xml.in.h:12
 #, fuzzy
 msgid "GtkPandaPixmap"
 msgstr "Set inn bilete"
 
-#: ../plugins/panda/panda.xml.in.h:12
+#: ../plugins/panda/panda.xml.in.h:13
 msgid "GtkPandaPrint"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:13
+#: ../plugins/panda/panda.xml.in.h:14
 msgid "GtkPandaText"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:14
+#: ../plugins/panda/panda.xml.in.h:15
 msgid "GtkPandaTimer"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:15
+#: ../plugins/panda/panda.xml.in.h:16
 msgid "KANA"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:16
+#: ../plugins/panda/panda.xml.in.h:19
 #, fuzzy
 msgid "The number of columns"
 msgstr "Tal på kolonnar:"
 
-#: ../plugins/panda/panda.xml.in.h:17
+#: ../plugins/panda/panda.xml.in.h:20
 msgid "XIM"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:18
+#: ../plugins/panda/panda.xml.in.h:21
 #, fuzzy
 msgid "multi"
 msgstr "&Fleire:"
 
-#: ../plugins/panda/panda.xml.in.h:19
+#: ../plugins/panda/panda.xml.in.h:22
 msgid "single"
 msgstr ""
 
@@ -5875,9 +5880,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "The number of rows in the table"
 #~ msgstr "Høgste tal på ord i spørjinga"
-
-#~ msgid "Columns:"
-#~ msgstr "Kolonnar:"
 
 #, fuzzy
 #~ msgid "The number of columns in the table"

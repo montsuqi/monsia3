@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glade3 3.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-05 15:20+0900\n"
+"POT-Creation-Date: 2010-11-09 10:46+0900\n"
 "PO-Revision-Date: 2008-02-27 16:26+0100\n"
 "Last-Translator: Andrea Zagli <azagli@inwind.it>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -3224,7 +3224,7 @@ msgid "Set the current page (strictly for editing purposes)"
 msgstr "Imposta la pagina corrente (strettamente per scopi di modifica)"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:381
+#: ../plugins/gtk+/gtk+.xml.in.h:381 ../plugins/panda/panda.xml.in.h:17
 msgid "Set the text in the view's text buffer"
 msgstr "Imposta il testo nel buffer di testo della vista"
 
@@ -3309,7 +3309,7 @@ msgid "Table"
 msgstr "Tabella"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:406
+#: ../plugins/gtk+/gtk+.xml.in.h:406 ../plugins/panda/panda.xml.in.h:18
 msgid "Text"
 msgstr "Testo"
 
@@ -3533,78 +3533,83 @@ msgid "ASCII"
 msgstr ""
 
 #: ../plugins/panda/panda.xml.in.h:2
+#, fuzzy
+msgid "Columns"
+msgstr "Comuni"
+
+#: ../plugins/panda/panda.xml.in.h:3
 msgid "GTK+Panda Widgets"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:3
+#: ../plugins/panda/panda.xml.in.h:4
 msgid "GtkNumberEntry"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:4
+#: ../plugins/panda/panda.xml.in.h:5
 msgid "GtkPandaCList"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:5
+#: ../plugins/panda/panda.xml.in.h:6
 msgid "GtkPandaCombo"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:6
+#: ../plugins/panda/panda.xml.in.h:7
 msgid "GtkPandaDownload"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:7
+#: ../plugins/panda/panda.xml.in.h:8
 msgid "GtkPandaEntry"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:8
+#: ../plugins/panda/panda.xml.in.h:9
 #, fuzzy
 msgid "GtkPandaFileEntry"
 msgstr "Entrata file GNOME"
 
-#: ../plugins/panda/panda.xml.in.h:9
+#: ../plugins/panda/panda.xml.in.h:10
 msgid "GtkPandaHTML"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:10
+#: ../plugins/panda/panda.xml.in.h:11
 msgid "GtkPandaPDF"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:11
+#: ../plugins/panda/panda.xml.in.h:12
 #, fuzzy
 msgid "GtkPandaPixmap"
 msgstr "Pixmap"
 
-#: ../plugins/panda/panda.xml.in.h:12
+#: ../plugins/panda/panda.xml.in.h:13
 msgid "GtkPandaPrint"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:13
+#: ../plugins/panda/panda.xml.in.h:14
 msgid "GtkPandaText"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:14
+#: ../plugins/panda/panda.xml.in.h:15
 msgid "GtkPandaTimer"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:15
+#: ../plugins/panda/panda.xml.in.h:16
 msgid "KANA"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:16
+#: ../plugins/panda/panda.xml.in.h:19
 #, fuzzy
 msgid "The number of columns"
 msgstr "Il numero di pixel tra colonne di icone"
 
-#: ../plugins/panda/panda.xml.in.h:17
+#: ../plugins/panda/panda.xml.in.h:20
 msgid "XIM"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:18
+#: ../plugins/panda/panda.xml.in.h:21
 #, fuzzy
 msgid "multi"
 msgstr "multiplo"
 
-#: ../plugins/panda/panda.xml.in.h:19
+#: ../plugins/panda/panda.xml.in.h:22
 #, fuzzy
 msgid "single"
 msgstr "Singolo"

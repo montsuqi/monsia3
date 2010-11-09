@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glade3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-05 15:20+0900\n"
+"POT-Creation-Date: 2010-11-09 10:46+0900\n"
 "PO-Revision-Date: 2008-01-17 22:13+0800\n"
 "Last-Translator: Weisheng Wu <wwssir@gmail.com>\n"
 "Language-Team: zh_CN <i18n-zh@googlegroups.com>\n"
@@ -3158,7 +3158,7 @@ msgid "Set the current page (strictly for editing purposes)"
 msgstr "设置当前页(严格地为编辑目的)"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:381
+#: ../plugins/gtk+/gtk+.xml.in.h:381 ../plugins/panda/panda.xml.in.h:17
 msgid "Set the text in the view's text buffer"
 msgstr "在视图文本缓冲区设置文字"
 
@@ -3243,7 +3243,7 @@ msgid "Table"
 msgstr "表格"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:406
+#: ../plugins/gtk+/gtk+.xml.in.h:406 ../plugins/panda/panda.xml.in.h:18
 msgid "Text"
 msgstr "文本"
 
@@ -3463,78 +3463,83 @@ msgid "ASCII"
 msgstr ""
 
 #: ../plugins/panda/panda.xml.in.h:2
+#, fuzzy
+msgid "Columns"
+msgstr "通用"
+
+#: ../plugins/panda/panda.xml.in.h:3
 msgid "GTK+Panda Widgets"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:3
+#: ../plugins/panda/panda.xml.in.h:4
 msgid "GtkNumberEntry"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:4
+#: ../plugins/panda/panda.xml.in.h:5
 msgid "GtkPandaCList"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:5
+#: ../plugins/panda/panda.xml.in.h:6
 msgid "GtkPandaCombo"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:6
+#: ../plugins/panda/panda.xml.in.h:7
 msgid "GtkPandaDownload"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:7
+#: ../plugins/panda/panda.xml.in.h:8
 msgid "GtkPandaEntry"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:8
+#: ../plugins/panda/panda.xml.in.h:9
 #, fuzzy
 msgid "GtkPandaFileEntry"
 msgstr "GNOME文件条目"
 
-#: ../plugins/panda/panda.xml.in.h:9
+#: ../plugins/panda/panda.xml.in.h:10
 msgid "GtkPandaHTML"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:10
+#: ../plugins/panda/panda.xml.in.h:11
 msgid "GtkPandaPDF"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:11
+#: ../plugins/panda/panda.xml.in.h:12
 #, fuzzy
 msgid "GtkPandaPixmap"
 msgstr "Pixmap"
 
-#: ../plugins/panda/panda.xml.in.h:12
+#: ../plugins/panda/panda.xml.in.h:13
 msgid "GtkPandaPrint"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:13
+#: ../plugins/panda/panda.xml.in.h:14
 msgid "GtkPandaText"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:14
+#: ../plugins/panda/panda.xml.in.h:15
 msgid "GtkPandaTimer"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:15
+#: ../plugins/panda/panda.xml.in.h:16
 msgid "KANA"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:16
+#: ../plugins/panda/panda.xml.in.h:19
 #, fuzzy
 msgid "The number of columns"
 msgstr "图标列间隔像素数"
 
-#: ../plugins/panda/panda.xml.in.h:17
+#: ../plugins/panda/panda.xml.in.h:20
 msgid "XIM"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:18
+#: ../plugins/panda/panda.xml.in.h:21
 #, fuzzy
 msgid "multi"
 msgstr "乘数"
 
-#: ../plugins/panda/panda.xml.in.h:19
+#: ../plugins/panda/panda.xml.in.h:22
 #, fuzzy
 msgid "single"
 msgstr "单一的"

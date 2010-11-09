@@ -1,4 +1,9 @@
 ===========
+monsia3 3.4.5
+===========
+	- branch from glade-3
+
+===========
 Glade 3.4.5
 ===========
 	- Fixed annoying text editing bug (527896).
