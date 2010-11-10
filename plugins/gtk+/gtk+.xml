@@ -1079,7 +1079,7 @@
       <special-child-type>type</special-child-type>
 
       <properties>
-	<property id="label" disabled="True"/>
+	<property id="label"/>
 	<property id="shadow" disabled="True"/>
 	<property id="label-widget" disabled="True"/>
 	<property save-always="True" id="label-xalign" default="0.0"/>

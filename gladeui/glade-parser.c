@@ -149,6 +149,15 @@ flush_properties(GladeParseState *state)
 				prop.value = "none";
 			}
 			g_array_append_val(props, prop);
+		} else if (!xmlStrcmp(attr->name,BAD_CAST("child_name"))) {
+			if (!xmlStrcmp(attr->value,BAD_CAST("Notebook:tab"))) {
+			  prop.name = "type";
+			  prop.value = "tab";
+			  g_array_append_val(child_props, prop);
+			  prop.name = "tabl_fill";
+			  prop.value = "False";
+			  g_array_append_val(child_props, prop);
+			}
 		} else {
 			prop.name = attr->name;
 			prop.value = attr->value;
@@ -938,6 +947,12 @@ dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *c
                 !strcmp(child_info->properties[i].name, "bottom_attach")) {
                 f_child_tag = TRUE;
                 continue;
+            } else if (!strcmp(child_info->properties[i].name, "type")) {
+				if (!strcmp(child_info->properties[i].value, "tab")) { 
+              		node = xmlNewNode(NULL, BAD_CAST("child_name"));
+              		xmlNodeAddContent(node, BAD_CAST("Notebook:tab"));
+              		xmlAddChild(widget, node);
+				}
             } else {
               node = xmlNewNode(NULL, BAD_CAST(child_info->properties[i].name));
               xmlNodeAddContent(node, BAD_CAST(child_info->properties[i].value));
@@ -998,6 +1013,8 @@ dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *c
             	xmlNodeAddContent(node, BAD_CAST("GTK_WIN_POS_NONE"));
 			}
             xmlAddChild(widget, node);
+        } else if (!strcmp(info->properties[i].name,"events")) {
+        } else if (!strcmp(info->properties[i].name,"extension_events")) {
         } else {
             node = xmlNewNode(NULL, BAD_CAST(info->properties[i].name));
             xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
@@ -1118,7 +1135,7 @@ glade_interface_make_doc_panda (GladeInterface *interface)
 }
 
 static gboolean
-eval_cb(
+eval_cb1(
   const GMatchInfo *info,
   GString *res,
   gpointer data)
@@ -1136,13 +1153,31 @@ eval_cb(
   return FALSE;
 }
 
+static gboolean
+eval_cb2(
+  const GMatchInfo *info,
+  GString *res,
+  gpointer data)
+{
+  gchar *match;
+
+  match = g_match_info_fetch(info, 1);
+  g_string_append (res, match);
+  g_free(match);
+  match = g_match_info_fetch(info, 2);
+  g_string_append (res, match);
+  g_free(match);
+  return FALSE;
+}
+
 static void
 glade_interface_buffer_panda (GladeInterface  *interface,
 			gpointer        *ret,
 			gint            *size)
 {
     xmlDoc *doc;
-    gchar *buf;
+    gchar *buf1;
+    gchar *buf2;
     GRegex *reg;
 
     g_return_if_fail (interface != NULL);
@@ -1150,19 +1185,27 @@ glade_interface_buffer_panda (GladeInterface  *interface,
     g_return_if_fail (size      != NULL);
 
     doc = glade_interface_make_doc_panda (interface);
-    xmlDocDumpFormatMemoryEnc(doc, (xmlChar **)&buf,
+    xmlDocDumpFormatMemoryEnc(doc, (xmlChar **)&buf1,
 			      size, "EUC-JP",  TRUE);
 
     reg = g_regex_new("<(.*)/>",G_REGEX_RAW,0,NULL); 
-    *ret = g_regex_replace_eval(reg,buf,-1,0,0,eval_cb,NULL,NULL);
-    if (*ret != NULL) {
-        *size = strlen(*ret);
-    } else {
-        *size = 0;
-    }
+    buf2 = g_regex_replace_eval(reg,buf1,-1,0,0,eval_cb1,NULL,NULL);
     g_regex_unref(reg);
-    g_free(buf);
-
+    g_free(buf1);
+    if (buf2 != NULL) {
+      reg = g_regex_new("(<\\?xml.*)encoding=\"EUC-JP\"(.*>)",G_REGEX_RAW,0,NULL); 
+      *ret = g_regex_replace_eval(reg,buf2,-1,0,0,eval_cb2,NULL,NULL);
+      g_regex_unref(reg);
+      g_free(buf2);
+      if (*ret != NULL) {
+          *size = strlen(*ret);
+      } else {
+          *size = 0;
+      }
+    } else {
+      *ret = NULL;
+      *size = 0;
+	}
     xmlFreeDoc(doc);
 }
 

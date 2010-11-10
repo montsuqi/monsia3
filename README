@@ -83,6 +83,10 @@ GtkWindowのプロパティ
     * GTK_WIN_POS_CENTER_ON_PARENT
   などが追加されていまが、追加されたプロパティはGTK_WIN_POS_NONEと解釈してgladeファイルに出力します。
 
+wmclass_nameおよびwmclass_classの廃止
+
+  Gtk+2.0では、wmclass_nameおよびwmclass_classプロパティは廃止されています。
+
 出力するgladeファイルの違い
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 monsia3はGtk+2.0のウィジェットを編集しているので、monsia0(=Gtk+1.2)には存在しないプロパティが多数gladeファイルに含まれる場合があります。
