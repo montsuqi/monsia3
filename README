@@ -15,9 +15,10 @@ Glade-3.4.5をベースにした日医標準レセプトソフトのための画
 基本的にはmonsia0と同様です。
 細かい部分はGlade-3.4.5のマニュアルを参照してください。
 
+monsia0からの変更点
+^^^^^^^^^^^^^^^^^^^
+% monsia0から置き換えられたウィジェット
 
-monsia0から置き換えられたウィジェット
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 以下のウィジェットはmonsia3では置き換えられています。
 これらはgladeファイルの互換性維持のため、出力時にはまた旧名に変換されて出力されます。
 
@@ -26,6 +27,34 @@ monsia0から置き換えられたウィジェット
  * GnomePixmap    -> GtkPandaPixmap
  * GtkPandaPS     -> GtkPandaPDF
 
+% GtkRadioButtonのgroupプロパティ
+
+monsia0では、GtkRadioButtonのgroupプロパティに任意の文字列が設定できましたが、monsia3ではgroupはウィジェット名でしか指定できません。
+そのため旧形式のgladeファイルの読み込み時にgroupプロパティを任意文字列からウィジェット名に変換しています。
+またglade出力時にもgroupプロパティにはウィジェット名を指定します。
+
+% GtkWindowのプロパティ
+
+ウィンドウタイプ
+
+  Gtk+2.0ではGTK_WINDOW_POPUPとGTK_WINDOW_TOPLEVELしかなく、GTK_WINDOW_DIALOGがなくなっています。
+  そこでmonsiaでGTK_WINDOW_DIALOG だったものは GTK_WINDOW_POPUP とします。
+  逆にmonsia3でGTK_WINDOW_POPUPとしたものは出力したgladeファイルでは GTK_WINDOW_DIALOGとします。
+
+ウィンドウの位置
+
+  Gtk+2.0では
+    * GTK_WIN_POS_NONE
+    * GTK_WIN_POS_CENTER
+  に加え
+    * GTK_WIN_POS_MOUSE
+    * GTK_WIN_POS_CENTER_ALWAYS
+    * GTK_WIN_POS_CENTER_ON_PARENT
+  などが追加されていまが、追加されたプロパティはGTK_WIN_POS_NONEと解釈してgladeファイルに出力します。
+
+wmclass_nameおよびwmclass_classの廃止
+
+  Gtk+2.0では、wmclass_nameおよびwmclass_classプロパティは廃止されています。
 
 日レセで利用可能なウィジェット
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,29 +93,6 @@ monsia0から置き換えられたウィジェット
    * GktPandaText
    * GtkPandaTimer
    * GtkPandaPixmap
-
-GtkWindowのプロパティ
-^^^^^^^^^^^^^^^^^^^^^
-ウィンドウタイプ
-
-  Gtk+2.0ではGTK_WINDOW_POPUPとGTK_WINDOW_TOPLEVELしかなく、GTK_WINDOW_DIALOGがなくなっています。
-  そこでmonsiaでGTK_WINDOW_DIALOG だったものは GTK_WINDOW_POPUP とします。
-  逆にmonsia3でGTK_WINDOW_POPUPとしたものは出力したgladeファイルでは GTK_WINDOW_DIALOGとします。
-
-ウィンドウの位置
-
-  Gtk+2.0では
-    * GTK_WIN_POS_NONE
-    * GTK_WIN_POS_CENTER
-  に加え
-    * GTK_WIN_POS_MOUSE
-    * GTK_WIN_POS_CENTER_ALWAYS
-    * GTK_WIN_POS_CENTER_ON_PARENT
-  などが追加されていまが、追加されたプロパティはGTK_WIN_POS_NONEと解釈してgladeファイルに出力します。
-
-wmclass_nameおよびwmclass_classの廃止
-
-  Gtk+2.0では、wmclass_nameおよびwmclass_classプロパティは廃止されています。
 
 出力するgladeファイルの違い
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
