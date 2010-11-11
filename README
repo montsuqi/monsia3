@@ -30,7 +30,7 @@ monsia0からの変更点
 % GtkRadioButtonのgroupプロパティ
 
 monsia0では、GtkRadioButtonのgroupプロパティに任意の文字列が設定できましたが、monsia3ではgroupはウィジェット名でしか指定できません。
-そのため旧形式のgladeファイルの読み込み時にgroupプロパティを任意文字列からウィジェット名に変換しています。
+そのため旧gladeファイルの読み込み時にgroupプロパティを任意文字列からウィジェット名に変換しています。
 またglade出力時にもgroupプロパティにはウィジェット名を指定します。
 
 % GtkWindowのプロパティ
@@ -51,6 +51,9 @@ monsia0では、GtkRadioButtonのgroupプロパティに任意の文字列が設
     * GTK_WIN_POS_CENTER_ALWAYS
     * GTK_WIN_POS_CENTER_ON_PARENT
   などが追加されていまが、追加されたプロパティはGTK_WIN_POS_NONEと解釈してgladeファイルに出力します。
+
+  またmonsia0ではウィンドウの座標位置が指定可能でしたが、Gtk+2.0では廃止されているため指定できません。
+  そのため旧gladeファイルの修正をした際にウィンドウの座標位置の指定が失われることに注意が必要です。
 
 wmclass_nameおよびwmclass_classの廃止
 
@@ -108,5 +111,5 @@ monsia3はGtk+2.0のウィジェットを編集しているので、monsia0(=Gtk
    + GtkFixed[1024x744]
      + GtkWidget...
 
- * GtkWindow(GTK_WINDOW_POPUP/GTK_WINDOW_DIALOG)
+ * GtkWindow(GTK_WINDOW_POPUP)
    + GtkWidget...
