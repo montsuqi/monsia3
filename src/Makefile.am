@@ -15,7 +15,7 @@ monsia3_CFLAGS =           \
 
 monsia3_LDFLAGS = $(AM_LDFLAGS)
 
-monsia3_LDADD = $(top_builddir)/gladeui/libgladeui-1.la
+monsia3_LDADD = $(top_builddir)/gladeui/libmonsia3.la
 
 monsia3_SOURCES = \
 	glade-window.c \

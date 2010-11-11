@@ -36,7 +36,7 @@ host_triplet = @host@
 target_triplet = @target@
 @PLATFORM_WIN32_TRUE@am__append_1 = -no-undefined
 @NATIVE_WIN32_TRUE@am__append_2 = -Wl,gladeui-win32-res.o -export-symbols gladeui.def
-@NATIVE_WIN32_FALSE@libgladeui_1_la_DEPENDENCIES =  \
+@NATIVE_WIN32_FALSE@libmonsia3_la_DEPENDENCIES =  \
 @NATIVE_WIN32_FALSE@	$(am__DEPENDENCIES_1)
 subdir = gladeui
 DIST_COMMON = $(libgladeuiinclude_HEADERS) $(srcdir)/Makefile.am \
@@ -60,46 +60,42 @@ am__installdirs = "$(DESTDIR)$(libdir)" \
 libLTLIBRARIES_INSTALL = $(INSTALL)
 LTLIBRARIES = $(lib_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-am_libgladeui_1_la_OBJECTS = libgladeui_1_la-glade-widget-adaptor.lo \
-	libgladeui_1_la-glade-debug.lo \
-	libgladeui_1_la-glade-project.lo \
-	libgladeui_1_la-glade-parameter.lo \
-	libgladeui_1_la-glade-placeholder.lo \
-	libgladeui_1_la-glade-custom.lo \
-	libgladeui_1_la-glade-inspector.lo \
-	libgladeui_1_la-glade-xml-utils.lo \
-	libgladeui_1_la-glade-palette.lo \
-	libgladeui_1_la-glade-palette-item.lo \
-	libgladeui_1_la-glade-palette-box.lo \
-	libgladeui_1_la-glade-palette-expander.lo \
-	libgladeui_1_la-glade-design-layout.lo \
-	libgladeui_1_la-glade-design-view.lo \
-	libgladeui_1_la-glade-named-icon-chooser-dialog.lo \
-	libgladeui_1_la-glade-cursor.lo \
-	libgladeui_1_la-glade-catalog.lo \
-	libgladeui_1_la-glade-property.lo \
-	libgladeui_1_la-glade-property-class.lo \
-	libgladeui_1_la-glade-popup.lo libgladeui_1_la-glade-widget.lo \
-	libgladeui_1_la-glade-editor-property.lo \
-	libgladeui_1_la-glade-editor.lo libgladeui_1_la-glade-utils.lo \
-	libgladeui_1_la-glade-signal.lo \
-	libgladeui_1_la-glade-signal-editor.lo \
-	libgladeui_1_la-glade-clipboard.lo \
-	libgladeui_1_la-glade-clipboard-view.lo \
-	libgladeui_1_la-glade-command.lo \
-	libgladeui_1_la-glade-id-allocator.lo \
-	libgladeui_1_la-glade-marshallers.lo \
-	libgladeui_1_la-glade-accumulators.lo \
-	libgladeui_1_la-glade-parser.lo \
-	libgladeui_1_la-glade-builtins.lo libgladeui_1_la-glade-app.lo \
-	libgladeui_1_la-glade-keysyms.lo \
-	libgladeui_1_la-glade-fixed.lo \
-	libgladeui_1_la-glade-base-editor.lo \
-	libgladeui_1_la-glade-widget-action.lo
-libgladeui_1_la_OBJECTS = $(am_libgladeui_1_la_OBJECTS)
-libgladeui_1_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libgladeui_1_la_CFLAGS) \
-	$(CFLAGS) $(libgladeui_1_la_LDFLAGS) $(LDFLAGS) -o $@
+am_libmonsia3_la_OBJECTS = libmonsia3_la-glade-widget-adaptor.lo \
+	libmonsia3_la-glade-debug.lo libmonsia3_la-glade-project.lo \
+	libmonsia3_la-glade-parameter.lo \
+	libmonsia3_la-glade-placeholder.lo \
+	libmonsia3_la-glade-custom.lo libmonsia3_la-glade-inspector.lo \
+	libmonsia3_la-glade-xml-utils.lo \
+	libmonsia3_la-glade-palette.lo \
+	libmonsia3_la-glade-palette-item.lo \
+	libmonsia3_la-glade-palette-box.lo \
+	libmonsia3_la-glade-palette-expander.lo \
+	libmonsia3_la-glade-design-layout.lo \
+	libmonsia3_la-glade-design-view.lo \
+	libmonsia3_la-glade-named-icon-chooser-dialog.lo \
+	libmonsia3_la-glade-cursor.lo libmonsia3_la-glade-catalog.lo \
+	libmonsia3_la-glade-property.lo \
+	libmonsia3_la-glade-property-class.lo \
+	libmonsia3_la-glade-popup.lo libmonsia3_la-glade-widget.lo \
+	libmonsia3_la-glade-editor-property.lo \
+	libmonsia3_la-glade-editor.lo libmonsia3_la-glade-utils.lo \
+	libmonsia3_la-glade-signal.lo \
+	libmonsia3_la-glade-signal-editor.lo \
+	libmonsia3_la-glade-clipboard.lo \
+	libmonsia3_la-glade-clipboard-view.lo \
+	libmonsia3_la-glade-command.lo \
+	libmonsia3_la-glade-id-allocator.lo \
+	libmonsia3_la-glade-marshallers.lo \
+	libmonsia3_la-glade-accumulators.lo \
+	libmonsia3_la-glade-parser.lo libmonsia3_la-glade-builtins.lo \
+	libmonsia3_la-glade-app.lo libmonsia3_la-glade-keysyms.lo \
+	libmonsia3_la-glade-fixed.lo \
+	libmonsia3_la-glade-base-editor.lo \
+	libmonsia3_la-glade-widget-action.lo
+libmonsia3_la_OBJECTS = $(am_libmonsia3_la_OBJECTS)
+libmonsia3_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libmonsia3_la_CFLAGS) \
+	$(CFLAGS) $(libmonsia3_la_LDFLAGS) $(LDFLAGS) -o $@
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -112,8 +108,8 @@ CCLD = $(CC)
 LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-SOURCES = $(libgladeui_1_la_SOURCES)
-DIST_SOURCES = $(libgladeui_1_la_SOURCES)
+SOURCES = $(libmonsia3_la_SOURCES)
+DIST_SOURCES = $(libmonsia3_la_SOURCES)
 libgladeuiincludeHEADERS_INSTALL = $(INSTALL_HEADER)
 HEADERS = $(libgladeuiinclude_HEADERS)
 ETAGS = etags
@@ -308,12 +304,12 @@ common_defines = \
 	-DGLADE_PIXMAPSDIR="\"$(pkgdatadir)/pixmaps\""	\
 	-DGLADE_LOCALEDIR="\"$(datadir)/locale\""
 
-lib_LTLIBRARIES = libgladeui-1.la
+lib_LTLIBRARIES = libmonsia3.la
 BUILT_SOURCES = glade-marshallers.c glade-marshallers.h
-EXTRA_DIST = glade-marshallers.list gladeui.rc.in icon-naming-spec.c
+EXTRA_DIST = glade-marshallers.list gladeui.rc.in icon-naming-spec.c glade-property-save-list.txt
 
 # The glade-3 core library
-libgladeui_1_la_SOURCES = \
+libmonsia3_la_SOURCES = \
 	glade-widget-adaptor.c \
 	glade-debug.c \
 	glade-project.c \
@@ -361,23 +357,24 @@ libgladeui_1_la_SOURCES = \
 	glade-catalog.h \
 	glade-marshallers.h \
 	glade-accumulators.h \
-	glade-widget-action.c
+	glade-widget-action.c \
+	glade-property-save-list.txt
 
-libgladeui_1_la_CPPFLAGS = \
+libmonsia3_la_CPPFLAGS = \
 	$(common_defines)   \
 	-I$(top_srcdir)     \
 	-I$(top_builddir)   \
 	$(AM_CPPFLAGS)
 
-libgladeui_1_la_CFLAGS = \
+libmonsia3_la_CFLAGS = \
 	$(GTK_CFLAGS)       \
 	$(WARN_CFLAGS)      \
 	$(AM_CFLAGS)
 
-libgladeui_1_la_LDFLAGS = -version-info \
+libmonsia3_la_LDFLAGS = -version-info \
 	$(GLADE_CURRENT):$(GLADE_REVISION):$(GLADE_AGE) $(AM_LDFLAGS) \
 	$(am__append_1) $(am__append_2)
-libgladeui_1_la_LIBADD = $(GTK_LIBS)
+libmonsia3_la_LIBADD = $(GTK_LIBS)
 libgladeuiincludedir = $(includedir)/libgladeui-1.0/gladeui
 libgladeuiinclude_HEADERS = \
 	glade.h \
@@ -412,7 +409,7 @@ libgladeuiinclude_HEADERS = \
 	glade-cursor.h \
 	glade-widget-action.h
 
-@NATIVE_WIN32_TRUE@libgladeui_1_la_DEPENDENCIES = gladeui-win32-res.o gladeui.def
+@NATIVE_WIN32_TRUE@libmonsia3_la_DEPENDENCIES = gladeui-win32-res.o gladeui.def
 CLEANFILES = $(BUILT_SOURCES) gladeui.def
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
@@ -477,8 +474,8 @@ clean-libLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-libgladeui-1.la: $(libgladeui_1_la_OBJECTS) $(libgladeui_1_la_DEPENDENCIES) 
-	$(libgladeui_1_la_LINK) -rpath $(libdir) $(libgladeui_1_la_OBJECTS) $(libgladeui_1_la_LIBADD) $(LIBS)
+libmonsia3.la: $(libmonsia3_la_OBJECTS) $(libmonsia3_la_DEPENDENCIES) 
+	$(libmonsia3_la_LINK) -rpath $(libdir) $(libmonsia3_la_OBJECTS) $(libmonsia3_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -486,45 +483,45 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-accumulators.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-app.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-base-editor.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-builtins.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-catalog.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-clipboard-view.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-clipboard.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-command.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-cursor.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-custom.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-debug.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-design-layout.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-design-view.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-editor-property.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-editor.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-fixed.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-id-allocator.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-inspector.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-keysyms.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-marshallers.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-named-icon-chooser-dialog.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-palette-box.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-palette-expander.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-palette-item.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-palette.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-parameter.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-parser.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-placeholder.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-popup.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-project.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-property-class.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-property.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-signal-editor.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-signal.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-utils.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-widget-action.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-widget-adaptor.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-widget.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgladeui_1_la-glade-xml-utils.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-accumulators.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-app.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-base-editor.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-builtins.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-catalog.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-clipboard-view.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-clipboard.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-command.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-cursor.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-custom.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-debug.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-design-layout.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-design-view.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-editor-property.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-editor.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-fixed.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-id-allocator.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-inspector.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-keysyms.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-marshallers.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-named-icon-chooser-dialog.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-palette-box.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-palette-expander.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-palette-item.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-palette.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-parameter.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-parser.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-placeholder.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-popup.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-project.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-property-class.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-property.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-signal-editor.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-signal.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-utils.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-widget-action.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-widget-adaptor.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-widget.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libmonsia3_la-glade-xml-utils.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -547,278 +544,278 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<
 
-libgladeui_1_la-glade-widget-adaptor.lo: glade-widget-adaptor.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-widget-adaptor.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-widget-adaptor.Tpo -c -o libgladeui_1_la-glade-widget-adaptor.lo `test -f 'glade-widget-adaptor.c' || echo '$(srcdir)/'`glade-widget-adaptor.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-widget-adaptor.Tpo $(DEPDIR)/libgladeui_1_la-glade-widget-adaptor.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-widget-adaptor.c' object='libgladeui_1_la-glade-widget-adaptor.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-widget-adaptor.lo: glade-widget-adaptor.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-widget-adaptor.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-widget-adaptor.Tpo -c -o libmonsia3_la-glade-widget-adaptor.lo `test -f 'glade-widget-adaptor.c' || echo '$(srcdir)/'`glade-widget-adaptor.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-widget-adaptor.Tpo $(DEPDIR)/libmonsia3_la-glade-widget-adaptor.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-widget-adaptor.c' object='libmonsia3_la-glade-widget-adaptor.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-widget-adaptor.lo `test -f 'glade-widget-adaptor.c' || echo '$(srcdir)/'`glade-widget-adaptor.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-widget-adaptor.lo `test -f 'glade-widget-adaptor.c' || echo '$(srcdir)/'`glade-widget-adaptor.c
 
-libgladeui_1_la-glade-debug.lo: glade-debug.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-debug.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-debug.Tpo -c -o libgladeui_1_la-glade-debug.lo `test -f 'glade-debug.c' || echo '$(srcdir)/'`glade-debug.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-debug.Tpo $(DEPDIR)/libgladeui_1_la-glade-debug.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-debug.c' object='libgladeui_1_la-glade-debug.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-debug.lo: glade-debug.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-debug.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-debug.Tpo -c -o libmonsia3_la-glade-debug.lo `test -f 'glade-debug.c' || echo '$(srcdir)/'`glade-debug.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-debug.Tpo $(DEPDIR)/libmonsia3_la-glade-debug.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-debug.c' object='libmonsia3_la-glade-debug.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-debug.lo `test -f 'glade-debug.c' || echo '$(srcdir)/'`glade-debug.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-debug.lo `test -f 'glade-debug.c' || echo '$(srcdir)/'`glade-debug.c
 
-libgladeui_1_la-glade-project.lo: glade-project.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-project.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-project.Tpo -c -o libgladeui_1_la-glade-project.lo `test -f 'glade-project.c' || echo '$(srcdir)/'`glade-project.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-project.Tpo $(DEPDIR)/libgladeui_1_la-glade-project.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-project.c' object='libgladeui_1_la-glade-project.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-project.lo: glade-project.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-project.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-project.Tpo -c -o libmonsia3_la-glade-project.lo `test -f 'glade-project.c' || echo '$(srcdir)/'`glade-project.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-project.Tpo $(DEPDIR)/libmonsia3_la-glade-project.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-project.c' object='libmonsia3_la-glade-project.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-project.lo `test -f 'glade-project.c' || echo '$(srcdir)/'`glade-project.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-project.lo `test -f 'glade-project.c' || echo '$(srcdir)/'`glade-project.c
 
-libgladeui_1_la-glade-parameter.lo: glade-parameter.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-parameter.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-parameter.Tpo -c -o libgladeui_1_la-glade-parameter.lo `test -f 'glade-parameter.c' || echo '$(srcdir)/'`glade-parameter.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-parameter.Tpo $(DEPDIR)/libgladeui_1_la-glade-parameter.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-parameter.c' object='libgladeui_1_la-glade-parameter.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-parameter.lo: glade-parameter.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-parameter.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-parameter.Tpo -c -o libmonsia3_la-glade-parameter.lo `test -f 'glade-parameter.c' || echo '$(srcdir)/'`glade-parameter.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-parameter.Tpo $(DEPDIR)/libmonsia3_la-glade-parameter.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-parameter.c' object='libmonsia3_la-glade-parameter.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-parameter.lo `test -f 'glade-parameter.c' || echo '$(srcdir)/'`glade-parameter.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-parameter.lo `test -f 'glade-parameter.c' || echo '$(srcdir)/'`glade-parameter.c
 
-libgladeui_1_la-glade-placeholder.lo: glade-placeholder.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-placeholder.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-placeholder.Tpo -c -o libgladeui_1_la-glade-placeholder.lo `test -f 'glade-placeholder.c' || echo '$(srcdir)/'`glade-placeholder.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-placeholder.Tpo $(DEPDIR)/libgladeui_1_la-glade-placeholder.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-placeholder.c' object='libgladeui_1_la-glade-placeholder.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-placeholder.lo: glade-placeholder.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-placeholder.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-placeholder.Tpo -c -o libmonsia3_la-glade-placeholder.lo `test -f 'glade-placeholder.c' || echo '$(srcdir)/'`glade-placeholder.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-placeholder.Tpo $(DEPDIR)/libmonsia3_la-glade-placeholder.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-placeholder.c' object='libmonsia3_la-glade-placeholder.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-placeholder.lo `test -f 'glade-placeholder.c' || echo '$(srcdir)/'`glade-placeholder.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-placeholder.lo `test -f 'glade-placeholder.c' || echo '$(srcdir)/'`glade-placeholder.c
 
-libgladeui_1_la-glade-custom.lo: glade-custom.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-custom.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-custom.Tpo -c -o libgladeui_1_la-glade-custom.lo `test -f 'glade-custom.c' || echo '$(srcdir)/'`glade-custom.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-custom.Tpo $(DEPDIR)/libgladeui_1_la-glade-custom.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-custom.c' object='libgladeui_1_la-glade-custom.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-custom.lo: glade-custom.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-custom.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-custom.Tpo -c -o libmonsia3_la-glade-custom.lo `test -f 'glade-custom.c' || echo '$(srcdir)/'`glade-custom.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-custom.Tpo $(DEPDIR)/libmonsia3_la-glade-custom.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-custom.c' object='libmonsia3_la-glade-custom.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-custom.lo `test -f 'glade-custom.c' || echo '$(srcdir)/'`glade-custom.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-custom.lo `test -f 'glade-custom.c' || echo '$(srcdir)/'`glade-custom.c
 
-libgladeui_1_la-glade-inspector.lo: glade-inspector.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-inspector.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-inspector.Tpo -c -o libgladeui_1_la-glade-inspector.lo `test -f 'glade-inspector.c' || echo '$(srcdir)/'`glade-inspector.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-inspector.Tpo $(DEPDIR)/libgladeui_1_la-glade-inspector.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-inspector.c' object='libgladeui_1_la-glade-inspector.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-inspector.lo: glade-inspector.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-inspector.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-inspector.Tpo -c -o libmonsia3_la-glade-inspector.lo `test -f 'glade-inspector.c' || echo '$(srcdir)/'`glade-inspector.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-inspector.Tpo $(DEPDIR)/libmonsia3_la-glade-inspector.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-inspector.c' object='libmonsia3_la-glade-inspector.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-inspector.lo `test -f 'glade-inspector.c' || echo '$(srcdir)/'`glade-inspector.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-inspector.lo `test -f 'glade-inspector.c' || echo '$(srcdir)/'`glade-inspector.c
 
-libgladeui_1_la-glade-xml-utils.lo: glade-xml-utils.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-xml-utils.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-xml-utils.Tpo -c -o libgladeui_1_la-glade-xml-utils.lo `test -f 'glade-xml-utils.c' || echo '$(srcdir)/'`glade-xml-utils.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-xml-utils.Tpo $(DEPDIR)/libgladeui_1_la-glade-xml-utils.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-xml-utils.c' object='libgladeui_1_la-glade-xml-utils.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-xml-utils.lo: glade-xml-utils.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-xml-utils.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-xml-utils.Tpo -c -o libmonsia3_la-glade-xml-utils.lo `test -f 'glade-xml-utils.c' || echo '$(srcdir)/'`glade-xml-utils.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-xml-utils.Tpo $(DEPDIR)/libmonsia3_la-glade-xml-utils.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-xml-utils.c' object='libmonsia3_la-glade-xml-utils.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-xml-utils.lo `test -f 'glade-xml-utils.c' || echo '$(srcdir)/'`glade-xml-utils.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-xml-utils.lo `test -f 'glade-xml-utils.c' || echo '$(srcdir)/'`glade-xml-utils.c
 
-libgladeui_1_la-glade-palette.lo: glade-palette.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-palette.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-palette.Tpo -c -o libgladeui_1_la-glade-palette.lo `test -f 'glade-palette.c' || echo '$(srcdir)/'`glade-palette.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-palette.Tpo $(DEPDIR)/libgladeui_1_la-glade-palette.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette.c' object='libgladeui_1_la-glade-palette.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-palette.lo: glade-palette.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-palette.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-palette.Tpo -c -o libmonsia3_la-glade-palette.lo `test -f 'glade-palette.c' || echo '$(srcdir)/'`glade-palette.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-palette.Tpo $(DEPDIR)/libmonsia3_la-glade-palette.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette.c' object='libmonsia3_la-glade-palette.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-palette.lo `test -f 'glade-palette.c' || echo '$(srcdir)/'`glade-palette.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-palette.lo `test -f 'glade-palette.c' || echo '$(srcdir)/'`glade-palette.c
 
-libgladeui_1_la-glade-palette-item.lo: glade-palette-item.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-palette-item.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-palette-item.Tpo -c -o libgladeui_1_la-glade-palette-item.lo `test -f 'glade-palette-item.c' || echo '$(srcdir)/'`glade-palette-item.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-palette-item.Tpo $(DEPDIR)/libgladeui_1_la-glade-palette-item.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette-item.c' object='libgladeui_1_la-glade-palette-item.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-palette-item.lo: glade-palette-item.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-palette-item.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-palette-item.Tpo -c -o libmonsia3_la-glade-palette-item.lo `test -f 'glade-palette-item.c' || echo '$(srcdir)/'`glade-palette-item.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-palette-item.Tpo $(DEPDIR)/libmonsia3_la-glade-palette-item.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette-item.c' object='libmonsia3_la-glade-palette-item.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-palette-item.lo `test -f 'glade-palette-item.c' || echo '$(srcdir)/'`glade-palette-item.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-palette-item.lo `test -f 'glade-palette-item.c' || echo '$(srcdir)/'`glade-palette-item.c
 
-libgladeui_1_la-glade-palette-box.lo: glade-palette-box.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-palette-box.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-palette-box.Tpo -c -o libgladeui_1_la-glade-palette-box.lo `test -f 'glade-palette-box.c' || echo '$(srcdir)/'`glade-palette-box.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-palette-box.Tpo $(DEPDIR)/libgladeui_1_la-glade-palette-box.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette-box.c' object='libgladeui_1_la-glade-palette-box.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-palette-box.lo: glade-palette-box.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-palette-box.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-palette-box.Tpo -c -o libmonsia3_la-glade-palette-box.lo `test -f 'glade-palette-box.c' || echo '$(srcdir)/'`glade-palette-box.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-palette-box.Tpo $(DEPDIR)/libmonsia3_la-glade-palette-box.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette-box.c' object='libmonsia3_la-glade-palette-box.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-palette-box.lo `test -f 'glade-palette-box.c' || echo '$(srcdir)/'`glade-palette-box.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-palette-box.lo `test -f 'glade-palette-box.c' || echo '$(srcdir)/'`glade-palette-box.c
 
-libgladeui_1_la-glade-palette-expander.lo: glade-palette-expander.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-palette-expander.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-palette-expander.Tpo -c -o libgladeui_1_la-glade-palette-expander.lo `test -f 'glade-palette-expander.c' || echo '$(srcdir)/'`glade-palette-expander.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-palette-expander.Tpo $(DEPDIR)/libgladeui_1_la-glade-palette-expander.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette-expander.c' object='libgladeui_1_la-glade-palette-expander.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-palette-expander.lo: glade-palette-expander.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-palette-expander.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-palette-expander.Tpo -c -o libmonsia3_la-glade-palette-expander.lo `test -f 'glade-palette-expander.c' || echo '$(srcdir)/'`glade-palette-expander.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-palette-expander.Tpo $(DEPDIR)/libmonsia3_la-glade-palette-expander.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-palette-expander.c' object='libmonsia3_la-glade-palette-expander.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-palette-expander.lo `test -f 'glade-palette-expander.c' || echo '$(srcdir)/'`glade-palette-expander.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-palette-expander.lo `test -f 'glade-palette-expander.c' || echo '$(srcdir)/'`glade-palette-expander.c
 
-libgladeui_1_la-glade-design-layout.lo: glade-design-layout.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-design-layout.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-design-layout.Tpo -c -o libgladeui_1_la-glade-design-layout.lo `test -f 'glade-design-layout.c' || echo '$(srcdir)/'`glade-design-layout.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-design-layout.Tpo $(DEPDIR)/libgladeui_1_la-glade-design-layout.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-design-layout.c' object='libgladeui_1_la-glade-design-layout.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-design-layout.lo: glade-design-layout.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-design-layout.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-design-layout.Tpo -c -o libmonsia3_la-glade-design-layout.lo `test -f 'glade-design-layout.c' || echo '$(srcdir)/'`glade-design-layout.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-design-layout.Tpo $(DEPDIR)/libmonsia3_la-glade-design-layout.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-design-layout.c' object='libmonsia3_la-glade-design-layout.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-design-layout.lo `test -f 'glade-design-layout.c' || echo '$(srcdir)/'`glade-design-layout.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-design-layout.lo `test -f 'glade-design-layout.c' || echo '$(srcdir)/'`glade-design-layout.c
 
-libgladeui_1_la-glade-design-view.lo: glade-design-view.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-design-view.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-design-view.Tpo -c -o libgladeui_1_la-glade-design-view.lo `test -f 'glade-design-view.c' || echo '$(srcdir)/'`glade-design-view.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-design-view.Tpo $(DEPDIR)/libgladeui_1_la-glade-design-view.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-design-view.c' object='libgladeui_1_la-glade-design-view.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-design-view.lo: glade-design-view.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-design-view.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-design-view.Tpo -c -o libmonsia3_la-glade-design-view.lo `test -f 'glade-design-view.c' || echo '$(srcdir)/'`glade-design-view.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-design-view.Tpo $(DEPDIR)/libmonsia3_la-glade-design-view.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-design-view.c' object='libmonsia3_la-glade-design-view.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-design-view.lo `test -f 'glade-design-view.c' || echo '$(srcdir)/'`glade-design-view.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-design-view.lo `test -f 'glade-design-view.c' || echo '$(srcdir)/'`glade-design-view.c
 
-libgladeui_1_la-glade-named-icon-chooser-dialog.lo: glade-named-icon-chooser-dialog.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-named-icon-chooser-dialog.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-named-icon-chooser-dialog.Tpo -c -o libgladeui_1_la-glade-named-icon-chooser-dialog.lo `test -f 'glade-named-icon-chooser-dialog.c' || echo '$(srcdir)/'`glade-named-icon-chooser-dialog.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-named-icon-chooser-dialog.Tpo $(DEPDIR)/libgladeui_1_la-glade-named-icon-chooser-dialog.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-named-icon-chooser-dialog.c' object='libgladeui_1_la-glade-named-icon-chooser-dialog.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-named-icon-chooser-dialog.lo: glade-named-icon-chooser-dialog.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-named-icon-chooser-dialog.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-named-icon-chooser-dialog.Tpo -c -o libmonsia3_la-glade-named-icon-chooser-dialog.lo `test -f 'glade-named-icon-chooser-dialog.c' || echo '$(srcdir)/'`glade-named-icon-chooser-dialog.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-named-icon-chooser-dialog.Tpo $(DEPDIR)/libmonsia3_la-glade-named-icon-chooser-dialog.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-named-icon-chooser-dialog.c' object='libmonsia3_la-glade-named-icon-chooser-dialog.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-named-icon-chooser-dialog.lo `test -f 'glade-named-icon-chooser-dialog.c' || echo '$(srcdir)/'`glade-named-icon-chooser-dialog.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-named-icon-chooser-dialog.lo `test -f 'glade-named-icon-chooser-dialog.c' || echo '$(srcdir)/'`glade-named-icon-chooser-dialog.c
 
-libgladeui_1_la-glade-cursor.lo: glade-cursor.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-cursor.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-cursor.Tpo -c -o libgladeui_1_la-glade-cursor.lo `test -f 'glade-cursor.c' || echo '$(srcdir)/'`glade-cursor.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-cursor.Tpo $(DEPDIR)/libgladeui_1_la-glade-cursor.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-cursor.c' object='libgladeui_1_la-glade-cursor.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-cursor.lo: glade-cursor.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-cursor.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-cursor.Tpo -c -o libmonsia3_la-glade-cursor.lo `test -f 'glade-cursor.c' || echo '$(srcdir)/'`glade-cursor.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-cursor.Tpo $(DEPDIR)/libmonsia3_la-glade-cursor.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-cursor.c' object='libmonsia3_la-glade-cursor.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-cursor.lo `test -f 'glade-cursor.c' || echo '$(srcdir)/'`glade-cursor.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-cursor.lo `test -f 'glade-cursor.c' || echo '$(srcdir)/'`glade-cursor.c
 
-libgladeui_1_la-glade-catalog.lo: glade-catalog.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-catalog.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-catalog.Tpo -c -o libgladeui_1_la-glade-catalog.lo `test -f 'glade-catalog.c' || echo '$(srcdir)/'`glade-catalog.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-catalog.Tpo $(DEPDIR)/libgladeui_1_la-glade-catalog.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-catalog.c' object='libgladeui_1_la-glade-catalog.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-catalog.lo: glade-catalog.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-catalog.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-catalog.Tpo -c -o libmonsia3_la-glade-catalog.lo `test -f 'glade-catalog.c' || echo '$(srcdir)/'`glade-catalog.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-catalog.Tpo $(DEPDIR)/libmonsia3_la-glade-catalog.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-catalog.c' object='libmonsia3_la-glade-catalog.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-catalog.lo `test -f 'glade-catalog.c' || echo '$(srcdir)/'`glade-catalog.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-catalog.lo `test -f 'glade-catalog.c' || echo '$(srcdir)/'`glade-catalog.c
 
-libgladeui_1_la-glade-property.lo: glade-property.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-property.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-property.Tpo -c -o libgladeui_1_la-glade-property.lo `test -f 'glade-property.c' || echo '$(srcdir)/'`glade-property.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-property.Tpo $(DEPDIR)/libgladeui_1_la-glade-property.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-property.c' object='libgladeui_1_la-glade-property.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-property.lo: glade-property.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-property.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-property.Tpo -c -o libmonsia3_la-glade-property.lo `test -f 'glade-property.c' || echo '$(srcdir)/'`glade-property.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-property.Tpo $(DEPDIR)/libmonsia3_la-glade-property.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-property.c' object='libmonsia3_la-glade-property.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-property.lo `test -f 'glade-property.c' || echo '$(srcdir)/'`glade-property.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-property.lo `test -f 'glade-property.c' || echo '$(srcdir)/'`glade-property.c
 
-libgladeui_1_la-glade-property-class.lo: glade-property-class.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-property-class.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-property-class.Tpo -c -o libgladeui_1_la-glade-property-class.lo `test -f 'glade-property-class.c' || echo '$(srcdir)/'`glade-property-class.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-property-class.Tpo $(DEPDIR)/libgladeui_1_la-glade-property-class.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-property-class.c' object='libgladeui_1_la-glade-property-class.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-property-class.lo: glade-property-class.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-property-class.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-property-class.Tpo -c -o libmonsia3_la-glade-property-class.lo `test -f 'glade-property-class.c' || echo '$(srcdir)/'`glade-property-class.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-property-class.Tpo $(DEPDIR)/libmonsia3_la-glade-property-class.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-property-class.c' object='libmonsia3_la-glade-property-class.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-property-class.lo `test -f 'glade-property-class.c' || echo '$(srcdir)/'`glade-property-class.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-property-class.lo `test -f 'glade-property-class.c' || echo '$(srcdir)/'`glade-property-class.c
 
-libgladeui_1_la-glade-popup.lo: glade-popup.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-popup.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-popup.Tpo -c -o libgladeui_1_la-glade-popup.lo `test -f 'glade-popup.c' || echo '$(srcdir)/'`glade-popup.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-popup.Tpo $(DEPDIR)/libgladeui_1_la-glade-popup.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-popup.c' object='libgladeui_1_la-glade-popup.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-popup.lo: glade-popup.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-popup.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-popup.Tpo -c -o libmonsia3_la-glade-popup.lo `test -f 'glade-popup.c' || echo '$(srcdir)/'`glade-popup.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-popup.Tpo $(DEPDIR)/libmonsia3_la-glade-popup.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-popup.c' object='libmonsia3_la-glade-popup.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-popup.lo `test -f 'glade-popup.c' || echo '$(srcdir)/'`glade-popup.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-popup.lo `test -f 'glade-popup.c' || echo '$(srcdir)/'`glade-popup.c
 
-libgladeui_1_la-glade-widget.lo: glade-widget.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-widget.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-widget.Tpo -c -o libgladeui_1_la-glade-widget.lo `test -f 'glade-widget.c' || echo '$(srcdir)/'`glade-widget.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-widget.Tpo $(DEPDIR)/libgladeui_1_la-glade-widget.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-widget.c' object='libgladeui_1_la-glade-widget.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-widget.lo: glade-widget.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-widget.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-widget.Tpo -c -o libmonsia3_la-glade-widget.lo `test -f 'glade-widget.c' || echo '$(srcdir)/'`glade-widget.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-widget.Tpo $(DEPDIR)/libmonsia3_la-glade-widget.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-widget.c' object='libmonsia3_la-glade-widget.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-widget.lo `test -f 'glade-widget.c' || echo '$(srcdir)/'`glade-widget.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-widget.lo `test -f 'glade-widget.c' || echo '$(srcdir)/'`glade-widget.c
 
-libgladeui_1_la-glade-editor-property.lo: glade-editor-property.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-editor-property.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-editor-property.Tpo -c -o libgladeui_1_la-glade-editor-property.lo `test -f 'glade-editor-property.c' || echo '$(srcdir)/'`glade-editor-property.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-editor-property.Tpo $(DEPDIR)/libgladeui_1_la-glade-editor-property.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-editor-property.c' object='libgladeui_1_la-glade-editor-property.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-editor-property.lo: glade-editor-property.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-editor-property.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-editor-property.Tpo -c -o libmonsia3_la-glade-editor-property.lo `test -f 'glade-editor-property.c' || echo '$(srcdir)/'`glade-editor-property.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-editor-property.Tpo $(DEPDIR)/libmonsia3_la-glade-editor-property.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-editor-property.c' object='libmonsia3_la-glade-editor-property.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-editor-property.lo `test -f 'glade-editor-property.c' || echo '$(srcdir)/'`glade-editor-property.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-editor-property.lo `test -f 'glade-editor-property.c' || echo '$(srcdir)/'`glade-editor-property.c
 
-libgladeui_1_la-glade-editor.lo: glade-editor.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-editor.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-editor.Tpo -c -o libgladeui_1_la-glade-editor.lo `test -f 'glade-editor.c' || echo '$(srcdir)/'`glade-editor.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-editor.Tpo $(DEPDIR)/libgladeui_1_la-glade-editor.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-editor.c' object='libgladeui_1_la-glade-editor.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-editor.lo: glade-editor.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-editor.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-editor.Tpo -c -o libmonsia3_la-glade-editor.lo `test -f 'glade-editor.c' || echo '$(srcdir)/'`glade-editor.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-editor.Tpo $(DEPDIR)/libmonsia3_la-glade-editor.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-editor.c' object='libmonsia3_la-glade-editor.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-editor.lo `test -f 'glade-editor.c' || echo '$(srcdir)/'`glade-editor.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-editor.lo `test -f 'glade-editor.c' || echo '$(srcdir)/'`glade-editor.c
 
-libgladeui_1_la-glade-utils.lo: glade-utils.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-utils.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-utils.Tpo -c -o libgladeui_1_la-glade-utils.lo `test -f 'glade-utils.c' || echo '$(srcdir)/'`glade-utils.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-utils.Tpo $(DEPDIR)/libgladeui_1_la-glade-utils.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-utils.c' object='libgladeui_1_la-glade-utils.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-utils.lo: glade-utils.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-utils.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-utils.Tpo -c -o libmonsia3_la-glade-utils.lo `test -f 'glade-utils.c' || echo '$(srcdir)/'`glade-utils.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-utils.Tpo $(DEPDIR)/libmonsia3_la-glade-utils.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-utils.c' object='libmonsia3_la-glade-utils.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-utils.lo `test -f 'glade-utils.c' || echo '$(srcdir)/'`glade-utils.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-utils.lo `test -f 'glade-utils.c' || echo '$(srcdir)/'`glade-utils.c
 
-libgladeui_1_la-glade-signal.lo: glade-signal.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-signal.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-signal.Tpo -c -o libgladeui_1_la-glade-signal.lo `test -f 'glade-signal.c' || echo '$(srcdir)/'`glade-signal.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-signal.Tpo $(DEPDIR)/libgladeui_1_la-glade-signal.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-signal.c' object='libgladeui_1_la-glade-signal.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-signal.lo: glade-signal.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-signal.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-signal.Tpo -c -o libmonsia3_la-glade-signal.lo `test -f 'glade-signal.c' || echo '$(srcdir)/'`glade-signal.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-signal.Tpo $(DEPDIR)/libmonsia3_la-glade-signal.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-signal.c' object='libmonsia3_la-glade-signal.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-signal.lo `test -f 'glade-signal.c' || echo '$(srcdir)/'`glade-signal.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-signal.lo `test -f 'glade-signal.c' || echo '$(srcdir)/'`glade-signal.c
 
-libgladeui_1_la-glade-signal-editor.lo: glade-signal-editor.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-signal-editor.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-signal-editor.Tpo -c -o libgladeui_1_la-glade-signal-editor.lo `test -f 'glade-signal-editor.c' || echo '$(srcdir)/'`glade-signal-editor.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-signal-editor.Tpo $(DEPDIR)/libgladeui_1_la-glade-signal-editor.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-signal-editor.c' object='libgladeui_1_la-glade-signal-editor.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-signal-editor.lo: glade-signal-editor.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-signal-editor.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-signal-editor.Tpo -c -o libmonsia3_la-glade-signal-editor.lo `test -f 'glade-signal-editor.c' || echo '$(srcdir)/'`glade-signal-editor.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-signal-editor.Tpo $(DEPDIR)/libmonsia3_la-glade-signal-editor.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-signal-editor.c' object='libmonsia3_la-glade-signal-editor.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-signal-editor.lo `test -f 'glade-signal-editor.c' || echo '$(srcdir)/'`glade-signal-editor.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-signal-editor.lo `test -f 'glade-signal-editor.c' || echo '$(srcdir)/'`glade-signal-editor.c
 
-libgladeui_1_la-glade-clipboard.lo: glade-clipboard.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-clipboard.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-clipboard.Tpo -c -o libgladeui_1_la-glade-clipboard.lo `test -f 'glade-clipboard.c' || echo '$(srcdir)/'`glade-clipboard.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-clipboard.Tpo $(DEPDIR)/libgladeui_1_la-glade-clipboard.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-clipboard.c' object='libgladeui_1_la-glade-clipboard.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-clipboard.lo: glade-clipboard.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-clipboard.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-clipboard.Tpo -c -o libmonsia3_la-glade-clipboard.lo `test -f 'glade-clipboard.c' || echo '$(srcdir)/'`glade-clipboard.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-clipboard.Tpo $(DEPDIR)/libmonsia3_la-glade-clipboard.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-clipboard.c' object='libmonsia3_la-glade-clipboard.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-clipboard.lo `test -f 'glade-clipboard.c' || echo '$(srcdir)/'`glade-clipboard.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-clipboard.lo `test -f 'glade-clipboard.c' || echo '$(srcdir)/'`glade-clipboard.c
 
-libgladeui_1_la-glade-clipboard-view.lo: glade-clipboard-view.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-clipboard-view.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-clipboard-view.Tpo -c -o libgladeui_1_la-glade-clipboard-view.lo `test -f 'glade-clipboard-view.c' || echo '$(srcdir)/'`glade-clipboard-view.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-clipboard-view.Tpo $(DEPDIR)/libgladeui_1_la-glade-clipboard-view.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-clipboard-view.c' object='libgladeui_1_la-glade-clipboard-view.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-clipboard-view.lo: glade-clipboard-view.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-clipboard-view.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-clipboard-view.Tpo -c -o libmonsia3_la-glade-clipboard-view.lo `test -f 'glade-clipboard-view.c' || echo '$(srcdir)/'`glade-clipboard-view.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-clipboard-view.Tpo $(DEPDIR)/libmonsia3_la-glade-clipboard-view.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-clipboard-view.c' object='libmonsia3_la-glade-clipboard-view.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-clipboard-view.lo `test -f 'glade-clipboard-view.c' || echo '$(srcdir)/'`glade-clipboard-view.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-clipboard-view.lo `test -f 'glade-clipboard-view.c' || echo '$(srcdir)/'`glade-clipboard-view.c
 
-libgladeui_1_la-glade-command.lo: glade-command.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-command.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-command.Tpo -c -o libgladeui_1_la-glade-command.lo `test -f 'glade-command.c' || echo '$(srcdir)/'`glade-command.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-command.Tpo $(DEPDIR)/libgladeui_1_la-glade-command.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-command.c' object='libgladeui_1_la-glade-command.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-command.lo: glade-command.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-command.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-command.Tpo -c -o libmonsia3_la-glade-command.lo `test -f 'glade-command.c' || echo '$(srcdir)/'`glade-command.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-command.Tpo $(DEPDIR)/libmonsia3_la-glade-command.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-command.c' object='libmonsia3_la-glade-command.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-command.lo `test -f 'glade-command.c' || echo '$(srcdir)/'`glade-command.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-command.lo `test -f 'glade-command.c' || echo '$(srcdir)/'`glade-command.c
 
-libgladeui_1_la-glade-id-allocator.lo: glade-id-allocator.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-id-allocator.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-id-allocator.Tpo -c -o libgladeui_1_la-glade-id-allocator.lo `test -f 'glade-id-allocator.c' || echo '$(srcdir)/'`glade-id-allocator.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-id-allocator.Tpo $(DEPDIR)/libgladeui_1_la-glade-id-allocator.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-id-allocator.c' object='libgladeui_1_la-glade-id-allocator.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-id-allocator.lo: glade-id-allocator.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-id-allocator.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-id-allocator.Tpo -c -o libmonsia3_la-glade-id-allocator.lo `test -f 'glade-id-allocator.c' || echo '$(srcdir)/'`glade-id-allocator.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-id-allocator.Tpo $(DEPDIR)/libmonsia3_la-glade-id-allocator.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-id-allocator.c' object='libmonsia3_la-glade-id-allocator.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-id-allocator.lo `test -f 'glade-id-allocator.c' || echo '$(srcdir)/'`glade-id-allocator.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-id-allocator.lo `test -f 'glade-id-allocator.c' || echo '$(srcdir)/'`glade-id-allocator.c
 
-libgladeui_1_la-glade-marshallers.lo: glade-marshallers.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-marshallers.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-marshallers.Tpo -c -o libgladeui_1_la-glade-marshallers.lo `test -f 'glade-marshallers.c' || echo '$(srcdir)/'`glade-marshallers.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-marshallers.Tpo $(DEPDIR)/libgladeui_1_la-glade-marshallers.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-marshallers.c' object='libgladeui_1_la-glade-marshallers.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-marshallers.lo: glade-marshallers.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-marshallers.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-marshallers.Tpo -c -o libmonsia3_la-glade-marshallers.lo `test -f 'glade-marshallers.c' || echo '$(srcdir)/'`glade-marshallers.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-marshallers.Tpo $(DEPDIR)/libmonsia3_la-glade-marshallers.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-marshallers.c' object='libmonsia3_la-glade-marshallers.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-marshallers.lo `test -f 'glade-marshallers.c' || echo '$(srcdir)/'`glade-marshallers.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-marshallers.lo `test -f 'glade-marshallers.c' || echo '$(srcdir)/'`glade-marshallers.c
 
-libgladeui_1_la-glade-accumulators.lo: glade-accumulators.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-accumulators.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-accumulators.Tpo -c -o libgladeui_1_la-glade-accumulators.lo `test -f 'glade-accumulators.c' || echo '$(srcdir)/'`glade-accumulators.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-accumulators.Tpo $(DEPDIR)/libgladeui_1_la-glade-accumulators.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-accumulators.c' object='libgladeui_1_la-glade-accumulators.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-accumulators.lo: glade-accumulators.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-accumulators.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-accumulators.Tpo -c -o libmonsia3_la-glade-accumulators.lo `test -f 'glade-accumulators.c' || echo '$(srcdir)/'`glade-accumulators.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-accumulators.Tpo $(DEPDIR)/libmonsia3_la-glade-accumulators.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-accumulators.c' object='libmonsia3_la-glade-accumulators.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-accumulators.lo `test -f 'glade-accumulators.c' || echo '$(srcdir)/'`glade-accumulators.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-accumulators.lo `test -f 'glade-accumulators.c' || echo '$(srcdir)/'`glade-accumulators.c
 
-libgladeui_1_la-glade-parser.lo: glade-parser.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-parser.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-parser.Tpo -c -o libgladeui_1_la-glade-parser.lo `test -f 'glade-parser.c' || echo '$(srcdir)/'`glade-parser.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-parser.Tpo $(DEPDIR)/libgladeui_1_la-glade-parser.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-parser.c' object='libgladeui_1_la-glade-parser.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-parser.lo: glade-parser.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-parser.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-parser.Tpo -c -o libmonsia3_la-glade-parser.lo `test -f 'glade-parser.c' || echo '$(srcdir)/'`glade-parser.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-parser.Tpo $(DEPDIR)/libmonsia3_la-glade-parser.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-parser.c' object='libmonsia3_la-glade-parser.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-parser.lo `test -f 'glade-parser.c' || echo '$(srcdir)/'`glade-parser.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-parser.lo `test -f 'glade-parser.c' || echo '$(srcdir)/'`glade-parser.c
 
-libgladeui_1_la-glade-builtins.lo: glade-builtins.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-builtins.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-builtins.Tpo -c -o libgladeui_1_la-glade-builtins.lo `test -f 'glade-builtins.c' || echo '$(srcdir)/'`glade-builtins.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-builtins.Tpo $(DEPDIR)/libgladeui_1_la-glade-builtins.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-builtins.c' object='libgladeui_1_la-glade-builtins.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-builtins.lo: glade-builtins.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-builtins.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-builtins.Tpo -c -o libmonsia3_la-glade-builtins.lo `test -f 'glade-builtins.c' || echo '$(srcdir)/'`glade-builtins.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-builtins.Tpo $(DEPDIR)/libmonsia3_la-glade-builtins.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-builtins.c' object='libmonsia3_la-glade-builtins.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-builtins.lo `test -f 'glade-builtins.c' || echo '$(srcdir)/'`glade-builtins.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-builtins.lo `test -f 'glade-builtins.c' || echo '$(srcdir)/'`glade-builtins.c
 
-libgladeui_1_la-glade-app.lo: glade-app.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-app.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-app.Tpo -c -o libgladeui_1_la-glade-app.lo `test -f 'glade-app.c' || echo '$(srcdir)/'`glade-app.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-app.Tpo $(DEPDIR)/libgladeui_1_la-glade-app.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-app.c' object='libgladeui_1_la-glade-app.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-app.lo: glade-app.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-app.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-app.Tpo -c -o libmonsia3_la-glade-app.lo `test -f 'glade-app.c' || echo '$(srcdir)/'`glade-app.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-app.Tpo $(DEPDIR)/libmonsia3_la-glade-app.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-app.c' object='libmonsia3_la-glade-app.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-app.lo `test -f 'glade-app.c' || echo '$(srcdir)/'`glade-app.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-app.lo `test -f 'glade-app.c' || echo '$(srcdir)/'`glade-app.c
 
-libgladeui_1_la-glade-keysyms.lo: glade-keysyms.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-keysyms.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-keysyms.Tpo -c -o libgladeui_1_la-glade-keysyms.lo `test -f 'glade-keysyms.c' || echo '$(srcdir)/'`glade-keysyms.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-keysyms.Tpo $(DEPDIR)/libgladeui_1_la-glade-keysyms.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-keysyms.c' object='libgladeui_1_la-glade-keysyms.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-keysyms.lo: glade-keysyms.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-keysyms.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-keysyms.Tpo -c -o libmonsia3_la-glade-keysyms.lo `test -f 'glade-keysyms.c' || echo '$(srcdir)/'`glade-keysyms.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-keysyms.Tpo $(DEPDIR)/libmonsia3_la-glade-keysyms.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-keysyms.c' object='libmonsia3_la-glade-keysyms.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-keysyms.lo `test -f 'glade-keysyms.c' || echo '$(srcdir)/'`glade-keysyms.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-keysyms.lo `test -f 'glade-keysyms.c' || echo '$(srcdir)/'`glade-keysyms.c
 
-libgladeui_1_la-glade-fixed.lo: glade-fixed.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-fixed.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-fixed.Tpo -c -o libgladeui_1_la-glade-fixed.lo `test -f 'glade-fixed.c' || echo '$(srcdir)/'`glade-fixed.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-fixed.Tpo $(DEPDIR)/libgladeui_1_la-glade-fixed.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-fixed.c' object='libgladeui_1_la-glade-fixed.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-fixed.lo: glade-fixed.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-fixed.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-fixed.Tpo -c -o libmonsia3_la-glade-fixed.lo `test -f 'glade-fixed.c' || echo '$(srcdir)/'`glade-fixed.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-fixed.Tpo $(DEPDIR)/libmonsia3_la-glade-fixed.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-fixed.c' object='libmonsia3_la-glade-fixed.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-fixed.lo `test -f 'glade-fixed.c' || echo '$(srcdir)/'`glade-fixed.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-fixed.lo `test -f 'glade-fixed.c' || echo '$(srcdir)/'`glade-fixed.c
 
-libgladeui_1_la-glade-base-editor.lo: glade-base-editor.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-base-editor.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-base-editor.Tpo -c -o libgladeui_1_la-glade-base-editor.lo `test -f 'glade-base-editor.c' || echo '$(srcdir)/'`glade-base-editor.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-base-editor.Tpo $(DEPDIR)/libgladeui_1_la-glade-base-editor.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-base-editor.c' object='libgladeui_1_la-glade-base-editor.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-base-editor.lo: glade-base-editor.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-base-editor.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-base-editor.Tpo -c -o libmonsia3_la-glade-base-editor.lo `test -f 'glade-base-editor.c' || echo '$(srcdir)/'`glade-base-editor.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-base-editor.Tpo $(DEPDIR)/libmonsia3_la-glade-base-editor.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-base-editor.c' object='libmonsia3_la-glade-base-editor.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-base-editor.lo `test -f 'glade-base-editor.c' || echo '$(srcdir)/'`glade-base-editor.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-base-editor.lo `test -f 'glade-base-editor.c' || echo '$(srcdir)/'`glade-base-editor.c
 
-libgladeui_1_la-glade-widget-action.lo: glade-widget-action.c
-@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -MT libgladeui_1_la-glade-widget-action.lo -MD -MP -MF $(DEPDIR)/libgladeui_1_la-glade-widget-action.Tpo -c -o libgladeui_1_la-glade-widget-action.lo `test -f 'glade-widget-action.c' || echo '$(srcdir)/'`glade-widget-action.c
-@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libgladeui_1_la-glade-widget-action.Tpo $(DEPDIR)/libgladeui_1_la-glade-widget-action.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-widget-action.c' object='libgladeui_1_la-glade-widget-action.lo' libtool=yes @AMDEPBACKSLASH@
+libmonsia3_la-glade-widget-action.lo: glade-widget-action.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -MT libmonsia3_la-glade-widget-action.lo -MD -MP -MF $(DEPDIR)/libmonsia3_la-glade-widget-action.Tpo -c -o libmonsia3_la-glade-widget-action.lo `test -f 'glade-widget-action.c' || echo '$(srcdir)/'`glade-widget-action.c
+@am__fastdepCC_TRUE@	mv -f $(DEPDIR)/libmonsia3_la-glade-widget-action.Tpo $(DEPDIR)/libmonsia3_la-glade-widget-action.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='glade-widget-action.c' object='libmonsia3_la-glade-widget-action.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libgladeui_1_la_CPPFLAGS) $(CPPFLAGS) $(libgladeui_1_la_CFLAGS) $(CFLAGS) -c -o libgladeui_1_la-glade-widget-action.lo `test -f 'glade-widget-action.c' || echo '$(srcdir)/'`glade-widget-action.c
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmonsia3_la_CPPFLAGS) $(CPPFLAGS) $(libmonsia3_la_CFLAGS) $(CFLAGS) -c -o libmonsia3_la-glade-widget-action.lo `test -f 'glade-widget-action.c' || echo '$(srcdir)/'`glade-widget-action.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

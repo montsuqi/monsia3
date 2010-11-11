@@ -53,7 +53,7 @@ PROGRAMS = $(bin_PROGRAMS)
 am_monsia3_OBJECTS = monsia3-glade-window.$(OBJEXT) \
 	monsia3-main.$(OBJEXT)
 monsia3_OBJECTS = $(am_monsia3_OBJECTS)
-monsia3_DEPENDENCIES = $(top_builddir)/gladeui/libgladeui-1.la \
+monsia3_DEPENDENCIES = $(top_builddir)/gladeui/libmonsia3.la \
 	$(am__append_1)
 monsia3_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(monsia3_CFLAGS) $(CFLAGS) \
@@ -265,8 +265,7 @@ monsia3_CFLAGS = \
 	$(AM_CFLAGS)
 
 monsia3_LDFLAGS = $(AM_LDFLAGS) $(am__append_2)
-monsia3_LDADD = $(top_builddir)/gladeui/libgladeui-1.la \
-	$(am__append_1)
+monsia3_LDADD = $(top_builddir)/gladeui/libmonsia3.la $(am__append_1)
 monsia3_SOURCES = \
 	glade-window.c \
 	glade-window.h \

@@ -212,6 +212,5 @@ Configuration:
 	Source code location:	 ${srcdir}
 	Compiler:		 ${CC}
 	GTK+ UNIX Print Widgets: ${have_unix_print}
-	GNOME UI Widgets:	 ${have_gnome}
 	GTK+Panda2 Widgets:	 ${have_gtkpanda2}
 "

@@ -276,7 +276,7 @@ target_vendor = @target_vendor@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = icons
-libgladeui = $(top_builddir)/gladeui/libgladeui-1.la
+libgladeui = $(top_builddir)/gladeui/libmonsia3.la
 
 # libgladegtk
 gladegtk_LTLIBRARIES = libgladegtk.la

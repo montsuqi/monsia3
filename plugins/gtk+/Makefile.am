@@ -2,7 +2,7 @@
 
 SUBDIRS = icons
 
-libgladeui = $(top_builddir)/gladeui/libgladeui-1.la
+libgladeui = $(top_builddir)/gladeui/libmonsia3.la
 
 
 # libgladegtk

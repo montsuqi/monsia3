@@ -1657,6 +1657,7 @@ embedded in another object</_tooltip>
   
   <glade-widget-group name="gtk-toplevels" _title="Toplevels">
     <glade-widget-class-ref name="GtkWindow"/>
+<!--
     <glade-widget-class-ref name="GtkDialog"/>
     <glade-widget-class-ref name="GtkAboutDialog"/>
     <glade-widget-class-ref name="GtkColorSelectionDialog"/>
@@ -1666,6 +1667,7 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkMessageDialog"/>
     <glade-widget-class-ref name="GtkRecentChooserDialog"/>
     <glade-widget-class-ref name="GtkAssistant"/>
+-->
   </glade-widget-group>
 
   <glade-widget-group name="gtk-containers" _title="Containers">
@@ -1674,6 +1676,7 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkTable"/>
     <glade-widget-class-ref name="GtkNotebook"/>
     <glade-widget-class-ref name="GtkFrame"/>
+<!--
     <glade-widget-class-ref name="GtkAspectFrame"/>
     <glade-widget-class-ref name="GtkMenuBar"/>
     <glade-widget-class-ref name="GtkToolbar"/>
@@ -1682,12 +1685,17 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkHButtonBox"/>
     <glade-widget-class-ref name="GtkVButtonBox"/>
     <glade-widget-class-ref name="GtkLayout"/>
+-->
     <glade-widget-class-ref name="GtkFixed"/>
+<!--
     <glade-widget-class-ref name="GtkEventBox"/>
     <glade-widget-class-ref name="GtkExpander"/>
     <glade-widget-class-ref name="GtkViewport"/>
+-->
     <glade-widget-class-ref name="GtkScrolledWindow"/>
+<!--
     <glade-widget-class-ref name="GtkAlignment"/>
+-->
   </glade-widget-group>
 
   <glade-widget-group name="gtk-control-display" _title="Control and Display">
@@ -1695,12 +1703,14 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkButton"/>
     <glade-widget-class-ref name="GtkToggleButton"/>
     <glade-widget-class-ref name="GtkCheckButton"/>
+<!--
     <glade-widget-class-ref name="GtkSpinButton"/>
     <glade-widget-class-ref name="GtkRadioButton"/>
     <glade-widget-class-ref name="GtkFileChooserButton"/>
     <glade-widget-class-ref name="GtkColorButton"/>
     <glade-widget-class-ref name="GtkFontButton"/>
     <glade-widget-class-ref name="GtkLinkButton"/>
+-->
 
 
     <!-- Commenting out these widgets until freeze is over
@@ -1708,8 +1718,11 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkVolumeButton"/>\
     -->
 
+<!--
     <glade-widget-class-ref name="GtkImage"/>
+-->
     <glade-widget-class-ref name="GtkLabel"/>
+<!--
     <glade-widget-class-ref name="GtkAccelLabel"/>
     <glade-widget-class-ref name="GtkEntry"/>
     <glade-widget-class-ref name="GtkTextView"/>
@@ -1721,15 +1734,19 @@ embedded in another object</_tooltip>
 
     <glade-widget-class-ref name="GtkComboBox"/>
     <glade-widget-class-ref name="GtkComboBoxEntry"/>
+-->
     <glade-widget-class-ref name="GtkProgressBar"/>
 
+<!--
     <glade-widget-class-ref name="GtkTreeView"/>
     <glade-widget-class-ref name="GtkIconView"/>
 
     <glade-widget-class-ref name="GtkHandleBox"/>
     <glade-widget-class-ref name="GtkStatusbar"/>
 
+-->
     <glade-widget-class-ref name="GtkCalendar"/>
+<!--
     <glade-widget-class-ref name="GtkMenu"/>
     <glade-widget-class-ref name="GtkHSeparator"/>
     <glade-widget-class-ref name="GtkVSeparator"/>
@@ -1738,6 +1755,7 @@ embedded in another object</_tooltip>
     
     <glade-widget-class-ref name="GtkRecentChooserWidget"/>
     <glade-widget-class-ref name="GtkFileChooserWidget"/>
+-->
   </glade-widget-group>
 
   <!-- don't use gtk-obsolete
