@@ -13,7 +13,7 @@ lib_LTLIBRARIES = libgladeui-1.la
 
 BUILT_SOURCES = glade-marshallers.c glade-marshallers.h
 
-EXTRA_DIST = glade-marshallers.list gladeui.rc.in icon-naming-spec.c
+EXTRA_DIST = glade-marshallers.list gladeui.rc.in icon-naming-spec.c glade-property-save-list.txt
 
 # The glade-3 core library
 libgladeui_1_la_SOURCES = \
@@ -64,7 +64,8 @@ libgladeui_1_la_SOURCES = \
 	glade-catalog.h \
 	glade-marshallers.h \
 	glade-accumulators.h \
-	glade-widget-action.c
+	glade-widget-action.c \
+	glade-property-save-list.txt
 
 libgladeui_1_la_CPPFLAGS =  \
 	$(common_defines)   \

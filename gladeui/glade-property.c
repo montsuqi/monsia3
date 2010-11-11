@@ -373,11 +373,27 @@ glade_property_write_impl (GladeProperty  *property,
 	/* Skip properties that are default by original pspec default
 	 * (excepting those that specified otherwise).
 	 */
-    /*
+#if 0
 	if (!(property->klass->save_always || property->save_always) &&
 	    glade_property_equals_value (property, property->klass->orig_def))
 		return FALSE;
-    */
+#else
+	char *plist[] = {
+#include "glade-property-save-list.txt"
+	};
+	int n_plist = sizeof(plist)/sizeof(char*);
+	for(i = 0; i < n_plist ; i++) {
+		if (!strcmp(plist[i], property->klass->id)) {
+			i = 0;
+			break;
+		}
+	}
+	if (i == n_plist) {
+		if (!(property->klass->save_always || property->save_always) &&
+		    glade_property_equals_value (property, property->klass->orig_def))
+			return FALSE;
+	}
+#endif
 
 	/* we should change each '-' by '_' on the name of the property 
          * (<property name="...">) */

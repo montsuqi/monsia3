@@ -41,7 +41,6 @@
             <value id="GTK_SELECTION_MULTIPLE" _name="multi"/>
           </displayable-values>
         </property>
-	    <property id="show_titles"/>
         <property id="enable-grid-lines" disabled="True"/>
         <property id="enable-search" disabled="True"/>
         <property id="enable-tree-lines" disabled="True"/>

@@ -1326,7 +1326,7 @@ embedded in another object</_tooltip>
         <property id="hadjustment" disabled="True"/>
         <property id="vadjustment" disabled="True"/>
         <property id="window-placement-set" ignore="True"/>
-      	<property id="shadow-type">
+      	<property id="shadow-type" disabled="True">
   	  <displayable-values>
 	    <value id="GTK_SHADOW_NONE" _name="None"/>
 	    <value id="GTK_SHADOW_IN" _name="In"/>
