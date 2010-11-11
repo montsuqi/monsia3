@@ -48,6 +48,7 @@ monsia0から置き換えられたウィジェット
    * GtkRadioButton
    * GtkLabel
    * GtkCalendar
+   * GtkProgressBar
    * GtkHSeparetor 
    * GtkVSeparetor 
 

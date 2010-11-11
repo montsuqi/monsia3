@@ -85,6 +85,8 @@ struct _GladeParseState {
 	GladeSignalInfo *signal_info;
     GArray *accels;
 	GladeAccelInfo *accel_info;
+	
+	GHashTable *group_table;
 };
 
 
@@ -102,7 +104,7 @@ flush_properties(GladeParseState *state)
     if (!state->widget->attrs) {
 		return;
 	}
-	
+
 	prop.has_context = 1;
 	prop.translatable = 1;
 	prop.comment = "";
@@ -158,6 +160,17 @@ flush_properties(GladeParseState *state)
 			  prop.value = "False";
 			  g_array_append_val(child_props, prop);
 			}
+		} else if (!xmlStrcmp(state->widget->classname,BAD_CAST("GtkRadioButton")) &&
+                   !xmlStrcmp(attr->name,BAD_CAST("group"))) {
+			gchar *groupname = (gchar*)g_hash_table_lookup(state->group_table,attr->value);
+			if (groupname != NULL) {
+				prop.value = groupname;
+			} else {
+				prop.value = state->widget->name;
+				g_hash_table_insert(state->group_table,attr->value,state->widget->name);
+			}
+			prop.name = attr->name;
+			g_array_append_val(props, prop);
 		} else {
 			prop.name = attr->name;
 			prop.value = attr->value;
@@ -274,6 +287,7 @@ glade_parser_start_element(GladeParseState *state,
 		    state->accels = NULL;
 			state->accel_info = NULL;
 		    state->state = PARSER_WIDGET;
+			state->group_table = g_hash_table_new(g_str_hash,g_str_equal);
 		} else {
 		    state->prev_state = state->state;
 		    state->state = PARSER_UNKNOWN;
