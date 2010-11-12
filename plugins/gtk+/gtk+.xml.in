@@ -1655,9 +1655,9 @@ embedded in another object</_tooltip>
     </glade-widget-class>
   </glade-widget-classes>
   
+<!--
   <glade-widget-group name="gtk-toplevels" _title="Toplevels">
     <glade-widget-class-ref name="GtkWindow"/>
-<!--
     <glade-widget-class-ref name="GtkDialog"/>
     <glade-widget-class-ref name="GtkAboutDialog"/>
     <glade-widget-class-ref name="GtkColorSelectionDialog"/>
@@ -1667,8 +1667,8 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkMessageDialog"/>
     <glade-widget-class-ref name="GtkRecentChooserDialog"/>
     <glade-widget-class-ref name="GtkAssistant"/>
--->
   </glade-widget-group>
+-->
 
   <glade-widget-group name="gtk-containers" _title="Containers">
     <glade-widget-class-ref name="GtkHBox"/>

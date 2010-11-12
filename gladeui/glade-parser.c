@@ -111,8 +111,6 @@ flush_properties(GladeParseState *state)
 	for (i = 0; i < g_list_length(state->widget->attrs); i++) {
 		attr = (GladeAttribute*)g_list_nth_data(state->widget->attrs,i);
 		if (
-			!xmlStrcmp(attr->name,BAD_CAST("x")) ||
-			!xmlStrcmp(attr->name,BAD_CAST("y")) ||
 			!xmlStrcmp(attr->name,BAD_CAST("left_attach")) ||
 			!xmlStrcmp(attr->name,BAD_CAST("right_attach")) ||
 			!xmlStrcmp(attr->name,BAD_CAST("top_attach")) ||
@@ -121,6 +119,21 @@ flush_properties(GladeParseState *state)
 			prop.name = attr->name;
 			prop.value = attr->value;
 			g_array_append_val(child_props, prop);
+		} else if (
+                   !xmlStrcmp(attr->name,BAD_CAST("x")) ||
+                   !xmlStrcmp(attr->name,BAD_CAST("y")) ) {
+fprintf(stderr,"class[%s] [%s:%s] ",state->widget->classname,attr->name,attr->value);
+            if (!xmlStrcmp(state->widget->classname,BAD_CAST("GtkPandaWindow"))) {
+fprintf(stderr,"add props\n");
+			  prop.name = attr->name;
+			  prop.value = attr->value;
+			  g_array_append_val(props, prop);
+            } else {
+fprintf(stderr,"add child_props\n");
+			  prop.name = attr->name;
+			  prop.value = attr->value;
+			  g_array_append_val(child_props, prop);
+            }
 		} else if (!xmlStrcmp(attr->name,BAD_CAST("width"))) {
 			prop.name = xmlStrdup("width_request");
 			prop.value = attr->value;
@@ -395,6 +408,9 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
             } else if (!strcmp(state->content->str,"GnomeFileEntry")) {
 			    state->widget->classname = 
 			    	glade_xml_alloc_string(state->interface, "GtkPandaFileEntry");
+            } else if (!strcmp(state->content->str,"GtkWindow")) {
+			    state->widget->classname = 
+			    	glade_xml_alloc_string(state->interface, "GtkPandaWindow");
             } else {
 			    state->widget->classname = 
 			    	glade_xml_alloc_string(state->interface, state->content->str);
@@ -927,6 +943,8 @@ dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *c
         xmlNodeAddContent(node, BAD_CAST("GnomePixmap"));
     } else if (!strcmp(info->classname,"GtkPandaFileEntry")) {
         xmlNodeAddContent(node, BAD_CAST("GnomeFileEntry"));
+    } else if (!strcmp(info->classname,"GtkPandaWindow")) {
+        xmlNodeAddContent(node, BAD_CAST("GtkWindow"));
     } else {
         xmlNodeAddContent(node, BAD_CAST(info->classname));
     }

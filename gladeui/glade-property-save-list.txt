@@ -98,6 +98,7 @@
 "widget",
 "width",
 "wmclass-class",
+"wmclass-name",
 "wrap",
 "x",
 "xalign",

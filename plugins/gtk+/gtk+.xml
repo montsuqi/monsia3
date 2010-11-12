@@ -1615,10 +1615,7 @@
     </glade-widget-class>
   </glade-widget-classes>
   
-  <glade-widget-group name="gtk-toplevels" title="Toplevels">
-    <glade-widget-class-ref name="GtkWindow"/>
 
-  </glade-widget-group>
 
   <glade-widget-group name="gtk-containers" title="Containers">
     <glade-widget-class-ref name="GtkHBox"/>
