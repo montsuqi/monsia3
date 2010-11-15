@@ -1,4 +1,4 @@
-SUBDIRS = po data gladeui src plugins 
+SUBDIRS = po gladeui src plugins 
 
 ACLOCAL_AMFLAGS = -I m4
 

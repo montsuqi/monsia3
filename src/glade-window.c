@@ -2115,7 +2115,7 @@ about_cb (GtkAction *action, GladeWindow *window)
 	
 	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "name", g_get_application_name (),
-			       "logo-icon-name", "glade-3",
+			       "logo-icon-name", "monsia3",
 			       "authors", authors,
 			       "artists", artists,
 			       "documenters", documenters,			       			       
@@ -2125,7 +2125,7 @@ about_cb (GtkAction *action, GladeWindow *window)
 			       "wrap-license", TRUE,
 			       "copyright", copyright,
 			       "version", PACKAGE_VERSION,
-			       "website", "http://glade.gnome.org",
+			       "website", "http://www.montsuqi.org",
 			       NULL);
 }
 

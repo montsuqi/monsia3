@@ -13,7 +13,7 @@ lib_LTLIBRARIES = libmonsia3.la
 
 BUILT_SOURCES = glade-marshallers.c glade-marshallers.h
 
-EXTRA_DIST = glade-marshallers.list gladeui.rc.in icon-naming-spec.c glade-property-save-list.txt
+EXTRA_DIST = glade-marshallers.list icon-naming-spec.c glade-property-save-list.txt
 
 # The glade-3 core library
 libmonsia3_la_SOURCES = \
@@ -89,9 +89,6 @@ if NATIVE_WIN32
 libmonsia3_la_LDFLAGS += -Wl,gladeui-win32-res.o -export-symbols gladeui.def
 libmonsia3_la_DEPENDENCIES = gladeui-win32-res.o gladeui.def
 endif
-
-gladeui-win32-res.o: gladeui.rc
-	$(WINDRES) $< $@
 
 # gladeui.def: auto-generated DEF file for linker input
 # The routines below will scan the header files and extracts symbol declarations.

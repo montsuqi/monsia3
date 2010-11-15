@@ -132,11 +132,11 @@ flush_properties(GladeParseState *state)
 			  g_array_append_val(child_props, prop);
             }
 		} else if (!strcmp(attr->name,"width")) {
-			prop.name = strdup("width_request");
+			prop.name = g_strdup("width_request");
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
 		} else if (!strcmp(attr->name,"height")) {
-			prop.name = strdup("height_request");
+			prop.name = g_strdup("height_request");
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
 		} else if (!strcmp(attr->name,"input_mode")) {
@@ -381,6 +381,9 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 				 name, state_names[state->state]));
 
     switch (state->state) {
+	case PARSER_START:
+		state->state = PARSER_GTK_INTERFACE;
+		break;
     case PARSER_GTK_INTERFACE:
         state->state = PARSER_FINISH;
         break;
@@ -416,9 +419,9 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 		} else {
 			GladeAttribute *attr = g_new0(GladeAttribute, 1);
 			attr->name = 
-				g_strdup(name);
+				g_strdup((gchar*)name);
 			attr->value = 
-				g_strdup(state->content->str);
+				g_strdup((gchar*)state->content->str);
 			state->widget->attrs = 
 				g_list_append(state->widget->attrs, attr);
 		}
@@ -432,10 +435,8 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 			!xmlStrcmp(name, BAD_CAST("top_attach")) ||
 			!xmlStrcmp(name, BAD_CAST("bottom_attach"))
 		) {
-			attr->name = 
-				glade_xml_alloc_string(state->interface, name);
-			attr->value = 
-				glade_xml_alloc_string(state->interface, state->content->str);
+			attr->name = g_strdup((gchar*)name);
+			attr->value = g_strdup((gchar*)state->content->str);
 			state->widget->attrs = 
 				g_list_append(state->widget->attrs, attr);
 		}

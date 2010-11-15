@@ -38,8 +38,7 @@ target_triplet = @target@
 @NATIVE_WIN32_FALSE@libmonsia3_la_DEPENDENCIES =  \
 @NATIVE_WIN32_FALSE@	$(am__DEPENDENCIES_1)
 subdir = gladeui
-DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
-	$(srcdir)/gladeui.rc.in
+DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
 	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/configure.ac
@@ -47,7 +46,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
-CONFIG_CLEAN_FILES = gladeui.rc
+CONFIG_CLEAN_FILES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
     $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
@@ -302,7 +301,7 @@ common_defines = \
 
 lib_LTLIBRARIES = libmonsia3.la
 BUILT_SOURCES = glade-marshallers.c glade-marshallers.h
-EXTRA_DIST = glade-marshallers.list gladeui.rc.in icon-naming-spec.c glade-property-save-list.txt
+EXTRA_DIST = glade-marshallers.list icon-naming-spec.c glade-property-save-list.txt
 
 # The glade-3 core library
 libmonsia3_la_SOURCES = \
@@ -407,8 +406,6 @@ $(top_srcdir)/configure: @MAINTAINER_MODE_TRUE@ $(am__configure_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
-gladeui.rc: $(top_builddir)/config.status $(srcdir)/gladeui.rc.in
-	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 install-libLTLIBRARIES: $(lib_LTLIBRARIES)
 	@$(NORMAL_INSTALL)
 	test -z "$(libdir)" || $(MKDIR_P) "$(DESTDIR)$(libdir)"
@@ -968,9 +965,6 @@ uninstall-am: uninstall-libLTLIBRARIES
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags uninstall uninstall-am uninstall-libLTLIBRARIES
 
-
-gladeui-win32-res.o: gladeui.rc
-	$(WINDRES) $< $@
 
 # gladeui.def: auto-generated DEF file for linker input
 # The routines below will scan the header files and extracts symbol declarations.
