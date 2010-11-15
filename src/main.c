@@ -69,6 +69,13 @@ static GOptionEntry debug_option_entries[] =
   { NULL }
 };
 
+static gboolean filter = FALSE;
+static GOptionEntry monsia3_entries[] = 
+{
+  { "filter", 0, 0, G_OPTION_ARG_NONE, &filter, N_("filter"), NULL },
+  { NULL }
+};
+
 int
 main (int argc, char *argv[])
 {
@@ -100,6 +107,8 @@ main (int argc, char *argv[])
 	g_option_group_add_entries (option_group, option_entries);
 	g_option_context_set_main_group (option_context, option_group);
 	g_option_group_set_translation_domain (option_group, GETTEXT_PACKAGE);
+
+    g_option_context_add_main_entries(option_context, monsia3_entries, GETTEXT_PACKAGE);
 
 	option_group = g_option_group_new ("debug",
 					   N_("Glade debug options"),
@@ -155,14 +164,33 @@ main (int argc, char *argv[])
 	gtk_window_set_default_icon_name ("glade-3");
 	
 	glade_setup_log_handlers ();
-	
-	
+
 	window = GLADE_WINDOW (glade_window_new ());
 	
 	if (without_devhelp == FALSE)
 		glade_window_check_devhelp (window);
-	
-	
+
+	if (filter) {
+		if (files != NULL)
+		{
+			guint i;
+			for (i=0; files[i] ; ++i)
+			{
+				if (g_file_test (files[i], G_FILE_TEST_EXISTS) != FALSE) {
+					GladeProject *project = glade_project_load(files[i]);
+					GError *err = NULL;
+					glade_project_save(project,files[i],&err);
+                    err = NULL;
+				} else {
+					g_warning (_("Unable to open '%s', the file does not exist.\n"), files[i]);
+				}
+			}
+			g_strfreev (files);
+		}
+		exit(0);
+	}
+
+
 	/* load files specified on commandline */
 	if (files != NULL)
 	{

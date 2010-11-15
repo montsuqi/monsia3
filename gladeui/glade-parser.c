@@ -122,14 +122,11 @@ flush_properties(GladeParseState *state)
 		} else if (
                    !xmlStrcmp(attr->name,BAD_CAST("x")) ||
                    !xmlStrcmp(attr->name,BAD_CAST("y")) ) {
-fprintf(stderr,"class[%s] [%s:%s] ",state->widget->classname,attr->name,attr->value);
             if (!xmlStrcmp(state->widget->classname,BAD_CAST("GtkPandaWindow"))) {
-fprintf(stderr,"add props\n");
 			  prop.name = attr->name;
 			  prop.value = attr->value;
 			  g_array_append_val(props, prop);
             } else {
-fprintf(stderr,"add child_props\n");
 			  prop.name = attr->name;
 			  prop.value = attr->value;
 			  g_array_append_val(child_props, prop);
@@ -509,7 +506,7 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 		} else if (!xmlStrcmp(name, BAD_CAST("modifiers"))) {
 			const xmlChar *pos = state->content->str;
 			const xmlChar *shift = "GDK_SHIFT_MASK";
-			const xmlChar *ctrl = "GDK_CTRL_MASK";
+			const xmlChar *ctrl = "GDK_CONTROL_MASK";
 			const xmlChar *mod1 = "GDK_MOD1_MASK";
 			state->accel_info->modifiers = 0;
 			while (pos[0]) {
