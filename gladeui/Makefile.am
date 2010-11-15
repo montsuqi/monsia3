@@ -81,42 +81,6 @@ libmonsia3_la_CFLAGS =    \
 libmonsia3_la_LDFLAGS = -version-info $(GLADE_CURRENT):$(GLADE_REVISION):$(GLADE_AGE) $(AM_LDFLAGS)
 libmonsia3_la_LIBADD = $(GTK_LIBS)
 
-
-libgladeuiincludedir=$(includedir)/libgladeui-1.0/gladeui
-libgladeuiinclude_HEADERS = \
-	glade.h \
-	glade-debug.h \
-	glade-project.h \
-	glade-inspector.h \
-	glade-parameter.h \
-	glade-placeholder.h \
-	glade-custom.h \
-	glade-editor.h \
-	glade-editor-property.h \
-	glade-signal-editor.h \
-	glade-palette.h \
-	glade-palette-item.h \
-	glade-design-layout.h \
-	glade-design-view.h \
-	glade-widget.h \
-	glade-widget-adaptor.h \
-	glade-property.h \
-	glade-property-class.h \
-	glade-utils.h \
-	glade-clipboard.h \
-	glade-clipboard-view.h \
-	glade-command.h \
-	glade-app.h \
-	glade-builtins.h \
-	glade-fixed.h \
-	glade-base-editor.h \
-	glade-xml-utils.h \
-	glade-parser.h \
-	glade-signal.h \
-	glade-cursor.h \
-	glade-widget-action.h
-	
-
 if PLATFORM_WIN32
 libmonsia3_la_LDFLAGS += -no-undefined
 endif

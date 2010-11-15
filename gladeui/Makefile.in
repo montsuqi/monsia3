@@ -14,7 +14,6 @@
 
 @SET_MAKE@
 
-
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkglibdir = $(libdir)/@PACKAGE@
@@ -39,8 +38,8 @@ target_triplet = @target@
 @NATIVE_WIN32_FALSE@libmonsia3_la_DEPENDENCIES =  \
 @NATIVE_WIN32_FALSE@	$(am__DEPENDENCIES_1)
 subdir = gladeui
-DIST_COMMON = $(libgladeuiinclude_HEADERS) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in $(srcdir)/gladeui.rc.in
+DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+	$(srcdir)/gladeui.rc.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
 	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/configure.ac
@@ -55,8 +54,7 @@ am__vpath_adj = case $$p in \
     *) f=$$p;; \
   esac;
 am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
-am__installdirs = "$(DESTDIR)$(libdir)" \
-	"$(DESTDIR)$(libgladeuiincludedir)"
+am__installdirs = "$(DESTDIR)$(libdir)"
 libLTLIBRARIES_INSTALL = $(INSTALL)
 LTLIBRARIES = $(lib_LTLIBRARIES)
 am__DEPENDENCIES_1 =
@@ -110,8 +108,6 @@ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	$(LDFLAGS) -o $@
 SOURCES = $(libmonsia3_la_SOURCES)
 DIST_SOURCES = $(libmonsia3_la_SOURCES)
-libgladeuiincludeHEADERS_INSTALL = $(INSTALL_HEADER)
-HEADERS = $(libgladeuiinclude_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -375,40 +371,6 @@ libmonsia3_la_LDFLAGS = -version-info \
 	$(GLADE_CURRENT):$(GLADE_REVISION):$(GLADE_AGE) $(AM_LDFLAGS) \
 	$(am__append_1) $(am__append_2)
 libmonsia3_la_LIBADD = $(GTK_LIBS)
-libgladeuiincludedir = $(includedir)/libgladeui-1.0/gladeui
-libgladeuiinclude_HEADERS = \
-	glade.h \
-	glade-debug.h \
-	glade-project.h \
-	glade-inspector.h \
-	glade-parameter.h \
-	glade-placeholder.h \
-	glade-custom.h \
-	glade-editor.h \
-	glade-editor-property.h \
-	glade-signal-editor.h \
-	glade-palette.h \
-	glade-palette-item.h \
-	glade-design-layout.h \
-	glade-design-view.h \
-	glade-widget.h \
-	glade-widget-adaptor.h \
-	glade-property.h \
-	glade-property-class.h \
-	glade-utils.h \
-	glade-clipboard.h \
-	glade-clipboard-view.h \
-	glade-command.h \
-	glade-app.h \
-	glade-builtins.h \
-	glade-fixed.h \
-	glade-base-editor.h \
-	glade-xml-utils.h \
-	glade-parser.h \
-	glade-signal.h \
-	glade-cursor.h \
-	glade-widget-action.h
-
 @NATIVE_WIN32_TRUE@libmonsia3_la_DEPENDENCIES = gladeui-win32-res.o gladeui.def
 CLEANFILES = $(BUILT_SOURCES) gladeui.def
 all: $(BUILT_SOURCES)
@@ -822,23 +784,6 @@ mostlyclean-libtool:
 
 clean-libtool:
 	-rm -rf .libs _libs
-install-libgladeuiincludeHEADERS: $(libgladeuiinclude_HEADERS)
-	@$(NORMAL_INSTALL)
-	test -z "$(libgladeuiincludedir)" || $(MKDIR_P) "$(DESTDIR)$(libgladeuiincludedir)"
-	@list='$(libgladeuiinclude_HEADERS)'; for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  f=$(am__strip_dir) \
-	  echo " $(libgladeuiincludeHEADERS_INSTALL) '$$d$$p' '$(DESTDIR)$(libgladeuiincludedir)/$$f'"; \
-	  $(libgladeuiincludeHEADERS_INSTALL) "$$d$$p" "$(DESTDIR)$(libgladeuiincludedir)/$$f"; \
-	done
-
-uninstall-libgladeuiincludeHEADERS:
-	@$(NORMAL_UNINSTALL)
-	@list='$(libgladeuiinclude_HEADERS)'; for p in $$list; do \
-	  f=$(am__strip_dir) \
-	  echo " rm -f '$(DESTDIR)$(libgladeuiincludedir)/$$f'"; \
-	  rm -f "$(DESTDIR)$(libgladeuiincludedir)/$$f"; \
-	done
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
@@ -916,9 +861,9 @@ distdir: $(DISTFILES)
 check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-am
-all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+all-am: Makefile $(LTLIBRARIES)
 installdirs:
-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(libgladeuiincludedir)"; do \
+	for dir in "$(DESTDIR)$(libdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: $(BUILT_SOURCES)
@@ -969,7 +914,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-libgladeuiincludeHEADERS
+install-data-am:
 
 install-dvi: install-dvi-am
 
@@ -1005,8 +950,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-libLTLIBRARIES \
-	uninstall-libgladeuiincludeHEADERS
+uninstall-am: uninstall-libLTLIBRARIES
 
 .MAKE: install-am install-strip
 
@@ -1017,14 +961,12 @@ uninstall-am: uninstall-libLTLIBRARIES \
 	install install-am install-data install-data-am install-dvi \
 	install-dvi-am install-exec install-exec-am install-html \
 	install-html-am install-info install-info-am \
-	install-libLTLIBRARIES install-libgladeuiincludeHEADERS \
-	install-man install-pdf install-pdf-am install-ps \
-	install-ps-am install-strip installcheck installcheck-am \
-	installdirs maintainer-clean maintainer-clean-generic \
-	mostlyclean mostlyclean-compile mostlyclean-generic \
-	mostlyclean-libtool pdf pdf-am ps ps-am tags uninstall \
-	uninstall-am uninstall-libLTLIBRARIES \
-	uninstall-libgladeuiincludeHEADERS
+	install-libLTLIBRARIES install-man install-pdf install-pdf-am \
+	install-ps install-ps-am install-strip installcheck \
+	installcheck-am installdirs maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-compile \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	tags uninstall uninstall-am uninstall-libLTLIBRARIES
 
 
 gladeui-win32-res.o: gladeui.rc

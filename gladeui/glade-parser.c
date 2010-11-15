@@ -111,18 +111,18 @@ flush_properties(GladeParseState *state)
 	for (i = 0; i < g_list_length(state->widget->attrs); i++) {
 		attr = (GladeAttribute*)g_list_nth_data(state->widget->attrs,i);
 		if (
-			!xmlStrcmp(attr->name,BAD_CAST("left_attach")) ||
-			!xmlStrcmp(attr->name,BAD_CAST("right_attach")) ||
-			!xmlStrcmp(attr->name,BAD_CAST("top_attach")) ||
-			!xmlStrcmp(attr->name,BAD_CAST("bottom_attach"))
+			!strcmp(attr->name,"left_attach") ||
+			!strcmp(attr->name,"right_attach") ||
+			!strcmp(attr->name,"top_attach") ||
+			!strcmp(attr->name,"bottom_attach")
 		) {
 			prop.name = attr->name;
 			prop.value = attr->value;
 			g_array_append_val(child_props, prop);
 		} else if (
-                   !xmlStrcmp(attr->name,BAD_CAST("x")) ||
-                   !xmlStrcmp(attr->name,BAD_CAST("y")) ) {
-            if (!xmlStrcmp(state->widget->classname,BAD_CAST("GtkPandaWindow"))) {
+                   !strcmp(attr->name,"x") ||
+                   !strcmp(attr->name,"y") ) {
+            if (!strcmp(state->widget->classname,"GtkPandaWindow")) {
 			  prop.name = attr->name;
 			  prop.value = attr->value;
 			  g_array_append_val(props, prop);
@@ -131,38 +131,38 @@ flush_properties(GladeParseState *state)
 			  prop.value = attr->value;
 			  g_array_append_val(child_props, prop);
             }
-		} else if (!xmlStrcmp(attr->name,BAD_CAST("width"))) {
-			prop.name = xmlStrdup("width_request");
+		} else if (!strcmp(attr->name,"width")) {
+			prop.name = strdup("width_request");
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
-		} else if (!xmlStrcmp(attr->name,BAD_CAST("height"))) {
-			prop.name = xmlStrdup("height_request");
+		} else if (!strcmp(attr->name,"height")) {
+			prop.name = strdup("height_request");
 			prop.value = attr->value;
 			g_array_append_val(props, prop);
-		} else if (!xmlStrcmp(attr->name,BAD_CAST("input_mode"))) {
+		} else if (!strcmp(attr->name,"input_mode")) {
             gchar *buf = g_malloc0(64);
 			prop.name = attr->name;
             sprintf(buf,"GTK_PANDA_ENTRY_%s",attr->value);
 			prop.value = buf;
 			g_array_append_val(props, prop);
-		} else if (!xmlStrcmp(attr->name,BAD_CAST("type"))) {
+		} else if (!strcmp(attr->name,"type")) {
 			prop.name = attr->name;
-			if (!xmlStrcmp(attr->value,BAD_CAST("GTK_WINDOW_DIALOG"))) {
+			if (!strcmp(attr->value,"GTK_WINDOW_DIALOG")) {
 				prop.value = "popup";
 			} else {
 				prop.value = "toplevel";
 			}
 			g_array_append_val(props, prop);
-		} else if (!xmlStrcmp(attr->name,BAD_CAST("position"))) {
+		} else if (!strcmp(attr->name,"position")) {
 			prop.name = "window_position";
-			if (!xmlStrcmp(attr->value,BAD_CAST("GTK_WIN_POS_CENTER"))) {
+			if (!strcmp(attr->value,"GTK_WIN_POS_CENTER")) {
 				prop.value = "center";
 			} else {
 				prop.value = "none";
 			}
 			g_array_append_val(props, prop);
-		} else if (!xmlStrcmp(attr->name,BAD_CAST("child_name"))) {
-			if (!xmlStrcmp(attr->value,BAD_CAST("Notebook:tab"))) {
+		} else if (!strcmp(attr->name,"child_name")) {
+			if (!strcmp(attr->value,"Notebook:tab")) {
 			  prop.name = "type";
 			  prop.value = "tab";
 			  g_array_append_val(child_props, prop);
@@ -170,8 +170,8 @@ flush_properties(GladeParseState *state)
 			  prop.value = "False";
 			  g_array_append_val(child_props, prop);
 			}
-		} else if (!xmlStrcmp(state->widget->classname,BAD_CAST("GtkRadioButton")) &&
-                   !xmlStrcmp(attr->name,BAD_CAST("group"))) {
+		} else if (!strcmp(state->widget->classname,"GtkRadioButton") &&
+                   !strcmp(attr->name,"group")) {
 			gchar *groupname = (gchar*)g_hash_table_lookup(state->group_table,attr->value);
 			if (groupname != NULL) {
 				prop.value = groupname;
@@ -265,8 +265,6 @@ static void
 glade_parser_start_element(GladeParseState *state,
 			   const xmlChar *name, const xmlChar **attrs)
 {
-    gint i;
-
     GLADE_NOTE(PARSER, g_message("<%s> in state %s",
 				 name, state_names[state->state]));
 
@@ -379,8 +377,6 @@ glade_parser_start_element(GladeParseState *state,
 static void
 glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 {
-    GladePropInfo prop;
-
     GLADE_NOTE(PARSER, g_message("</%s> in state %s",
 				 name, state_names[state->state]));
 
@@ -420,9 +416,9 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 		} else {
 			GladeAttribute *attr = g_new0(GladeAttribute, 1);
 			attr->name = 
-				glade_xml_alloc_string(state->interface, name);
+				g_strdup(name);
 			attr->value = 
-				glade_xml_alloc_string(state->interface, state->content->str);
+				g_strdup(state->content->str);
 			state->widget->attrs = 
 				g_list_append(state->widget->attrs, attr);
 		}
@@ -497,17 +493,17 @@ glade_parser_end_element(GladeParseState *state, const xmlChar *name)
 			state->accel_info = g_new0(GladeAccelInfo, 1);
 		}
 		if (!xmlStrcmp(name, BAD_CAST("key")) && 
-			!xmlStrncmp(state->content->str, "GDK_",4)) {
+			!strncmp(state->content->str, "GDK_",4)) {
 			state->accel_info->key = 
 				gdk_keyval_from_name(CAST_BAD(&state->content->str[4]));
 		} else if (!xmlStrcmp(name, BAD_CAST("signal"))) {
 			state->accel_info->signal = 
 				glade_xml_alloc_string(state->interface, state->content->str);
 		} else if (!xmlStrcmp(name, BAD_CAST("modifiers"))) {
-			const xmlChar *pos = state->content->str;
-			const xmlChar *shift = "GDK_SHIFT_MASK";
-			const xmlChar *ctrl = "GDK_CONTROL_MASK";
-			const xmlChar *mod1 = "GDK_MOD1_MASK";
+			const xmlChar *pos   = BAD_CAST(state->content->str);
+			const xmlChar *shift = BAD_CAST("GDK_SHIFT_MASK");
+			const xmlChar *ctrl  = BAD_CAST("GDK_CONTROL_MASK");
+			const xmlChar *mod1  = BAD_CAST("GDK_MOD1_MASK");
 			state->accel_info->modifiers = 0;
 			while (pos[0]) {
 				if (!xmlStrncmp(pos, shift, xmlStrlen(shift))) {
@@ -923,7 +919,7 @@ dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *c
 {
     xmlNode *widget, *node;
     xmlNode *child;
-    gint i, j;
+    gint i;
     gboolean f_child_tag = FALSE;
 
     if (info == NULL) {
@@ -1114,7 +1110,7 @@ static xmlDoc *
 glade_interface_make_doc_panda (GladeInterface *interface)
 {
     xmlDoc *doc;
-    xmlNode *root, *comment, *node1, *node2;
+    xmlNode *root, *node1, *node2;
     gint i;
     gchar *name;
 
@@ -1517,9 +1513,8 @@ glade_parser_interface_dump (GladeInterface *interface,
 			     const gchar *filename,
 			     GError **error)
 {
-	GIOChannel *fd;
 	gpointer buffer;
-	gint     size, retval = G_IO_STATUS_ERROR;
+	gint     size;
     gchar *env;
    
     env = getenv("OUTPUT_GLADE_3_FORMAT");

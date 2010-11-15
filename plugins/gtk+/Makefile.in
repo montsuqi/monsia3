@@ -15,7 +15,6 @@
 @SET_MAKE@
 
 
-
 VPATH = @srcdir@
 pkgdatadir = $(datadir)/@PACKAGE@
 pkglibdir = $(libdir)/@PACKAGE@
@@ -37,8 +36,7 @@ host_triplet = @host@
 target_triplet = @target@
 @PLATFORM_WIN32_TRUE@am__append_1 = -no-undefined
 subdir = plugins/gtk+
-DIST_COMMON = $(libgladegtkinclude_HEADERS) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in
+DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gtk-doc.m4 \
 	$(top_srcdir)/m4/intltool.m4 $(top_srcdir)/configure.ac
@@ -54,8 +52,7 @@ am__vpath_adj = case $$p in \
   esac;
 am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
 am__installdirs = "$(DESTDIR)$(gladegtkdir)" \
-	"$(DESTDIR)$(catalogsdir)" \
-	"$(DESTDIR)$(libgladegtkincludedir)"
+	"$(DESTDIR)$(catalogsdir)"
 gladegtkLTLIBRARIES_INSTALL = $(INSTALL)
 LTLIBRARIES = $(gladegtk_LTLIBRARIES)
 am__DEPENDENCIES_1 =
@@ -88,8 +85,6 @@ RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
 	ps-recursive uninstall-recursive
 catalogsDATA_INSTALL = $(INSTALL_DATA)
 DATA = $(catalogs_DATA)
-libgladegtkincludeHEADERS_INSTALL = $(INSTALL_HEADER)
-HEADERS = $(libgladegtkinclude_HEADERS)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 ETAGS = etags
@@ -298,8 +293,6 @@ libgladegtk_la_SOURCES = glade-gtk.c fixed-bg.xpm
 libgladegtk_la_LDFLAGS = -module -avoid-version $(AM_LDFLAGS) \
 	$(am__append_1)
 libgladegtk_la_LIBADD = $(libgladeui) $(GTK_LIBS)
-libgladegtkincludedir = $(includedir)/libgladeui-1.0/gladeui
-libgladegtkinclude_HEADERS = glade-gtk.h
 
 # catalog data
 catalogsdir = $(pkgdatadir)/catalogs
@@ -426,23 +419,6 @@ uninstall-catalogsDATA:
 	  f=$(am__strip_dir) \
 	  echo " rm -f '$(DESTDIR)$(catalogsdir)/$$f'"; \
 	  rm -f "$(DESTDIR)$(catalogsdir)/$$f"; \
-	done
-install-libgladegtkincludeHEADERS: $(libgladegtkinclude_HEADERS)
-	@$(NORMAL_INSTALL)
-	test -z "$(libgladegtkincludedir)" || $(MKDIR_P) "$(DESTDIR)$(libgladegtkincludedir)"
-	@list='$(libgladegtkinclude_HEADERS)'; for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  f=$(am__strip_dir) \
-	  echo " $(libgladegtkincludeHEADERS_INSTALL) '$$d$$p' '$(DESTDIR)$(libgladegtkincludedir)/$$f'"; \
-	  $(libgladegtkincludeHEADERS_INSTALL) "$$d$$p" "$(DESTDIR)$(libgladegtkincludedir)/$$f"; \
-	done
-
-uninstall-libgladegtkincludeHEADERS:
-	@$(NORMAL_UNINSTALL)
-	@list='$(libgladegtkinclude_HEADERS)'; for p in $$list; do \
-	  f=$(am__strip_dir) \
-	  echo " rm -f '$(DESTDIR)$(libgladegtkincludedir)/$$f'"; \
-	  rm -f "$(DESTDIR)$(libgladegtkincludedir)/$$f"; \
 	done
 
 # This directory's subdirectories are mostly independent; you can cd
@@ -620,10 +596,10 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-recursive
-all-am: Makefile $(LTLIBRARIES) $(DATA) $(HEADERS)
+all-am: Makefile $(LTLIBRARIES) $(DATA)
 installdirs: installdirs-recursive
 installdirs-am:
-	for dir in "$(DESTDIR)$(gladegtkdir)" "$(DESTDIR)$(catalogsdir)" "$(DESTDIR)$(libgladegtkincludedir)"; do \
+	for dir in "$(DESTDIR)$(gladegtkdir)" "$(DESTDIR)$(catalogsdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-recursive
@@ -672,8 +648,7 @@ info: info-recursive
 
 info-am:
 
-install-data-am: install-catalogsDATA install-gladegtkLTLIBRARIES \
-	install-libgladegtkincludeHEADERS
+install-data-am: install-catalogsDATA install-gladegtkLTLIBRARIES
 
 install-dvi: install-dvi-recursive
 
@@ -709,8 +684,7 @@ ps: ps-recursive
 
 ps-am:
 
-uninstall-am: uninstall-catalogsDATA uninstall-gladegtkLTLIBRARIES \
-	uninstall-libgladegtkincludeHEADERS
+uninstall-am: uninstall-catalogsDATA uninstall-gladegtkLTLIBRARIES
 
 .MAKE: $(RECURSIVE_CLEAN_TARGETS) $(RECURSIVE_TARGETS) install-am \
 	install-strip
@@ -724,14 +698,13 @@ uninstall-am: uninstall-catalogsDATA uninstall-gladegtkLTLIBRARIES \
 	install-data install-data-am install-dvi install-dvi-am \
 	install-exec install-exec-am install-gladegtkLTLIBRARIES \
 	install-html install-html-am install-info install-info-am \
-	install-libgladegtkincludeHEADERS install-man install-pdf \
-	install-pdf-am install-ps install-ps-am install-strip \
-	installcheck installcheck-am installdirs installdirs-am \
-	maintainer-clean maintainer-clean-generic mostlyclean \
-	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
-	pdf pdf-am ps ps-am tags tags-recursive uninstall uninstall-am \
-	uninstall-catalogsDATA uninstall-gladegtkLTLIBRARIES \
-	uninstall-libgladegtkincludeHEADERS
+	install-man install-pdf install-pdf-am install-ps \
+	install-ps-am install-strip installcheck installcheck-am \
+	installdirs installdirs-am maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-compile \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	tags tags-recursive uninstall uninstall-am \
+	uninstall-catalogsDATA uninstall-gladegtkLTLIBRARIES
 
 
 # don't use
