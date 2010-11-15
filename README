@@ -26,6 +26,7 @@ monsia0からの変更点
  * GnomeFileEntry -> GtkPandaFileEntry
  * GnomePixmap    -> GtkPandaPixmap
  * GtkPandaPS     -> GtkPandaPDF
+ * GtkWindow      -> GtkPandaWindow
 
 % GtkRadioButtonのgroupプロパティ
 
@@ -33,7 +34,7 @@ monsia0では、GtkRadioButtonのgroupプロパティに任意の文字列が設
 そのため旧gladeファイルの読み込み時にgroupプロパティを任意文字列からウィジェット名に変換しています。
 またglade出力時にもgroupプロパティにはウィジェット名を指定します。
 
-% GtkWindowのプロパティ
+% GtkWindow(GtkPandaWindow)のプロパティ
 
 ウィンドウタイプ
 
@@ -52,51 +53,6 @@ monsia0では、GtkRadioButtonのgroupプロパティに任意の文字列が設
     * GTK_WIN_POS_CENTER_ON_PARENT
   などが追加されていまが、追加されたプロパティはGTK_WIN_POS_NONEと解釈してgladeファイルに出力します。
 
-  またmonsia0ではウィンドウの座標位置が指定可能でしたが、Gtk+2.0では廃止されているため指定できません。
-  そのため旧gladeファイルの修正をした際にウィンドウの座標位置の指定が失われることに注意が必要です。
-
-wmclass_nameおよびwmclass_classの廃止
-
-  Gtk+2.0では、wmclass_nameおよびwmclass_classプロパティは廃止されています。
-
-日レセで利用可能なウィジェット
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * トップレベル
-   * GtkWindow
-
- * コンテナ
-   * GtkHBox
-   * GtkVBox
-   * GtkTable
-   * GtkNoteBook
-   * GtkFrame
-   * GtkFixed
-   * GtkScrolledWindow
-
- * コントロールと表示
-   * GtkButton
-   * GtkToggleButton
-   * GtkCheckButton
-   * GtkRadioButton
-   * GtkLabel
-   * GtkCalendar
-   * GtkProgressBar
-   * GtkHSeparetor 
-   * GtkVSeparetor 
-
- * Gtk+Pandaウィジェット
-   * GtkNumberEntry
-   * GtkPandaCList
-   * GtkPandaCombo
-   * GtkPandaDownload
-   * GtkPandaEntry
-   * GtkPandaFileEntry
-   * GtkPandaHTML
-   * GtkPandaPDF
-   * GktPandaText
-   * GtkPandaTimer
-   * GtkPandaPixmap
-
 出力するgladeファイルの違い
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 monsia3はGtk+2.0のウィジェットを編集しているので、monsia0(=Gtk+1.2)には存在しないプロパティが多数gladeファイルに含まれる場合があります。
@@ -107,9 +63,9 @@ monsia3はGtk+2.0のウィジェットを編集しているので、monsia0(=Gtk
 日レセの画面定義体の場合、以下の2つのパターンのいずれかである必要があります。
 この2パターン以外の場合は、クライアントが正常に動作しません。
 
- * GtkWindow(GTK_WINDOW_TOPLEVEL)
+ * GtkPandaWindow(GTK_WINDOW_TOPLEVEL)
    + GtkFixed[1024x744]
      + GtkWidget...
 
- * GtkWindow(GTK_WINDOW_POPUP)
+ * GtkPandaWindow(GTK_WINDOW_POPUP)
    + GtkWidget...

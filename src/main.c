@@ -190,6 +190,7 @@ main (int argc, char *argv[])
 		exit(0);
 	}
 
+	putenv("GTK_PANDA_HTML_DISABLE=1");
 
 	/* load files specified on commandline */
 	if (files != NULL)
