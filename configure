@@ -24089,7 +24089,7 @@ fi
 
 
 
-ac_config_files="$ac_config_files Makefile data/monsia3.desktop.in data/Makefile data/icons/Makefile gladeui/Makefile src/Makefile plugins/Makefile plugins/gtk+/Makefile plugins/gtk+/icons/Makefile plugins/gtk+/icons/16x16/Makefile plugins/gtk+/icons/22x22/Makefile plugins/panda/Makefile plugins/panda/icons/Makefile plugins/panda/icons/16x16/Makefile plugins/panda/icons/22x22/Makefile po/Makefile.in"
+ac_config_files="$ac_config_files Makefile gladeui/Makefile src/Makefile plugins/Makefile plugins/gtk+/Makefile plugins/gtk+/icons/Makefile plugins/gtk+/icons/16x16/Makefile plugins/gtk+/icons/22x22/Makefile plugins/panda/Makefile plugins/panda/icons/Makefile plugins/panda/icons/16x16/Makefile plugins/panda/icons/22x22/Makefile po/Makefile.in"
 
 
 cat >confcache <<\_ACEOF
@@ -24752,9 +24752,6 @@ do
     "intltool") CONFIG_COMMANDS="$CONFIG_COMMANDS intltool" ;;
     "default-1") CONFIG_COMMANDS="$CONFIG_COMMANDS default-1" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
-    "data/monsia3.desktop.in") CONFIG_FILES="$CONFIG_FILES data/monsia3.desktop.in" ;;
-    "data/Makefile") CONFIG_FILES="$CONFIG_FILES data/Makefile" ;;
-    "data/icons/Makefile") CONFIG_FILES="$CONFIG_FILES data/icons/Makefile" ;;
     "gladeui/Makefile") CONFIG_FILES="$CONFIG_FILES gladeui/Makefile" ;;
     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
     "plugins/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/Makefile" ;;
