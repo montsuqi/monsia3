@@ -15,14 +15,47 @@
 
     <glade-widget-class name="GtkNumberEntry" generic-name="numberentry" _title="GtkNumberEntry">
       <properties>
-        <property id="invisible-char" disabled="True"/>
+        <property id="activates-default" disabled="True"/>
+        <property id="buffer" disabled="True"/>
+        <property id="caps-lock-warning" disabled="True"/>
+        <property id="cursor-position" disabled="True"/>
+        <property id="editable" disabled="False"/>
         <property id="has-frame" disabled="True"/>
+        <property id="im-module" disabled="True"/>
+        <property id="inner-border" disabled="True"/>
+        <property id="invisible-char" disabled="True"/>
+        <property id="invisible-char-set" disabled="True"/>
+        <property id="max-length" disabled="True"/>
+        <property id="overwrite-mode" disabled="True"/>
+        <property id="primary-icon-activatable" disabled="True"/>
+        <property id="primary-icon-gicon" disabled="True"/>
+        <property id="primary-icon-name" disabled="True"/>
+        <property id="primary-icon-pixbuf" disabled="True"/>
+        <property id="primary-icon-sensitive" disabled="True"/>
+        <property id="primary-icon-stock" disabled="True"/>
+        <property id="primary-icon-storage-type" disabled="True"/>
+        <property id="primary-icon-tooltip-markup" disabled="True"/>
+        <property id="primary-icon-tooltip-text" disabled="True"/>
+        <property id="progress-fraction" disabled="True"/>
+        <property id="progress-pulse-step" disabled="True"/>
+        <property id="scroll-offset" disabled="True"/>
+        <property id="secondary-icon-activatable" disabled="True"/>
+        <property id="secondary-icon-gicon" disabled="True"/>
+        <property id="secondary-icon-name" disabled="True"/>
+        <property id="secondary-icon-pixbuf" disabled="True"/>
+        <property id="secondary-icon-sensitive" disabled="True"/>
+        <property id="secondary-icon-stock" disabled="True"/>
+        <property id="secondary-icon-storage-type" disabled="True"/>
+        <property id="secondary-icon-tooltip-markup" disabled="True"/>
+        <property id="secondary-icon-tooltip-text" disabled="True"/>
         <property id="shadow-type" disabled="True"/>
         <property id="text" disabled="True"/>
-        <property id="max-length" disabled="True"/>
+        <property id="text-length" disabled="True"/>
         <property id="truncate-multiline" disabled="True"/>
         <property id="width-chars" disabled="True"/>
         <property id="xalign" disabled="True"/>
+        <property id="editing-canceled" disabled="True" />
+        <property id="editing-canceled" disabled="True" />
       </properties>
     </glade-widget-class>
 
@@ -65,23 +98,27 @@
         <property id="search-column" disabled="True"/>
         <property id="show-expanders" disabled="True"/>
         <property id="tooltip-column" disabled="True" default="False"/>
+        <property id="editing-canceled" disabled="True" default="False"/>
       </properties>
     </glade-widget-class>
 
     <glade-widget-class name="GtkPandaCombo" generic-name="pandacombo" _title="GtkPandaCombo">
       <post-create-function>glade_gtk_panda_combo_post_create</post-create-function>
       <properties>
-        <property id="active" disabled="True" default="False"/>
-        <property id="add-tearoffs" disabled="True" default="False"/>
-        <property id="button-sensitivity" disabled="True" default="False"/>
-        <property id="column-span-column" disabled="True" default="False"/>
-        <property id="focus-on-click" disabled="True" default="False"/>
-        <property id="has-frame" disabled="True" default="False"/>
-        <property id="model" disabled="True" default="False"/>
-        <property id="popup-shown" disabled="True" default="False"/>
-        <property id="row-span-column" disabled="True" default="False"/>
-        <property id="tearoff-title" disabled="True" default="False"/>
-        <property id="wrap-width" disabled="True" default="False"/>
+        <property id="active" disabled="True" />
+        <property id="add-tearoffs" disabled="True"/>
+        <property id="button-sensitivity" disabled="True" />
+        <property id="column-span-column" disabled="True" />
+        <property id="focus-on-click" disabled="True" />
+        <property id="has-frame" disabled="True" />
+        <property id="model" disabled="True" />
+        <property id="popup-shown" disabled="True" />
+        <property id="row-span-column" disabled="True"/>
+        <property id="tearoff-title" disabled="True" />
+        <property id="wrap-width" disabled="True" />
+        <property id="editing-canceled" disabled="True" />
+        <property id="editing-canceled" disabled="True" />
+        <property id="button-sensitivity" disabled="True" default="GTK_SENSITIVITY_ON" />
       </properties>
     </glade-widget-class>
 
@@ -96,12 +133,47 @@
             <value id="GTK_PANDA_ENTRY_XIM" _name="XIM"/>
           </displayable-values>
         </property>
-        <property id="invisible-char" disabled="True"/>
+        <property id="activates-default" disabled="True"/>
+        <property id="buffer" disabled="True"/>
+        <property id="caps-lock-warning" disabled="True"/>
+        <property id="cursor-position" disabled="True"/>
+        <property id="editable" disabled="False"/>
         <property id="has-frame" disabled="True"/>
+        <property id="im-module" disabled="True"/>
+        <property id="inner-border" disabled="True"/>
+        <property id="invisible-char" disabled="True"/>
+        <property id="invisible-char-set" disabled="True"/>
+        <property id="max-length" disabled="True"/>
+        <property id="overwrite-mode" disabled="True"/>
+        <property id="primary-icon-activatable" disabled="True"/>
+        <property id="primary-icon-gicon" disabled="True"/>
+        <property id="primary-icon-name" disabled="True"/>
+        <property id="primary-icon-pixbuf" disabled="True"/>
+        <property id="primary-icon-sensitive" disabled="True"/>
+        <property id="primary-icon-stock" disabled="True"/>
+        <property id="primary-icon-storage-type" disabled="True"/>
+        <property id="primary-icon-tooltip-markup" disabled="True"/>
+        <property id="primary-icon-tooltip-text" disabled="True"/>
+        <property id="progress-fraction" disabled="True"/>
+        <property id="progress-pulse-step" disabled="True"/>
+        <property id="scroll-offset" disabled="True"/>
+        <property id="secondary-icon-activatable" disabled="True"/>
+        <property id="secondary-icon-gicon" disabled="True"/>
+        <property id="secondary-icon-name" disabled="True"/>
+        <property id="secondary-icon-pixbuf" disabled="True"/>
+        <property id="secondary-icon-sensitive" disabled="True"/>
+        <property id="secondary-icon-stock" disabled="True"/>
+        <property id="secondary-icon-storage-type" disabled="True"/>
+        <property id="secondary-icon-tooltip-markup" disabled="True"/>
+        <property id="secondary-icon-tooltip-text" disabled="True"/>
         <property id="shadow-type" disabled="True"/>
+        <property id="text" disabled="False"/>
+        <property id="text-length" visible="True" disabled="False"/>
         <property id="truncate-multiline" disabled="True"/>
         <property id="width-chars" disabled="True"/>
         <property id="xalign" disabled="True"/>
+        <property id="editing-canceled" disabled="True" />
+        <property id="editing-canceled" disabled="True" />
       </properties>
     </glade-widget-class>
 
@@ -112,6 +184,9 @@
         <property id="size" disabled="True"/>
         <property id="homogeneous" disabled="True"/>
         <property id="spacing" disabled="True"/>
+        <property id="orientation" disabled="True"/>
+        <property id="orientation" disabled="True"/>
+        <property id="orientation" disabled="True"/>
       </properties>
     </glade-widget-class>
 
@@ -120,6 +195,9 @@
         <property id="size" disabled="True"/>
         <property id="homogeneous" disabled="True"/>
         <property id="spacing" disabled="True"/>
+        <property id="orientation" disabled="True"/>
+        <property id="orientation" disabled="True"/>
+        <property id="orientation" disabled="True"/>
       </properties>
     </glade-widget-class>
 
@@ -128,6 +206,9 @@
         <property id="size" disabled="True"/>
         <property id="homogeneous" disabled="True"/>
         <property id="spacing" disabled="True"/>
+        <property id="orientation" disabled="True"/>
+        <property id="orientation" disabled="True"/>
+        <property id="orientation" disabled="True"/>
       </properties>
     </glade-widget-class>
 
