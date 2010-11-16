@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-_Name=Glade Interface Designer
+_Name=monsia3
 _GenericName=User Interface Designer
 _Comment=Create or open user interface designs for GTK+ applications
 Exec=monsia3 %F
