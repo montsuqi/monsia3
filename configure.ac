@@ -163,6 +163,8 @@ if test "$native_win32" = "yes"; then
   fi
 fi
 
+AM_LDFLAGS=-g -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
 AC_SUBST([AM_CPPFLAGS])
 AC_SUBST([AM_CFLAGS])
 AC_SUBST([AM_CXXFLAGS])

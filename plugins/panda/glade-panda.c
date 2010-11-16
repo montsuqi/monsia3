@@ -21,6 +21,7 @@
  */
 
 #include <config.h>
+#include <string.h>
 
 #include <gladeui/glade.h>
 #include <gladeui/glade-editor-property.h>
@@ -90,7 +91,6 @@ glade_gtk_panda_clist_add_child (GladeWidgetAdaptor  *adaptor,
 {
 	GtkPandaCList *clist = GTK_PANDA_CLIST(parent);
 	GtkTreeViewColumn *column;
-	GList *list = NULL;
 	GtkWidget *_child;
 	int i;
 
@@ -120,7 +120,6 @@ glade_gtk_panda_clist_remove_child (GladeWidgetAdaptor  *adaptor,
 	GtkPandaCList *clist = GTK_PANDA_CLIST(parent);
 	GtkTreeViewColumn *column;
 	GtkWidget *_child;
-	GList *list = NULL;
 	int i;
 
 	for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
@@ -142,7 +141,6 @@ glade_gtk_panda_clist_replace_child (GladeWidgetAdaptor *adaptor,
 	GtkPandaCList *clist = GTK_PANDA_CLIST(container);
 	GtkTreeViewColumn *column;
 	GtkWidget *_child;
-	GList *list = NULL;
 	int i;
 	GladeWidget  *gchild;
 
@@ -166,7 +164,6 @@ GList *
 glade_gtk_panda_clist_get_children (GladeWidgetAdaptor  *adaptor,
 				  GObject        *object)
 {
-	GladeWidget *gclist = glade_widget_get_from_gobject (object);
 	GtkPandaCList *clist = GTK_PANDA_CLIST(object);
 	GtkTreeViewColumn *column;
 	GtkWidget *child;
@@ -188,10 +185,9 @@ glade_gtk_panda_clist_get_internal_child (GladeWidgetAdaptor *adaptor,
 				  GObject            *object, 
 				  const gchar        *name)
 {
-	GladeWidget *gclist = glade_widget_get_from_gobject (object);
 	GtkPandaCList *clist = GTK_PANDA_CLIST(object);
 	GtkTreeViewColumn *column;
-	GObject *child;
+	GObject *child = NULL;
 	int i;
 
 	for(i = 0; i < gtk_panda_clist_get_columns(clist); i++) {
@@ -241,7 +237,6 @@ glade_gtk_panda_clist_set_property (GladeWidgetAdaptor *adaptor,
 			    const gchar        *id,
 			    const GValue       *value)
 {
-	GladeWidget *gclist = glade_widget_get_from_gobject (object);
 	GtkPandaCList *clist = GTK_PANDA_CLIST(object);
 	GtkTreeViewColumn *column;
 	GtkWidget *child;
