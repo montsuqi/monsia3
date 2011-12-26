@@ -1748,6 +1748,7 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkCalendar"/>
 <!--
     <glade-widget-class-ref name="GtkMenu"/>
+-->
     <glade-widget-class-ref name="GtkHSeparator"/>
     <glade-widget-class-ref name="GtkVSeparator"/>
     <glade-widget-class-ref name="GtkArrow"/>
@@ -1755,7 +1756,6 @@ embedded in another object</_tooltip>
     
     <glade-widget-class-ref name="GtkRecentChooserWidget"/>
     <glade-widget-class-ref name="GtkFileChooserWidget"/>
--->
   </glade-widget-group>
 
   <!-- don't use gtk-obsolete
