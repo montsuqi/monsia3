@@ -1706,7 +1706,9 @@ embedded in another object</_tooltip>
 <!--
     <glade-widget-class-ref name="GtkSpinButton"/>
     <glade-widget-class-ref name="GtkRadioButton"/>
+-->
     <glade-widget-class-ref name="GtkFileChooserButton"/>
+<!--
     <glade-widget-class-ref name="GtkColorButton"/>
     <glade-widget-class-ref name="GtkFontButton"/>
     <glade-widget-class-ref name="GtkLinkButton"/>
@@ -1751,11 +1753,13 @@ embedded in another object</_tooltip>
 -->
     <glade-widget-class-ref name="GtkHSeparator"/>
     <glade-widget-class-ref name="GtkVSeparator"/>
+<!--
     <glade-widget-class-ref name="GtkArrow"/>
     <glade-widget-class-ref name="GtkDrawingArea"/>
     
     <glade-widget-class-ref name="GtkRecentChooserWidget"/>
     <glade-widget-class-ref name="GtkFileChooserWidget"/>
+-->
   </glade-widget-group>
 
   <!-- don't use gtk-obsolete

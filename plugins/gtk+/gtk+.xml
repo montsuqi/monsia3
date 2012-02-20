@@ -1636,6 +1636,8 @@
     <glade-widget-class-ref name="GtkToggleButton"/>
     <glade-widget-class-ref name="GtkCheckButton"/>
 
+    <glade-widget-class-ref name="GtkFileChooserButton"/>
+
 
 
     
@@ -1647,6 +1649,9 @@
 
 
     <glade-widget-class-ref name="GtkCalendar"/>
+
+    <glade-widget-class-ref name="GtkHSeparator"/>
+    <glade-widget-class-ref name="GtkVSeparator"/>
 
   </glade-widget-group>
 
