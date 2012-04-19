@@ -1636,6 +1636,7 @@
     <glade-widget-class-ref name="GtkToggleButton"/>
     <glade-widget-class-ref name="GtkCheckButton"/>
 
+    <glade-widget-class-ref name="GtkRadioButton"/>
     <glade-widget-class-ref name="GtkFileChooserButton"/>
 
 

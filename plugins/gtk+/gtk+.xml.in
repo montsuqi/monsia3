@@ -1705,8 +1705,8 @@ embedded in another object</_tooltip>
     <glade-widget-class-ref name="GtkCheckButton"/>
 <!--
     <glade-widget-class-ref name="GtkSpinButton"/>
-    <glade-widget-class-ref name="GtkRadioButton"/>
 -->
+    <glade-widget-class-ref name="GtkRadioButton"/>
     <glade-widget-class-ref name="GtkFileChooserButton"/>
 <!--
     <glade-widget-class-ref name="GtkColorButton"/>
