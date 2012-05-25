@@ -46,4 +46,14 @@ typedef struct _GladeProject   GladeProject;
 #include <gladeui/glade-builtins.h>
 #include <gladeui/glade-fixed.h>
 
+
+#ifdef	GLOBALMAIN
+#define	GLOBAL		/*	*/
+#else
+#define	GLOBAL		extern
+#endif
+
+GLOBAL gboolean DO_SNAP_GRID;
+#define GRID_SIZE 8
+
 #endif /* __GLADE_H__ */

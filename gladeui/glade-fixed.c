@@ -91,6 +91,9 @@ typedef struct {
 #define GRAB_BORDER_WIDTH  7
 #define GRAB_CORNER_WIDTH  7
 
+#define GLOBALMAIN 1
+DO_SNAP_GRID = TRUE;
+
 static GObjectClass *parent_class;
 static guint         glade_fixed_signals[FIXED_SIGNALS];
 
@@ -276,6 +279,19 @@ glade_fixed_handle_swindow (GladeFixed   *fixed,
 	}
 }
 
+static gint
+snap(gint x)
+{
+	gint m;
+	m = x % GRID_SIZE;
+	if (m < (GRID_SIZE/2)) {
+		x -= m;
+	} else {
+		x += (GRID_SIZE-m);
+	}
+	return x;
+}
+
 static void
 glade_fixed_configure_widget (GladeFixed   *fixed,
 			      GladeWidget  *child)
@@ -309,6 +325,10 @@ glade_fixed_configure_widget (GladeFixed   *fixed,
 			x - fixed->pointer_x_origin;
 		new_area.y = fixed->child_y_origin + 
 			y - fixed->pointer_y_origin;
+		if(DO_SNAP_GRID) {
+			new_area.x = snap(new_area.x);
+			new_area.y = snap(new_area.y);
+		}
 
 	} else {
 
@@ -317,6 +337,9 @@ glade_fixed_configure_widget (GladeFixed   *fixed,
 			new_area.height =
 				fixed->child_height_origin +
 				(y - fixed->pointer_y_origin);
+			if(DO_SNAP_GRID) {
+				new_area.height = snap(new_area.height);
+			}
 		} else if (top)
 		{
 
@@ -326,6 +349,10 @@ glade_fixed_configure_widget (GladeFixed   *fixed,
 			new_area.y =
 				fixed->child_y_origin +
 				(y - fixed->pointer_y_origin);
+			if(DO_SNAP_GRID) {
+				new_area.height = snap(new_area.height);
+				new_area.y = snap(new_area.y);
+			}
 		}
 
 		if (right) 
@@ -333,6 +360,9 @@ glade_fixed_configure_widget (GladeFixed   *fixed,
 			new_area.width =
 				fixed->child_width_origin +
 				(x - fixed->pointer_x_origin);
+			if(DO_SNAP_GRID) {
+				new_area.width = snap(new_area.width);
+			}
 		} else if (left)
 		{
 			new_area.width =
@@ -341,6 +371,10 @@ glade_fixed_configure_widget (GladeFixed   *fixed,
 			new_area.x =
 				fixed->child_x_origin + 
 				(x - fixed->pointer_x_origin);
+			if(DO_SNAP_GRID) {
+				new_area.width = snap(new_area.width);
+				new_area.x = snap(new_area.x);
+			}
 		}
 	}
 

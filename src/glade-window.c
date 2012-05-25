@@ -1926,6 +1926,12 @@ on_dock_resized (GtkWidget         *window,
 }
 
 static void
+toggle_snap_grid_cb (GtkAction *action, GladeWindow *window)
+{
+	DO_SNAP_GRID = !DO_SNAP_GRID;
+}
+
+static void
 toggle_dock_cb (GtkAction *action, GladeWindow *window)
 {
 	GtkWidget *toplevel;
@@ -2167,6 +2173,8 @@ static const gchar ui_info[] =
 "      <menuitem action='DockPalette'/>"
 "      <menuitem action='DockInspector'/>"
 "      <menuitem action='DockEditor'/>"
+"      <separator/>"
+"      <menuitem action='SnapGrid'/>"
 "    </menu>"
 "    <menu action='ProjectMenu'>"
 "      <menuitem action='PreviousProject'/>"
@@ -2298,6 +2306,10 @@ static GtkToggleActionEntry view_entries[] = {
 	{ "DockEditor", NULL, N_("Dock _Editor"), NULL,
 	  N_("Dock the editor into the main window"),
 	  G_CALLBACK (toggle_dock_cb), TRUE },
+
+	{ "SnapGrid", NULL, N_("Snap _Grid"), NULL,
+	  N_("Snap to grid"),
+	  G_CALLBACK (toggle_snap_grid_cb), TRUE },
 
 };
 static guint n_view_entries = G_N_ELEMENTS (view_entries);

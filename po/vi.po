@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glade3 TRUNK\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-09 10:46+0900\n"
+"POT-Creation-Date: 2012-05-25 15:51+0900\n"
 "PO-Revision-Date: 2008-01-04 18:55+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
@@ -17,21 +17,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: LocFactoryEditor 1.7b1\n"
 
-#: ../data/glade-3.desktop.in.in.h:1
-msgid "Create or open user interface designs for GTK+ applications"
-msgstr "Tạo hay mở bản đồ án thiết kế giao diện người dùng cho ứng dụng GTK+"
-
-#: ../data/glade-3.desktop.in.in.h:2
-msgid "Glade Interface Designer"
-msgstr "Bộ thiết kế giao diện Glade"
-
-#: ../data/glade-3.desktop.in.in.h:3 ../src/glade-window.c:440
-msgid "User Interface Designer"
-msgstr "Bộ thiết kế giao diện người dùng"
-
 #: ../src/main.c:42
-msgid "Glade"
-msgstr "Glade"
+msgid "monsia3"
+msgstr ""
 
 #: ../src/main.c:52
 msgid "Output version information and exit"
@@ -49,29 +37,34 @@ msgstr "[FILE...]"
 msgid "be verbose"
 msgstr "xuất chi tiết"
 
-#: ../src/main.c:93
+#: ../src/main.c:75
+#, fuzzy
+msgid "filter"
+msgstr "Sau"
+
+#: ../src/main.c:100
 msgid "Create or edit user interface designs for GTK+ or GNOME applications."
 msgstr "Tạo hay mở thiết kế giao diện người dùng cho ứng dụng GTK+."
 
-#: ../src/main.c:97 ../src/main.c:98
+#: ../src/main.c:104 ../src/main.c:105
 msgid "Glade options"
 msgstr "Tùy chọn Glade"
 
-#: ../src/main.c:105
+#: ../src/main.c:114
 msgid "Glade debug options"
 msgstr "Tùy chọn gỡ lỗi Glade"
 
-#: ../src/main.c:106
+#: ../src/main.c:115
 msgid "Show Glade debug options"
 msgstr "Hiện các tùy chọn Glade về gỡ lỗi"
 
-#: ../src/main.c:149
+#: ../src/main.c:158
 msgid ""
 "gmodule support not found. gmodule support is required for glade to work"
 msgstr ""
 "không tìm thấy cách hỗ trợ gmodule, mà cần thiết cho trình glade hoạt động"
 
-#: ../src/main.c:176
+#: ../src/main.c:185 ../src/main.c:205
 #, c-format
 msgid "Unable to open '%s', the file does not exist.\n"
 msgstr "Không thể mở « %s » vì tập tin đó không tồn tại.\n"
@@ -89,6 +82,10 @@ msgstr "Không thể hiển thị địa chỉ URL « %s »"
 msgid "No suitable web browser could be found."
 msgstr "Không tìm thấy trình duyệt Mạng thích hợp."
 
+#: ../src/glade-window.c:440
+msgid "User Interface Designer"
+msgstr "Bộ thiết kế giao diện người dùng"
+
 #. translators: referring to the properties of a widget named '%s [%s]'
 #: ../src/glade-window.c:669
 #, c-format
@@ -96,7 +93,7 @@ msgid "%s [%s] - Properties"
 msgstr "%s [%s] - Thuộc tính"
 
 #: ../src/glade-window.c:682 ../src/glade-window.c:688
-#: ../src/glade-window.c:3121 ../src/glade-window.c:3127
+#: ../src/glade-window.c:3133 ../src/glade-window.c:3139
 #: ../gladeui/glade-widget.c:1053
 msgid "Properties"
 msgstr "Thuộc tính"
@@ -198,11 +195,11 @@ msgstr "Lỗi lưu %s vào « %s »: %s"
 msgid "Save…"
 msgstr "Lưu…"
 
-#: ../src/glade-window.c:2015
+#: ../src/glade-window.c:2021
 msgid "Could not display the online user manual"
 msgstr "Không thể hiển thị sổ tay người dùng trực tuyến"
 
-#: ../src/glade-window.c:2018 ../src/glade-window.c:2056
+#: ../src/glade-window.c:2024 ../src/glade-window.c:2062
 #, c-format
 msgid ""
 "No suitable web browser executable could be found to be executed and to "
@@ -211,11 +208,11 @@ msgstr ""
 "Không tìm thấy trình duyệt Mạng thích hợp chạy được để chạy và hiển thị địa "
 "chỉ URL: %s"
 
-#: ../src/glade-window.c:2053
+#: ../src/glade-window.c:2059
 msgid "Could not display the online developer reference manual"
 msgstr "Không thể hiển thị sổ tay nhà phát triển trực tuyến"
 
-#: ../src/glade-window.c:2096
+#: ../src/glade-window.c:2102
 msgid ""
 "Glade is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
@@ -246,298 +243,306 @@ msgstr ""
 "51 Franklin Street, Fifth Floor,\n"
 "Boston, MA  02110-1301, USA (Mỹ)."
 
-#: ../src/glade-window.c:2122
+#: ../src/glade-window.c:2128
 msgid "translator-credits"
 msgstr "Nhóm Việt hoá GNOME <gnomevi-list@lists.sourceforge.net>"
 
-#: ../src/glade-window.c:2123
+#: ../src/glade-window.c:2129
 msgid "A user interface designer for GTK+ and GNOME."
 msgstr "Bộ thiết kế giao diện người dùng cho GTK+ và GNOME."
 
 #. File
-#: ../src/glade-window.c:2196 ../plugins/gtk+/glade-gtk.c:5133
+#: ../src/glade-window.c:2204 ../plugins/gtk+/glade-gtk.c:5133
 #: ../plugins/gtk+/glade-gtk.c:5456
 msgid "_File"
 msgstr "_Tập tin"
 
 #. Edit
-#: ../src/glade-window.c:2197 ../plugins/gtk+/glade-gtk.c:5136
+#: ../src/glade-window.c:2205 ../plugins/gtk+/glade-gtk.c:5136
 #: ../plugins/gtk+/glade-gtk.c:5466
 msgid "_Edit"
 msgstr "_Hiệu chỉnh"
 
 #. View
-#: ../src/glade-window.c:2198 ../plugins/gtk+/glade-gtk.c:5139
+#: ../src/glade-window.c:2206 ../plugins/gtk+/glade-gtk.c:5139
 #: ../plugins/gtk+/glade-gtk.c:5474
 msgid "_View"
 msgstr "_Xem"
 
-#: ../src/glade-window.c:2199
+#: ../src/glade-window.c:2207
 msgid "_Projects"
 msgstr "_Dự án"
 
 #. Help
-#: ../src/glade-window.c:2200 ../plugins/gtk+/glade-gtk.c:5151
+#: ../src/glade-window.c:2208 ../plugins/gtk+/glade-gtk.c:5151
 #: ../plugins/gtk+/glade-gtk.c:5477
 msgid "_Help"
 msgstr "Trợ _giúp"
 
-#: ../src/glade-window.c:2206
+#: ../src/glade-window.c:2214
 msgid "Create a new project"
 msgstr "Tạo một dự án mới."
 
-#: ../src/glade-window.c:2208
+#: ../src/glade-window.c:2216
 msgid "_Open…"
 msgstr "_Mở…"
 
-#: ../src/glade-window.c:2209
+#: ../src/glade-window.c:2217
 msgid "Open a project"
 msgstr "Mở một dự án"
 
-#: ../src/glade-window.c:2211
+#: ../src/glade-window.c:2219
 msgid "Open _Recent"
 msgstr "Mở _gần đây"
 
-#: ../src/glade-window.c:2214
+#: ../src/glade-window.c:2222
 msgid "Quit the program"
 msgstr "Thoát khỏi chương trình"
 
 #. ViewMenu
-#: ../src/glade-window.c:2217
+#: ../src/glade-window.c:2225
 msgid "Palette _Appearance"
 msgstr "_Diện mạo hộp"
 
-#: ../src/glade-window.c:2221
+#: ../src/glade-window.c:2229
 msgid "About this application"
 msgstr "Giới thiệu về ứng dụng này"
 
-#: ../src/glade-window.c:2223
+#: ../src/glade-window.c:2231
 msgid "_Contents"
 msgstr "_Nội dung"
 
-#: ../src/glade-window.c:2224
+#: ../src/glade-window.c:2232
 msgid "Display the user manual"
 msgstr "Hiển thị sổ tay người dùng"
 
-#: ../src/glade-window.c:2226
+#: ../src/glade-window.c:2234
 msgid "_Developer Reference"
 msgstr "Tham chiếu _phát triển"
 
-#: ../src/glade-window.c:2227
+#: ../src/glade-window.c:2235
 msgid "Display the developer reference manual"
 msgstr "Hiển thị sổ tay tham chiếu nhà phát triển"
 
-#: ../src/glade-window.c:2236
+#: ../src/glade-window.c:2244
 msgid "Save the current project"
 msgstr "Lưu dự án hiện thời"
 
-#: ../src/glade-window.c:2238
+#: ../src/glade-window.c:2246
 msgid "Save _As…"
 msgstr "Lưu _dạng…"
 
-#: ../src/glade-window.c:2239
+#: ../src/glade-window.c:2247
 msgid "Save the current project with a different name"
 msgstr "Lưu dự án hiện thời có tên khác"
 
-#: ../src/glade-window.c:2242
+#: ../src/glade-window.c:2250
 msgid "Close the current project"
 msgstr "Đóng dự án hiện thời"
 
-#: ../src/glade-window.c:2246
+#: ../src/glade-window.c:2254
 msgid "Undo the last action"
 msgstr "Hủy hành động cuối cùng"
 
-#: ../src/glade-window.c:2249
+#: ../src/glade-window.c:2257
 msgid "Redo the last action"
 msgstr "Làm lại hành động cuối cùng"
 
-#: ../src/glade-window.c:2252
+#: ../src/glade-window.c:2260
 msgid "Cut the selection"
 msgstr "Cắt vùng chọn"
 
-#: ../src/glade-window.c:2255
+#: ../src/glade-window.c:2263
 msgid "Copy the selection"
 msgstr "Sao chép vùng chọn"
 
-#: ../src/glade-window.c:2258
+#: ../src/glade-window.c:2266
 msgid "Paste the clipboard"
 msgstr "Dán bảng nháp"
 
-#: ../src/glade-window.c:2261
+#: ../src/glade-window.c:2269
 msgid "Delete the selection"
 msgstr "Xoá vùng chọn"
 
 #. ViewMenu
-#: ../src/glade-window.c:2265
+#: ../src/glade-window.c:2273
 msgid "_Clipboard"
 msgstr "_Bảng nháp"
 
-#: ../src/glade-window.c:2266
+#: ../src/glade-window.c:2274
 msgid "Show the clipboard"
 msgstr "Hiện bảng nháp"
 
 #. ProjectsMenu
-#: ../src/glade-window.c:2270
+#: ../src/glade-window.c:2278
 msgid "_Previous Project"
 msgstr "Dự án t_rước"
 
-#: ../src/glade-window.c:2271
+#: ../src/glade-window.c:2279
 msgid "Activate previous project"
 msgstr "Kích hoạt dự án trước"
 
-#: ../src/glade-window.c:2273
+#: ../src/glade-window.c:2281
 msgid "_Next Project"
 msgstr "Dự án _kế"
 
-#: ../src/glade-window.c:2274
+#: ../src/glade-window.c:2282
 msgid "Activate next project"
 msgstr "Kích hoạt dự án kế tiếp"
 
-#: ../src/glade-window.c:2282
+#: ../src/glade-window.c:2290
 msgid "_Use Small Icons"
 msgstr "Biể_u tượng nhỏ"
 
-#: ../src/glade-window.c:2283
+#: ../src/glade-window.c:2291
 msgid "Show items using small icons"
 msgstr "Hiện mục bằng biểu tượng nhỏ"
 
-#: ../src/glade-window.c:2286
+#: ../src/glade-window.c:2294
 msgid "Context _Help"
 msgstr "Trợ g_iúp ngữ cảnh"
 
-#: ../src/glade-window.c:2287
+#: ../src/glade-window.c:2295
 msgid "Show or hide contextual help buttons in the editor"
 msgstr "Ẩn/hiện các cái nút trợ giúp ngữ cảnh trong bộ soạn thảo"
 
-#: ../src/glade-window.c:2290
+#: ../src/glade-window.c:2298
 msgid "Dock _Palette"
 msgstr "Thả neo _bảng chọn"
 
-#: ../src/glade-window.c:2291
+#: ../src/glade-window.c:2299
 msgid "Dock the palette into the main window"
 msgstr "Thả neo bảng chọn vào cửa sổ chính"
 
-#: ../src/glade-window.c:2294
+#: ../src/glade-window.c:2302
 msgid "Dock _Inspector"
 msgstr "Thả neo bộ _xem xét"
 
-#: ../src/glade-window.c:2295
+#: ../src/glade-window.c:2303
 msgid "Dock the inspector into the main window"
 msgstr "Thả neo bộ xem xét vào cửa sổ chính"
 
-#: ../src/glade-window.c:2298
+#: ../src/glade-window.c:2306
 msgid "Dock _Editor"
 msgstr "Thả neo bộ chỉnh _sửa"
 
-#: ../src/glade-window.c:2299
+#: ../src/glade-window.c:2307
 msgid "Dock the editor into the main window"
 msgstr "Thả neo bộ chỉnh sửa vào cửa sổ chính"
 
-#: ../src/glade-window.c:2307 ../plugins/gtk+/gtk+.xml.in.h:410
+#: ../src/glade-window.c:2310
+msgid "Snap _Grid"
+msgstr ""
+
+#: ../src/glade-window.c:2311
+msgid "Snap to grid"
+msgstr ""
+
+#: ../src/glade-window.c:2319 ../plugins/gtk+/gtk+.xml.in.h:424
 msgid "Text beside icons"
 msgstr "Văn bản ở cạnh biểu tượng"
 
-#: ../src/glade-window.c:2308
+#: ../src/glade-window.c:2320
 msgid "Display items as text beside icons"
 msgstr "Hiện mục dạng văn bản ở cạnh biểu tượng"
 
-#: ../src/glade-window.c:2310
+#: ../src/glade-window.c:2322
 msgid "_Icons only"
 msgstr "Chỉ b_iểu tượng"
 
-#: ../src/glade-window.c:2311
+#: ../src/glade-window.c:2323
 msgid "Display items as icons only"
 msgstr "Hiện mục chỉ dạng biểu tượng"
 
-#: ../src/glade-window.c:2313
+#: ../src/glade-window.c:2325
 msgid "_Text only"
 msgstr "Chỉ _văn bản"
 
-#: ../src/glade-window.c:2314
+#: ../src/glade-window.c:2326
 msgid "Display items as text only"
 msgstr "Hiện mục chỉ dạng văn bản"
 
-#: ../src/glade-window.c:2501
+#: ../src/glade-window.c:2513
 msgid "Select"
 msgstr "Chọn"
 
-#: ../src/glade-window.c:2505
+#: ../src/glade-window.c:2517
 msgid "Select widgets in the workspace"
 msgstr "Chọn ô điều khiển trong vùng làm việc"
 
-#: ../src/glade-window.c:2529
+#: ../src/glade-window.c:2541
 msgid "Drag Resize"
 msgstr "Kéo đổi cỡ"
 
-#: ../src/glade-window.c:2533
+#: ../src/glade-window.c:2545
 msgid "Drag and resize widgets in the workspace"
 msgstr "Kéo và thay đổi kích cỡ của ô điều khiển trong vùng làm việc"
 
-#: ../src/glade-window.c:2571
+#: ../src/glade-window.c:2583
 msgid "Could not create a new project."
 msgstr "Không thể tạo một dự án mới."
 
-#: ../src/glade-window.c:2625
+#: ../src/glade-window.c:2637
 #, c-format
 msgid "The project %s has unsaved changes"
 msgstr "Dự án %s có thay đổi chưa lưu"
 
-#: ../src/glade-window.c:2629
+#: ../src/glade-window.c:2641
 msgid "If you reload it, all unsaved changes could be lost. Reload it anyway?"
 msgstr ""
 "Nạp lại thì tất cả các thay đổi chưa lưu có thể bị mất. Vẫn còn nạp lại "
 "không?"
 
-#: ../src/glade-window.c:2638
+#: ../src/glade-window.c:2650
 #, c-format
 msgid "The project file %s has been externally modified"
 msgstr "Tập tin dự án %s đã bị sửa đổi bên ngoài"
 
-#: ../src/glade-window.c:2642
+#: ../src/glade-window.c:2654
 msgid "Do you want to reload the project?"
 msgstr "Bạn có muốn nạp lại dự án không?"
 
-#: ../src/glade-window.c:2648
+#: ../src/glade-window.c:2660
 msgid "_Reload"
 msgstr "Nạp _lại"
 
-#: ../src/glade-window.c:2765
+#: ../src/glade-window.c:2777
 msgid "_Undo"
 msgstr "_Hồi lại"
 
 #. Change tooltips
-#: ../src/glade-window.c:2767 ../gladeui/glade-app.c:268
+#: ../src/glade-window.c:2779 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Undo: %s"
 msgstr "Hồi lại: %s"
 
-#: ../src/glade-window.c:2767 ../src/glade-window.c:2778
+#: ../src/glade-window.c:2779 ../src/glade-window.c:2790
 #: ../gladeui/glade-app.c:269
 msgid "the last action"
 msgstr "hành động cuối cùng"
 
-#: ../src/glade-window.c:2776
+#: ../src/glade-window.c:2788
 msgid "_Redo"
 msgstr "_Làm lại"
 
-#: ../src/glade-window.c:2778 ../gladeui/glade-app.c:268
+#: ../src/glade-window.c:2790 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Redo: %s"
 msgstr "Làm lại: %s"
 
-#: ../src/glade-window.c:3058
+#: ../src/glade-window.c:3070
 msgid "Go back in undo history"
 msgstr "Lùi lại trong lược sử hủy bước"
 
-#: ../src/glade-window.c:3060
+#: ../src/glade-window.c:3072
 msgid "Go forward in undo history"
 msgstr "Tiếp tới trong lược sử hủy bước"
 
-#: ../src/glade-window.c:3106
+#: ../src/glade-window.c:3118
 msgid "Palette"
 msgstr "Bảng chọn"
 
-#: ../src/glade-window.c:3117
+#: ../src/glade-window.c:3129
 msgid "Inspector"
 msgstr "Bộ xem xét"
 
@@ -650,7 +655,7 @@ msgid "You cannot delete a widget internal to a composite widget."
 msgstr ""
 "Bạn không thể xoá bỏ một ô điều khiển là một phần của ô điều khiển ghép."
 
-#: ../gladeui/glade-builtins.c:265 ../plugins/gtk+/gtk+.xml.in.h:396
+#: ../gladeui/glade-builtins.c:265 ../plugins/gtk+/gtk+.xml.in.h:410
 msgid "Stock"
 msgstr "Kho"
 
@@ -658,7 +663,7 @@ msgstr "Kho"
 msgid "A builtin stock item"
 msgstr "Mục kho có sẵn"
 
-#: ../gladeui/glade-builtins.c:274 ../plugins/gtk+/gtk+.xml.in.h:398
+#: ../gladeui/glade-builtins.c:274 ../plugins/gtk+/gtk+.xml.in.h:412
 msgid "Stock Image"
 msgstr "Ảnh kho"
 
@@ -768,7 +773,7 @@ msgstr "Xoá %s con ra %s"
 msgid "Reorder %s's children"
 msgstr "Sắp xếp lại các điều con của %s"
 
-#: ../gladeui/glade-base-editor.c:1435 ../plugins/gtk+/gtk+.xml.in.h:219
+#: ../gladeui/glade-base-editor.c:1435 ../plugins/gtk+/gtk+.xml.in.h:233
 msgid "Label"
 msgstr "Nhãn"
 
@@ -786,7 +791,7 @@ msgstr "Tên :"
 msgid "Type :"
 msgstr "Kiểu :"
 
-#: ../gladeui/glade-clipboard-view.c:209 ../plugins/gtk+/gtk+.xml.in.h:451
+#: ../gladeui/glade-clipboard-view.c:209 ../plugins/gtk+/gtk+.xml.in.h:464
 msgid "Widget"
 msgstr "Ô điều khiển"
 
@@ -1077,7 +1082,7 @@ msgstr "Vùng phím"
 msgid "Functions"
 msgstr "Hàm"
 
-#: ../gladeui/glade-editor-property.c:3253 ../plugins/gtk+/gtk+.xml.in.h:284
+#: ../gladeui/glade-editor-property.c:3253 ../plugins/gtk+/gtk+.xml.in.h:298
 msgid "Other"
 msgstr "Khác"
 
@@ -1087,7 +1092,7 @@ msgstr "Khác"
 msgid "<choose a key>"
 msgstr "<chọn một phím>"
 
-#: ../gladeui/glade-editor-property.c:3457 ../plugins/gtk+/gtk+.xml.in.h:246
+#: ../gladeui/glade-editor-property.c:3457 ../plugins/gtk+/gtk+.xml.in.h:260
 msgid "None"
 msgstr "Không có"
 
@@ -1227,48 +1232,48 @@ msgstr "_Bỏ chọn hết"
 msgid "Property _Description:"
 msgstr "_Mô tả thuộc tính:"
 
-#: ../gladeui/glade-fixed.c:482 ../plugins/gtk+/glade-gtk.c:1677
+#: ../gladeui/glade-fixed.c:516 ../plugins/gtk+/glade-gtk.c:1677
 #, c-format
 msgid "Placing %s inside %s"
 msgstr "Đang để %s bên trong %s"
 
-#: ../gladeui/glade-fixed.c:971
+#: ../gladeui/glade-fixed.c:1005
 msgid "X position property"
 msgstr "Thuộc tính vị trí X"
 
-#: ../gladeui/glade-fixed.c:972
+#: ../gladeui/glade-fixed.c:1006
 msgid "The property used to set the X position of a child object"
 msgstr "Thuộc tính dùng để đặt vị trí X của đối tượng con."
 
-#: ../gladeui/glade-fixed.c:978
+#: ../gladeui/glade-fixed.c:1012
 msgid "Y position property"
 msgstr "Thuộc tính vị trí Y"
 
-#: ../gladeui/glade-fixed.c:979
+#: ../gladeui/glade-fixed.c:1013
 msgid "The property used to set the Y position of a child object"
 msgstr "Thuộc tính dùng để đặt vị trí Y của đối tượng con."
 
-#: ../gladeui/glade-fixed.c:985
+#: ../gladeui/glade-fixed.c:1019
 msgid "Width property"
 msgstr "Thuộc tính rộng"
 
-#: ../gladeui/glade-fixed.c:986
+#: ../gladeui/glade-fixed.c:1020
 msgid "The property used to set the width of a child object"
 msgstr "Thuộc tính dùng để đặt độ rộng của đối tượng con."
 
-#: ../gladeui/glade-fixed.c:992
+#: ../gladeui/glade-fixed.c:1026
 msgid "Height property"
 msgstr "Thuộc tính cao"
 
-#: ../gladeui/glade-fixed.c:993
+#: ../gladeui/glade-fixed.c:1027
 msgid "The property used to set the height of a child object"
 msgstr "Thuộc tính dùng để đặt độ cao của đối tượng con."
 
-#: ../gladeui/glade-fixed.c:999
+#: ../gladeui/glade-fixed.c:1033
 msgid "Can resize"
 msgstr "Đổi cỡ được"
 
-#: ../gladeui/glade-fixed.c:1000
+#: ../gladeui/glade-fixed.c:1034
 msgid "Whether this container supports resizes of child widgets"
 msgstr ""
 "Đồ chứa này có nên hỗ trợ khả năng thay đổi kích cỡ của ô điều khiển con hay "
@@ -1278,17 +1283,17 @@ msgstr ""
 msgid "Widget selector"
 msgstr "Bộ chọn ô điều khiển"
 
-#: ../gladeui/glade-parser.c:670
+#: ../gladeui/glade-parser.c:719
 #, c-format
 msgid "Could not find glade file %s"
 msgstr "Không tìm thấy tập tin Glade %s"
 
-#: ../gladeui/glade-parser.c:702 ../gladeui/glade-parser.c:710
+#: ../gladeui/glade-parser.c:751 ../gladeui/glade-parser.c:759
 #, c-format
 msgid "Errors parsing glade file %s"
 msgstr "Gặp lỗi khi phân tách tập tin Glade %s"
 
-#: ../gladeui/glade-parser.c:1432
+#: ../gladeui/glade-parser.c:1532
 #, c-format
 msgid "Could not allocate memory for interface"
 msgstr "Không thể cấp phát bộ nhớ cho giao diện"
@@ -1345,27 +1350,27 @@ msgid "Click"
 msgstr "Nhấn"
 
 #. Atk click property
-#: ../gladeui/glade-property-class.c:68 ../plugins/gtk+/gtk+.xml.in.h:375
+#: ../gladeui/glade-property-class.c:68 ../plugins/gtk+/gtk+.xml.in.h:389
 msgid "Set the description of the Click atk action"
 msgstr "Đặt mô tả của hành động atk Nhấn (Click)"
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:69 ../plugins/gtk+/gtk+.xml.in.h:297
+#: ../gladeui/glade-property-class.c:69 ../plugins/gtk+/gtk+.xml.in.h:311
 msgid "Press"
 msgstr "Bấm"
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:70 ../plugins/gtk+/gtk+.xml.in.h:377
+#: ../gladeui/glade-property-class.c:70 ../plugins/gtk+/gtk+.xml.in.h:391
 msgid "Set the description of the Press atk action"
 msgstr "Đặt mô tả của hành động atk Bấm (Press)"
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:71 ../plugins/gtk+/gtk+.xml.in.h:312
+#: ../gladeui/glade-property-class.c:71 ../plugins/gtk+/gtk+.xml.in.h:326
 msgid "Release"
 msgstr "Buông"
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:72 ../plugins/gtk+/gtk+.xml.in.h:379
+#: ../gladeui/glade-property-class.c:72 ../plugins/gtk+/gtk+.xml.in.h:393
 msgid "Set the description of the Release atk action"
 msgstr "Đặt mô tả của hành động atk Buông (Release)"
 
@@ -1375,49 +1380,49 @@ msgid "Activate"
 msgstr "Kích hoạt"
 
 #. Atk activate property
-#: ../gladeui/glade-property-class.c:74 ../plugins/gtk+/gtk+.xml.in.h:373
+#: ../gladeui/glade-property-class.c:74 ../plugins/gtk+/gtk+.xml.in.h:387
 msgid "Set the description of the Activate atk action"
 msgstr "Đặt mô tả của hành động atk Kích hoạt (Activate)"
 
 #. Atk relationset properties
-#: ../gladeui/glade-property-class.c:78 ../plugins/gtk+/gtk+.xml.in.h:69
+#: ../gladeui/glade-property-class.c:78 ../plugins/gtk+/gtk+.xml.in.h:83
 msgid "Controlled By"
 msgstr "Bị điều khiển bởi"
 
 #. Atk relationset properties
-#: ../gladeui/glade-property-class.c:79 ../plugins/gtk+/gtk+.xml.in.h:192
+#: ../gladeui/glade-property-class.c:79 ../plugins/gtk+/gtk+.xml.in.h:206
 msgid "Indicates an object controlled by one or more target objects"
 msgstr "Ngụ ý đối tượng bị điều khiển bởi một hay nhiều đối tượng đích"
 
-#: ../gladeui/glade-property-class.c:81 ../plugins/gtk+/gtk+.xml.in.h:70
+#: ../gladeui/glade-property-class.c:81 ../plugins/gtk+/gtk+.xml.in.h:84
 msgid "Controller For"
 msgstr "Bộ điều khiển cho"
 
-#: ../gladeui/glade-property-class.c:82 ../plugins/gtk+/gtk+.xml.in.h:194
+#: ../gladeui/glade-property-class.c:82 ../plugins/gtk+/gtk+.xml.in.h:208
 msgid "Indicates an object is a controller for one or more target objects"
 msgstr "Ngụ ý đối tượng là bộ điều khiển cho một hay nhiều đối tượng đích"
 
-#: ../gladeui/glade-property-class.c:84 ../plugins/gtk+/gtk+.xml.in.h:221
+#: ../gladeui/glade-property-class.c:84 ../plugins/gtk+/gtk+.xml.in.h:235
 msgid "Labelled By"
 msgstr "Bị nhãn bởi"
 
-#: ../gladeui/glade-property-class.c:85 ../plugins/gtk+/gtk+.xml.in.h:197
+#: ../gladeui/glade-property-class.c:85 ../plugins/gtk+/gtk+.xml.in.h:211
 msgid "Indicates an object is labelled by one or more target objects"
 msgstr "Ngụ ý đối tượng bị nhãn bởi một hay nhiều đối tượng đích"
 
-#: ../gladeui/glade-property-class.c:87 ../plugins/gtk+/gtk+.xml.in.h:220
+#: ../gladeui/glade-property-class.c:87 ../plugins/gtk+/gtk+.xml.in.h:234
 msgid "Label For"
 msgstr "Nhãn cho"
 
-#: ../gladeui/glade-property-class.c:88 ../plugins/gtk+/gtk+.xml.in.h:195
+#: ../gladeui/glade-property-class.c:88 ../plugins/gtk+/gtk+.xml.in.h:209
 msgid "Indicates an object is a label for one or more target objects"
 msgstr "Ngụ ý đối tượng là nhãn cho một hay nhiều đối tượng đích"
 
-#: ../gladeui/glade-property-class.c:90 ../plugins/gtk+/gtk+.xml.in.h:233
+#: ../gladeui/glade-property-class.c:90 ../plugins/gtk+/gtk+.xml.in.h:247
 msgid "Member Of"
 msgstr "Thành viên"
 
-#: ../gladeui/glade-property-class.c:91 ../plugins/gtk+/gtk+.xml.in.h:196
+#: ../gladeui/glade-property-class.c:91 ../plugins/gtk+/gtk+.xml.in.h:210
 msgid ""
 "Indicates an object is a member of a group of one or more target objects"
 msgstr ""
@@ -1427,7 +1432,7 @@ msgstr ""
 msgid "Child Node Of"
 msgstr "Nút con"
 
-#: ../gladeui/glade-property-class.c:94 ../plugins/gtk+/gtk+.xml.in.h:193
+#: ../gladeui/glade-property-class.c:94 ../plugins/gtk+/gtk+.xml.in.h:207
 msgid ""
 "Indicates an object is a cell in a treetable which is displayed because a "
 "cell in the same column is expanded and identifies that cell"
@@ -1435,7 +1440,7 @@ msgstr ""
 "Ngụ ý đối tượng là ô trong bảng cây được hiển thị vì ô cùng cột được mở rộng "
 "và ngụ ý ô đó"
 
-#: ../gladeui/glade-property-class.c:97 ../plugins/gtk+/gtk+.xml.in.h:160
+#: ../gladeui/glade-property-class.c:97 ../plugins/gtk+/gtk+.xml.in.h:174
 msgid "Flows To"
 msgstr "Chảy đến"
 
@@ -1447,11 +1452,11 @@ msgstr ""
 "Ngụ ý đối tượng có nội dung luồng hợp lý đến một đối tượng ATK khác bằng "
 "cách tuần tự (v.d. luồng văn bản)."
 
-#: ../gladeui/glade-property-class.c:101 ../plugins/gtk+/gtk+.xml.in.h:159
+#: ../gladeui/glade-property-class.c:101 ../plugins/gtk+/gtk+.xml.in.h:173
 msgid "Flows From"
 msgstr "Chảy từ"
 
-#: ../gladeui/glade-property-class.c:102 ../plugins/gtk+/gtk+.xml.in.h:202
+#: ../gladeui/glade-property-class.c:102 ../plugins/gtk+/gtk+.xml.in.h:216
 msgid ""
 "Indicates that the object has content that flows logically from another "
 "AtkObject in a sequential way, (for instance text-flow)"
@@ -1459,11 +1464,11 @@ msgstr ""
 "Ngụ ý đối tượng có nội dung luồng hợp lý từ một đối tượng ATK khác bằng cách "
 "tuần tự (v.d. luồng chữ)"
 
-#: ../gladeui/glade-property-class.c:105 ../plugins/gtk+/gtk+.xml.in.h:402
+#: ../gladeui/glade-property-class.c:105 ../plugins/gtk+/gtk+.xml.in.h:416
 msgid "Subwindow Of"
 msgstr "Cửa sổ phụ"
 
-#: ../gladeui/glade-property-class.c:106 ../plugins/gtk+/gtk+.xml.in.h:190
+#: ../gladeui/glade-property-class.c:106 ../plugins/gtk+/gtk+.xml.in.h:204
 msgid ""
 "Indicates a subwindow attached to a component but otherwise has no "
 "connection in the UI hierarchy to that component"
@@ -1471,11 +1476,11 @@ msgstr ""
 "Ngụ ý cửa sổ phụ được nối lại với thành phần nhưng mặc khác không kết nối "
 "đến thành phần đó trong phân cấp giao diện người dùng."
 
-#: ../gladeui/glade-property-class.c:109 ../plugins/gtk+/gtk+.xml.in.h:119
+#: ../gladeui/glade-property-class.c:109 ../plugins/gtk+/gtk+.xml.in.h:133
 msgid "Embeds"
 msgstr "Làm nhúng"
 
-#: ../gladeui/glade-property-class.c:110 ../plugins/gtk+/gtk+.xml.in.h:204
+#: ../gladeui/glade-property-class.c:110 ../plugins/gtk+/gtk+.xml.in.h:218
 msgid ""
 "Indicates that the object visually embeds another object's content, i.e. "
 "this object's content flows around another's content"
@@ -1483,11 +1488,11 @@ msgstr ""
 "Ngụ ý đối tượng làm nhúng trực quan nội dung của đối tượng khác, tức là nội "
 "dung đối tượng này chảy quanh nội dung đối tượng khác."
 
-#: ../gladeui/glade-property-class.c:113 ../plugins/gtk+/gtk+.xml.in.h:118
+#: ../gladeui/glade-property-class.c:113 ../plugins/gtk+/gtk+.xml.in.h:132
 msgid "Embedded By"
 msgstr "Nhúng bởi"
 
-#: ../gladeui/glade-property-class.c:114 ../plugins/gtk+/gtk+.xml.in.h:215
+#: ../gladeui/glade-property-class.c:114 ../plugins/gtk+/gtk+.xml.in.h:229
 msgid ""
 "Inverse of 'Embeds', indicates that this object's content is visually "
 "embedded in another object"
@@ -1495,59 +1500,59 @@ msgstr ""
 "Ngược lại « Làm nhúng », ngụ ý nội dung đối tượng nhúng trực quan trong đối "
 "tượng khác."
 
-#: ../gladeui/glade-property-class.c:117 ../plugins/gtk+/gtk+.xml.in.h:293
+#: ../gladeui/glade-property-class.c:117 ../plugins/gtk+/gtk+.xml.in.h:307
 msgid "Popup For"
 msgstr "Bật lên"
 
-#: ../gladeui/glade-property-class.c:118 ../plugins/gtk+/gtk+.xml.in.h:199
+#: ../gladeui/glade-property-class.c:118 ../plugins/gtk+/gtk+.xml.in.h:213
 msgid "Indicates that an object is a popup for another object"
 msgstr "Ngụ ý đối tượng là điều bật lên cho đối tượng khác."
 
-#: ../gladeui/glade-property-class.c:120 ../plugins/gtk+/gtk+.xml.in.h:288
+#: ../gladeui/glade-property-class.c:120 ../plugins/gtk+/gtk+.xml.in.h:302
 msgid "Parent Window Of"
 msgstr "Cửa sổ mẹ"
 
-#: ../gladeui/glade-property-class.c:121 ../plugins/gtk+/gtk+.xml.in.h:198
+#: ../gladeui/glade-property-class.c:121 ../plugins/gtk+/gtk+.xml.in.h:212
 msgid "Indicates that an object is a parent window of another object"
 msgstr "Ngụ ý đối tượng là cửa sổ mẹ của đối tượng khác"
 
-#: ../gladeui/glade-property.c:607
+#: ../gladeui/glade-property.c:623
 msgid "Enabled"
 msgstr "Hoạt động"
 
-#: ../gladeui/glade-property.c:608
+#: ../gladeui/glade-property.c:624
 msgid "If the property is optional, this is its enabled state"
 msgstr "Nếu thuộc tính là tùy chọn, điều này là tính trạng hoạt động của nó"
 
-#: ../gladeui/glade-property.c:614 ../gladeui/glade-widget-action.c:158
+#: ../gladeui/glade-property.c:630 ../gladeui/glade-widget-action.c:158
 msgid "Sensitive"
 msgstr "Nhạy cảm"
 
-#: ../gladeui/glade-property.c:615
+#: ../gladeui/glade-property.c:631
 msgid "This gives backends control to set property sensitivity"
 msgstr "Tính năng này cho phép hậu phương đặt độ nhạy cảm của thuộc tính"
 
-#: ../gladeui/glade-property.c:621
+#: ../gladeui/glade-property.c:637
 msgid "Comment"
 msgstr "Ghi chú"
 
-#: ../gladeui/glade-property.c:622
+#: ../gladeui/glade-property.c:638
 msgid "Comment for translators"
 msgstr "Ghi chú cho người dịch"
 
-#: ../gladeui/glade-property.c:628
+#: ../gladeui/glade-property.c:644
 msgid "Translatable"
 msgstr "Dịch được"
 
-#: ../gladeui/glade-property.c:629
+#: ../gladeui/glade-property.c:645
 msgid "Whether this property is translatable or not"
 msgstr "Có nên thông dịch thuộc tính này hay không."
 
-#: ../gladeui/glade-property.c:635
+#: ../gladeui/glade-property.c:651
 msgid "Has Context"
 msgstr "Có ngữ cảnh"
 
-#: ../gladeui/glade-property.c:636
+#: ../gladeui/glade-property.c:652
 msgid "Whether or not the translatable string has a context prefix"
 msgstr "Chuỗi có khả năng dịch có tiền tố ngữ cảnh hay không"
 
@@ -1679,7 +1684,7 @@ msgstr "Dự án Glade mà ô điều khiển này thuộc về nó."
 msgid "A list of GladeProperties"
 msgstr "Danh sách thuộc tính Glade"
 
-#: ../gladeui/glade-widget.c:1060 ../plugins/gtk+/gtk+.xml.in.h:287
+#: ../gladeui/glade-widget.c:1060 ../plugins/gtk+/gtk+.xml.in.h:301
 msgid "Parent"
 msgstr "Mẹ"
 
@@ -1703,7 +1708,7 @@ msgstr "Mẫu"
 msgid "A GladeWidget template to base a new widget on"
 msgstr "Một mẫu GladeWidget vào đó cần dựa ô điều khiển mới"
 
-#: ../gladeui/glade-widget.c:1081 ../plugins/gtk+/gtk+.xml.in.h:205
+#: ../gladeui/glade-widget.c:1081 ../plugins/gtk+/gtk+.xml.in.h:219
 msgid "Info"
 msgstr "Thông tin"
 
@@ -1764,7 +1769,7 @@ msgstr "Tên giống loài"
 msgid "Used to generate names of new widgets"
 msgstr "Dùng để tạo ra tên của mỗi ô điều khiển mới"
 
-#: ../gladeui/glade-widget-adaptor.c:836 ../plugins/gtk+/gtk+.xml.in.h:179
+#: ../gladeui/glade-widget-adaptor.c:836 ../plugins/gtk+/gtk+.xml.in.h:193
 msgid "Icon Name"
 msgstr "Tên biểu tượng"
 
@@ -1801,7 +1806,7 @@ msgstr ""
 "Giữ tên của thuộc tính gom lại để hiển thị các con đặc biệt cho hạng đồ chứa "
 "này"
 
-#: ../gladeui/glade-widget-adaptor.c:869 ../plugins/gtk+/gtk+.xml.in.h:93
+#: ../gladeui/glade-widget-adaptor.c:869 ../plugins/gtk+/gtk+.xml.in.h:107
 msgid "Cursor"
 msgstr "Con chạy"
 
@@ -2054,11 +2059,11 @@ msgstr "Kích cỡ điểm ảnh được ở trên Kích cỡ Biểu tượng."
 msgid "<separator>"
 msgstr "<bộ ngăn cách>"
 
-#: ../plugins/gtk+/glade-gtk.c:4799 ../plugins/gtk+/gtk+.xml.in.h:247
+#: ../plugins/gtk+/glade-gtk.c:4799 ../plugins/gtk+/gtk+.xml.in.h:261
 msgid "Normal"
 msgstr "Chuẩn"
 
-#: ../plugins/gtk+/glade-gtk.c:4800 ../plugins/gtk+/gtk+.xml.in.h:184
+#: ../plugins/gtk+/glade-gtk.c:4800 ../plugins/gtk+/gtk+.xml.in.h:198
 msgid "Image"
 msgstr "Ảnh"
 
@@ -2192,7 +2197,7 @@ msgstr "Nút"
 msgid "Toggle"
 msgstr "Bật/tắt"
 
-#: ../plugins/gtk+/glade-gtk.c:5684 ../plugins/gtk+/gtk+.xml.in.h:234
+#: ../plugins/gtk+/glade-gtk.c:5684 ../plugins/gtk+/gtk+.xml.in.h:248
 msgid "Menu"
 msgstr "Trình đơn"
 
@@ -2437,19 +2442,33 @@ msgstr "Xác nhận"
 msgid "Container"
 msgstr "Đồ chứa"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:64
+#.
+#. <glade-widget-group name="gtk-toplevels" _title="Toplevels">
+#. <glade-widget-class-ref name="GtkWindow"/>
+#. <glade-widget-class-ref name="GtkDialog"/>
+#. <glade-widget-class-ref name="GtkAboutDialog"/>
+#. <glade-widget-class-ref name="GtkColorSelectionDialog"/>
+#. <glade-widget-class-ref name="GtkFileChooserDialog"/>
+#. <glade-widget-class-ref name="GtkFontSelectionDialog"/>
+#. <glade-widget-class-ref name="GtkInputDialog"/>
+#. <glade-widget-class-ref name="GtkMessageDialog"/>
+#. <glade-widget-class-ref name="GtkRecentChooserDialog"/>
+#. <glade-widget-class-ref name="GtkAssistant"/>
+#. </glade-widget-group>
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:78
 msgid "Containers"
 msgstr "Đồ chứa"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:65
+#: ../plugins/gtk+/gtk+.xml.in.h:79
 msgid "Content"
 msgstr "Nội dung"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:66
+#: ../plugins/gtk+/gtk+.xml.in.h:80
 msgid "Continuous"
 msgstr "Liên tục"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:67
+#: ../plugins/gtk+/gtk+.xml.in.h:81
 msgid "Control and Display"
 msgstr "Điều khiển và Hiển thị"
 
@@ -2474,152 +2493,152 @@ msgstr "Điều khiển và Hiển thị"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:92
+#: ../plugins/gtk+/gtk+.xml.in.h:106
 msgid "Create Folder"
 msgstr "Tạo thư mục"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:94
+#: ../plugins/gtk+/gtk+.xml.in.h:108
 msgid "Curve"
 msgstr "Cong"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:95
+#: ../plugins/gtk+/gtk+.xml.in.h:109
 msgid "Custom"
 msgstr "Riêng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:96
+#: ../plugins/gtk+/gtk+.xml.in.h:110
 msgid "Custom widget"
 msgstr "Ô điều kiện riêng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:97
+#: ../plugins/gtk+/gtk+.xml.in.h:111
 msgid "Default"
 msgstr "Mặc định"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:98
+#: ../plugins/gtk+/gtk+.xml.in.h:112
 msgid "Delayed"
 msgstr "Trễ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:99
+#: ../plugins/gtk+/gtk+.xml.in.h:113
 msgid "Descending"
 msgstr "Giảm dần"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:100
+#: ../plugins/gtk+/gtk+.xml.in.h:114
 msgid "Described By"
 msgstr "Diễn tả bởi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:101
+#: ../plugins/gtk+/gtk+.xml.in.h:115
 msgid "Description For"
 msgstr "Mô tả cho"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:102
+#: ../plugins/gtk+/gtk+.xml.in.h:116
 msgid "Description of an object, formatted for assistive technology access"
 msgstr ""
 "Mô tả đối tượmg, được định dạng để cho khả năng truy cập kỹ thuật giúp đỡ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:103
+#: ../plugins/gtk+/gtk+.xml.in.h:117
 msgid "Desktop"
 msgstr "Môi trường"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:104
+#: ../plugins/gtk+/gtk+.xml.in.h:118
 msgid "Dialog"
 msgstr "Hộp thoại"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:105
+#: ../plugins/gtk+/gtk+.xml.in.h:119
 msgid "Dialog Box"
 msgstr "Hộp thoại"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:106
+#: ../plugins/gtk+/gtk+.xml.in.h:120
 msgid "Discontinuous"
 msgstr "Gián đoạn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:107
+#: ../plugins/gtk+/gtk+.xml.in.h:121
 msgid "Discrete"
 msgstr "Rời rạc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:108
+#: ../plugins/gtk+/gtk+.xml.in.h:122
 msgid "Dock"
 msgstr "Cụ neo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:109
+#: ../plugins/gtk+/gtk+.xml.in.h:123
 msgid "Down"
 msgstr "Xuống"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:110
+#: ../plugins/gtk+/gtk+.xml.in.h:124
 msgid "Drag & Drop"
 msgstr "Kéo và Thả"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:111
+#: ../plugins/gtk+/gtk+.xml.in.h:125
 msgid "Drag and Drop"
 msgstr "Kéo và Thả"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:112
+#: ../plugins/gtk+/gtk+.xml.in.h:126
 msgid "Drawing Area"
 msgstr "Vùng vẽ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:113
+#: ../plugins/gtk+/gtk+.xml.in.h:127
 msgid "Drop Down Menu"
 msgstr "Trình đơn thả xuống"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:114
+#: ../plugins/gtk+/gtk+.xml.in.h:128
 msgid "East"
 msgstr "Đông"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:115
+#: ../plugins/gtk+/gtk+.xml.in.h:129
 msgid "Edge"
 msgstr "Cạnh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:116
+#: ../plugins/gtk+/gtk+.xml.in.h:130
 msgid "Edit Type"
 msgstr "Sửa kiểu"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:117
+#: ../plugins/gtk+/gtk+.xml.in.h:131
 msgid "Edit&#8230;"
 msgstr "Sửa&#8230;"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:120
+#: ../plugins/gtk+/gtk+.xml.in.h:134
 msgid "End"
 msgstr "Kết thúc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:121
+#: ../plugins/gtk+/gtk+.xml.in.h:135
 msgid "Enter Notify"
 msgstr "Gõ Thông báo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:122
+#: ../plugins/gtk+/gtk+.xml.in.h:136
 msgid "Error"
 msgstr "Lỗi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:123
+#: ../plugins/gtk+/gtk+.xml.in.h:137
 msgid "Etched In"
 msgstr "Đã khắc vào"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:124
+#: ../plugins/gtk+/gtk+.xml.in.h:138
 msgid "Etched Out"
 msgstr "Đã khắc ra"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:125
+#: ../plugins/gtk+/gtk+.xml.in.h:139
 msgid "Event Box"
 msgstr "Ô sự kiện"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:126
+#: ../plugins/gtk+/gtk+.xml.in.h:140
 msgid "Expand"
 msgstr "Bung"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:127
+#: ../plugins/gtk+/gtk+.xml.in.h:141
 msgid "Expander"
 msgstr "Bộ bung"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:128
+#: ../plugins/gtk+/gtk+.xml.in.h:142
 msgid "Exposure"
 msgstr "Phơi nắng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:129
+#: ../plugins/gtk+/gtk+.xml.in.h:143
 msgid "Extended"
 msgstr "Đã mở rộng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:130
+#: ../plugins/gtk+/gtk+.xml.in.h:144
 msgid "File Chooser Button"
 msgstr "Nút chọn tập tin"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:131
+#: ../plugins/gtk+/gtk+.xml.in.h:145
 msgid "File Chooser Dialog"
 msgstr "Hộp thoại chọn tập tin"
 
@@ -2644,139 +2663,139 @@ msgstr "Hộp thoại chọn tập tin"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:153
+#: ../plugins/gtk+/gtk+.xml.in.h:167
 msgid "File Chooser Widget"
 msgstr "Ô điều khiển chọn tập tin"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:154
+#: ../plugins/gtk+/gtk+.xml.in.h:168
 msgid "File Name"
 msgstr "Tên tập tin"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:155
+#: ../plugins/gtk+/gtk+.xml.in.h:169
 msgid "File Selection"
 msgstr "Chọn tập tin"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:156
+#: ../plugins/gtk+/gtk+.xml.in.h:170
 msgid "Filename"
 msgstr "Tên tập tin"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:157
+#: ../plugins/gtk+/gtk+.xml.in.h:171
 msgid "Fill"
 msgstr "Điền đầy"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:158
+#: ../plugins/gtk+/gtk+.xml.in.h:172
 msgid "Fixed"
 msgstr "Cố định"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:161
+#: ../plugins/gtk+/gtk+.xml.in.h:175
 msgid "Focus Change"
 msgstr "Đổi tiêu điểm"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:162
+#: ../plugins/gtk+/gtk+.xml.in.h:176
 msgid "Font Button"
 msgstr "Nút phông chữ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:163
+#: ../plugins/gtk+/gtk+.xml.in.h:177
 msgid "Font Selection"
 msgstr "Chọn phông chữ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:164
+#: ../plugins/gtk+/gtk+.xml.in.h:178
 msgid "Font Selection Dialog"
 msgstr "Hộp thoại chọn phông chữ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:165
+#: ../plugins/gtk+/gtk+.xml.in.h:179
 msgid "Frame"
 msgstr "Khung"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:166
+#: ../plugins/gtk+/gtk+.xml.in.h:180
 msgid "Free"
 msgstr "Tự do"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:167
+#: ../plugins/gtk+/gtk+.xml.in.h:181
 msgid "Gamma Curve"
 msgstr "Cong Gamma (γ)"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:168
+#: ../plugins/gtk+/gtk+.xml.in.h:182
 msgid "Half"
 msgstr "Nửa"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:169
+#: ../plugins/gtk+/gtk+.xml.in.h:183
 msgid "Handle Box"
 msgstr "Ô móc kéo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:170
+#: ../plugins/gtk+/gtk+.xml.in.h:184
 msgid "Horizontal"
 msgstr "Ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:171
+#: ../plugins/gtk+/gtk+.xml.in.h:185
 msgid "Horizontal Box"
 msgstr "Hộp ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:172
+#: ../plugins/gtk+/gtk+.xml.in.h:186
 msgid "Horizontal Button Box"
 msgstr "Hộp nút ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:173
+#: ../plugins/gtk+/gtk+.xml.in.h:187
 msgid "Horizontal Panes"
 msgstr "Ô cửa sổ ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:174
+#: ../plugins/gtk+/gtk+.xml.in.h:188
 msgid "Horizontal Ruler"
 msgstr "Thước ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:175
+#: ../plugins/gtk+/gtk+.xml.in.h:189
 msgid "Horizontal Scale"
 msgstr "Tỷ lệ ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:176
+#: ../plugins/gtk+/gtk+.xml.in.h:190
 msgid "Horizontal Scrollbar"
 msgstr "Thanh cuộn ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:177
+#: ../plugins/gtk+/gtk+.xml.in.h:191
 msgid "Horizontal Separator"
 msgstr "Bộ phân cách ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:178
+#: ../plugins/gtk+/gtk+.xml.in.h:192
 msgid "Horizontal and Vertical"
 msgstr "Dọc và Ngang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:180
+#: ../plugins/gtk+/gtk+.xml.in.h:194
 msgid "Icon Theme"
 msgstr "Sắc thái biểu tượng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:181
+#: ../plugins/gtk+/gtk+.xml.in.h:195
 msgid "Icon View"
 msgstr "Ô xem biểu tượng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:182
+#: ../plugins/gtk+/gtk+.xml.in.h:196
 msgid "Icons only"
 msgstr "Chỉ biểu tượng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:183
+#: ../plugins/gtk+/gtk+.xml.in.h:197
 msgid "If Valid"
 msgstr "Nếu hợp lệ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:185
+#: ../plugins/gtk+/gtk+.xml.in.h:199
 msgid "Image Menu Item"
 msgstr "Mục trình đơn Ảnh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:186
+#: ../plugins/gtk+/gtk+.xml.in.h:200
 msgid "Image Type"
 msgstr "Kiểu ảnh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:187
+#: ../plugins/gtk+/gtk+.xml.in.h:201
 msgid "Immediate"
 msgstr "Trung cấp"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:188
+#: ../plugins/gtk+/gtk+.xml.in.h:202
 msgid "In"
 msgstr "Vào"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:189
+#: ../plugins/gtk+/gtk+.xml.in.h:203
 msgid "Inches"
 msgstr "Inch"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:200
+#: ../plugins/gtk+/gtk+.xml.in.h:214
 msgid ""
 "Indicates that an object provides descriptive information about another "
 "object; more verbose than 'Label For'"
@@ -2784,7 +2803,7 @@ msgstr ""
 "Ngụ ý đối tượng cung cấp thông tin diễn tả về đối tượng khác; chi tiết hơn « "
 "Nhãn cho »."
 
-#: ../plugins/gtk+/gtk+.xml.in.h:201
+#: ../plugins/gtk+/gtk+.xml.in.h:215
 msgid ""
 "Indicates that another object provides descriptive information about this "
 "object; more verbose than 'Labelled By'"
@@ -2792,7 +2811,7 @@ msgstr ""
 "Ngụ ý đối tượng khác cung cấp thông tin diễn tả đối tượng này; chi tiết hơn « "
 "Bị đặt nhãn bởi »."
 
-#: ../plugins/gtk+/gtk+.xml.in.h:203
+#: ../plugins/gtk+/gtk+.xml.in.h:217
 msgid ""
 "Indicates that the object has content that flows logically to another "
 "AtkObject in a sequential way, (for instance text-flow)"
@@ -2800,190 +2819,190 @@ msgstr ""
 "Ngụ ý đối tượng có nội dung luồng hợp lý đến một đối tượng ATK khác bằng "
 "cách tuần tự (v.d. luồng chữ)"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:206
+#: ../plugins/gtk+/gtk+.xml.in.h:220
 msgid "Input Dialog"
 msgstr "Hộp thoại nhập"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:207
+#: ../plugins/gtk+/gtk+.xml.in.h:221
 msgid "Insert After"
 msgstr "Chèn sau"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:208
+#: ../plugins/gtk+/gtk+.xml.in.h:222
 msgid "Insert Before"
 msgstr "Chèn trước"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:209
+#: ../plugins/gtk+/gtk+.xml.in.h:223
 msgid "Insert Column"
 msgstr "Chèn cột"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:210
+#: ../plugins/gtk+/gtk+.xml.in.h:224
 msgid "Insert Page After"
 msgstr "Chèn trang sau"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:211
+#: ../plugins/gtk+/gtk+.xml.in.h:225
 msgid "Insert Page Before"
 msgstr "Chèn trang trước"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:212
+#: ../plugins/gtk+/gtk+.xml.in.h:226
 msgid "Insert Row"
 msgstr "Chèn cột"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:213
+#: ../plugins/gtk+/gtk+.xml.in.h:227
 msgid "Intro"
 msgstr "Giới thiệu"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:214
+#: ../plugins/gtk+/gtk+.xml.in.h:228
 msgid "Invalid"
 msgstr "Không hợp lệ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:216
+#: ../plugins/gtk+/gtk+.xml.in.h:230
 msgid "Items"
 msgstr "Mục"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:217
+#: ../plugins/gtk+/gtk+.xml.in.h:231
 msgid "Key Press"
 msgstr "Nhấn phím"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:218
+#: ../plugins/gtk+/gtk+.xml.in.h:232
 msgid "Key Release"
 msgstr "Nhả phím"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:222
+#: ../plugins/gtk+/gtk+.xml.in.h:236
 msgid "Large Toolbar"
 msgstr "Thanh công cụ lớn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:223
+#: ../plugins/gtk+/gtk+.xml.in.h:237
 msgid "Layout"
 msgstr "Bố trí"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:224
+#: ../plugins/gtk+/gtk+.xml.in.h:238
 msgid "Least Recently Used first"
 msgstr "Dùng ít gần đây nhất trước"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:225
+#: ../plugins/gtk+/gtk+.xml.in.h:239
 msgid "Leave Notify"
 msgstr "Rời Thông báo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:226
+#: ../plugins/gtk+/gtk+.xml.in.h:240
 msgid "Left"
 msgstr "Trái"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:227
+#: ../plugins/gtk+/gtk+.xml.in.h:241
 msgid "Left to Right"
 msgstr "Trái qua Phải"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:228
+#: ../plugins/gtk+/gtk+.xml.in.h:242
 msgid "Linear"
 msgstr "Tuyến"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:229
+#: ../plugins/gtk+/gtk+.xml.in.h:243
 msgid "Link Button"
 msgstr "Nút liên kết"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:230
+#: ../plugins/gtk+/gtk+.xml.in.h:244
 msgid "List"
 msgstr "Danh sách"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:231
+#: ../plugins/gtk+/gtk+.xml.in.h:245
 msgid "List Item"
 msgstr "Mục danh sách"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:232
+#: ../plugins/gtk+/gtk+.xml.in.h:246
 msgid "Maximum Width"
 msgstr "Rộng tối đa"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:235
+#: ../plugins/gtk+/gtk+.xml.in.h:249
 msgid "Menu Bar"
 msgstr "Thanh trình đơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:236
+#: ../plugins/gtk+/gtk+.xml.in.h:250
 msgid "Menu Item"
 msgstr "Mục trình đơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:237
+#: ../plugins/gtk+/gtk+.xml.in.h:251
 msgid "Menu Shell"
 msgstr "Hệ vỏ trình đơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:238
+#: ../plugins/gtk+/gtk+.xml.in.h:252
 msgid "Menu Tool Button"
 msgstr "Nút công cụ trình đơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:239
+#: ../plugins/gtk+/gtk+.xml.in.h:253
 msgid "Message Dialog"
 msgstr "Hộp thoại thông điệp"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:240
+#: ../plugins/gtk+/gtk+.xml.in.h:254
 msgid "Middle"
 msgstr "Giữa"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:241
+#: ../plugins/gtk+/gtk+.xml.in.h:255
 msgid "Most Recently Used first"
 msgstr "Dùng gần đây nhất trước"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:242
+#: ../plugins/gtk+/gtk+.xml.in.h:256
 msgid "Mouse"
 msgstr "Chuột"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:243
+#: ../plugins/gtk+/gtk+.xml.in.h:257
 msgid "Multiple"
 msgstr "Nhiều"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:244
+#: ../plugins/gtk+/gtk+.xml.in.h:258
 msgid "Never"
 msgstr "Không bao giờ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:245
+#: ../plugins/gtk+/gtk+.xml.in.h:259
 msgid "Node Child Of"
 msgstr "Nút con của"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:248
+#: ../plugins/gtk+/gtk+.xml.in.h:262
 msgid "North"
 msgstr "Bắc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:249
+#: ../plugins/gtk+/gtk+.xml.in.h:263
 msgid "North East"
 msgstr "Đông Bắc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:250
+#: ../plugins/gtk+/gtk+.xml.in.h:264
 msgid "North West"
 msgstr "Tây Bắc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:251
+#: ../plugins/gtk+/gtk+.xml.in.h:265
 msgid "Notebook"
 msgstr "Vở"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:252
+#: ../plugins/gtk+/gtk+.xml.in.h:266
 msgid "Notification"
 msgstr "Thông báo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:253
+#: ../plugins/gtk+/gtk+.xml.in.h:267
 msgid "Number of items"
 msgstr "Số mục"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:254
+#: ../plugins/gtk+/gtk+.xml.in.h:268
 msgid "Number of pages"
 msgstr "Số trang"
 
 #. Atk name and description properties
-#: ../plugins/gtk+/gtk+.xml.in.h:256
+#: ../plugins/gtk+/gtk+.xml.in.h:270
 msgid "Object instance's name formatted for assistive technology access"
 msgstr ""
 "Tên của thể hiện đối tượng, được định dạng để cho khả năng truy cập kỹ thuật "
 "giúp đỡ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:257
+#: ../plugins/gtk+/gtk+.xml.in.h:271
 msgid "Off"
 msgstr "Tắt"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:258
+#: ../plugins/gtk+/gtk+.xml.in.h:272
 msgid "Ok"
 msgstr "Được"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:259
+#: ../plugins/gtk+/gtk+.xml.in.h:273
 msgid "Ok, Cancel"
 msgstr "Được, Thôi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:260
+#: ../plugins/gtk+/gtk+.xml.in.h:274
 msgid "On"
 msgstr "Bật"
 
@@ -3008,131 +3027,131 @@ msgstr "Bật"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:282
+#: ../plugins/gtk+/gtk+.xml.in.h:296
 msgid "Open"
 msgstr "Mở"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:283
+#: ../plugins/gtk+/gtk+.xml.in.h:297
 msgid "Option Menu"
 msgstr "Trình đơn Tùy chọn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:285
+#: ../plugins/gtk+/gtk+.xml.in.h:299
 msgid "Out"
 msgstr "Ra"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:286
+#: ../plugins/gtk+/gtk+.xml.in.h:300
 msgid "Paned"
 msgstr "Có ô"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:289
+#: ../plugins/gtk+/gtk+.xml.in.h:303
 msgid "Pixels"
 msgstr "Điểm ảnh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:290
+#: ../plugins/gtk+/gtk+.xml.in.h:304
 msgid "Pointer Motion"
 msgstr "Cách chuyển con trỏ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:291
+#: ../plugins/gtk+/gtk+.xml.in.h:305
 msgid "Pointer Motion Hint"
 msgstr "Gợi ý cách chuyển con trỏ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:292
+#: ../plugins/gtk+/gtk+.xml.in.h:306
 msgid "Popup"
 msgstr "Bật lên"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:294
+#: ../plugins/gtk+/gtk+.xml.in.h:308
 msgid "Popup Menu"
 msgstr "Trình đơn bật lên"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:295
+#: ../plugins/gtk+/gtk+.xml.in.h:309
 msgid "Position"
 msgstr "Vị trí"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:298
+#: ../plugins/gtk+/gtk+.xml.in.h:312
 msgid "Progress"
 msgstr "Tiến hành"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:299
+#: ../plugins/gtk+/gtk+.xml.in.h:313
 msgid "Progress Bar"
 msgstr "Thanh tiến hành"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:300
+#: ../plugins/gtk+/gtk+.xml.in.h:314
 msgid "Property Change"
 msgstr "Đổi thuộc tính"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:301
+#: ../plugins/gtk+/gtk+.xml.in.h:315
 msgid "Proximity  Out"
 msgstr "Độ gần\tRa"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:302
+#: ../plugins/gtk+/gtk+.xml.in.h:316
 msgid "Proximity In"
 msgstr "Độ gần\tVào"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:303
+#: ../plugins/gtk+/gtk+.xml.in.h:317
 msgid "Question"
 msgstr "Câu hỏi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:304
+#: ../plugins/gtk+/gtk+.xml.in.h:318
 msgid "Queue"
 msgstr "Hàng đợi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:305
+#: ../plugins/gtk+/gtk+.xml.in.h:319
 msgid "Radio Button"
 msgstr "Nút chọn một"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:306
+#: ../plugins/gtk+/gtk+.xml.in.h:320
 msgid "Radio Menu Item"
 msgstr "Mục trình đơn chọn một"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:307
+#: ../plugins/gtk+/gtk+.xml.in.h:321
 msgid "Radio Tool Button"
 msgstr "Nút công cụ chọn một"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:308
+#: ../plugins/gtk+/gtk+.xml.in.h:322
 msgid "Range"
 msgstr "Phạm vi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:309
+#: ../plugins/gtk+/gtk+.xml.in.h:323
 msgid "Recent Chooser"
 msgstr "Bộ chọn gần đây"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:310
+#: ../plugins/gtk+/gtk+.xml.in.h:324
 msgid "Recent Chooser Dialog"
 msgstr "Hộp thoại bộ chọn gần đây"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:313
+#: ../plugins/gtk+/gtk+.xml.in.h:327
 msgid "Remove Column"
 msgstr "Gỡ bỏ cột"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:314
+#: ../plugins/gtk+/gtk+.xml.in.h:328
 msgid "Remove Page"
 msgstr "Gỡ bỏ trang"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:315
+#: ../plugins/gtk+/gtk+.xml.in.h:329
 msgid "Remove Parent"
 msgstr "Gỡ bỏ cha"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:316
+#: ../plugins/gtk+/gtk+.xml.in.h:330
 msgid "Remove Row"
 msgstr "Gỡ bỏ hàng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:317
+#: ../plugins/gtk+/gtk+.xml.in.h:331
 msgid "Remove Slot"
 msgstr "Gỡ bỏ khe"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:318
+#: ../plugins/gtk+/gtk+.xml.in.h:332
 msgid "Response ID"
 msgstr "ID đáp ứng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:319
+#: ../plugins/gtk+/gtk+.xml.in.h:333
 msgid "Right"
 msgstr "Phải"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:320
+#: ../plugins/gtk+/gtk+.xml.in.h:334
 msgid "Right to Left"
 msgstr "Phải qua Trái"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:321
+#: ../plugins/gtk+/gtk+.xml.in.h:335
 msgid "Ruler"
 msgstr "Thước đo"
 
@@ -3157,19 +3176,19 @@ msgstr "Thước đo"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:343
+#: ../plugins/gtk+/gtk+.xml.in.h:357
 msgid "Save"
 msgstr "Lưu"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:344
+#: ../plugins/gtk+/gtk+.xml.in.h:358
 msgid "Scale"
 msgstr "Tỷ lệ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:345
+#: ../plugins/gtk+/gtk+.xml.in.h:359
 msgid "Scroll"
 msgstr "Cuộn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:346
+#: ../plugins/gtk+/gtk+.xml.in.h:360
 msgid "Scrolled Window"
 msgstr "Cửa sổ cuộn"
 
@@ -3194,153 +3213,153 @@ msgstr "Cửa sổ cuộn"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:368
+#: ../plugins/gtk+/gtk+.xml.in.h:382
 msgid "Select Folder"
 msgstr "Chọn thư mục"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:369
+#: ../plugins/gtk+/gtk+.xml.in.h:383
 msgid "Separator Menu Item"
 msgstr "Mục trình đơn bộ ngăn cách"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:370
+#: ../plugins/gtk+/gtk+.xml.in.h:384
 msgid "Separator Tool Item"
 msgstr "Mục công cụ bộ ngăn cách"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:371
+#: ../plugins/gtk+/gtk+.xml.in.h:385
 msgid "Set the current page (strictly for editing purposes)"
 msgstr "Đặt trang hiện thời (cho mục đích chỉnh sửa hẳn)"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:381 ../plugins/panda/panda.xml.in.h:17
+#: ../plugins/gtk+/gtk+.xml.in.h:395 ../plugins/panda/panda.xml.in.h:19
 msgid "Set the text in the view's text buffer"
 msgstr "Đặt văn bản trong bộ đệm văn bản của ô xem"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:382
+#: ../plugins/gtk+/gtk+.xml.in.h:396
 msgid "Shrink"
 msgstr "Nhỏ hơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:383
+#: ../plugins/gtk+/gtk+.xml.in.h:397
 msgid "Single"
 msgstr "Đơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:384
+#: ../plugins/gtk+/gtk+.xml.in.h:398
 msgid "Size"
 msgstr "Cỡ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:385
+#: ../plugins/gtk+/gtk+.xml.in.h:399
 msgid "Small Toolbar"
 msgstr "Thanh công cụ nhỏ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:386
+#: ../plugins/gtk+/gtk+.xml.in.h:400
 msgid "South"
 msgstr "Nam"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:387
+#: ../plugins/gtk+/gtk+.xml.in.h:401
 msgid "South East"
 msgstr "Nam Đông"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:388
+#: ../plugins/gtk+/gtk+.xml.in.h:402
 msgid "South West"
 msgstr "Nam Tây"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:389
+#: ../plugins/gtk+/gtk+.xml.in.h:403
 msgid "Spin Button"
 msgstr "Nút xoay"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:390
+#: ../plugins/gtk+/gtk+.xml.in.h:404
 msgid "Splash Screen"
 msgstr "Màn hình giật gân"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:391
+#: ../plugins/gtk+/gtk+.xml.in.h:405
 msgid "Spline"
 msgstr "Chốt trục"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:392
+#: ../plugins/gtk+/gtk+.xml.in.h:406
 msgid "Spread"
 msgstr "Phết"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:393
+#: ../plugins/gtk+/gtk+.xml.in.h:407
 msgid "Start"
 msgstr "Bắt đầu"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:394
+#: ../plugins/gtk+/gtk+.xml.in.h:408
 msgid "Static"
 msgstr "Tĩnh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:395
+#: ../plugins/gtk+/gtk+.xml.in.h:409
 msgid "Status Bar"
 msgstr "Thanh trạng thái"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:397
+#: ../plugins/gtk+/gtk+.xml.in.h:411
 msgid "Stock Button"
 msgstr "Nút kho"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:399
+#: ../plugins/gtk+/gtk+.xml.in.h:413
 msgid "Stock Item"
 msgstr "Mục kho"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:400
+#: ../plugins/gtk+/gtk+.xml.in.h:414
 msgid "Structure"
 msgstr "Cấu trúc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:401
+#: ../plugins/gtk+/gtk+.xml.in.h:415
 msgid "Substructure"
 msgstr "Cấu trúc phụ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:403
+#: ../plugins/gtk+/gtk+.xml.in.h:417
 msgid "Summary"
 msgstr "Tóm tắt"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:404
+#: ../plugins/gtk+/gtk+.xml.in.h:418
 msgid "Table"
 msgstr "Bảng"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:406 ../plugins/panda/panda.xml.in.h:18
+#: ../plugins/gtk+/gtk+.xml.in.h:420 ../plugins/panda/panda.xml.in.h:20
 msgid "Text"
 msgstr "Chữ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:407
+#: ../plugins/gtk+/gtk+.xml.in.h:421
 msgid "Text Entry"
 msgstr "Mục nhập chữ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:408
+#: ../plugins/gtk+/gtk+.xml.in.h:422
 msgid "Text View"
 msgstr "Khung xem chữ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:409
+#: ../plugins/gtk+/gtk+.xml.in.h:423
 msgid "Text below icons"
 msgstr "Văn bản bên dưới biểu tượng"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:411
+#: ../plugins/gtk+/gtk+.xml.in.h:425
 msgid "Text only"
 msgstr "Chỉ văn bản"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:412
+#: ../plugins/gtk+/gtk+.xml.in.h:426
 msgid "The items in this combo box"
 msgstr "Các mục trong hộp tổ hợp"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:413
+#: ../plugins/gtk+/gtk+.xml.in.h:427
 msgid "The number of items in the box"
 msgstr "Số mục trong hộp"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:414
+#: ../plugins/gtk+/gtk+.xml.in.h:428
 msgid "The number of pages in the notebook"
 msgstr "Số trang trong vở"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:415
+#: ../plugins/gtk+/gtk+.xml.in.h:429
 msgid "The page position in the Assistant"
 msgstr "Vị trí trang trong trợ lý"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:416
+#: ../plugins/gtk+/gtk+.xml.in.h:430
 msgid "The position of the menu item in the menu shell"
 msgstr "Vị trí của mục trình đơn trong hệ vỏ trình đơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:417
+#: ../plugins/gtk+/gtk+.xml.in.h:431
 msgid "The position of the tool item in the toolbar"
 msgstr "Vị trí của mục công cụ trên thanh công cụ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:418
+#: ../plugins/gtk+/gtk+.xml.in.h:432
 msgid ""
 "The response ID of this button in a dialog (it's NOT useful if this button "
 "is not in a GtkDialog)"
@@ -3348,151 +3367,147 @@ msgstr ""
 "ID đáp ứng của cái nút này trong hộp thoại (VÔ ích nếu cái nút này không "
 "phải trong một hộp thoại GtkDialog)"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:419
+#: ../plugins/gtk+/gtk+.xml.in.h:433
 msgid "The stock item for this button"
 msgstr "Mục kho cho cái nút này"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:420
+#: ../plugins/gtk+/gtk+.xml.in.h:434
 msgid "The stock item for this image"
 msgstr "Mục kho cho ảnh này"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:421
+#: ../plugins/gtk+/gtk+.xml.in.h:435
 msgid "The text of the menu item"
 msgstr "Chuỗi của mục trình đơn"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:422
+#: ../plugins/gtk+/gtk+.xml.in.h:436
 msgid "The text to display"
 msgstr "Chuỗi chữ cần hiển thị"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:423
+#: ../plugins/gtk+/gtk+.xml.in.h:437
 msgid "Toggle Button"
 msgstr "Nút bật/tắt"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:424
+#: ../plugins/gtk+/gtk+.xml.in.h:438
 msgid "Toggle Tool Button"
 msgstr "Bật/tắt nút công cụ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:425
+#: ../plugins/gtk+/gtk+.xml.in.h:439
 msgid "Tool Bar"
 msgstr "Thanh công cụ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:426
+#: ../plugins/gtk+/gtk+.xml.in.h:440
 msgid "Tool Button"
 msgstr "Nút công cụ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:427
+#: ../plugins/gtk+/gtk+.xml.in.h:441
 msgid "Toolbar"
 msgstr "Thanh công cụ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:428
+#: ../plugins/gtk+/gtk+.xml.in.h:442
 msgid "Tooltip"
 msgstr "Mẹo công cụ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:429
+#: ../plugins/gtk+/gtk+.xml.in.h:443
 msgid "Top"
 msgstr "Trên"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:430
+#: ../plugins/gtk+/gtk+.xml.in.h:444
 msgid "Top Left"
 msgstr "Trái trên"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:431
+#: ../plugins/gtk+/gtk+.xml.in.h:445
 msgid "Top Level"
 msgstr "Cấp trên"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:432
+#: ../plugins/gtk+/gtk+.xml.in.h:446
 msgid "Top Right"
 msgstr "Trên phải"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:433
+#: ../plugins/gtk+/gtk+.xml.in.h:447
 msgid "Top to Bottom"
 msgstr "Trên xuống dưới"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:434
-msgid "Toplevels"
-msgstr "Cấp trên"
-
-#: ../plugins/gtk+/gtk+.xml.in.h:435
+#: ../plugins/gtk+/gtk+.xml.in.h:448
 msgid "Tree View"
 msgstr "Khung xem cây"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:436
+#: ../plugins/gtk+/gtk+.xml.in.h:449
 msgid "Up"
 msgstr "Lên"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:437
+#: ../plugins/gtk+/gtk+.xml.in.h:450
 msgid "Use Underline"
 msgstr "Dùng gạch chân"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:438
+#: ../plugins/gtk+/gtk+.xml.in.h:451
 msgid "Utility"
 msgstr "Tiện ích"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:439
+#: ../plugins/gtk+/gtk+.xml.in.h:452
 msgid "Vertical"
 msgstr "Dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:440
+#: ../plugins/gtk+/gtk+.xml.in.h:453
 msgid "Vertical Box"
 msgstr "Hộp dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:441
+#: ../plugins/gtk+/gtk+.xml.in.h:454
 msgid "Vertical Button Box"
 msgstr "Hộp nút dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:442
+#: ../plugins/gtk+/gtk+.xml.in.h:455
 msgid "Vertical Panes"
 msgstr "Ô cửa sổ dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:443
+#: ../plugins/gtk+/gtk+.xml.in.h:456
 msgid "Vertical Ruler"
 msgstr "Thước dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:444
+#: ../plugins/gtk+/gtk+.xml.in.h:457
 msgid "Vertical Scale"
 msgstr "Tỷ lệ dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:445
+#: ../plugins/gtk+/gtk+.xml.in.h:458
 msgid "Vertical Scrollbar"
 msgstr "Thanh cuộn dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:446
+#: ../plugins/gtk+/gtk+.xml.in.h:459
 msgid "Vertical Separator"
 msgstr "Bộ phân cách dọc"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:447
+#: ../plugins/gtk+/gtk+.xml.in.h:460
 msgid "Viewport"
 msgstr "Cổng xem"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:448
+#: ../plugins/gtk+/gtk+.xml.in.h:461
 msgid "Visibility Notify"
 msgstr "Thông báo hiện rõ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:449
+#: ../plugins/gtk+/gtk+.xml.in.h:462
 msgid "Warning"
 msgstr "Cảnh báo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:450
+#: ../plugins/gtk+/gtk+.xml.in.h:463
 msgid "West"
 msgstr "Tây"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:452
+#: ../plugins/gtk+/gtk+.xml.in.h:465
 msgid "Window"
 msgstr "Cửa sổ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:453
+#: ../plugins/gtk+/gtk+.xml.in.h:466
 msgid "Word"
 msgstr "Từ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:454
+#: ../plugins/gtk+/gtk+.xml.in.h:467
 msgid "Word Character"
 msgstr "Ký tự từ"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:455
+#: ../plugins/gtk+/gtk+.xml.in.h:468
 msgid "Yes, No"
 msgstr "Có, Không"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:456
+#: ../plugins/gtk+/gtk+.xml.in.h:469
 msgid ""
 "You can mark this as translatable and set one name/address if you want to "
 "show a translation specific translator, otherwise you should list all "
@@ -3570,35 +3585,58 @@ msgid "GtkPandaPrint"
 msgstr ""
 
 #: ../plugins/panda/panda.xml.in.h:14
+#, fuzzy
+msgid "GtkPandaTable"
+msgstr "Mục nhập tập tin GNOME"
+
+#: ../plugins/panda/panda.xml.in.h:15
 msgid "GtkPandaText"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:15
+#: ../plugins/panda/panda.xml.in.h:16
 msgid "GtkPandaTimer"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:16
-msgid "KANA"
-msgstr ""
-
-#: ../plugins/panda/panda.xml.in.h:19
+#: ../plugins/panda/panda.xml.in.h:17
 #, fuzzy
-msgid "The number of columns"
-msgstr "Số điểm ảnh giữa hai cột biểu tượng"
+msgid "GtkPandaWindow"
+msgstr "Mục nhập tập tin GNOME"
 
-#: ../plugins/panda/panda.xml.in.h:20
-msgid "XIM"
+#: ../plugins/panda/panda.xml.in.h:18
+msgid "KANA"
 msgstr ""
 
 #: ../plugins/panda/panda.xml.in.h:21
 #, fuzzy
+msgid "The number of columns"
+msgstr "Số điểm ảnh giữa hai cột biểu tượng"
+
+#: ../plugins/panda/panda.xml.in.h:22
+msgid "XIM"
+msgstr ""
+
+#: ../plugins/panda/panda.xml.in.h:23
+#, fuzzy
 msgid "multi"
 msgstr "nhiều"
 
-#: ../plugins/panda/panda.xml.in.h:22
+#: ../plugins/panda/panda.xml.in.h:24
 #, fuzzy
 msgid "single"
 msgstr "Đơn"
+
+#~ msgid "Create or open user interface designs for GTK+ applications"
+#~ msgstr ""
+#~ "Tạo hay mở bản đồ án thiết kế giao diện người dùng cho ứng dụng GTK+"
+
+#~ msgid "Glade Interface Designer"
+#~ msgstr "Bộ thiết kế giao diện Glade"
+
+#~ msgid "Glade"
+#~ msgstr "Glade"
+
+#~ msgid "Toplevels"
+#~ msgstr "Cấp trên"
 
 #~ msgid "Gtk+ Obsolete"
 #~ msgstr "Gtk+ Cũ"

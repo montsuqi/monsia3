@@ -3,7 +3,6 @@
 
 
 # Main application
-data/glade-3.desktop.in.in
 src/main.c
 src/glade-window.c
 

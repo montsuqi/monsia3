@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glade3 gnome-2-22\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-09 10:46+0900\n"
+"POT-Creation-Date: 2012-05-25 15:51+0900\n"
 "PO-Revision-Date: 2008-03-20 11:46+0100\n"
 "Last-Translator: Laurent Dhima <laurenti@alblinux.net>\n"
 "Language-Team: albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
@@ -17,21 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/glade-3.desktop.in.in.h:1
-msgid "Create or open user interface designs for GTK+ applications"
-msgstr "Krijon ose hap vizatime interfaqe përdorimi për aplikativë GTK+"
-
-#: ../data/glade-3.desktop.in.in.h:2
-msgid "Glade Interface Designer"
-msgstr "Glade - Vizatuesi i interfaqeve"
-
-#: ../data/glade-3.desktop.in.in.h:3 ../src/glade-window.c:440
-msgid "User Interface Designer"
-msgstr "Vizatuesi i interfaqeve të përdorimit"
-
 #: ../src/main.c:42
-msgid "Glade"
-msgstr "Glade"
+msgid "monsia3"
+msgstr ""
 
 #: ../src/main.c:52
 msgid "Output version information and exit"
@@ -49,30 +37,35 @@ msgstr "[FILE...]"
 msgid "be verbose"
 msgstr "bëhu i imtësishëm"
 
-#: ../src/main.c:93
+#: ../src/main.c:75
+#, fuzzy
+msgid "filter"
+msgstr "Mbas"
+
+#: ../src/main.c:100
 msgid "Create or edit user interface designs for GTK+ or GNOME applications."
 msgstr "Krijo ose ndrysho vizatime interfaqesh për aplikativë GTK+ apo GNOME."
 
-#: ../src/main.c:97 ../src/main.c:98
+#: ../src/main.c:104 ../src/main.c:105
 msgid "Glade options"
 msgstr "Opsionet e Glade"
 
-#: ../src/main.c:105
+#: ../src/main.c:114
 msgid "Glade debug options"
 msgstr "Opsionet e debug të Glade"
 
-#: ../src/main.c:106
+#: ../src/main.c:115
 msgid "Show Glade debug options"
 msgstr "Shfaq opsionet e debug të Glade"
 
-#: ../src/main.c:149
+#: ../src/main.c:158
 msgid ""
 "gmodule support not found. gmodule support is required for glade to work"
 msgstr ""
 "Suporti për gmodule nuk u gjet. Suporti për gmodule është i domosdoshëm që "
 "glade të funksionojë"
 
-#: ../src/main.c:176
+#: ../src/main.c:185 ../src/main.c:205
 #, c-format
 msgid "Unable to open '%s', the file does not exist.\n"
 msgstr "E pamundur hapja e '%s', file nuk ekziston.\n"
@@ -90,6 +83,10 @@ msgstr "E pamundur shfaqja e URL '%s'"
 msgid "No suitable web browser could be found."
 msgstr "E pamundur gjetja e një shfletuesi web të përshtatshëm."
 
+#: ../src/glade-window.c:440
+msgid "User Interface Designer"
+msgstr "Vizatuesi i interfaqeve të përdorimit"
+
 #. translators: referring to the properties of a widget named '%s [%s]'
 #: ../src/glade-window.c:669
 #, c-format
@@ -97,7 +94,7 @@ msgid "%s [%s] - Properties"
 msgstr "%s [%s] - Pronësitë"
 
 #: ../src/glade-window.c:682 ../src/glade-window.c:688
-#: ../src/glade-window.c:3121 ../src/glade-window.c:3127
+#: ../src/glade-window.c:3133 ../src/glade-window.c:3139
 #: ../gladeui/glade-widget.c:1053
 msgid "Properties"
 msgstr "Pronësitë"
@@ -203,11 +200,11 @@ msgstr "Ruajtja e %s tek %s dështoi: %s"
 msgid "Save…"
 msgstr "Ruaj..."
 
-#: ../src/glade-window.c:2015
+#: ../src/glade-window.c:2021
 msgid "Could not display the online user manual"
 msgstr "E pamundur shfaqja e manualit në linjë të përdorimit"
 
-#: ../src/glade-window.c:2018 ../src/glade-window.c:2056
+#: ../src/glade-window.c:2024 ../src/glade-window.c:2062
 #, c-format
 msgid ""
 "No suitable web browser executable could be found to be executed and to "
@@ -216,11 +213,11 @@ msgstr ""
 "E pamundur gjetja e të ekzekutueshmes së një shfletuesi web të përshtatshëm "
 "për tu ekzekutuar dhe për të shfaqur URL: %s"
 
-#: ../src/glade-window.c:2053
+#: ../src/glade-window.c:2059
 msgid "Could not display the online developer reference manual"
 msgstr "E pamundur shfaqja e manualit në linjë të zhvilluesit"
 
-#: ../src/glade-window.c:2096
+#: ../src/glade-window.c:2102
 msgid ""
 "Glade is free software; you can redistribute it and/or modify it under the "
 "terms of the GNU General Public License as published by the Free Software "
@@ -249,302 +246,310 @@ msgstr ""
 "Publike të Përgjithshme GNU; Nëse jo, shkruani tek Free Software Foundation, "
 "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../src/glade-window.c:2122
+#: ../src/glade-window.c:2128
 msgid "translator-credits"
 msgstr "Laurent Dhima <laurenti@alblinux.net>"
 
-#: ../src/glade-window.c:2123
+#: ../src/glade-window.c:2129
 msgid "A user interface designer for GTK+ and GNOME."
 msgstr "Një vizatues interfaqesh përdorimi për GTK+ dhe GNOME."
 
 #. File
-#: ../src/glade-window.c:2196 ../plugins/gtk+/glade-gtk.c:5133
+#: ../src/glade-window.c:2204 ../plugins/gtk+/glade-gtk.c:5133
 #: ../plugins/gtk+/glade-gtk.c:5456
 msgid "_File"
 msgstr "_File"
 
 #. Edit
-#: ../src/glade-window.c:2197 ../plugins/gtk+/glade-gtk.c:5136
+#: ../src/glade-window.c:2205 ../plugins/gtk+/glade-gtk.c:5136
 #: ../plugins/gtk+/glade-gtk.c:5466
 msgid "_Edit"
 msgstr "_Ndrysho"
 
 #. View
-#: ../src/glade-window.c:2198 ../plugins/gtk+/glade-gtk.c:5139
+#: ../src/glade-window.c:2206 ../plugins/gtk+/glade-gtk.c:5139
 #: ../plugins/gtk+/glade-gtk.c:5474
 msgid "_View"
 msgstr "_Shfaq"
 
-#: ../src/glade-window.c:2199
+#: ../src/glade-window.c:2207
 msgid "_Projects"
 msgstr "_Projekte"
 
 #. Help
-#: ../src/glade-window.c:2200 ../plugins/gtk+/glade-gtk.c:5151
+#: ../src/glade-window.c:2208 ../plugins/gtk+/glade-gtk.c:5151
 #: ../plugins/gtk+/glade-gtk.c:5477
 msgid "_Help"
 msgstr "_Ndihmë"
 
-#: ../src/glade-window.c:2206
+#: ../src/glade-window.c:2214
 msgid "Create a new project"
 msgstr "Krijo një projekt të ri"
 
-#: ../src/glade-window.c:2208
+#: ../src/glade-window.c:2216
 msgid "_Open…"
 msgstr "_Hap..."
 
-#: ../src/glade-window.c:2209
+#: ../src/glade-window.c:2217
 msgid "Open a project"
 msgstr "Hap një projekt"
 
-#: ../src/glade-window.c:2211
+#: ../src/glade-window.c:2219
 msgid "Open _Recent"
 msgstr "Hap të _fundit"
 
-#: ../src/glade-window.c:2214
+#: ../src/glade-window.c:2222
 msgid "Quit the program"
 msgstr "Del nga programi"
 
 #. ViewMenu
-#: ../src/glade-window.c:2217
+#: ../src/glade-window.c:2225
 msgid "Palette _Appearance"
 msgstr "P_araqitja e tavoletës"
 
-#: ../src/glade-window.c:2221
+#: ../src/glade-window.c:2229
 msgid "About this application"
 msgstr "Informacione në lidhje me këtë aplikativ"
 
 # (pofilter) accelerators: accelerator _ is missing from translation
-#: ../src/glade-window.c:2223
+#: ../src/glade-window.c:2231
 msgid "_Contents"
 msgstr "_Përmbajtja"
 
-#: ../src/glade-window.c:2224
+#: ../src/glade-window.c:2232
 msgid "Display the user manual"
 msgstr "Shfaq manualin e përdorimit"
 
-#: ../src/glade-window.c:2226
+#: ../src/glade-window.c:2234
 msgid "_Developer Reference"
 msgstr "_Orientuesi i zhvilluesit"
 
-#: ../src/glade-window.c:2227
+#: ../src/glade-window.c:2235
 msgid "Display the developer reference manual"
 msgstr "Shfaq manualin orientues të zhvilluesit"
 
-#: ../src/glade-window.c:2236
+#: ../src/glade-window.c:2244
 msgid "Save the current project"
 msgstr "Ruaj projektin aktual"
 
-#: ../src/glade-window.c:2238
+#: ../src/glade-window.c:2246
 msgid "Save _As…"
 msgstr "Ru_aj si..."
 
-#: ../src/glade-window.c:2239
+#: ../src/glade-window.c:2247
 msgid "Save the current project with a different name"
 msgstr "Ruaj projektin aktual me një emër tjetër"
 
-#: ../src/glade-window.c:2242
+#: ../src/glade-window.c:2250
 msgid "Close the current project"
 msgstr "Mbyll projektin aktual"
 
-#: ../src/glade-window.c:2246
+#: ../src/glade-window.c:2254
 msgid "Undo the last action"
 msgstr "Anullo veprimin e fundit"
 
-#: ../src/glade-window.c:2249
+#: ../src/glade-window.c:2257
 msgid "Redo the last action"
 msgstr "Përsërit veprimin e fundit"
 
-#: ../src/glade-window.c:2252
+#: ../src/glade-window.c:2260
 msgid "Cut the selection"
 msgstr "Preje zgjedhjen"
 
-#: ../src/glade-window.c:2255
+#: ../src/glade-window.c:2263
 msgid "Copy the selection"
 msgstr "Kopjo zgjedhjen"
 
-#: ../src/glade-window.c:2258
+#: ../src/glade-window.c:2266
 msgid "Paste the clipboard"
 msgstr "Ngjit nga shënimet"
 
-#: ../src/glade-window.c:2261
+#: ../src/glade-window.c:2269
 msgid "Delete the selection"
 msgstr "Elemino zgjedhjen"
 
 #. ViewMenu
-#: ../src/glade-window.c:2265
+#: ../src/glade-window.c:2273
 msgid "_Clipboard"
 msgstr "_Shënime"
 
-#: ../src/glade-window.c:2266
+#: ../src/glade-window.c:2274
 msgid "Show the clipboard"
 msgstr "Shfaq shënimet"
 
 #. ProjectsMenu
-#: ../src/glade-window.c:2270
+#: ../src/glade-window.c:2278
 msgid "_Previous Project"
 msgstr "_Projekti paraardhës"
 
-#: ../src/glade-window.c:2271
+#: ../src/glade-window.c:2279
 msgid "Activate previous project"
 msgstr "Aktivo projektin paraardhës"
 
-#: ../src/glade-window.c:2273
+#: ../src/glade-window.c:2281
 msgid "_Next Project"
 msgstr "Projekti _në vijim"
 
-#: ../src/glade-window.c:2274
+#: ../src/glade-window.c:2282
 msgid "Activate next project"
 msgstr "Aktivo projektin në vijim"
 
-#: ../src/glade-window.c:2282
+#: ../src/glade-window.c:2290
 msgid "_Use Small Icons"
 msgstr "_Përdor ikona të vogla"
 
-#: ../src/glade-window.c:2283
+#: ../src/glade-window.c:2291
 msgid "Show items using small icons"
 msgstr "Shfaq elementët duke përdorur ikona të vogla"
 
-#: ../src/glade-window.c:2286
+#: ../src/glade-window.c:2294
 msgid "Context _Help"
 msgstr "Ndi_hmë sipas kontekstit"
 
-#: ../src/glade-window.c:2287
+#: ../src/glade-window.c:2295
 msgid "Show or hide contextual help buttons in the editor"
 msgstr "Shfaq ose fsheh pulsantët e ndihmës sipas kontekstit në editor"
 
 # (pofilter) accelerators: accelerator _ is missing from translation
-#: ../src/glade-window.c:2290
+#: ../src/glade-window.c:2298
 msgid "Dock _Palette"
 msgstr "Vendos _tavoletën"
 
-#: ../src/glade-window.c:2291
+#: ../src/glade-window.c:2299
 msgid "Dock the palette into the main window"
 msgstr "Vendos tavoletën në dritaren qendrore"
 
 # (pofilter) accelerators: accelerator _ is missing from translation
-#: ../src/glade-window.c:2294
+#: ../src/glade-window.c:2302
 msgid "Dock _Inspector"
 msgstr "Vendos _inspektorin"
 
-#: ../src/glade-window.c:2295
+#: ../src/glade-window.c:2303
 msgid "Dock the inspector into the main window"
 msgstr "Vendos inspektorin në dritaren qendrore"
 
 # (pofilter) accelerators: accelerator _ is missing from translation
-#: ../src/glade-window.c:2298
+#: ../src/glade-window.c:2306
 msgid "Dock _Editor"
 msgstr "Vendos _editorin"
 
-#: ../src/glade-window.c:2299
+#: ../src/glade-window.c:2307
 msgid "Dock the editor into the main window"
 msgstr "Vendos editorin në dritaren qendrore"
 
-#: ../src/glade-window.c:2307 ../plugins/gtk+/gtk+.xml.in.h:410
+#: ../src/glade-window.c:2310
+msgid "Snap _Grid"
+msgstr ""
+
+#: ../src/glade-window.c:2311
+msgid "Snap to grid"
+msgstr ""
+
+#: ../src/glade-window.c:2319 ../plugins/gtk+/gtk+.xml.in.h:424
 msgid "Text beside icons"
 msgstr "Tekst anash ikonave"
 
-#: ../src/glade-window.c:2308
+#: ../src/glade-window.c:2320
 msgid "Display items as text beside icons"
 msgstr "Shfaq elementët si tekst anash ikonave"
 
-#: ../src/glade-window.c:2310
+#: ../src/glade-window.c:2322
 msgid "_Icons only"
 msgstr "Vetëm _Ikona"
 
-#: ../src/glade-window.c:2311
+#: ../src/glade-window.c:2323
 msgid "Display items as icons only"
 msgstr "Shfaq elementët vetëm si ikona"
 
-#: ../src/glade-window.c:2313
+#: ../src/glade-window.c:2325
 msgid "_Text only"
 msgstr "Vetëm _tekst"
 
-#: ../src/glade-window.c:2314
+#: ../src/glade-window.c:2326
 msgid "Display items as text only"
 msgstr "Shfaq elementët vetëm si tekste"
 
-#: ../src/glade-window.c:2501
+#: ../src/glade-window.c:2513
 msgid "Select"
 msgstr "Zgjidh"
 
-#: ../src/glade-window.c:2505
+#: ../src/glade-window.c:2517
 msgid "Select widgets in the workspace"
 msgstr "Zgjidh widget në hapësirën e punës"
 
-#: ../src/glade-window.c:2529
+#: ../src/glade-window.c:2541
 msgid "Drag Resize"
 msgstr "Tërhiq e ripërmaso"
 
-#: ../src/glade-window.c:2533
+#: ../src/glade-window.c:2545
 msgid "Drag and resize widgets in the workspace"
 msgstr "Tërhiq e ripërmaso widget në hapësirën e punës"
 
-#: ../src/glade-window.c:2571
+#: ../src/glade-window.c:2583
 msgid "Could not create a new project."
 msgstr "I pamundur krijimi i një projekti të ri."
 
-#: ../src/glade-window.c:2625
+#: ../src/glade-window.c:2637
 #, c-format
 msgid "The project %s has unsaved changes"
 msgstr "Projekti %s ka ndryshime të paruajtura"
 
-#: ../src/glade-window.c:2629
+#: ../src/glade-window.c:2641
 msgid "If you reload it, all unsaved changes could be lost. Reload it anyway?"
 msgstr ""
 "Nëse e ringarkoni, të gjitha ndryshimet e paruajtura do të humbasin. "
 "Ringarkon sidoqoftë?"
 
-#: ../src/glade-window.c:2638
+#: ../src/glade-window.c:2650
 #, c-format
 msgid "The project file %s has been externally modified"
 msgstr "File i projektit %s është ndryshuar nga jashtë"
 
-#: ../src/glade-window.c:2642
+#: ../src/glade-window.c:2654
 msgid "Do you want to reload the project?"
 msgstr "Dëshiron të ringarkosh projektin?"
 
-#: ../src/glade-window.c:2648
+#: ../src/glade-window.c:2660
 msgid "_Reload"
 msgstr "_Ringarko"
 
-#: ../src/glade-window.c:2765
+#: ../src/glade-window.c:2777
 msgid "_Undo"
 msgstr "_Anullo"
 
 #. Change tooltips
-#: ../src/glade-window.c:2767 ../gladeui/glade-app.c:268
+#: ../src/glade-window.c:2779 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Undo: %s"
 msgstr "Anullo: %s"
 
-#: ../src/glade-window.c:2767 ../src/glade-window.c:2778
+#: ../src/glade-window.c:2779 ../src/glade-window.c:2790
 #: ../gladeui/glade-app.c:269
 msgid "the last action"
 msgstr "veprimin e fundit"
 
-#: ../src/glade-window.c:2776
+#: ../src/glade-window.c:2788
 msgid "_Redo"
 msgstr "_Përsërit"
 
-#: ../src/glade-window.c:2778 ../gladeui/glade-app.c:268
+#: ../src/glade-window.c:2790 ../gladeui/glade-app.c:268
 #, c-format
 msgid "Redo: %s"
 msgstr "Përsërit: %s"
 
-#: ../src/glade-window.c:3058
+#: ../src/glade-window.c:3070
 msgid "Go back in undo history"
 msgstr "Shko mbrapsht në historikun e anullimeve"
 
-#: ../src/glade-window.c:3060
+#: ../src/glade-window.c:3072
 msgid "Go forward in undo history"
 msgstr "Ec përpara në historikun e anullimeve"
 
-#: ../src/glade-window.c:3106
+#: ../src/glade-window.c:3118
 msgid "Palette"
 msgstr "Tavoleta"
 
-#: ../src/glade-window.c:3117
+#: ../src/glade-window.c:3129
 msgid "Inspector"
 msgstr "Inspektori"
 
@@ -657,7 +662,7 @@ msgid "You cannot delete a widget internal to a composite widget."
 msgstr ""
 "Nuk mund të eleminosh një widget në brendësi të një widget të kompozuar."
 
-#: ../gladeui/glade-builtins.c:265 ../plugins/gtk+/gtk+.xml.in.h:396
+#: ../gladeui/glade-builtins.c:265 ../plugins/gtk+/gtk+.xml.in.h:410
 msgid "Stock"
 msgstr "Stock"
 
@@ -665,7 +670,7 @@ msgstr "Stock"
 msgid "A builtin stock item"
 msgstr "Një element stock i integruar"
 
-#: ../gladeui/glade-builtins.c:274 ../plugins/gtk+/gtk+.xml.in.h:398
+#: ../gladeui/glade-builtins.c:274 ../plugins/gtk+/gtk+.xml.in.h:412
 msgid "Stock Image"
 msgstr "Figurë stock"
 
@@ -775,7 +780,7 @@ msgstr "Elemino birin %s nga %s"
 msgid "Reorder %s's children"
 msgstr "Riorganizimi i bijve të %s"
 
-#: ../gladeui/glade-base-editor.c:1435 ../plugins/gtk+/gtk+.xml.in.h:219
+#: ../gladeui/glade-base-editor.c:1435 ../plugins/gtk+/gtk+.xml.in.h:233
 msgid "Label"
 msgstr "Etiketa"
 
@@ -793,7 +798,7 @@ msgstr "Emri :"
 msgid "Type :"
 msgstr "Lloji :"
 
-#: ../gladeui/glade-clipboard-view.c:209 ../plugins/gtk+/gtk+.xml.in.h:451
+#: ../gladeui/glade-clipboard-view.c:209 ../plugins/gtk+/gtk+.xml.in.h:464
 msgid "Widget"
 msgstr "Widget"
 
@@ -1084,7 +1089,7 @@ msgstr "Tastiera"
 msgid "Functions"
 msgstr "Funksione"
 
-#: ../gladeui/glade-editor-property.c:3253 ../plugins/gtk+/gtk+.xml.in.h:284
+#: ../gladeui/glade-editor-property.c:3253 ../plugins/gtk+/gtk+.xml.in.h:298
 msgid "Other"
 msgstr "Tjetër"
 
@@ -1094,7 +1099,7 @@ msgstr "Tjetër"
 msgid "<choose a key>"
 msgstr "<zgjidh një pulsant>"
 
-#: ../gladeui/glade-editor-property.c:3457 ../plugins/gtk+/gtk+.xml.in.h:246
+#: ../gladeui/glade-editor-property.c:3457 ../plugins/gtk+/gtk+.xml.in.h:260
 msgid "None"
 msgstr "Asnjë"
 
@@ -1245,48 +1250,48 @@ msgstr "Ç_zgjidh gjithçka"
 msgid "Property _Description:"
 msgstr "Përshkrimi i _pronësisë:"
 
-#: ../gladeui/glade-fixed.c:482 ../plugins/gtk+/glade-gtk.c:1677
+#: ../gladeui/glade-fixed.c:516 ../plugins/gtk+/glade-gtk.c:1677
 #, c-format
 msgid "Placing %s inside %s"
 msgstr "Vendosje e %s në brendësi të %s"
 
-#: ../gladeui/glade-fixed.c:971
+#: ../gladeui/glade-fixed.c:1005
 msgid "X position property"
 msgstr "Pronësia e pozicionit X"
 
-#: ../gladeui/glade-fixed.c:972
+#: ../gladeui/glade-fixed.c:1006
 msgid "The property used to set the X position of a child object"
 msgstr "Pronësia e përdorur për të caktuar pozicionin X të një objekti bir"
 
-#: ../gladeui/glade-fixed.c:978
+#: ../gladeui/glade-fixed.c:1012
 msgid "Y position property"
 msgstr "Pronësia e pozicionit Y"
 
-#: ../gladeui/glade-fixed.c:979
+#: ../gladeui/glade-fixed.c:1013
 msgid "The property used to set the Y position of a child object"
 msgstr "Pronësia e përdorur për të caktuar pozicionin Y të një objekti bir"
 
-#: ../gladeui/glade-fixed.c:985
+#: ../gladeui/glade-fixed.c:1019
 msgid "Width property"
 msgstr "Pronësia e gjerësisë"
 
-#: ../gladeui/glade-fixed.c:986
+#: ../gladeui/glade-fixed.c:1020
 msgid "The property used to set the width of a child object"
 msgstr "Pronësia e përdorur për të caktuar gjerësinë e një objekti bir"
 
-#: ../gladeui/glade-fixed.c:992
+#: ../gladeui/glade-fixed.c:1026
 msgid "Height property"
 msgstr "Pronësia e lartësisë"
 
-#: ../gladeui/glade-fixed.c:993
+#: ../gladeui/glade-fixed.c:1027
 msgid "The property used to set the height of a child object"
 msgstr "Pronësia e përdorur për të caktuar lartësinë e një objekti bir"
 
-#: ../gladeui/glade-fixed.c:999
+#: ../gladeui/glade-fixed.c:1033
 msgid "Can resize"
 msgstr "Mund të ripërmasohet"
 
-#: ../gladeui/glade-fixed.c:1000
+#: ../gladeui/glade-fixed.c:1034
 msgid "Whether this container supports resizes of child widgets"
 msgstr "Tregon nëse ky përmbajtës suporton ripërmasimin e widget bij"
 
@@ -1295,18 +1300,18 @@ msgid "Widget selector"
 msgstr "Zgjedhësi i widget"
 
 # (pofilter) variables: do not translate: %s
-#: ../gladeui/glade-parser.c:670
+#: ../gladeui/glade-parser.c:719
 #, c-format
 msgid "Could not find glade file %s"
 msgstr "E pamundur gjetja e file glade %s"
 
 # (pofilter) variables: do not translate: %s
-#: ../gladeui/glade-parser.c:702 ../gladeui/glade-parser.c:710
+#: ../gladeui/glade-parser.c:751 ../gladeui/glade-parser.c:759
 #, c-format
 msgid "Errors parsing glade file %s"
 msgstr "Gabim gjatë analizimit të file glade %s"
 
-#: ../gladeui/glade-parser.c:1432
+#: ../gladeui/glade-parser.c:1532
 #, c-format
 msgid "Could not allocate memory for interface"
 msgstr "I pamundur sigurimi i memorjes për interfaqen"
@@ -1366,27 +1371,27 @@ msgid "Click"
 msgstr "Click"
 
 #. Atk click property
-#: ../gladeui/glade-property-class.c:68 ../plugins/gtk+/gtk+.xml.in.h:375
+#: ../gladeui/glade-property-class.c:68 ../plugins/gtk+/gtk+.xml.in.h:389
 msgid "Set the description of the Click atk action"
 msgstr "Përcakto përshkrimin e aksionit atk Click"
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:69 ../plugins/gtk+/gtk+.xml.in.h:297
+#: ../gladeui/glade-property-class.c:69 ../plugins/gtk+/gtk+.xml.in.h:311
 msgid "Press"
 msgstr "Presioni"
 
 #. Atk press property
-#: ../gladeui/glade-property-class.c:70 ../plugins/gtk+/gtk+.xml.in.h:377
+#: ../gladeui/glade-property-class.c:70 ../plugins/gtk+/gtk+.xml.in.h:391
 msgid "Set the description of the Press atk action"
 msgstr "Përcakto përshkrimin e aksionit atk Press"
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:71 ../plugins/gtk+/gtk+.xml.in.h:312
+#: ../gladeui/glade-property-class.c:71 ../plugins/gtk+/gtk+.xml.in.h:326
 msgid "Release"
 msgstr "Lëshimi"
 
 #. Atk release property
-#: ../gladeui/glade-property-class.c:72 ../plugins/gtk+/gtk+.xml.in.h:379
+#: ../gladeui/glade-property-class.c:72 ../plugins/gtk+/gtk+.xml.in.h:393
 msgid "Set the description of the Release atk action"
 msgstr "Përcakto përshkrimin e aksionit atk Release"
 
@@ -1396,50 +1401,50 @@ msgid "Activate"
 msgstr "Aktivo"
 
 #. Atk activate property
-#: ../gladeui/glade-property-class.c:74 ../plugins/gtk+/gtk+.xml.in.h:373
+#: ../gladeui/glade-property-class.c:74 ../plugins/gtk+/gtk+.xml.in.h:387
 msgid "Set the description of the Activate atk action"
 msgstr "Përcakto përshkrimin e aksionit atk Activate"
 
 #. Atk relationset properties
-#: ../gladeui/glade-property-class.c:78 ../plugins/gtk+/gtk+.xml.in.h:69
+#: ../gladeui/glade-property-class.c:78 ../plugins/gtk+/gtk+.xml.in.h:83
 msgid "Controlled By"
 msgstr "Kontrolluar nga"
 
 #. Atk relationset properties
-#: ../gladeui/glade-property-class.c:79 ../plugins/gtk+/gtk+.xml.in.h:192
+#: ../gladeui/glade-property-class.c:79 ../plugins/gtk+/gtk+.xml.in.h:206
 msgid "Indicates an object controlled by one or more target objects"
 msgstr "Tregon një objekt të kontrolluar nga një apo më shumë objekte target"
 
-#: ../gladeui/glade-property-class.c:81 ../plugins/gtk+/gtk+.xml.in.h:70
+#: ../gladeui/glade-property-class.c:81 ../plugins/gtk+/gtk+.xml.in.h:84
 msgid "Controller For"
 msgstr "Kontrollues për"
 
-#: ../gladeui/glade-property-class.c:82 ../plugins/gtk+/gtk+.xml.in.h:194
+#: ../gladeui/glade-property-class.c:82 ../plugins/gtk+/gtk+.xml.in.h:208
 msgid "Indicates an object is a controller for one or more target objects"
 msgstr ""
 "Tregon një objekt që është kontrollues për një apo më shumë objekte target"
 
-#: ../gladeui/glade-property-class.c:84 ../plugins/gtk+/gtk+.xml.in.h:221
+#: ../gladeui/glade-property-class.c:84 ../plugins/gtk+/gtk+.xml.in.h:235
 msgid "Labelled By"
 msgstr "Etiketuar nga"
 
-#: ../gladeui/glade-property-class.c:85 ../plugins/gtk+/gtk+.xml.in.h:197
+#: ../gladeui/glade-property-class.c:85 ../plugins/gtk+/gtk+.xml.in.h:211
 msgid "Indicates an object is labelled by one or more target objects"
 msgstr "Tregon një objekt të etiketuar nga një apo më shumë objekte target"
 
-#: ../gladeui/glade-property-class.c:87 ../plugins/gtk+/gtk+.xml.in.h:220
+#: ../gladeui/glade-property-class.c:87 ../plugins/gtk+/gtk+.xml.in.h:234
 msgid "Label For"
 msgstr "Etiketë për"
 
-#: ../gladeui/glade-property-class.c:88 ../plugins/gtk+/gtk+.xml.in.h:195
+#: ../gladeui/glade-property-class.c:88 ../plugins/gtk+/gtk+.xml.in.h:209
 msgid "Indicates an object is a label for one or more target objects"
 msgstr "Tregon një objekt që është etiketë për një apo më shumë objekte target"
 
-#: ../gladeui/glade-property-class.c:90 ../plugins/gtk+/gtk+.xml.in.h:233
+#: ../gladeui/glade-property-class.c:90 ../plugins/gtk+/gtk+.xml.in.h:247
 msgid "Member Of"
 msgstr "Anëtar i"
 
-#: ../gladeui/glade-property-class.c:91 ../plugins/gtk+/gtk+.xml.in.h:196
+#: ../gladeui/glade-property-class.c:91 ../plugins/gtk+/gtk+.xml.in.h:210
 msgid ""
 "Indicates an object is a member of a group of one or more target objects"
 msgstr ""
@@ -1450,7 +1455,7 @@ msgstr ""
 msgid "Child Node Of"
 msgstr "Nyje bijë e"
 
-#: ../gladeui/glade-property-class.c:94 ../plugins/gtk+/gtk+.xml.in.h:193
+#: ../gladeui/glade-property-class.c:94 ../plugins/gtk+/gtk+.xml.in.h:207
 msgid ""
 "Indicates an object is a cell in a treetable which is displayed because a "
 "cell in the same column is expanded and identifies that cell"
@@ -1458,7 +1463,7 @@ msgstr ""
 "Tregon që një objekt është qeli e një tabele të degëzuar që shfaqet sepse "
 "një qeli e të njëjtës kollonë është shpalosur dhe identifikon këtë qeli"
 
-#: ../gladeui/glade-property-class.c:97 ../plugins/gtk+/gtk+.xml.in.h:160
+#: ../gladeui/glade-property-class.c:97 ../plugins/gtk+/gtk+.xml.in.h:174
 msgid "Flows To"
 msgstr "Rrjedh tek"
 
@@ -1470,11 +1475,11 @@ msgstr ""
 "Tregon që përmbajtja e këtij objekti rrjedh llogjikisht tek një tjetër "
 "AtkObject në menyrë sekuenciale (për shembull text-flow)."
 
-#: ../gladeui/glade-property-class.c:101 ../plugins/gtk+/gtk+.xml.in.h:159
+#: ../gladeui/glade-property-class.c:101 ../plugins/gtk+/gtk+.xml.in.h:173
 msgid "Flows From"
 msgstr "Rrjedh nga"
 
-#: ../gladeui/glade-property-class.c:102 ../plugins/gtk+/gtk+.xml.in.h:202
+#: ../gladeui/glade-property-class.c:102 ../plugins/gtk+/gtk+.xml.in.h:216
 msgid ""
 "Indicates that the object has content that flows logically from another "
 "AtkObject in a sequential way, (for instance text-flow)"
@@ -1482,11 +1487,11 @@ msgstr ""
 "Tregon që ky objekt ka përmbajtje që rrjedh llogjikisht nga një tjetër "
 "AtkObject në menyrë sekuenciale (për shembull text-flow)."
 
-#: ../gladeui/glade-property-class.c:105 ../plugins/gtk+/gtk+.xml.in.h:402
+#: ../gladeui/glade-property-class.c:105 ../plugins/gtk+/gtk+.xml.in.h:416
 msgid "Subwindow Of"
 msgstr "Nëndritare e"
 
-#: ../gladeui/glade-property-class.c:106 ../plugins/gtk+/gtk+.xml.in.h:190
+#: ../gladeui/glade-property-class.c:106 ../plugins/gtk+/gtk+.xml.in.h:204
 msgid ""
 "Indicates a subwindow attached to a component but otherwise has no "
 "connection in the UI hierarchy to that component"
@@ -1494,11 +1499,11 @@ msgstr ""
 "Tregon një nën-dritare ngjitur një komponenti por që përkundrazi nuk ka "
 "lidhje në gjerarkinë e UI me këtë komponent"
 
-#: ../gladeui/glade-property-class.c:109 ../plugins/gtk+/gtk+.xml.in.h:119
+#: ../gladeui/glade-property-class.c:109 ../plugins/gtk+/gtk+.xml.in.h:133
 msgid "Embeds"
 msgstr "Përmban"
 
-#: ../gladeui/glade-property-class.c:110 ../plugins/gtk+/gtk+.xml.in.h:204
+#: ../gladeui/glade-property-class.c:110 ../plugins/gtk+/gtk+.xml.in.h:218
 msgid ""
 "Indicates that the object visually embeds another object's content, i.e. "
 "this object's content flows around another's content"
@@ -1507,11 +1512,11 @@ msgstr ""
 "tjetër, p.sh. përmbajtja e këtij objekti \"rrjedh\" rreth e qark përmbajtjes "
 "së një tjetri"
 
-#: ../gladeui/glade-property-class.c:113 ../plugins/gtk+/gtk+.xml.in.h:118
+#: ../gladeui/glade-property-class.c:113 ../plugins/gtk+/gtk+.xml.in.h:132
 msgid "Embedded By"
 msgstr "Përmbajtur nga"
 
-#: ../gladeui/glade-property-class.c:114 ../plugins/gtk+/gtk+.xml.in.h:215
+#: ../gladeui/glade-property-class.c:114 ../plugins/gtk+/gtk+.xml.in.h:229
 msgid ""
 "Inverse of 'Embeds', indicates that this object's content is visually "
 "embedded in another object"
@@ -1519,60 +1524,60 @@ msgstr ""
 "E kundërta e \"Përmban\", tregon që përmbajtja e këtij objekti përmbahet në "
 "menyrë të dukshme tek një tjetër objekt"
 
-#: ../gladeui/glade-property-class.c:117 ../plugins/gtk+/gtk+.xml.in.h:293
+#: ../gladeui/glade-property-class.c:117 ../plugins/gtk+/gtk+.xml.in.h:307
 msgid "Popup For"
 msgstr "Menu e shpalosëshme për"
 
-#: ../gladeui/glade-property-class.c:118 ../plugins/gtk+/gtk+.xml.in.h:199
+#: ../gladeui/glade-property-class.c:118 ../plugins/gtk+/gtk+.xml.in.h:213
 msgid "Indicates that an object is a popup for another object"
 msgstr "Tregon që një objekt është menu e shpalosëshme për një objekt tjetër"
 
-#: ../gladeui/glade-property-class.c:120 ../plugins/gtk+/gtk+.xml.in.h:288
+#: ../gladeui/glade-property-class.c:120 ../plugins/gtk+/gtk+.xml.in.h:302
 msgid "Parent Window Of"
 msgstr "Dritare prind i"
 
-#: ../gladeui/glade-property-class.c:121 ../plugins/gtk+/gtk+.xml.in.h:198
+#: ../gladeui/glade-property-class.c:121 ../plugins/gtk+/gtk+.xml.in.h:212
 msgid "Indicates that an object is a parent window of another object"
 msgstr "Tregon që një objekt është dritare prind e një objekti tjetër"
 
-#: ../gladeui/glade-property.c:607
+#: ../gladeui/glade-property.c:623
 msgid "Enabled"
 msgstr "Aktivuar"
 
-#: ../gladeui/glade-property.c:608
+#: ../gladeui/glade-property.c:624
 msgid "If the property is optional, this is its enabled state"
 msgstr "Nëse pronësia është opsionale, kjo është gjendja e saj e aktivuar"
 
-#: ../gladeui/glade-property.c:614 ../gladeui/glade-widget-action.c:158
+#: ../gladeui/glade-property.c:630 ../gladeui/glade-widget-action.c:158
 msgid "Sensitive"
 msgstr "I ndjeshëm"
 
-#: ../gladeui/glade-property.c:615
+#: ../gladeui/glade-property.c:631
 msgid "This gives backends control to set property sensitivity"
 msgstr ""
 "Kjo jep kontrollin e backend për të përcaktuar pronësinë \"ndjeshmëria\""
 
-#: ../gladeui/glade-property.c:621
+#: ../gladeui/glade-property.c:637
 msgid "Comment"
 msgstr "Koment"
 
-#: ../gladeui/glade-property.c:622
+#: ../gladeui/glade-property.c:638
 msgid "Comment for translators"
 msgstr "Koment për përkthyesit"
 
-#: ../gladeui/glade-property.c:628
+#: ../gladeui/glade-property.c:644
 msgid "Translatable"
 msgstr "E përkthyeshme"
 
-#: ../gladeui/glade-property.c:629
+#: ../gladeui/glade-property.c:645
 msgid "Whether this property is translatable or not"
 msgstr "Tregon nëse kjo pronësi është ose jo e përkthyeshme"
 
-#: ../gladeui/glade-property.c:635
+#: ../gladeui/glade-property.c:651
 msgid "Has Context"
 msgstr "Ka kontekst"
 
-#: ../gladeui/glade-property.c:636
+#: ../gladeui/glade-property.c:652
 msgid "Whether or not the translatable string has a context prefix"
 msgstr "Tregon nëse fraza e përkthyeshme ka ose jo një prefiks konteksti"
 
@@ -1712,7 +1717,7 @@ msgstr "Projekti glade kujt i përket ky widget"
 msgid "A list of GladeProperties"
 msgstr "Një listë me GladeProperties"
 
-#: ../gladeui/glade-widget.c:1060 ../plugins/gtk+/gtk+.xml.in.h:287
+#: ../gladeui/glade-widget.c:1060 ../plugins/gtk+/gtk+.xml.in.h:301
 msgid "Parent"
 msgstr "Prindi"
 
@@ -1736,7 +1741,7 @@ msgstr "Modeli"
 msgid "A GladeWidget template to base a new widget on"
 msgstr "Një model GladeWidget si bazë për një widget të ri"
 
-#: ../gladeui/glade-widget.c:1081 ../plugins/gtk+/gtk+.xml.in.h:205
+#: ../gladeui/glade-widget.c:1081 ../plugins/gtk+/gtk+.xml.in.h:219
 msgid "Info"
 msgstr "Informacione"
 
@@ -1798,7 +1803,7 @@ msgstr "Emri i përgjithshëm"
 msgid "Used to generate names of new widgets"
 msgstr "Përdorur për të gjeneruar emrat e widget të rinj"
 
-#: ../gladeui/glade-widget-adaptor.c:836 ../plugins/gtk+/gtk+.xml.in.h:179
+#: ../gladeui/glade-widget-adaptor.c:836 ../plugins/gtk+/gtk+.xml.in.h:193
 msgid "Icon Name"
 msgstr "Emri i ikonës"
 
@@ -1834,7 +1839,7 @@ msgstr ""
 "Përmban emrin e pronësisë së packing për të përshkruar bijtë specialë për "
 "këtë klasë të përmbajtësit"
 
-#: ../gladeui/glade-widget-adaptor.c:869 ../plugins/gtk+/gtk+.xml.in.h:93
+#: ../gladeui/glade-widget-adaptor.c:869 ../plugins/gtk+/gtk+.xml.in.h:107
 msgid "Cursor"
 msgstr "Kursori"
 
@@ -2093,11 +2098,11 @@ msgstr "Përmasa në piksel ka përparësi ndaj madhësisë së ikonës"
 msgid "<separator>"
 msgstr "<ndarës>"
 
-#: ../plugins/gtk+/glade-gtk.c:4799 ../plugins/gtk+/gtk+.xml.in.h:247
+#: ../plugins/gtk+/glade-gtk.c:4799 ../plugins/gtk+/gtk+.xml.in.h:261
 msgid "Normal"
 msgstr "Normal"
 
-#: ../plugins/gtk+/glade-gtk.c:4800 ../plugins/gtk+/gtk+.xml.in.h:184
+#: ../plugins/gtk+/glade-gtk.c:4800 ../plugins/gtk+/gtk+.xml.in.h:198
 msgid "Image"
 msgstr "Figurë"
 
@@ -2236,7 +2241,7 @@ msgstr "Pulsant"
 msgid "Toggle"
 msgstr "Pulsant me dy gjëndje"
 
-#: ../plugins/gtk+/glade-gtk.c:5684 ../plugins/gtk+/gtk+.xml.in.h:234
+#: ../plugins/gtk+/glade-gtk.c:5684 ../plugins/gtk+/gtk+.xml.in.h:248
 msgid "Menu"
 msgstr "Menu"
 
@@ -2483,19 +2488,33 @@ msgstr "Konfermo"
 msgid "Container"
 msgstr "Përmbajtës"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:64
+#.
+#. <glade-widget-group name="gtk-toplevels" _title="Toplevels">
+#. <glade-widget-class-ref name="GtkWindow"/>
+#. <glade-widget-class-ref name="GtkDialog"/>
+#. <glade-widget-class-ref name="GtkAboutDialog"/>
+#. <glade-widget-class-ref name="GtkColorSelectionDialog"/>
+#. <glade-widget-class-ref name="GtkFileChooserDialog"/>
+#. <glade-widget-class-ref name="GtkFontSelectionDialog"/>
+#. <glade-widget-class-ref name="GtkInputDialog"/>
+#. <glade-widget-class-ref name="GtkMessageDialog"/>
+#. <glade-widget-class-ref name="GtkRecentChooserDialog"/>
+#. <glade-widget-class-ref name="GtkAssistant"/>
+#. </glade-widget-group>
+#.
+#: ../plugins/gtk+/gtk+.xml.in.h:78
 msgid "Containers"
 msgstr "Përmbajtës"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:65
+#: ../plugins/gtk+/gtk+.xml.in.h:79
 msgid "Content"
 msgstr "Përmbajtja"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:66
+#: ../plugins/gtk+/gtk+.xml.in.h:80
 msgid "Continuous"
 msgstr "Vazhdueshëm"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:67
+#: ../plugins/gtk+/gtk+.xml.in.h:81
 msgid "Control and Display"
 msgstr "Kontrolli dhe shfaqja"
 
@@ -2520,152 +2539,152 @@ msgstr "Kontrolli dhe shfaqja"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:92
+#: ../plugins/gtk+/gtk+.xml.in.h:106
 msgid "Create Folder"
 msgstr "Krijo kartelë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:94
+#: ../plugins/gtk+/gtk+.xml.in.h:108
 msgid "Curve"
 msgstr "Hark"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:95
+#: ../plugins/gtk+/gtk+.xml.in.h:109
 msgid "Custom"
 msgstr "Personalizuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:96
+#: ../plugins/gtk+/gtk+.xml.in.h:110
 msgid "Custom widget"
 msgstr "Widget i personalizuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:97
+#: ../plugins/gtk+/gtk+.xml.in.h:111
 msgid "Default"
 msgstr "Paracaktuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:98
+#: ../plugins/gtk+/gtk+.xml.in.h:112
 msgid "Delayed"
 msgstr "Vonuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:99
+#: ../plugins/gtk+/gtk+.xml.in.h:113
 msgid "Descending"
 msgstr "Në zbritje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:100
+#: ../plugins/gtk+/gtk+.xml.in.h:114
 msgid "Described By"
 msgstr "Përshkruar nga"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:101
+#: ../plugins/gtk+/gtk+.xml.in.h:115
 msgid "Description For"
 msgstr "Përshkrim për"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:102
+#: ../plugins/gtk+/gtk+.xml.in.h:116
 msgid "Description of an object, formatted for assistive technology access"
 msgstr ""
 "Përshkrimi i një objekti, formatuar për hyrje nga teknollogjia asistuese"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:103
+#: ../plugins/gtk+/gtk+.xml.in.h:117
 msgid "Desktop"
 msgstr "Hapësira e punës"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:104
+#: ../plugins/gtk+/gtk+.xml.in.h:118
 msgid "Dialog"
 msgstr "Dialog"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:105
+#: ../plugins/gtk+/gtk+.xml.in.h:119
 msgid "Dialog Box"
 msgstr "Dritare dialogu"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:106
+#: ../plugins/gtk+/gtk+.xml.in.h:120
 msgid "Discontinuous"
 msgstr "Ndërprerë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:107
+#: ../plugins/gtk+/gtk+.xml.in.h:121
 msgid "Discrete"
 msgstr "Diskret"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:108
+#: ../plugins/gtk+/gtk+.xml.in.h:122
 msgid "Dock"
 msgstr "E kapshme"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:109
+#: ../plugins/gtk+/gtk+.xml.in.h:123
 msgid "Down"
 msgstr "Poshtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:110
+#: ../plugins/gtk+/gtk+.xml.in.h:124
 msgid "Drag & Drop"
 msgstr "Tërhiq & Lësho"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:111
+#: ../plugins/gtk+/gtk+.xml.in.h:125
 msgid "Drag and Drop"
 msgstr "Tërhiq dhe lësho"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:112
+#: ../plugins/gtk+/gtk+.xml.in.h:126
 msgid "Drawing Area"
 msgstr "Sipërfaqja e vizatimit"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:113
+#: ../plugins/gtk+/gtk+.xml.in.h:127
 msgid "Drop Down Menu"
 msgstr "Menu e shpalosëshme"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:114
+#: ../plugins/gtk+/gtk+.xml.in.h:128
 msgid "East"
 msgstr "Lindje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:115
+#: ../plugins/gtk+/gtk+.xml.in.h:129
 msgid "Edge"
 msgstr "Kufi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:116
+#: ../plugins/gtk+/gtk+.xml.in.h:130
 msgid "Edit Type"
 msgstr "Ndrysho llojin"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:117
+#: ../plugins/gtk+/gtk+.xml.in.h:131
 msgid "Edit&#8230;"
 msgstr "Ndrysho&#8230;"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:120
+#: ../plugins/gtk+/gtk+.xml.in.h:134
 msgid "End"
 msgstr "Fundi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:121
+#: ../plugins/gtk+/gtk+.xml.in.h:135
 msgid "Enter Notify"
 msgstr "Njofto hyrjen"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:122
+#: ../plugins/gtk+/gtk+.xml.in.h:136
 msgid "Error"
 msgstr "Gabim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:123
+#: ../plugins/gtk+/gtk+.xml.in.h:137
 msgid "Etched In"
 msgstr "Gdhendur brenda"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:124
+#: ../plugins/gtk+/gtk+.xml.in.h:138
 msgid "Etched Out"
 msgstr "Gdhendur jashtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:125
+#: ../plugins/gtk+/gtk+.xml.in.h:139
 msgid "Event Box"
 msgstr "Kuti eventesh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:126
+#: ../plugins/gtk+/gtk+.xml.in.h:140
 msgid "Expand"
 msgstr "Shpalos"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:127
+#: ../plugins/gtk+/gtk+.xml.in.h:141
 msgid "Expander"
 msgstr "Shpalosësh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:128
+#: ../plugins/gtk+/gtk+.xml.in.h:142
 msgid "Exposure"
 msgstr "Ekspozim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:129
+#: ../plugins/gtk+/gtk+.xml.in.h:143
 msgid "Extended"
 msgstr "Shtrirë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:130
+#: ../plugins/gtk+/gtk+.xml.in.h:144
 msgid "File Chooser Button"
 msgstr "Pulsant zgjedhje file"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:131
+#: ../plugins/gtk+/gtk+.xml.in.h:145
 msgid "File Chooser Dialog"
 msgstr "Dialog zgjedhje file"
 
@@ -2690,141 +2709,141 @@ msgstr "Dialog zgjedhje file"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:153
+#: ../plugins/gtk+/gtk+.xml.in.h:167
 msgid "File Chooser Widget"
 msgstr "Widget zgjedhje file"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:154
+#: ../plugins/gtk+/gtk+.xml.in.h:168
 msgid "File Name"
 msgstr "Emri i file"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:155
+#: ../plugins/gtk+/gtk+.xml.in.h:169
 msgid "File Selection"
 msgstr "Zgjedhja e file"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:156
+#: ../plugins/gtk+/gtk+.xml.in.h:170
 msgid "Filename"
 msgstr "Emri i file"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:157
+#: ../plugins/gtk+/gtk+.xml.in.h:171
 msgid "Fill"
 msgstr "Mbush"
 
 # (pofilter) accelerators: accelerator _ does not occur in original and should not be in translation
-#: ../plugins/gtk+/gtk+.xml.in.h:158
+#: ../plugins/gtk+/gtk+.xml.in.h:172
 msgid "Fixed"
 msgstr "Fiksuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:161
+#: ../plugins/gtk+/gtk+.xml.in.h:175
 msgid "Focus Change"
 msgstr "Ndryshimi i fokusit"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:162
+#: ../plugins/gtk+/gtk+.xml.in.h:176
 msgid "Font Button"
 msgstr "Pulsant gërmash"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:163
+#: ../plugins/gtk+/gtk+.xml.in.h:177
 msgid "Font Selection"
 msgstr "Zgjedhja e gërmave"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:164
+#: ../plugins/gtk+/gtk+.xml.in.h:178
 msgid "Font Selection Dialog"
 msgstr "Dialog zgjedhje gërmash"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:165
+#: ../plugins/gtk+/gtk+.xml.in.h:179
 msgid "Frame"
 msgstr "Kornizë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:166
+#: ../plugins/gtk+/gtk+.xml.in.h:180
 msgid "Free"
 msgstr "E lirë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:167
+#: ../plugins/gtk+/gtk+.xml.in.h:181
 msgid "Gamma Curve"
 msgstr "Harku gamma"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:168
+#: ../plugins/gtk+/gtk+.xml.in.h:182
 msgid "Half"
 msgstr "Gjysëm"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:169
+#: ../plugins/gtk+/gtk+.xml.in.h:183
 msgid "Handle Box"
 msgstr "Kuti kapëse"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:170
+#: ../plugins/gtk+/gtk+.xml.in.h:184
 msgid "Horizontal"
 msgstr "Horizontale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:171
+#: ../plugins/gtk+/gtk+.xml.in.h:185
 msgid "Horizontal Box"
 msgstr "Kuti horizontale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:172
+#: ../plugins/gtk+/gtk+.xml.in.h:186
 msgid "Horizontal Button Box"
 msgstr "Kuti pulsantësh horizontale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:173
+#: ../plugins/gtk+/gtk+.xml.in.h:187
 msgid "Horizontal Panes"
 msgstr "Panelë horizontalë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:174
+#: ../plugins/gtk+/gtk+.xml.in.h:188
 msgid "Horizontal Ruler"
 msgstr "Vizore horizontale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:175
+#: ../plugins/gtk+/gtk+.xml.in.h:189
 msgid "Horizontal Scale"
 msgstr "Shkallë horizontale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:176
+#: ../plugins/gtk+/gtk+.xml.in.h:190
 msgid "Horizontal Scrollbar"
 msgstr "Shtyllë horizontale rrëshkitje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:177
+#: ../plugins/gtk+/gtk+.xml.in.h:191
 msgid "Horizontal Separator"
 msgstr "Ndarës horizontal"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:178
+#: ../plugins/gtk+/gtk+.xml.in.h:192
 msgid "Horizontal and Vertical"
 msgstr "Horizontalë dhe vertikalë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:180
+#: ../plugins/gtk+/gtk+.xml.in.h:194
 msgid "Icon Theme"
 msgstr "Temë ikonash"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:181
+#: ../plugins/gtk+/gtk+.xml.in.h:195
 msgid "Icon View"
 msgstr "Paraqitje me ikona"
 
 # (pofilter) accelerators: accelerator _ does not occur in original and should not be in translation
-#: ../plugins/gtk+/gtk+.xml.in.h:182
+#: ../plugins/gtk+/gtk+.xml.in.h:196
 msgid "Icons only"
 msgstr "Vetëm ikona"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:183
+#: ../plugins/gtk+/gtk+.xml.in.h:197
 msgid "If Valid"
 msgstr "Nëse e vlefshme"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:185
+#: ../plugins/gtk+/gtk+.xml.in.h:199
 msgid "Image Menu Item"
 msgstr "Element menu figure"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:186
+#: ../plugins/gtk+/gtk+.xml.in.h:200
 msgid "Image Type"
 msgstr "Lloji i figurës"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:187
+#: ../plugins/gtk+/gtk+.xml.in.h:201
 msgid "Immediate"
 msgstr "Menjëhershëm"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:188
+#: ../plugins/gtk+/gtk+.xml.in.h:202
 msgid "In"
 msgstr "Brenda"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:189
+#: ../plugins/gtk+/gtk+.xml.in.h:203
 msgid "Inches"
 msgstr "Inch"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:200
+#: ../plugins/gtk+/gtk+.xml.in.h:214
 msgid ""
 "Indicates that an object provides descriptive information about another "
 "object; more verbose than 'Label For'"
@@ -2832,7 +2851,7 @@ msgstr ""
 "Tregon që një objekt jep informacione përshkruese për një objekt tjetër; më "
 "shumë se 'Etiketa për'"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:201
+#: ../plugins/gtk+/gtk+.xml.in.h:215
 msgid ""
 "Indicates that another object provides descriptive information about this "
 "object; more verbose than 'Labelled By'"
@@ -2840,7 +2859,7 @@ msgstr ""
 "Tregon që një objekt tjetër jep informacione përshkruese për këtë objekt; më "
 "shumë se 'Etiketuar nga'"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:203
+#: ../plugins/gtk+/gtk+.xml.in.h:217
 msgid ""
 "Indicates that the object has content that flows logically to another "
 "AtkObject in a sequential way, (for instance text-flow)"
@@ -2848,190 +2867,190 @@ msgstr ""
 "Tregon që përmbajtja e këtij objekti rrjedh llogjikisht tek një "
 "tjetërAtkObject në menyrë sekuenciale, (për shembull text-flow)"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:206
+#: ../plugins/gtk+/gtk+.xml.in.h:220
 msgid "Input Dialog"
 msgstr "Dialog shtimi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:207
+#: ../plugins/gtk+/gtk+.xml.in.h:221
 msgid "Insert After"
 msgstr "Shto mbas"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:208
+#: ../plugins/gtk+/gtk+.xml.in.h:222
 msgid "Insert Before"
 msgstr "Shto para"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:209
+#: ../plugins/gtk+/gtk+.xml.in.h:223
 msgid "Insert Column"
 msgstr "Shto kollonë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:210
+#: ../plugins/gtk+/gtk+.xml.in.h:224
 msgid "Insert Page After"
 msgstr "Shto faqe mbas"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:211
+#: ../plugins/gtk+/gtk+.xml.in.h:225
 msgid "Insert Page Before"
 msgstr "Shto faqe përpara"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:212
+#: ../plugins/gtk+/gtk+.xml.in.h:226
 msgid "Insert Row"
 msgstr "Shto rresht"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:213
+#: ../plugins/gtk+/gtk+.xml.in.h:227
 msgid "Intro"
 msgstr "Hyrje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:214
+#: ../plugins/gtk+/gtk+.xml.in.h:228
 msgid "Invalid"
 msgstr "Pavlefshëm"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:216
+#: ../plugins/gtk+/gtk+.xml.in.h:230
 msgid "Items"
 msgstr "Elementë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:217
+#: ../plugins/gtk+/gtk+.xml.in.h:231
 msgid "Key Press"
 msgstr "Shtypje pulsanti"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:218
+#: ../plugins/gtk+/gtk+.xml.in.h:232
 msgid "Key Release"
 msgstr "Lëshim pulsanti"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:222
+#: ../plugins/gtk+/gtk+.xml.in.h:236
 msgid "Large Toolbar"
 msgstr "Panel i madh instrumentësh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:223
+#: ../plugins/gtk+/gtk+.xml.in.h:237
 msgid "Layout"
 msgstr "Planimetria"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:224
+#: ../plugins/gtk+/gtk+.xml.in.h:238
 msgid "Least Recently Used first"
 msgstr "Më i vjetri përdorur përpara"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:225
+#: ../plugins/gtk+/gtk+.xml.in.h:239
 msgid "Leave Notify"
 msgstr "Njoftim dalje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:226
+#: ../plugins/gtk+/gtk+.xml.in.h:240
 msgid "Left"
 msgstr "Majtas"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:227
+#: ../plugins/gtk+/gtk+.xml.in.h:241
 msgid "Left to Right"
 msgstr "Nga e majta në të djathtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:228
+#: ../plugins/gtk+/gtk+.xml.in.h:242
 msgid "Linear"
 msgstr "Linear"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:229
+#: ../plugins/gtk+/gtk+.xml.in.h:243
 msgid "Link Button"
 msgstr "Pulsant lidhje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:230
+#: ../plugins/gtk+/gtk+.xml.in.h:244
 msgid "List"
 msgstr "Listë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:231
+#: ../plugins/gtk+/gtk+.xml.in.h:245
 msgid "List Item"
 msgstr "Element liste"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:232
+#: ../plugins/gtk+/gtk+.xml.in.h:246
 msgid "Maximum Width"
 msgstr "Gjerësia maksimum"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:235
+#: ../plugins/gtk+/gtk+.xml.in.h:249
 msgid "Menu Bar"
 msgstr "Shtyllë menuje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:236
+#: ../plugins/gtk+/gtk+.xml.in.h:250
 msgid "Menu Item"
 msgstr "Element menuje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:237
+#: ../plugins/gtk+/gtk+.xml.in.h:251
 msgid "Menu Shell"
 msgstr "Menu shell"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:238
+#: ../plugins/gtk+/gtk+.xml.in.h:252
 msgid "Menu Tool Button"
 msgstr "Pulsant instrumenti menu"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:239
+#: ../plugins/gtk+/gtk+.xml.in.h:253
 msgid "Message Dialog"
 msgstr "Dialog mesazhi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:240
+#: ../plugins/gtk+/gtk+.xml.in.h:254
 msgid "Middle"
 msgstr "Mesatar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:241
+#: ../plugins/gtk+/gtk+.xml.in.h:255
 msgid "Most Recently Used first"
 msgstr "Më i riu përdorur në fillim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:242
+#: ../plugins/gtk+/gtk+.xml.in.h:256
 msgid "Mouse"
 msgstr "Mouse"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:243
+#: ../plugins/gtk+/gtk+.xml.in.h:257
 msgid "Multiple"
 msgstr "Shumëfishe"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:244
+#: ../plugins/gtk+/gtk+.xml.in.h:258
 msgid "Never"
 msgstr "Asnjëherë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:245
+#: ../plugins/gtk+/gtk+.xml.in.h:259
 msgid "Node Child Of"
 msgstr "Nyjë bije e"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:248
+#: ../plugins/gtk+/gtk+.xml.in.h:262
 msgid "North"
 msgstr "Veri"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:249
+#: ../plugins/gtk+/gtk+.xml.in.h:263
 msgid "North East"
 msgstr "Veri Lindje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:250
+#: ../plugins/gtk+/gtk+.xml.in.h:264
 msgid "North West"
 msgstr "Veri Perëndim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:251
+#: ../plugins/gtk+/gtk+.xml.in.h:265
 msgid "Notebook"
 msgstr "Notebook"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:252
+#: ../plugins/gtk+/gtk+.xml.in.h:266
 msgid "Notification"
 msgstr "Njoftim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:253
+#: ../plugins/gtk+/gtk+.xml.in.h:267
 msgid "Number of items"
 msgstr "Numri i elementëve"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:254
+#: ../plugins/gtk+/gtk+.xml.in.h:268
 msgid "Number of pages"
 msgstr "Numri i faqeve"
 
 #. Atk name and description properties
-#: ../plugins/gtk+/gtk+.xml.in.h:256
+#: ../plugins/gtk+/gtk+.xml.in.h:270
 msgid "Object instance's name formatted for assistive technology access"
 msgstr ""
 "Emri i instancës së objektit i formatuar për të qenë i shfrytëzueshëm nga "
 "teknollogjitë asistuese"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:257
+#: ../plugins/gtk+/gtk+.xml.in.h:271
 msgid "Off"
 msgstr "Fikur"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:258
+#: ../plugins/gtk+/gtk+.xml.in.h:272
 msgid "Ok"
 msgstr "Ok"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:259
+#: ../plugins/gtk+/gtk+.xml.in.h:273
 msgid "Ok, Cancel"
 msgstr "Ok, Anullo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:260
+#: ../plugins/gtk+/gtk+.xml.in.h:274
 msgid "On"
 msgstr "Ndezur"
 
@@ -3056,136 +3075,136 @@ msgstr "Ndezur"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:282
+#: ../plugins/gtk+/gtk+.xml.in.h:296
 msgid "Open"
 msgstr "Hap"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:283
+#: ../plugins/gtk+/gtk+.xml.in.h:297
 msgid "Option Menu"
 msgstr "Menu opsioni"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:285
+#: ../plugins/gtk+/gtk+.xml.in.h:299
 msgid "Out"
 msgstr "Jashtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:286
+#: ../plugins/gtk+/gtk+.xml.in.h:300
 msgid "Paned"
 msgstr "Kornizë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:289
+#: ../plugins/gtk+/gtk+.xml.in.h:303
 msgid "Pixels"
 msgstr "Pikselë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:290
+#: ../plugins/gtk+/gtk+.xml.in.h:304
 msgid "Pointer Motion"
 msgstr "Lëvizja puntuesit"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:291
+#: ../plugins/gtk+/gtk+.xml.in.h:305
 msgid "Pointer Motion Hint"
 msgstr "Lëvizje e kufizuar e puntuesit"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:292
+#: ../plugins/gtk+/gtk+.xml.in.h:306
 msgid "Popup"
 msgstr "E shpalosëshme"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:294
+#: ../plugins/gtk+/gtk+.xml.in.h:308
 msgid "Popup Menu"
 msgstr "Menu e shpalosëshme"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:295
+#: ../plugins/gtk+/gtk+.xml.in.h:309
 msgid "Position"
 msgstr "Pozicioni"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:298
+#: ../plugins/gtk+/gtk+.xml.in.h:312
 msgid "Progress"
 msgstr "Ecuria"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:299
+#: ../plugins/gtk+/gtk+.xml.in.h:313
 msgid "Progress Bar"
 msgstr "Shtyllë ecurie"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:300
+#: ../plugins/gtk+/gtk+.xml.in.h:314
 msgid "Property Change"
 msgstr "Ndryshim pronësie"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:301
+#: ../plugins/gtk+/gtk+.xml.in.h:315
 msgid "Proximity  Out"
 msgstr "Larg afërsisë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:302
+#: ../plugins/gtk+/gtk+.xml.in.h:316
 msgid "Proximity In"
 msgstr "Në afërsi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:303
+#: ../plugins/gtk+/gtk+.xml.in.h:317
 msgid "Question"
 msgstr "Pyetje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:304
+#: ../plugins/gtk+/gtk+.xml.in.h:318
 msgid "Queue"
 msgstr "Rradhë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:305
+#: ../plugins/gtk+/gtk+.xml.in.h:319
 msgid "Radio Button"
 msgstr "Pulsant zgjedhje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:306
+#: ../plugins/gtk+/gtk+.xml.in.h:320
 msgid "Radio Menu Item"
 msgstr "Element menu zgjedhje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:307
+#: ../plugins/gtk+/gtk+.xml.in.h:321
 msgid "Radio Tool Button"
 msgstr "Pulsant instrumenti zgjedhje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:308
+#: ../plugins/gtk+/gtk+.xml.in.h:322
 msgid "Range"
 msgstr "Interval"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:309
+#: ../plugins/gtk+/gtk+.xml.in.h:323
 msgid "Recent Chooser"
 msgstr "Zgjedhës së hershmi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:310
+#: ../plugins/gtk+/gtk+.xml.in.h:324
 msgid "Recent Chooser Dialog"
 msgstr "Dialog zgjedhës së hershmi"
 
 # (pofilter) variables: translation contains variables not in original: %s
-#: ../plugins/gtk+/gtk+.xml.in.h:313
+#: ../plugins/gtk+/gtk+.xml.in.h:327
 msgid "Remove Column"
 msgstr "Hiq kollonën"
 
 # (pofilter) variables: translation contains variables not in original: %s
-#: ../plugins/gtk+/gtk+.xml.in.h:314
+#: ../plugins/gtk+/gtk+.xml.in.h:328
 msgid "Remove Page"
 msgstr "Hiq faqen"
 
 # (pofilter) variables: translation contains variables not in original: %s
-#: ../plugins/gtk+/gtk+.xml.in.h:315
+#: ../plugins/gtk+/gtk+.xml.in.h:329
 msgid "Remove Parent"
 msgstr "Hiq prindin"
 
 # (pofilter) variables: translation contains variables not in original: %s
-#: ../plugins/gtk+/gtk+.xml.in.h:316
+#: ../plugins/gtk+/gtk+.xml.in.h:330
 msgid "Remove Row"
 msgstr "Hiq rreshtin"
 
 # (pofilter) variables: translation contains variables not in original: %s
-#: ../plugins/gtk+/gtk+.xml.in.h:317
+#: ../plugins/gtk+/gtk+.xml.in.h:331
 msgid "Remove Slot"
 msgstr "Hiq seksionin"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:318
+#: ../plugins/gtk+/gtk+.xml.in.h:332
 msgid "Response ID"
 msgstr "ID e përgjigjes"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:319
+#: ../plugins/gtk+/gtk+.xml.in.h:333
 msgid "Right"
 msgstr "Djathtas"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:320
+#: ../plugins/gtk+/gtk+.xml.in.h:334
 msgid "Right to Left"
 msgstr "Nga e djathta në të majtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:321
+#: ../plugins/gtk+/gtk+.xml.in.h:335
 msgid "Ruler"
 msgstr "Vizore"
 
@@ -3210,19 +3229,19 @@ msgstr "Vizore"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:343
+#: ../plugins/gtk+/gtk+.xml.in.h:357
 msgid "Save"
 msgstr "Ruaj"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:344
+#: ../plugins/gtk+/gtk+.xml.in.h:358
 msgid "Scale"
 msgstr "Shkallë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:345
+#: ../plugins/gtk+/gtk+.xml.in.h:359
 msgid "Scroll"
 msgstr "Rrëshkitje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:346
+#: ../plugins/gtk+/gtk+.xml.in.h:360
 msgid "Scrolled Window"
 msgstr "Dritare rëshkitje"
 
@@ -3247,154 +3266,154 @@ msgstr "Dritare rëshkitje"
 #. <glade-widget-class name="GtkVolumeButton" generic-name="volumebutton" _title="Volume Button"/>
 #.
 #.
-#: ../plugins/gtk+/gtk+.xml.in.h:368
+#: ../plugins/gtk+/gtk+.xml.in.h:382
 msgid "Select Folder"
 msgstr "Zgjidh kartelën"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:369
+#: ../plugins/gtk+/gtk+.xml.in.h:383
 msgid "Separator Menu Item"
 msgstr "Element ndarës për menutë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:370
+#: ../plugins/gtk+/gtk+.xml.in.h:384
 msgid "Separator Tool Item"
 msgstr "Element ndarës për instrumentët"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:371
+#: ../plugins/gtk+/gtk+.xml.in.h:385
 msgid "Set the current page (strictly for editing purposes)"
 msgstr "Rregullo faqen aktuale (vetëm për qëllim ndryshimesh)"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:381 ../plugins/panda/panda.xml.in.h:17
+#: ../plugins/gtk+/gtk+.xml.in.h:395 ../plugins/panda/panda.xml.in.h:19
 msgid "Set the text in the view's text buffer"
 msgstr "Përcakto tekstin në buffer e tekstit të paraqitjes"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:382
+#: ../plugins/gtk+/gtk+.xml.in.h:396
 msgid "Shrink"
 msgstr "Ngushtim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:383
+#: ../plugins/gtk+/gtk+.xml.in.h:397
 msgid "Single"
 msgstr "I vetëm"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:384
+#: ../plugins/gtk+/gtk+.xml.in.h:398
 msgid "Size"
 msgstr "Madhësia"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:385
+#: ../plugins/gtk+/gtk+.xml.in.h:399
 msgid "Small Toolbar"
 msgstr "Panel i vogël instrumentësh"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:386
+#: ../plugins/gtk+/gtk+.xml.in.h:400
 msgid "South"
 msgstr "Jug"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:387
+#: ../plugins/gtk+/gtk+.xml.in.h:401
 msgid "South East"
 msgstr "Jug Lindje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:388
+#: ../plugins/gtk+/gtk+.xml.in.h:402
 msgid "South West"
 msgstr "Jug Perëndim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:389
+#: ../plugins/gtk+/gtk+.xml.in.h:403
 msgid "Spin Button"
 msgstr "Pulsant numerik"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:390
+#: ../plugins/gtk+/gtk+.xml.in.h:404
 msgid "Splash Screen"
 msgstr "Pamja e nisjes"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:391
+#: ../plugins/gtk+/gtk+.xml.in.h:405
 msgid "Spline"
 msgstr "Harkuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:392
+#: ../plugins/gtk+/gtk+.xml.in.h:406
 msgid "Spread"
 msgstr "Përhapje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:393
+#: ../plugins/gtk+/gtk+.xml.in.h:407
 msgid "Start"
 msgstr "Fillimi"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:394
+#: ../plugins/gtk+/gtk+.xml.in.h:408
 msgid "Static"
 msgstr "Statike"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:395
+#: ../plugins/gtk+/gtk+.xml.in.h:409
 msgid "Status Bar"
 msgstr "Shtylla e gjëndjes"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:397
+#: ../plugins/gtk+/gtk+.xml.in.h:411
 msgid "Stock Button"
 msgstr "Pulsant stock"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:399
+#: ../plugins/gtk+/gtk+.xml.in.h:413
 msgid "Stock Item"
 msgstr "Element stock"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:400
+#: ../plugins/gtk+/gtk+.xml.in.h:414
 msgid "Structure"
 msgstr "Strukturë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:401
+#: ../plugins/gtk+/gtk+.xml.in.h:415
 msgid "Substructure"
 msgstr "Nënstrukturë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:403
+#: ../plugins/gtk+/gtk+.xml.in.h:417
 msgid "Summary"
 msgstr "Përmbledhje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:404
+#: ../plugins/gtk+/gtk+.xml.in.h:418
 msgid "Table"
 msgstr "Tabela"
 
 #. Text of the textview
-#: ../plugins/gtk+/gtk+.xml.in.h:406 ../plugins/panda/panda.xml.in.h:18
+#: ../plugins/gtk+/gtk+.xml.in.h:420 ../plugins/panda/panda.xml.in.h:20
 msgid "Text"
 msgstr "Teksti"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:407
+#: ../plugins/gtk+/gtk+.xml.in.h:421
 msgid "Text Entry"
 msgstr "Shtim teksti"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:408
+#: ../plugins/gtk+/gtk+.xml.in.h:422
 msgid "Text View"
 msgstr "Paraqitja e tekstit"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:409
+#: ../plugins/gtk+/gtk+.xml.in.h:423
 msgid "Text below icons"
 msgstr "Tekst poshtë ikonave"
 
 # (pofilter) accelerators: accelerator _ does not occur in original and should not be in translation
-#: ../plugins/gtk+/gtk+.xml.in.h:411
+#: ../plugins/gtk+/gtk+.xml.in.h:425
 msgid "Text only"
 msgstr "Vetëm tekst"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:412
+#: ../plugins/gtk+/gtk+.xml.in.h:426
 msgid "The items in this combo box"
 msgstr "Elementët në këtë kuti të kombinuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:413
+#: ../plugins/gtk+/gtk+.xml.in.h:427
 msgid "The number of items in the box"
 msgstr "Numri i elementëve në kuti"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:414
+#: ../plugins/gtk+/gtk+.xml.in.h:428
 msgid "The number of pages in the notebook"
 msgstr "Numri i faqeve në bllok"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:415
+#: ../plugins/gtk+/gtk+.xml.in.h:429
 msgid "The page position in the Assistant"
 msgstr "Pozicioni i faqes tek Asistenti"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:416
+#: ../plugins/gtk+/gtk+.xml.in.h:430
 msgid "The position of the menu item in the menu shell"
 msgstr "Pozicioni i elementit të menusë në menu shell"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:417
+#: ../plugins/gtk+/gtk+.xml.in.h:431
 msgid "The position of the tool item in the toolbar"
 msgstr "Pozicioni i elementit instrument në menunë e instrumentëve"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:418
+#: ../plugins/gtk+/gtk+.xml.in.h:432
 msgid ""
 "The response ID of this button in a dialog (it's NOT useful if this button "
 "is not in a GtkDialog)"
@@ -3402,151 +3421,147 @@ msgstr ""
 "ID e përgjigjes së këtij pulsanti në një dialog (nuk shërben nëse ky pulsant "
 "nuk gjendet në një GtkDialog)"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:419
+#: ../plugins/gtk+/gtk+.xml.in.h:433
 msgid "The stock item for this button"
 msgstr "Elementi stock për këtë pulsant"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:420
+#: ../plugins/gtk+/gtk+.xml.in.h:434
 msgid "The stock item for this image"
 msgstr "Elementi stock për këtë figurë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:421
+#: ../plugins/gtk+/gtk+.xml.in.h:435
 msgid "The text of the menu item"
 msgstr "Teksti i zërit të menusë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:422
+#: ../plugins/gtk+/gtk+.xml.in.h:436
 msgid "The text to display"
 msgstr "Teksti për tu shfaqur"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:423
+#: ../plugins/gtk+/gtk+.xml.in.h:437
 msgid "Toggle Button"
 msgstr "Pulsant me dy gjëndje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:424
+#: ../plugins/gtk+/gtk+.xml.in.h:438
 msgid "Toggle Tool Button"
 msgstr "Instrumenti pulsant me dy gjëndje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:425
+#: ../plugins/gtk+/gtk+.xml.in.h:439
 msgid "Tool Bar"
 msgstr "Paneli i instrumentëve"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:426
+#: ../plugins/gtk+/gtk+.xml.in.h:440
 msgid "Tool Button"
 msgstr "Pulsant instrumenti"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:427
+#: ../plugins/gtk+/gtk+.xml.in.h:441
 msgid "Toolbar"
 msgstr "Paneli i instrumentëve"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:428
+#: ../plugins/gtk+/gtk+.xml.in.h:442
 msgid "Tooltip"
 msgstr "Këshillë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:429
+#: ../plugins/gtk+/gtk+.xml.in.h:443
 msgid "Top"
 msgstr "Sipër"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:430
+#: ../plugins/gtk+/gtk+.xml.in.h:444
 msgid "Top Left"
 msgstr "Sipër në të majtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:431
+#: ../plugins/gtk+/gtk+.xml.in.h:445
 msgid "Top Level"
 msgstr "Niveli kryesor"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:432
+#: ../plugins/gtk+/gtk+.xml.in.h:446
 msgid "Top Right"
 msgstr "Sipër në të djathtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:433
+#: ../plugins/gtk+/gtk+.xml.in.h:447
 msgid "Top to Bottom"
 msgstr "Nga sipër poshtë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:434
-msgid "Toplevels"
-msgstr "Nivele kryesorë"
-
-#: ../plugins/gtk+/gtk+.xml.in.h:435
+#: ../plugins/gtk+/gtk+.xml.in.h:448
 msgid "Tree View"
 msgstr "Paraqitje e degëzuar"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:436
+#: ../plugins/gtk+/gtk+.xml.in.h:449
 msgid "Up"
 msgstr "Sipër"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:437
+#: ../plugins/gtk+/gtk+.xml.in.h:450
 msgid "Use Underline"
 msgstr "Përdor nënvizime"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:438
+#: ../plugins/gtk+/gtk+.xml.in.h:451
 msgid "Utility"
 msgstr "Ndihmues"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:439
+#: ../plugins/gtk+/gtk+.xml.in.h:452
 msgid "Vertical"
 msgstr "Vertikale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:440
+#: ../plugins/gtk+/gtk+.xml.in.h:453
 msgid "Vertical Box"
 msgstr "Kuti vertikale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:441
+#: ../plugins/gtk+/gtk+.xml.in.h:454
 msgid "Vertical Button Box"
 msgstr "Kuti pulsantësh vertikale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:442
+#: ../plugins/gtk+/gtk+.xml.in.h:455
 msgid "Vertical Panes"
 msgstr "Korniza vertikale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:443
+#: ../plugins/gtk+/gtk+.xml.in.h:456
 msgid "Vertical Ruler"
 msgstr "Vizore vertikale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:444
+#: ../plugins/gtk+/gtk+.xml.in.h:457
 msgid "Vertical Scale"
 msgstr "Shkallë vertikale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:445
+#: ../plugins/gtk+/gtk+.xml.in.h:458
 msgid "Vertical Scrollbar"
 msgstr "Shtyllë vertikale rrëshkitje"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:446
+#: ../plugins/gtk+/gtk+.xml.in.h:459
 msgid "Vertical Separator"
 msgstr "Ndarës vertikal"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:447
+#: ../plugins/gtk+/gtk+.xml.in.h:460
 msgid "Viewport"
 msgstr "Viewport"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:448
+#: ../plugins/gtk+/gtk+.xml.in.h:461
 msgid "Visibility Notify"
 msgstr "Njoftim dukshmërie"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:449
+#: ../plugins/gtk+/gtk+.xml.in.h:462
 msgid "Warning"
 msgstr "Paralajmërim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:450
+#: ../plugins/gtk+/gtk+.xml.in.h:463
 msgid "West"
 msgstr "Perëndim"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:452
+#: ../plugins/gtk+/gtk+.xml.in.h:465
 msgid "Window"
 msgstr "Dritare"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:453
+#: ../plugins/gtk+/gtk+.xml.in.h:466
 msgid "Word"
 msgstr "Fjalë"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:454
+#: ../plugins/gtk+/gtk+.xml.in.h:467
 msgid "Word Character"
 msgstr "Gërmë fjale"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:455
+#: ../plugins/gtk+/gtk+.xml.in.h:468
 msgid "Yes, No"
 msgstr "Po, Jo"
 
-#: ../plugins/gtk+/gtk+.xml.in.h:456
+#: ../plugins/gtk+/gtk+.xml.in.h:469
 msgid ""
 "You can mark this as translatable and set one name/address if you want to "
 "show a translation specific translator, otherwise you should list all "
@@ -3625,35 +3640,57 @@ msgid "GtkPandaPrint"
 msgstr ""
 
 #: ../plugins/panda/panda.xml.in.h:14
+#, fuzzy
+msgid "GtkPandaTable"
+msgstr "Shtim file GNOME"
+
+#: ../plugins/panda/panda.xml.in.h:15
 msgid "GtkPandaText"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:15
+#: ../plugins/panda/panda.xml.in.h:16
 msgid "GtkPandaTimer"
 msgstr ""
 
-#: ../plugins/panda/panda.xml.in.h:16
-msgid "KANA"
-msgstr ""
-
-#: ../plugins/panda/panda.xml.in.h:19
+#: ../plugins/panda/panda.xml.in.h:17
 #, fuzzy
-msgid "The number of columns"
-msgstr "Numri i piksel midis kollonave të ikonave"
+msgid "GtkPandaWindow"
+msgstr "Shtim file GNOME"
 
-#: ../plugins/panda/panda.xml.in.h:20
-msgid "XIM"
+#: ../plugins/panda/panda.xml.in.h:18
+msgid "KANA"
 msgstr ""
 
 #: ../plugins/panda/panda.xml.in.h:21
 #, fuzzy
+msgid "The number of columns"
+msgstr "Numri i piksel midis kollonave të ikonave"
+
+#: ../plugins/panda/panda.xml.in.h:22
+msgid "XIM"
+msgstr ""
+
+#: ../plugins/panda/panda.xml.in.h:23
+#, fuzzy
 msgid "multi"
 msgstr "shumëfish"
 
-#: ../plugins/panda/panda.xml.in.h:22
+#: ../plugins/panda/panda.xml.in.h:24
 #, fuzzy
 msgid "single"
 msgstr "I vetëm"
+
+#~ msgid "Create or open user interface designs for GTK+ applications"
+#~ msgstr "Krijon ose hap vizatime interfaqe përdorimi për aplikativë GTK+"
+
+#~ msgid "Glade Interface Designer"
+#~ msgstr "Glade - Vizatuesi i interfaqeve"
+
+#~ msgid "Glade"
+#~ msgstr "Glade"
+
+#~ msgid "Toplevels"
+#~ msgstr "Nivele kryesorë"
 
 #~ msgid "Gtk+ Obsolete"
 #~ msgstr "Gtk+ të vjetra"
