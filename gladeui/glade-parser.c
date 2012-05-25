@@ -681,9 +681,8 @@ to_utf8 (const gchar *str) {
   GError *err = NULL;
   gchar *tstr = g_convert(str, -1, "utf-8", "euc-jisx0213", &br, &bw, &err);
   if ( err != NULL ) { 
-    g_log(G_LOG_DOMAIN, G_LOG_LEVEL_CRITICAL, 
-      "convert error(euc-jisx0213 to utf8):%s:%s\n", err->message,str); 
-    exit(1);
+	g_error_free(err);
+	return NULL;
   }
   return tstr;
 }
@@ -738,8 +737,13 @@ glade_parser_interface_new_from_file (const gchar *file, const gchar *domain)
       rc = xmlSAXUserParseMemory(&glade_parser, &state, buf1, strlen(buf1));
     } else {
         buf2 = to_utf8(buf1);
-        rc = xmlSAXUserParseMemory(&glade_parser, &state, buf2, strlen(buf2));
-        g_free(buf2);
+		if (buf2 != NULL) {
+        	rc = xmlSAXUserParseMemory(&glade_parser, &state, buf2, strlen(buf2));
+        	g_free(buf2);
+		} else {
+			/*utf8?*/
+        	rc = xmlSAXUserParseMemory(&glade_parser, &state, buf1, strlen(buf1));
+		}
     }
     g_free(buf1);
 
@@ -1211,8 +1215,7 @@ glade_interface_buffer_panda (GladeInterface  *interface,
     g_return_if_fail (size      != NULL);
 
     doc = glade_interface_make_doc_panda (interface);
-    xmlDocDumpFormatMemoryEnc(doc, (xmlChar **)&buf1,
-			      size, "EUC-JP",  TRUE);
+    xmlDocDumpFormatMemoryEnc(doc, (xmlChar **)&buf1,size,"UTF-8",TRUE);
 
     reg = g_regex_new("<(.*)/>",G_REGEX_RAW,0,NULL); 
     buf2 = g_regex_replace_eval(reg,buf1,-1,0,0,eval_cb1,NULL,NULL);
