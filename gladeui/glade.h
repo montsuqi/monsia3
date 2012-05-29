@@ -54,6 +54,6 @@ typedef struct _GladeProject   GladeProject;
 #endif
 
 GLOBAL gboolean DO_SNAP_GRID;
-#define GRID_SIZE 8
+#define GRID_SIZE 4
 
 #endif /* __GLADE_H__ */
