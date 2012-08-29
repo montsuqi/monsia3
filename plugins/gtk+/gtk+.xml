@@ -1638,6 +1638,7 @@
 
     <glade-widget-class-ref name="GtkRadioButton"/>
     <glade-widget-class-ref name="GtkFileChooserButton"/>
+    <glade-widget-class-ref name="GtkColorButton"/>
 
 
 
