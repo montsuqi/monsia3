@@ -95,10 +95,14 @@ glade_signal_equal (GladeSignal *sig1, GladeSignal *sig2)
 	    sig1->after  == sig2->after             &&
 	    sig1->lookup == sig2->lookup)
 	{
+		ret = TRUE;
+#if 0 /* デフォルトで<ここにしてください>が入るので一致しない */
 		if ((sig1->userdata == NULL && sig2->userdata == NULL) ||
 		    (sig1->userdata != NULL && sig2->userdata != NULL  &&
-		     !strcmp (sig1->userdata, sig2->userdata)))
+		     !strcmp (sig1->userdata, sig2->userdata))) {
 			ret = TRUE;
+		}
+#endif
 	}
 
 	return ret;
