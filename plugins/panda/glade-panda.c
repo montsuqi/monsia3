@@ -27,7 +27,6 @@
 #include <gladeui/glade-editor-property.h>
 
 #include <glade-gtk.h>
-
 #include <gtkpanda/gtkpanda.h>
 
 /* This function does absolutely nothing
@@ -295,6 +294,8 @@ glade_panda_init (void)
 	gint argc = 1;
 	gchar *argv[2] = {"glade-3", NULL};
 	gchar **argvv = argv;
+
+	putenv("MONSIA3_GTKPANDA=1");
 	
 	gtk_init(&argc,&argvv);
 	gtk_panda_init(&argc,&argvv);
