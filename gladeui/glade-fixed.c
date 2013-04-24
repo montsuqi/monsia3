@@ -761,14 +761,12 @@ glade_fixed_add_child_impl (GladeWidget *gwidget_fixed,
 	{
 		rect.x      = fixed->mouse_x;
 		rect.y      = fixed->mouse_y;
+		
 		rect.width  = GTK_WIDGET (child->object)->allocation.width;
 		rect.height = GTK_WIDGET (child->object)->allocation.height;
 
-		if (rect.width < CHILD_WIDTH_DEF)
-			rect.width = CHILD_WIDTH_DEF;
-
-		if (rect.height < CHILD_HEIGHT_DEF)
-			rect.height = CHILD_HEIGHT_DEF;
+		gtk_widget_get_size_request(GTK_WIDGET(child->object),
+			&rect.width,&rect.height);
 
 		g_signal_emit (G_OBJECT (fixed),
 			       glade_fixed_signals[CONFIGURE_CHILD],

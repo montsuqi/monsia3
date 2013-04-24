@@ -1349,6 +1349,7 @@ glade_widget_dup_internal (GladeWidget *parent,
 	else
 	{
 		gchar *name = g_strdup (template_widget->name);
+fprintf(stderr,"template name[%s]\n",name);
 		gwidget = glade_widget_adaptor_create_widget
 			(template_widget->adaptor, FALSE,
 			 "name", name,
@@ -1357,6 +1358,7 @@ glade_widget_dup_internal (GladeWidget *parent,
 			 "template", template_widget, 
 			 "reason", GLADE_CREATE_COPY, NULL);
 		g_free (name);
+		glade_widget_copy_properties (gwidget, template_widget);
 	}
 
 	/* Copy signals over here regardless of internal or not... */
@@ -1424,7 +1426,7 @@ glade_widget_dup_internal (GladeWidget *parent,
 
 	if (gwidget->internal)
 		glade_widget_copy_properties (gwidget, template_widget);
-	
+
 	if (gwidget->packing_properties == NULL)
 		gwidget->packing_properties = glade_widget_dup_properties (template_widget->packing_properties , FALSE);
 	
@@ -1445,6 +1447,12 @@ glade_widget_dup_internal (GladeWidget *parent,
 				     &width, &height);
 		gtk_window_resize (GTK_WINDOW (gwidget->object),
 				   width, height);
+	} else {
+		gint width, height;
+		gtk_widget_get_size_request(GTK_WIDGET(template_widget->object),
+			&width,&height);
+		gtk_widget_set_size_request(GTK_WIDGET(gwidget->object),
+			width,height);
 	}
 
 	return gwidget;
