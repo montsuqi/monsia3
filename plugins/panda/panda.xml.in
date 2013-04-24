@@ -153,6 +153,7 @@
     </glade-widget-class>
 
     <glade-widget-class name="GtkPandaDownload" generic-name="pandadownload" _title="GtkPandaDownload"/>
+    <glade-widget-class name="GtkPandaDownload2" generic-name="pandadownload_2_" _title="GtkPandaDownload2"/>
 
     <glade-widget-class name="GtkPandaEntry" generic-name="pandaentry" _title="GtkPandaEntry">
       <properties>
@@ -305,6 +306,7 @@
     <glade-widget-class-ref name="GtkPandaHTML"/>
     <glade-widget-class-ref name="GtkPandaTimer"/>
     <glade-widget-class-ref name="GtkPandaDownload"/>
+    <glade-widget-class-ref name="GtkPandaDownload2"/>
     <glade-widget-class-ref name="GtkPandaPrint"/>
     <glade-widget-class-ref name="GtkPandaTable"/>
   </glade-widget-group>
