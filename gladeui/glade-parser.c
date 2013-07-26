@@ -131,6 +131,10 @@ flush_properties(GladeParseState *state)
 			  prop.value = attr->value;
 			  g_array_append_val(child_props, prop);
             }
+		} else if (!strcmp(attr->name,"text_max_length")) {
+			prop.name = g_strdup("max_length");
+			prop.value = attr->value;
+			g_array_append_val(props, prop);
 		} else if (!strcmp(attr->name,"width")) {
 			prop.name = g_strdup("width_request");
 			prop.value = attr->value;
@@ -1014,6 +1018,10 @@ dump_widget_panda(xmlNode *parent_node, GladeWidgetInfo *info, GladeChildInfo *c
             xmlAddChild(widget, node);
         } else if (!strcmp(info->properties[i].name,"height_request")) {
             node = xmlNewNode(NULL, BAD_CAST("height"));
+            xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
+            xmlAddChild(widget, node);
+        } else if (!strcmp(info->properties[i].name,"max_length")) {
+            node = xmlNewNode(NULL, BAD_CAST("text_max_length"));
             xmlNodeAddContent(node, BAD_CAST(info->properties[i].value));
             xmlAddChild(widget, node);
         } else if (!strcmp(info->properties[i].name,"input_mode")) {
