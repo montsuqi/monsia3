@@ -191,6 +191,7 @@ main (int argc, char *argv[])
 	}
 
 	putenv("GTK_PANDA_HTML_DISABLE=1");
+	putenv("MONSIA_EDITING=1");
 
 	/* load files specified on commandline */
 	if (files != NULL)
