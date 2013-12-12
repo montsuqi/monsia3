@@ -58,14 +58,9 @@
       </properties>
     </glade-widget-class>
 
-    <glade-widget-class name="GtkPandaTable" generic-name="pandatable" _title="GtkPandaTable" get-type-function="gtk_panda_table_get_type">
+    <glade-widget-class name="GtkPandaTable" generic-name="pandatable" _title="GtkPandaTable">
+      <post-create-function>empty</post-create-function>
       <properties>
-        <property id="size" disabled="True"/>
-        <property id="homogeneous" disabled="True"/>
-        <property id="spacing" disabled="True"/>
-        <property id="orientation" disabled="True"/>
-        <property id="orientation" disabled="True"/>
-        <property id="orientation" disabled="True"/>
 	    <property id="column_types" default="text,text,text,text,text,text,text,text,text,text" />
 	    <property id="column_titles" default="col1,col2,col3,col4,col5,col6,col7,col8,col9,col10" />
 	    <property id="column_widths" default="100,100,100,100,100,100,100,100,100,100" />
@@ -73,10 +68,24 @@
 	      <spec>glade_standard_int_spec</spec>
 	      <_tooltip>The number of columns</_tooltip>
 	    </property>
-	    <property id="rows" default="1" _name="Rows">
-	      <spec>glade_standard_int_spec</spec>
-	      <_tooltip>The number of rows</_tooltip>
-	    </property>
+        <property id="enable-grid-lines" disabled="True"/>
+        <property id="enable-search" disabled="True"/>
+        <property id="enable-tree-lines" disabled="True"/>
+        <property id="expander-column" disabled="True"/>
+        <property id="fixed-height-mode" disabled="True"/>
+        <property id="headers-clickable" disabled="True"/>
+        <property id="headers-visible" disabled="True"/>
+        <property id="hover-expand" disabled="True"/>
+        <property id="hover-selection" disabled="True"/>
+        <property id="level-indentation" disabled="True"/>
+        <property id="model" disabled="True"/>
+        <property id="reorderable" disabled="True"/>
+        <property id="rubber-banding" disabled="True"/>
+        <property id="rules-hint" disabled="True"/>
+        <property id="search-column" disabled="True"/>
+        <property id="show-expanders" disabled="True"/>
+        <property id="tooltip-column" disabled="True" default="False"/>
+        <property id="editing-canceled" disabled="True" default="False"/>
       </properties>
     </glade-widget-class>
 

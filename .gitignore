@@ -1,6 +1,6 @@
 *.swp
-Makefile.in
-Makefile
+**/Makefile.in
+**/Makefile
 aclocal.m4
 config.guess
 config.sub
@@ -19,17 +19,3 @@ missing
 po/.intltool-merge-cache
 *.xml
 src/monsia3
-.deps/
-.libs/
-autom4te.cache/
-po/POTFILES
-po/monsia3.pot
-config.h
-config.log
-config.status
-libtool
-po/stamp-it
-stamp-h1
-missing
-m4/
-gtk-doc.make
