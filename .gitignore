@@ -1,9 +1,8 @@
 *.swp
-**/Makefile.in
-**/Makefile
+Makefile.in
+Makefile
 aclocal.m4
-config.guess
-config.sub
+config.*
 configure
 data/monsia3.desktop
 depcomp
@@ -19,3 +18,10 @@ missing
 po/.intltool-merge-cache
 *.xml
 src/monsia3
+.deps/
+.libs/
+libtool
+po/POTFILES
+po/stamp-it
+stamp-h1
+autom4te.cache/
