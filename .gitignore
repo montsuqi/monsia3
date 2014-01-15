@@ -5,6 +5,7 @@ aclocal.m4
 config.*
 configure
 data/monsia3.desktop
+data/monsia3.desktop.in
 depcomp
 gtk-doc.make
 install-sh
