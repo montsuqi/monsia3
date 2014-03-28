@@ -152,14 +152,6 @@ main (int argc, char *argv[])
 	 */
 	gtk_init (NULL, NULL);
 	
-	/* Check for gmodule support */
-	if (!g_module_supported ())
-	{
-		g_warning (_("gmodule support not found. gmodule support is required "
-			     "for glade to work"));
-		return -1;
-	}
-
 	g_set_application_name (APPLICATION_NAME);
 	gtk_window_set_default_icon_name ("monsia3");
 	
