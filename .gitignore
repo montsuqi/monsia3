@@ -27,3 +27,5 @@ src/monsia3
 stamp-h1
 autom4te.cache/
 m4/
+gladeui/glade-marshallers.c
+configure
