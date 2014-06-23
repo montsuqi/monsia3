@@ -3407,6 +3407,7 @@ glade_widget_set_object (GladeWidget *gwidget, GObject *new_object)
 	
 	g_return_if_fail (GLADE_IS_WIDGET (gwidget));
 	g_return_if_fail (G_IS_OBJECT     (new_object));
+	g_return_if_fail (gwidget->adaptor);
 	g_return_if_fail (g_type_is_a (G_OBJECT_TYPE (new_object),
 				       gwidget->adaptor->type));
 
