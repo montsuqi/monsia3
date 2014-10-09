@@ -207,19 +207,6 @@
       </properties>
     </glade-widget-class>
 
-    <glade-widget-class name="GtkPandaFileEntry" generic-name="pandafileentry" _title="GtkPandaFileEntry">
-      <post-create-function>glade_gtk_panda_file_entry_post_create</post-create-function>
-      <add-child-function>glade_gtk_panda_file_entry_add_child</add-child-function>
-      <properties>
-        <property id="size" disabled="True"/>
-        <property id="homogeneous" disabled="True"/>
-        <property id="spacing" disabled="True"/>
-        <property id="orientation" disabled="True"/>
-        <property id="orientation" disabled="True"/>
-        <property id="orientation" disabled="True"/>
-      </properties>
-    </glade-widget-class>
-
     <glade-widget-class name="GtkPandaHTML" generic-name="pandahtml" _title="GtkPandaHTML" get-type-function="gtk_panda_html_get_type">
       <properties>
         <property id="size" disabled="True"/>
@@ -300,7 +287,6 @@
     <glade-widget-class-ref name="GtkPandaText"/>
     <glade-widget-class-ref name="GtkPandaCombo"/>
     <glade-widget-class-ref name="GtkPandaCList"/>
-    <glade-widget-class-ref name="GtkPandaFileEntry"/>
     <glade-widget-class-ref name="GtkPandaPixmap"/>
     <glade-widget-class-ref name="GtkPandaPDF"/>
     <glade-widget-class-ref name="GtkPandaHTML"/>
